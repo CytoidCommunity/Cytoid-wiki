@@ -5,4 +5,4 @@
 > 由像你一样的玩家所制作的节奏游戏。
 
 [GitHub](https://github.com/Cytoid/Cytoid)
-[Getting Started](#)
+[阅读wiki](#cytoid-中文wiki)
