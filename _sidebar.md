@@ -6,7 +6,7 @@
 
 - [活动](/events/)
 
-- [更新](/updates/)
+- [更新](/update/)
 
 - [关于](/about/)
 
