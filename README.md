@@ -1,38 +1,45 @@
-## docsify
+![img](https://camo.githubusercontent.com/82c0283f9d3501a6ac7f6140619ee7b79da6efb1/68747470733a2f2f692e696d6775722e636f6d2f44316b365678322e706e67)
 
-> A magical documentation site generator.
+# Cytoid 中文Wiki
 
-## What it is
+为没有有效途径访问[Cytoid](https://cytoid.io/)官方[wiki](https://sites.google.com/site/cytoidcommunity/home)的玩家设置的文档.
 
-docsify generates your documentation website on the fly. Unlike GitBook, it does not generate static html files. Instead, it smartly loads and parses your Markdown files and displays them as a website. To start using it, all you need to do is create an `index.html` and [deploy it on GitHub Pages](deploy.md).
+内容翻译自Cytoid的官方[wiki](https://sites.google.com/site/cytoidcommunity/home).
 
-See the [Quick start](quickstart.md) guide for more details.
+## Cytoid
 
-## Features
+[Cytoid](https://cytoid.io/)是在[App Store](https://itunes.apple.com/us/app/cytoid/id1266582726) ,[Google Play](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid)和[Taptap](https://www.taptap.com/app/158749),由社区提供支持的,为触摸屏设计的音乐游戏.
 
-- No statically built html files
-- Simple and lightweight
-- Smart full-text search plugin
-- Multiple themes
-- Useful plugin API
-- Emoji support
-- Compatible with IE11
-- Support server-side rendering ([example](https://github.com/docsifyjs/docsify-ssr-demo))
+## 快速开始
 
-## Examples
+[作为玩家访问](https://github.com/Teages/Cytoid-wiki-Chinese/tree/master/gameplay)
 
-Check out the [Showcase](https://github.com/docsifyjs/awesome-docsify#showcase) to see docsify in use.
+[作为谱师访问](https://github.com/Teages/Cytoid-wiki-Chinese/tree/master/guides)
 
-## Donate
+## 分类
 
-Please consider donating if you think docsify is helpful to you or that my work is valuable. I am happy if you can help me [buy a cup of coffee](https://github.com/QingWei-Li/donate). :heart:
+[主页](https://github.com/Teages/Cytoid-wiki-Chinese/tree/master/home)
 
-## Community
+[游玩](https://github.com/Teages/Cytoid-wiki-Chinese/tree/master/gameplay)
 
-Users and the development team are usually in the [Gitter chat room](https://gitter.im/docsifyjs/Lobby).
+[活动](https://github.com/Teages/Cytoid-wiki-Chinese/tree/master/events)
 
-## Special Thanks
+[指南](https://github.com/Teages/Cytoid-wiki-Chinese/tree/master/guides)
 
-_Vercel_ has given us a Pro account.
+[获取工具资源](https://github.com/Teages/Cytoid-wiki-Chinese/tree/master/resources)
 
-<a href="https://vercel.com/?utm_source=docsifyjsdocs" target="_blank"><img src="_media/vercel_logo.svg" width="100px"></a>
+## 你可以做的
+
+想要为该文章做出贡献? 
+
+请尝试为[TigerHix](https://github.com/tigerhix/)捐款.
+
+> ~~捐款别忘了留言催更.jpg~~
+
+> 在[Cytoid.io](https://cytoid.io)有TigerHix的捐款方式
+
+## 版权说明 & 特别感谢
+
+文章若无说明,则原文所有者为 [TigerHix](https://github.com/tigerhix/)
+
+~~翻译内容许可未定~~翻译内容遵循MIT分发

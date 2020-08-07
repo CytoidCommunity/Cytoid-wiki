@@ -1,12 +1,8 @@
-![logo](_media/icon.svg)
+![logo](https://lh5.googleusercontent.com/NfWeibRk_MWolQZjoNpAgqGhGKD4FEqsYuL1eVlAohpd6pLElXtPaedwOU9KxXZmPsUw3Eo=w16383)
 
-# docsify <small>4.11.4</small>
+# Cytoid
 
-> A magical documentation site generator.
+> 由像你一样的玩家所制作的节奏游戏。
 
-- Simple and lightweight
-- No statically built html files
-- Multiple themes
-
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Getting Started](#docsify)
+[GitHub](https://github.com/Cytoid/Cytoid)
+[Getting Started](#)
