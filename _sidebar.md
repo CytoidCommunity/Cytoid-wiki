@@ -1,6 +1,12 @@
-- Getting started
+- [主页](/)
 
-- Customization
+- [游玩](/gameplay/)
 
-- Guide
+- [制谱](/charting/)
+
+- [活动](/events/)
+
+- [更新](/updates/)
+
+- [关于](/about/)
 

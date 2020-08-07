@@ -16,7 +16,7 @@
 
 请尝试为[TigerHix](https://github.com/tigerhix/)捐款.
 
-> ~~捐款别忘了留言催更.jpg~~
+!> ~~捐款别忘了留言催更.jpg~~
 
 > 在[Cytoid.io](https://cytoid.io)有TigerHix的捐款方式
 
