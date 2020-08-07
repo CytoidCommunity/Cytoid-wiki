@@ -27,7 +27,14 @@
     .active {
       display: inline;
     }
-	</style>
+  </style>
+  
+  <script type="text/javascript" src="/site-source/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/site-source/js/jquery.easing.min.js"></script>
+
+
+  <link rel="stylesheet" href="/site-source/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -42,7 +49,10 @@
       mergeNavbar: true,
       maxLevel: 4,
       subMaxLevel: 5,
-      name: 'Cytoid Wiki',
+      name: '<img src="/./site-source/pic/cytoid.png" data-origin="./site-source/pic/cytoid.png" alt="logo" style="width:130px;display:block;margin:0 auto;">Cytoid Wiki',
+      search : [
+      '/'
+    ],
       search: {
         noData: '没有结果!（超大声）',
         paths: 'auto',
@@ -58,6 +68,18 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-nginx.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>
+
+
+  <script src="/site-source/js/auto-dark-mode.js"></script>
+  <button id="btn-dark" class="btn-dark btn-float" title="Dark Mode" onclick="manualDark()">
+    <i class="fa fa-moon-o fa-rotate-270" aria-hidden="true"></i>
+  </button>
+  <!-- back to top button -->
+  <script src="/site-source/js/back-to-top.js"></script>
+  <button id="btn-top" class="btn-top btn-float" title="Go to top">
+    <i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i>
+  </button>
+
 </body>
 
 </html>
