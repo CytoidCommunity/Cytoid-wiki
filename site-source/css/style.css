@@ -1631,18 +1631,18 @@ pre:after {
   }
 
   body.dark-theme .btn-float {
-    border-color: #c5f6fa;
-    background-color: #c5f6fa;
+    border-color: #4568dc;
+    background-color: #4568dc;
     color: #212529;
   }
 
   body.dark-theme .btn-float:visited {
     color: #212529;
-    border-color: #c5f6fa;
+    border-color: #4568dc;
   }
 
   body.dark-theme .btn-float:hover {
     background-color: #212529;
-    color: #c5f6fa;
-    border-color: #c5f6fa;
+    color: #4568dc;
+    border-color: #4568dc;
   }
