@@ -1,4 +1,4 @@
-![logo](https://lh5.googleusercontent.com/NfWeibRk_MWolQZjoNpAgqGhGKD4FEqsYuL1eVlAohpd6pLElXtPaedwOU9KxXZmPsUw3Eo=w16383)
+[logo](https://lh5.googleusercontent.com/NfWeibRk_MWolQZjoNpAgqGhGKD4FEqsYuL1eVlAohpd6pLElXtPaedwOU9KxXZmPsUw3Eo=w16383)
 
 # Cytoid
 
@@ -6,3 +6,8 @@
 
 [GitHub](https://github.com/Cytoid/Cytoid)
 [阅读wiki](#cytoid-中文wiki)
+
+<!-- background image -->
+
+![](./site-source/pic/background.jpg)
+

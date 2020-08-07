@@ -783,8 +783,9 @@ section.cover.show {
 }
 
 section.cover.has-mask .mask {
-    background-color: #fff;
-    opacity: .8;
+    z-index: 1;
+    background-color: #ffffff90;
+    opacity: 0.8;
     position: absolute;
     top: 0;
     height: 100%;
@@ -792,6 +793,7 @@ section.cover.has-mask .mask {
 }
 
 section.cover .cover-main {
+    z-index: 10;
     flex: 1;
     margin: -20px 16px 0;
     text-align: center
