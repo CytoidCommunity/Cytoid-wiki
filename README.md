@@ -8,7 +8,7 @@
 
 ## 什么是 Cytoid
 
-[Cytoid](https://cytoid.io/)是在[App Store](https://itunes.apple.com/us/app/cytoid/id1266582726) ,[Google Play](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid)和[Taptap](https://www.taptap.com/app/158749),由社区提供支持的,为触摸屏设计的音乐游戏.
+[Cytoid](https://cytoid.io/)是在[App Store](https://itunes.apple.com/us/app/cytoid/id1266582726) ,[Google Play](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid)和[Taptap](https://www.taptap.com/app/158749)上发布,由社区提供支持的,为触摸屏设计的音乐游戏.
 
 ## 你可以做的
 
