@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/auto-dark-mode.js"></script>
+  <button id="btn-dark" class="btn-dark btn-float" title="Dark Mode" onclick="manualDark()">
+    <i class="fa fa-moon-o fa-rotate-270" aria-hidden="true"></i>
+  </button>
+  <!-- back to top button -->
+  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/back-to-top.js"></script>
+  <button id="btn-top" class="btn-top btn-float" title="Go to top">
+    <i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i>
+  </button>
+  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/search-bar.js"></script>
+
+  <!--
+  <button id="btn-search" class="btn-search btn-float" title="Search">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
+  -->
+
+  <dev class="search-bar" id="search-bar">
+    <form>
+      <button class="search-start" id="search-start" title="Search" type="button" onclick="startSearch()">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+      <input type="text" maxlength="40" id="search-input" placeholder="请输入您要搜索的内容..."></input>
+      <button class="search-clean" id="search-clean" type="button" onclick="closeSearchBar()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </form>
+  </dev>
+
+
+<!--  Orgain  -->
+  {% include nav.html %}
+
+  {% if page.toc==true %}
+  <aside class="toc">
+    {% include toc.html html=content %}
+  </aside>
+  {% endif %}
+
+  <div id="main" role="main" class="wrapper-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include analytics.html %}
+
+
+</body>
+
+{% if page.toc==true %}
+<script>
+  document.getElementById("main").classList.add("withtoc");
+</script>
+{% endif %}
+
+<div class="wrapper-footer-mobile">
+  <footer class="footer">
+    {% include footer.html %}
+  </footer>
+
+
+</html>

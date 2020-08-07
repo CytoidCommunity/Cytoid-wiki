@@ -1,55 +1,125 @@
-# Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+# 这个文档包含了本博客的设定信息，你可以编辑它来个性化自己的博客，
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# 你的博客名称，请用你想要的博客名替换“LOFFER”，以下修改都可类似处理
+# 注意，“name: LOFFER”，冒号后面的空格不可以省略。
+# 井号后面的文字是说明文档，不会被程序读取。
+name: Teages
+# 描述/签名
+description: Teages's Blog
 
-# Build settings
-theme: minima
+#
+# 下面的设定都是可选的
+#
+
+# 你的博客logo图片URL，建议尺寸不超过300px × 300px
+avatar: /main-source/Teages.png
+
+# 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
+favicon: /main-source/Teages.png
+
+
+# 菜单中的按钮
+navigation:
+  - name: 首页
+    url: /
+  - name: 关于
+    url: /about
+  - name: 归档
+    url: /archive
+  - name: 标签
+    url: /tags
+
+# 每页的文章数
+paginate: 8
+
+# 文章简介的区分标记
+excerpt_separator: <!-- more -->
+
+# 你的社交网络链接，它们会作为图标出现在你的网站页脚中，可选填写
+footer-links: 
+  weibo: #请输入你的微博个性域名 https://www.weibo.com/<thispart>
+  behance: # https://www.behance.net/<>
+  dribbble: # https://dribbble.com/<>
+  email: Teages@teages.xyz 
+  facebook: #https://www.facebook.com/<>
+  flickr: #https://www.flickr.com/<>
+  github: Teages #https://github.com/<>
+  instagram: #https://instagram.com/<>
+  linkedin: #https://www.linkedin.com/in/<>
+  pinterest: #https://www.pinterest.com/<>
+  rss: Teages #随便填点啥RSS就能用了
+  stackoverflow: # http://stackoverflow.com/<>
+  tumblr: # https://<username>.tumblr.com
+  twitter: Teages_L # https://www.twitter.com/<your_twitter_username> 
+  youtube: # channel/<your_long_string> or user/<user-name>
+  bilibili: 37429890 # https://space.bilibili.com/<user-uid>
+
+# 站点页脚的文字
+footer-text: Copyright © 2018-2020
+
+# 评论，注意，请不要同时添加多种不同的评论区
+
+# 输入Disqus shortname，即可添加评论区
+#disqus:  #shortname
+
+# 输入Gitalk相关设定，即可添加评论区
+gitalk:
+  clientID: 1af62824c8d0c129d52e
+  clientSecret: ad0c76ff05b3d69c17dd0631c63f36427a22989f
+  repo: teages.github.io
+  owner: Teages
+
+# 输入Google Analytics web tracking code
+google_analytics: UA-137561154-1
+
+# 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）(例如:https://blog.teages.xyz)
+url: https://blog.teages.xyz
+
+# 添加你的博客的二级域名，一般来说是你的repository名
+# 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
+# 那么就写成 "/repository-name"
+baseurl: 
+
+#特殊设置
+grey_all: false  # 全站变灰
+
+#
+# !! 以下所有设置都不需要更改 !!
+#
+
+permalink: /pages/:title.html
+paginate_path: /page:num/
+
+# The release of Jekyll Now that you're using
+version: v1.2.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
