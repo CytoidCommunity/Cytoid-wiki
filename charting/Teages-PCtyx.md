@@ -12,7 +12,7 @@
 
 PCtyx下载 : [Github仓库](https://github.com/XionUzuki/PCtyx/releases)
 
-PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/newPCtyx/PCtyx_Editor_CN.pdf)
+PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/_source_Teages-PCtyx.md/PCtyx_Editor_CN.pdf)
 
 最后更新: 2020.4.5
 
@@ -30,7 +30,7 @@ PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/ne
 
 先来介绍一下一开始的界面 : 文件界面
 
-![文件界面](/posts-source/newPCtyx/file.png)
+![文件界面](/_source_Teages-PCtyx.md/file.png)
 
 每个按钮的功能都很清楚吧. 
 
@@ -80,11 +80,11 @@ PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/ne
 
 点击下图箭头所指的那个按钮,你就能进入制谱界面了!
 
-![进入制谱界面](/posts-source/newPCtyx/to-charting.png)
+![进入制谱界面](/_source_Teages-PCtyx.md/to-charting.png)
 
 下图是制谱界面的详细说明
 
-![制谱界面](/posts-source/newPCtyx/charting.png)
+![制谱界面](/_source_Teages-PCtyx.md/charting.png)
 
 ### 解释
 
@@ -100,7 +100,7 @@ PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/ne
 
 点击第一个按键,你可以看到底栏变成了下图这样
 
-![网格设置](/posts-source/newPCtyx/charting-2.png)
+![网格设置](/_source_Teages-PCtyx.md/charting-2.png)
 
 从左到右依次是:
 
@@ -185,7 +185,7 @@ PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/ne
 
 ## 预览界面
 
-![preview](/posts-source/newPCtyx/preview.png)
+![preview](/_source_Teages-PCtyx.md/preview.png)
 
 - 左上角是停止和暂停,点停止按钮会回到开始预览的那一页,点暂停可以直接编辑这一页
 - 中间上面是当前的note,下面是总note数
@@ -207,7 +207,7 @@ PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/ne
 
 首先我们回顾下[扫描线控制器](#1-扫描线控制器)
 
-> ![制谱界面](/posts-source/newPCtyx/charting.png)
+> ![制谱界面](/_source_Teages-PCtyx.md/charting.png)
 >
 > 扫描线控制器
 >
@@ -270,11 +270,11 @@ PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/ne
 
 我们像下面这样摆放两条锁链
 
-![两条不同时判定的锁链](/posts-source/newPCtyx/drag-1.png)
+![两条不同时判定的锁链](/_source_Teages-PCtyx.md/drag-1.png)
 
 可以发现这如同我们的预期
 
-![预览](/posts-source/newPCtyx/drag-2.png)
+![预览](/_source_Teages-PCtyx.md/drag-2.png)
 
 是不是很简单呢?
 
@@ -282,15 +282,15 @@ PCtyx 官方文档翻译: [文档翻译](https://blog.teages.xyz/posts-source/ne
 
 有些时候,我们可能会想同时摆两条锁链.小明这样摆了一下,想让锁链像图中蓝线一样连接
 
-![想象中](/posts-source/newPCtyx/drag-3.png)
+![想象中](/_source_Teages-PCtyx.md/drag-3.png)
 
 但实际上,生活给予了他重击,编辑器像下图这样连接了(悲)
 
-![生活的重击](/posts-source/newPCtyx/drag-4.png)
+![生活的重击](/_source_Teages-PCtyx.md/drag-4.png)
 
 到底应该怎样连接呢?他思索了许久,用滚轮改变了两个note的序号
 
-![drag-5](/posts-source/newPCtyx/drag-5.png)
+![drag-5](/_source_Teages-PCtyx.md/drag-5.png)
 
 现在锁链按照他预想的连接了!
 
