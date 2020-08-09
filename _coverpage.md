@@ -1,4 +1,4 @@
-<img src="/./site-source/pic/cytoid.png" data-origin="./site-source/pic/cytoid.png" alt="logo" style="width:130px;">
+<img src="/./site-source/pic/cytoid-girl.png" data-origin="./site-source/pic/cytoid-girl.png" alt="logo" style="width:130px;">
 
 # Cytoid <small> 2.0 </small>
 

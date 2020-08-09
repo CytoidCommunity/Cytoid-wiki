@@ -51,12 +51,10 @@
         background-color: #3f424e;
     }
     #qq {background: radial-gradient(circle farthest-corner at 0 0,transparent,#e9f8f7 256px),var(--box-background-gradient,linear-gradient(to right bottom,#acb6e5,#86fde8));
-    --box-background-gradient: linear-gradient(to right bottom,#76ffc6,#a5a8b2);
-    }
+    --box-background-gradient: linear-gradient(to right bottom,#8eff9c,#a5a8b2);
+}
     body.dark-theme #qq {background: radial-gradient(circle farthest-corner at 0 0,transparent,#292d38 256px),var(--box-background-gradient,linear-gradient(to right bottom,#acb6e5,#86fde8));
-    --box-background-gradient: linear-gradient(to right bottom,#6ae542,#72da80);    }
-        #afdian {background: radial-gradient(circle farthest-corner at 0 0,transparent,#e4dcff 256px),var(--box-background-gradient,linear-gradient(to right bottom,#acb6e5,#86fde8));
-    --box-background-gradient: linear-gradient(to right bottom,#9f73f8,#9762ff);
+    --box-background-gradient: linear-gradient(to right bottom,#5cc43a,#72da80);
 }
     #discord {background: radial-gradient(circle farthest-corner at 0 0,transparent,#d8d8fc 256px),var(--box-background-gradient,linear-gradient(to right bottom,#acb6e5,#86fde8));
     --box-background-gradient: linear-gradient(to right bottom,#7695ff,#a5a8b2);
