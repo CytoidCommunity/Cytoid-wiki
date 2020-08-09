@@ -791,6 +791,10 @@ body.close .content {
         padding         : 10px
     }
 
+    body.dark-theme .sidebar-toggle {
+        background-color: hsla(210, 10%, 23%, 0);
+    }
+
     body.close .content {
         transform: translateX(300px)
     }
@@ -1462,7 +1466,7 @@ pre:after {
 
 
   .dark-theme .sidebar-toggle {
-    background-color: #343a40;
+    background-color: #343a4000;
   }
 
   .dark-theme body.close .sidebar-toggle {
@@ -1659,3 +1663,5 @@ pre:after {
     color: #CEC3FF;
     border-color: #CEC3FF;
   }
+
+  
