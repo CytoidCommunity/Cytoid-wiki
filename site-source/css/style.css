@@ -638,7 +638,7 @@ body.sticky .sidebar-toggle {
 .markdown-section iframe {
     border   : 1px solid #eee;
     width    : 1px;
-    min-width: 100%
+    min-width: 30%
 }
 
 .markdown-section table {
@@ -870,7 +870,6 @@ section.cover.has-mask .mask {
     background-color: #ffffff;
     opacity         : 0.7;
     position        : absolute;
-    top             : 0;
     height          : 1500px;
     width           : 1000%
 }
