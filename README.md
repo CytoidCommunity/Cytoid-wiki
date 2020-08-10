@@ -28,7 +28,7 @@
 
 ## 下载 Cytoid
 <div>
-<iframe src="https://www.taptap.com/widget/158749?platform=ios" style="height:90px;width:50%;max-width:480px;min-width:480px;border:0;"></iframe>
+<iframe src="https://www.taptap.com/widget/158749?platform=ios" style="height:90px;width:100%;max-width:480px;min-width:200px;border:0;"></iframe>
 </div>
 
 ## 加入 Cytoid 的大家庭

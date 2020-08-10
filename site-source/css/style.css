@@ -1290,6 +1290,7 @@ pre:after {
     /* Safari and Chrome */
     -o-transition     : background-color 0.5s, color 0.5s;
     /* Opera */
+    margin:0px auto;
 }
 
 .btn-float:visited {
