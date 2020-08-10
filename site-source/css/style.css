@@ -252,7 +252,6 @@
     -webkit-text-size-adjust   : none;
     -webkit-touch-callout      : none;
     box-sizing                 : border-box;
-    /*transition               : color 0s, background 0.25s, background-color 0.25s;*/
 
 }
 
@@ -310,7 +309,7 @@ div#app:empty:before {
 }
 
 .search input {
-    padding: 0 20px !important;
+    padding      : 0 20px !important;
     border-radius: 20px;
 }
 
@@ -324,7 +323,6 @@ body {
     letter-spacing         : 0;
     margin                 : 0;
     overflow-x             : hidden;
-
 }
 
 img {
@@ -466,11 +464,12 @@ li input[type=checkbox] {
 }
 
 main {
-    display : block;
-    position: relative;
-    width   : 100vw;
-    height  : 100vw;
-    z-index : 10;
+    display   : block;
+    position  : relative;
+    width     : 100vw;
+    height    : 100vw;
+    z-index   : 10;
+    background: #fff;
 }
 
 main.hidden {
@@ -504,7 +503,7 @@ main li {
     top         : 0;
     bottom      : 0;
     left        : 0;
-    transition  : transform .25s ease-out;
+    /*transition  : transform .25s ease-out;*/
     width       : 300px;
     z-index     : 20
 }
@@ -513,7 +512,7 @@ main li {
     margin     : 0 auto 1rem;
     font-size  : 1.5rem;
     font-weight: 300;
-    text-align : center
+    text-align : center;
 }
 
 .sidebar>h1 a {
@@ -577,19 +576,19 @@ main li {
 }
 
 .sidebar-toggle {
-    background-color: transparent;
-    background-color: hsla(0, 0%, 100%, .8);
-    border          : 0;
-    outline         : none;
-    padding         : 10px;
-    position        : absolute;
-    bottom          : 0;
-    left            : 0;
-    text-align      : center;
-    transition      : opacity .3s;
-    width           : 284px;
-    z-index         : 30;
-    cursor          : pointer
+    background-color  : transparent;
+    /*background-color: hsla(0, 0%, 100%, .8);*/
+    border            : 0;
+    outline           : none;
+    padding           : 10px;
+    position          : absolute;
+    bottom            : 0;
+    left              : 0;
+    text-align        : center;
+    transition        : opacity .3s;
+    width             : 284px;
+    z-index           : 30;
+    cursor            : pointer
 }
 
 .sidebar-toggle:hover .sidebar-toggle-button {
@@ -610,7 +609,7 @@ body.sticky .sidebar-toggle {
 }
 
 .content {
-    padding-top: 60px;
+    /*padding-top: 60px;*/
     position   : absolute;
     top        : 0;
     right      : 0;
@@ -1290,7 +1289,7 @@ pre:after {
     /* Safari and Chrome */
     -o-transition     : background-color 0.5s, color 0.5s;
     /* Opera */
-    margin:0px auto;
+    margin            : 0px auto;
 }
 
 .btn-float:visited {
@@ -1340,10 +1339,6 @@ pre:after {
 .dark-theme .search .search-keyword,
 .dark-theme .search a:hover {
     color: var(--theme-color, #CEC3FF);
-}
-
-.dark-theme .search {
-    border-bottom: 1px solid #42484d;
 }
 
 .dark-theme body {
@@ -1399,8 +1394,9 @@ pre:after {
 }
 
 .dark-theme .search {
-    background: #343a40;
-    color     : #f1f3f5
+    /*background   : #343a40;*/
+    color        : #f1f3f5;
+    border-bottom: 1px solid #42484d;
 }
 
 .dark-theme .search input {
@@ -1410,16 +1406,6 @@ pre:after {
 
 .dark-theme .search p {
     color: #f1f3f5
-}
-
-.dark-theme .app-name {
-    background: #343a40;
-    color     : #f1f3f5
-}
-
-.dark-theme .sidebar-nav {
-    background: #343a40;
-    color     : #f1f3f5
 }
 
 .dark-theme aside.sidebar {
@@ -1668,4 +1654,12 @@ body.dark-theme .btn-float:hover {
     background-color: #343A40;
     color           : #CEC3FF;
     border-color    : #CEC3FF;
+}
+
+body, main, .mask, .sidebar, input {
+    transition: color 0.5s ease-in-out, background 1s ease-in-out, background-color 1s ease-in-out !important;
+}
+
+.box {
+    transition: color 0s !important;
 }
