@@ -25,5 +25,5 @@
 查看详情: 
 <a data-fancybox data-type="iframe" data-src="https://artifacts.cytoid.io/events/sora/index_cn.html" href="javascript:;">中文(简体)</a> | 
 <a data-fancybox data-type="iframe" data-src="https://artifacts.cytoid.io/events/sora/index_tw.html" href="javascript:;">中文(繁体)</a> | 
-<a data-fancybox data-type="iframe" data-src="https://artifacts.cytoid.io/events/sora/index_en.html" href="javascript:;">中文(ENG)</a>
+<a data-fancybox data-type="iframe" data-src="https://artifacts.cytoid.io/events/sora/index_en.html" href="javascript:;">ENG</a>
 
