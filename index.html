@@ -31,9 +31,44 @@
     }
   </style>
 
+  <style>
+    *::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 12px;/*定义纵向滚动条宽度*/
+        height: 12px;/*定义横向滚动条高度*/
+    }
+
+    .fancybox-iframe::-webkit-scrollbar {
+        /*event展示滚动条整体样式*/
+        width: 12px;/*定义纵向滚动条宽度*/
+        height: 12px;/*定义横向滚动条高度*/
+    }
+
+
+    *::-webkit-scrollbar-thumb {
+        /*滚动条内部滑块*/
+        border-radius: 8px;
+        background-color: hsla(220, 4%, 58%, 0.3);
+        transition: background-color 0.3s;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        /*鼠标悬停滚动条内部滑块*/
+        background: #bbb;
+    }
+
+    *::-webkit-scrollbar-track {
+        /*滚动条内部轨道*/
+        background: #ededed;
+    }
+    /*Thank https://juejin.im/post/6844903886185037832*/
+  </style>
+
   <script type="text/javascript" src="/site-source/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/site-source/js/jquery.easing.min.js"></script>
 
+  <link rel="stylesheet" href="/site-source/css/jquery.fancybox.min.css" />
+  <script src="/site-source/js/jquery.fancybox.min.js"></script>
 
   <link rel="stylesheet" href="/site-source/css/font-awesome.min.css">
 
@@ -65,12 +100,21 @@
       },
       plugins: [
         EditOnGithubPlugin.create('https://github.com/Teages/Cytoid-wiki/blob/master/', null, '发现不对劲? 请在 GitHub 上帮助我们更正')
-      ]
+      ],
+
+      tabs: {
+        persist    : true,      // default
+        sync       : true,      // default
+        theme      : 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      }
 
     }
   </script>
 
   <script src="/site-source/js/docsify/plugins/search.min.js"></script>
+  <script src="/site-source/js/docsify/plugins/docsify-tabs.js"></script>
 
   <script src="/site-source/js/prismjs/prism-bash.min.js"></script>
   <script src="/site-source/js/prismjs/prism-markdown.min.js"></script>
