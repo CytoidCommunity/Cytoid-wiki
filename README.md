@@ -22,8 +22,8 @@
 
 ## 版权说明 & 特别感谢
 
-文章若无说明,则原文所有者为 [TigerHix](https://github.com/tigerhix/)
+文章若无说明,则原文所有者为 [Cytoid](https://github.com/Cytoid/Cytoid)
 
-~~翻译内容许可未定~~翻译内容遵循MIT分发
+翻译内容遵循CC-BY-NC 4.0
 
 [support](/site-source/part/support.md ':include')
