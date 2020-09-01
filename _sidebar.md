@@ -1,7 +1,7 @@
 - [主页](/)
 
 - [游玩](/gameplay/)
-    - [游戏玩法](/gameplay/how_to_play)
+    - [开始游戏](/gameplay/how_to_play)
     - [游戏机制](/gameplay/mechanism)
 
 - [制谱](/charting/)
