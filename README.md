@@ -1,4 +1,4 @@
-![img](/site-source/pic/sayaka_thumb.png)
+![img](/site-source/pic/sayaka_thumb.png ":no-zoom")
 
 # Cytoid 中文Wiki
 
@@ -16,7 +16,7 @@
 
 请为wiki提出你的意见, 或尝试为[TigerHix](https://github.com/tigerhix/)捐款.
 
-!> ~~捐款别忘了留言催更.jpg~~
+!> ~~捐款别忘了留言催更.jpg~~ 
 
 > 在[Cytoid.io](https://cytoid.io)有TigerHix的捐款方式
 

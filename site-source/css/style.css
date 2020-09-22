@@ -680,7 +680,9 @@ body.sticky .sidebar-toggle {
     border-top-right-radius   : 2px;
     margin                    : 2em 0;
     padding                   : 12px 24px 12px 30px;
-    position                  : relative
+    position                  : relative;
+    min-width: fit-content;
+    max-width: calc(100% - 400px);
 }
 
 .markdown-section p.tip:before {
@@ -1662,4 +1664,25 @@ body, main, .mask, .sidebar, input {
 
 .box {
     transition: color 0s !important;
+}
+
+/* img box */
+
+@media screen and (min-width: 710px) {
+    .side-img{
+        width: 300px;
+        height: 200px;
+        margin: 0.6em 0;
+        margin-left: 1.4em;
+        display: block;
+        float: right;
+        clear: right;
+    
+    }
+}
+
+
+div.side-img p{
+    margin: 0;
+    text-align: center
 }

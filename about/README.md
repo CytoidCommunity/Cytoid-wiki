@@ -27,3 +27,12 @@
 本规范并非强制性, 本身也在不断修正, 您在参考的同时也能提出异议
 
 [support](../site-source/part/support.md ':include')
+
+
+<div class="side-img">
+    <img src="/site-source/pic/backgrounds/palescreen.jpg" alt="img">
+    <p>Palescreen</p>
+</div>
+
+![img](/../site-source/pic/backgrounds/palescreen.jpg ":class=side-img")
+
