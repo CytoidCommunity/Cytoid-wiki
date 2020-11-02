@@ -1292,17 +1292,35 @@ pre:after {
     -o-transition     : background-color 0.5s, color 0.5s;
     /* Opera */
     margin            : 0px auto;
+    outline: none;
 }
+
+
+.btn-float-ios {
+    border-style      : none!important;
+    background-color  : transparent!important;
+    color             : #7B69C8!important;
+
+}
+
 
 .btn-float:visited {
     color       : #f8f9fa;
     border-color: #7B69C8;
 }
 
+.btn-float-ios:visited {
+    color       : #7B69C8!important;
+}
+
 .btn-float:hover {
     background-color: #f8f9fa;
     color           : #7B69C8;
     border-color    : #7B69C8;
+}
+
+.btn-float-ios:hover {
+    color           : #7B69C8;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1627,12 +1645,20 @@ pre:after {
 .dark-theme .btn-float {
     border-color    : #CEC3FF;
     background-color: #CEC3FF;
-    color           : #f8f9fa;
+    color           : #343A40;
+}
+
+.dark-theme .btn-float-ios {
+    color    : #CEC3FF!important;
 }
 
 .dark-theme .btn-float:visited {
     color       : #f8f9fa;
     border-color: #CEC3FF;
+}
+
+.dark-theme .btn-float-ios:visited {
+    color       :#CEC3FF!important;
 }
 
 .dark-theme .btn-float:hover {
@@ -1641,21 +1667,8 @@ pre:after {
     border-color    : #CEC3FF;
 }
 
-body.dark-theme .btn-float {
-    border-color    : #CEC3FF;
-    background-color: #CEC3FF;
-    color           : #343A40;
-}
-
-body.dark-theme .btn-float:visited {
-    color       : #343A40;
-    border-color: #CEC3FF;
-}
-
-body.dark-theme .btn-float:hover {
-    background-color: #343A40;
-    color           : #CEC3FF;
-    border-color    : #CEC3FF;
+.dark-theme .btn-float2:hover {
+    color           : #CEC3FF!important;
 }
 
 body, main, .mask, .sidebar, input {
@@ -1688,66 +1701,3 @@ div.side-img p{
 }
 
 /* Button fix, determine whether to use it by yourself jaja */
-
-.btn-float2 {
-    position          : fixed;
-    /* Fixed/sticky position */
-    right             : 30px;
-    /* Place the button 30px from the right */
-    z-index           : 233;
-    /* Make sure it does not overlap */
-    border-style      : none;
-    background-color  : transparent;
-    /* Make it transparent */
-    color             : #7B69C8;
-    height            : 40px;
-    width             : 40px;
-    text-align        : center;
-    font-size         : large;
-    transition        : background-color 0.5s, color 0.5s;
-    -moz-transition   : background-color 0.5s, color 0.5s;
-    /* Firefox 4 */
-    -webkit-transition: background-color 0.5s, color 0.5s;
-    /* Safari and Chrome */
-    -o-transition     : background-color 0.5s, color 0.5s;
-    /* Opera */
-    margin            : 0px auto;
-}
-
-.btn-float2:visited {
-    color       : #7B69C8;
-}
-
-.btn-float2:hover {
-    color           : #7B69C8;
-}
-
-@media screen and (max-width: 1200px) {
-    .btn-float2 {
-        right: 15px;
-    }
-}
-
-.dark-theme .btn-float2 {
-    color    : #CEC3FF;
-}
-
-.dark-theme .btn-float2:visited {
-    color       :#CEC3FF;
-}
-
-.dark-theme .btn-float2:hover {
-    color           : #CEC3FF;
-}
-
-body.dark-theme .btn-float2 {
-    color           : #CEC3FF;
-}
-
-body.dark-theme .btn-float2:visited {
-    color       : #CEC3FF;
-}
-
-body.dark-theme .btn-float2:hover {
-    color           : #CEC3FF;
-}
