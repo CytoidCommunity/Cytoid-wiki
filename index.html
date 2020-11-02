@@ -101,7 +101,11 @@
       plugins: [
         EditOnGithubPlugin.create('https://github.com/Teages/Cytoid-wiki/blob/master/', null, '发现不对劲? 请在 GitHub 上帮助更正')
       ],
-
+      copyCode: {
+        buttonText: '复制',
+        errorText: '失败',
+        successText: '成功',
+      },
       tabs: {
         persist    : true,      // default
         sync       : true,      // default
@@ -116,11 +120,10 @@
   <script src="/site-source/js/docsify/plugins/search.min.js"></script>
   <script src="/site-source/js/docsify/plugins/docsify-tabs.js"></script>
   <script src="/site-source/js/docsify/plugins/zoom-image.js"></script>
+  <script src="/site-source/js/docsify/plugins/docsify-copy-code.min.js"></script>
 
-  <script src="/site-source/js/prismjs/prism-bash.min.js"></script>
   <script src="/site-source/js/prismjs/prism-markdown.min.js"></script>
-  <script src="/site-source/js/prismjs/prism-nginx.min.js"></script>
-  <script src="/site-source/js/prismjs/prism-php.min.js"></script>
+  <script src="/site-source/js/prismjs/prism-json.min.js"></script>
 
   <script src="/site-source/js/auto-dark-mode.js"></script>
   <button id="btn-dark" class="btn-dark btn-float" title="Dark Mode" onclick="manualDark()">
@@ -131,6 +134,7 @@
   <button id="btn-top" class="btn-top btn-float" title="Go to top">
     <i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i>
   </button>
+  <script src="/site-source/js/btn-float-ios.js"></script>
 
 </body>
 
