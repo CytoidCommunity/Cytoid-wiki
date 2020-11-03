@@ -633,7 +633,8 @@ section.cover.has-mask .mask {
     opacity         : 0.7;
     position        : absolute;
     height          : 1500px;
-    width           : 100%
+    width           : 1000%;
+    float           : left;
 }
 
 section.cover .cover-main {
