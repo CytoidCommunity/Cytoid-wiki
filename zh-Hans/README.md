@@ -26,4 +26,4 @@
 
 翻译内容遵循CC-BY-NC 4.0
 
-[support](/site-source/part/support.md ':include')
+[support](../site-source/part/support.md ':include')
