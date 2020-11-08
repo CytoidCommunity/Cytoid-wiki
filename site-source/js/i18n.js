@@ -1,4 +1,4 @@
-var version = 1;
+var langVer = 1;
 //
 // localStorage.getItem("langSupport")
 // localStorage.getItem("langVer")
@@ -82,9 +82,9 @@ function loadLang(lang) {
 }
 
 window.onload = async () => {
-    if (!(localStorage.getItem("langVer")) || version != localStorage.getItem("langVer")) await updateLang();
+    if (!(localStorage.getItem("langSupport")) || langVer != JSON.parse(localStorage.getItem("langSupport")).version) await updateLang();
     lang = getUserLang();
-    //console.log(lang)
+    console.log('Version: ' + JSON.parse(localStorage.getItem("langSupport")).version + '; Language: '+lang);
     loadLang(lang);
 }
 
@@ -94,10 +94,12 @@ function manualLang(lang) {
         lang = getUserLang();
         //console.log(lang)
         loadLang(lang);
+        localStorage.removeItem("lang");
     } else if (!isSupportLang(lang)) {
         alert("Comming Soon!");
         return;
     } else {
+        localStorage.setItem("lang",lang);
         loadLang(lang);
     }
 }
