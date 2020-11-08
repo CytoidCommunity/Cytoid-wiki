@@ -28,11 +28,26 @@
 
 [support](../site-source/part/support.md ':include')
 
+### 特殊格式
 
+!> docsify中, `/`指的是当前位置, 上一级需要`../`, 再上一级要`../../`
+
+本 wiki 魔改过部分渲染内容, 例如: 
+
+~~~
+![Palescreen](../../site-source/pic/backgrounds/palescreen.jpg ":class=side-img")
+~~~
+
+![Palescreen](../../site-source/pic/backgrounds/palescreen.jpg ":class=side-img")
+
+会渲染成
+
+~~~
 <div class="side-img">
-    <img src="/site-source/pic/backgrounds/palescreen.jpg" alt="img">
+    <img src="/zh/about/../../site-source/pic/backgrounds/palescreen.jpg" alt="Palescreen">
     <p>Palescreen</p>
 </div>
+~~~
+如右图
 
-![img](/../site-source/pic/backgrounds/palescreen.jpg ":class=side-img")
 
