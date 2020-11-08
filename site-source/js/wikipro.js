@@ -1,4 +1,4 @@
-function loadSideIMG() {
+function loadIMG() {
     console.log("running")
     $("img.side-img").each(function () {
         let src = $(this).attr("src");
@@ -6,7 +6,10 @@ function loadSideIMG() {
 
         let newItemIMG = document.createElement("img");
         newItemIMG.src = src;
+        newItemIMG.setAttribute('data-orgain',src);
+        newItemIMG.className = 'side-img medium-zoom-image';
         newItemIMG.alt = info;
+
         let newItemP = document.createElement("p");
         newItemP.innerHTML = info;
 
@@ -19,6 +22,12 @@ function loadSideIMG() {
 
         $(this).hide();
         $(this).before(newItem);
+    });
+
+    $('article img').each(function() {
+        if (!($(this).attr('data-no-zoom') == '')) {
+            $(this).zoomify();
+        }
     });
 }
 
