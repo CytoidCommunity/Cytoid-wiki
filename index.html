@@ -83,13 +83,15 @@
     <section class="cover show has-mask"
         style="background: url(&quot;/./site-source/pic/background.jpg&quot;) center center / cover;display: grid;">
         <div style="z-index: 10;">
-            <div class="cover-main">
+            <h1 id="loadingHit">Loading...</h1>
+            <h1 id="loadingLanguagesHit" style="display: none;">Loading Languages...</h1>
+            <div class="cover-main" id="cover-main" style="display: none;">
                 <img src="/./site-source/pic/cytoid-girl.png" data-origin="./site-source/pic/cytoid-girl.png" alt="logo"
                     style="width:130px;">
     
                 <h1><a class="anchor"><span>Cytoid <small> 2.0 </small></span></a></h1>
                 <blockquote>
-                    <p>由像你一样的玩家所制作的节奏游戏。</p>
+                    <p id="motto">由像你一样的玩家所制作的节奏游戏。</p>
                 </blockquote>
                 <p style="margin: 1em 0 0;">
                     <a id="cytoidLink" href="https://cytoid.io" target="_blank" rel="noopener"
@@ -100,12 +102,12 @@
             <style>
 
             </style>
-            <p style="text-align: center;margin: 0em 0;">
-                <a style="opacity: 0.75;" onclick="">Eng</a> | 
-                <a style="opacity: 0.75;" onclick="">中文</a> | 
-                <a style="opacity: 0.75;" onclick="">日本語</a> | 
-                <a style="opacity: 0.75;" onclick="">한국어</a> | 
-                <a style="opacity: 0.75;" onclick="">Tiếng Việt</a>
+            <p id="chooseLanguage" style="text-align:center;margin:0em 0;display:none;user-select:none;">
+                <a style="opacity: 0.75;" onclick="manualLang('Auto')">Auto</a> | 
+                <a style="opacity: 0.75;" onclick="manualLang('en')">Eng</a> | 
+                <a style="opacity: 0.75;" onclick="manualLang('zh')">中文</a> | 
+                <a style="opacity: 0.75;" onclick="manualLang('jp')">日本語</a> | 
+                <a style="opacity: 0.75;" onclick="manualLang('kr')">한국어</a>
             </p>
         </div>
         <div class="mask" style="height: 100%;"></div>
@@ -115,6 +117,7 @@
     </button>
     <script src="/site-source/js/btn-float-ios.js"></script>
     <script src="/site-source/js/auto-dark-mode.js"></script>
+    <script src="/site-source/js/i18n.js"></script>
 
 </body>
 

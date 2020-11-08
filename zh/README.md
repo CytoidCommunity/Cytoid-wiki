@@ -1,4 +1,4 @@
-![img](/site-source/pic/sayaka_thumb.png ":no-zoom")
+![img](../site-source/pic/sayaka_thumb.png ":no-zoom")
 
 # Cytoid 中文Wiki
 
