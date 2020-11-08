@@ -1,4 +1,4 @@
-![img](/site-source/pic/sayaka_thumb.png ":no-zoom")
+![img](../site-source/pic/sayaka_thumb.png ":no-zoom")
 
 # Cytoid 中文Wiki
 
@@ -26,4 +26,4 @@
 
 翻译内容遵循CC-BY-NC 4.0
 
-[support](/site-source/part/support.md ':include')
+[support](../site-source/part/support.md ':include')
