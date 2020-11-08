@@ -4,22 +4,33 @@ var version = 1;
 // localStorage.getItem("langVer")
 // localStorage.getItem("lang")
 //
-function updateLang() {
-    var url = "/site-source/data/i18n.json"
-    fetch(url).then(function (response) {
-        //打印返回的json数据
-        response.json().then(function (data) {
-            //console.log(JSON.stringify(data));
-            localStorage.setItem("langSupport", JSON.stringify(data));
-        })
-    }).catch(function (e) {
+async function updateLang() {
+    let url = '/site-source/data/i18n.json';
+    try {
+        let response = await fetch(url);
+        if (response.ok) {
+            let json = await response.json();
+            let data = JSON.stringify(json);
+            localStorage.setItem("langSupport", data);
+        } else console.log('load failed with status code' + response.status);
+    } catch (e) {
         console.log('error: ' + e.toString());
-    })
-}//
+    }
+
+    // fetch(url).then(function (response) {
+    //     //打印返回的json数据
+    //     response.json().then(function (data) {
+    //         //console.log(JSON.stringify(data));
+    //         localStorage.setItem("langSupport", JSON.stringify(data));
+    //     })
+    // }).catch(function (e) {
+    //     console.log('error: ' + e.toString());
+    // })
+}
 
 function matchLang(lang) {
-    var langSupport = JSON.parse(localStorage.getItem("langSupport"));
-    var matchList = langSupport.match;
+    let langSupport = JSON.parse(localStorage.getItem("langSupport"));
+    let matchList = langSupport.match;
     //console.log(matchList);
     for (supportLang in matchList) {
         //console.log(matchList[supportLang])
@@ -29,8 +40,8 @@ function matchLang(lang) {
 }//匹配到: 输出结果, 没有匹配到: 输出en
 
 function isSupportLang(lang) {
-    var langSupport = JSON.parse(localStorage.getItem("langSupport"));
-    var supportList = langSupport.supports;
+    let langSupport = JSON.parse(localStorage.getItem("langSupport"));
+    let supportList = langSupport.supports;
     for (supportLang in supportList) {
         //console.log(supportList[supportLang])
         if (supportList[supportLang] == lang) return 1;
@@ -39,7 +50,7 @@ function isSupportLang(lang) {
 }//
 
 function getUserLang() {
-    var userLang;
+    let userLang;
     if (!(localStorage.getItem("lang"))) {
         userLang = matchLang(navigator.language);
     } else {
@@ -55,9 +66,9 @@ function loadLang(lang) {
     //document.getElementById("cover-main").style.display = "none";
     document.getElementById("loadingLanguagesHit").style.display = "";
 
-    var langSupport = JSON.parse(localStorage.getItem("langSupport"));
-    var langIndex = langSupport.lang[lang];
-    console.log(langSupport.lang[lang])
+    let langSupport = JSON.parse(localStorage.getItem("langSupport"));
+    let langIndex = langSupport.lang[lang];
+    console.log(langSupport.lang[lang]);
 
     document.getElementById("motto").innerHTML = langIndex.motto;
     document.getElementById("ReadWIKI").innerHTML = langIndex.ReadWIKI;
@@ -70,21 +81,21 @@ function loadLang(lang) {
     document.getElementById("chooseLanguage").style.display = "";
 }
 
-window.onload = function () {
-    if (!(localStorage.getItem("langVer")) || version != localStorage.getItem("langVer")) updateLang();
+window.onload = async () => {
+    if (!(localStorage.getItem("langVer")) || version != localStorage.getItem("langVer")) await updateLang();
     lang = getUserLang();
     //console.log(lang)
     loadLang(lang);
 }
 
 function manualLang(lang) {
-    console.log(isSupportLang(lang))
-    if (lang == "Auto"){
+    console.log(isSupportLang(lang));
+    if (lang == "Auto") {
         lang = getUserLang();
         //console.log(lang)
         loadLang(lang);
     } else if (!isSupportLang(lang)) {
-        alert("Comming Soon! ");
+        alert("Comming Soon!");
         return;
     } else {
         loadLang(lang);
