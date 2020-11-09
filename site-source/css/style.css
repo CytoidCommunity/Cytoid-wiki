@@ -222,7 +222,7 @@ main {
     display   : block;
     position  : relative;
     width     : 100vw;
-    height    : 100vw;
+    /* height    : 100vw; */
     z-index   : 10;
     background: #fff;
 }
