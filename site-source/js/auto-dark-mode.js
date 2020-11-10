@@ -58,3 +58,7 @@ function manualDark() {
         }    
     }
 }
+
+$(document).ready(function(){
+    document.body.classList.remove('notranload');
+});
