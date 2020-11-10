@@ -1,5 +1,3 @@
-@import url("https://fonts.font.im/css?family=Noto+Sans+SC:400,700|Overpass+Mono:400,700|Nunito:300,400,700&display=swap");
-
 * {
     -webkit-font-smoothing     : antialiased;
     -webkit-overflow-scrolling : touch;
@@ -73,7 +71,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing : antialiased;
     color                  : #34495e;
-    font-family            : "Nunito", "Noto Sans SC", "Helvetica Neue", "Arial", sans-serif;
     font-size              : 15px;
     letter-spacing         : 0;
     margin                 : 0;
@@ -445,7 +442,6 @@ body.sticky .sidebar-toggle {
     border-radius   : 100%;
     color           : #fff;
     content         : "!";
-    font-family     : Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
     font-size       : 14px;
     font-weight     : 700;
     left            : -12px;
@@ -492,7 +488,8 @@ body.close .content {
     .app-nav,
     .github-corner,
     .sidebar,
-    .sidebar-toggle {
+    .sidebar-toggle,
+    .btn-float {
         display: none
     }
 }
@@ -516,6 +513,10 @@ body.close .content {
     main {
         height    : auto;
         overflow-x: hidden
+    }
+
+    .markdown-section {
+        max-width: 90%
     }
 
     .sidebar {
@@ -632,9 +633,8 @@ section.cover.has-mask .mask {
     background-color: #ffffff;
     opacity         : 0.7;
     position        : absolute;
-    height          : 1500px;
-    width           : 1000%;
-    float           : left;
+    height          : 100vh;
+    width           : 100vw;
 }
 
 section.cover .cover-main {
@@ -661,7 +661,7 @@ section.cover p {
 section.cover h1 {
     color      : inherit;
     font-size  : 2.5rem;
-    font-weight: 700;
+    font-weight: 400;
     margin     : .625rem 0 2.5rem;
     position   : relative;
     text-align : center
@@ -865,7 +865,6 @@ body {
 .markdown-section code,
 .markdown-section pre {
     background-color: #f8f8f8;
-    font-family     : "Overpass Mono", "Monaco", courier, monospace
 }
 
 .markdown-section pre {
@@ -982,7 +981,6 @@ body {
     border-radius          : 2px;
     color                  : #525252;
     display                : block;
-    font-family            : "Overpass Mono", Monaco, courier, monospace;
     font-size              : .8rem;
     line-height            : inherit;
     margin                 : 0 2px;
@@ -1455,5 +1453,3 @@ div.side-img p{
     margin: 0;
     text-align: center
 }
-
-/* Button fix, determine whether to use it by yourself jaja */
