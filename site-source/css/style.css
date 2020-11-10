@@ -64,6 +64,7 @@ div#app:empty:before {
 .search input {
     padding      : 0 20px !important;
     border-radius: 20px;
+    background: none;
 }
 
 
@@ -727,7 +728,7 @@ section.cover blockquote>p>a:hover {
     color: var(--theme-color, #7B69C8)
 }
 
-.sidebar,
+/* .sidebar, */
 body {
     background-color: #fff
 }
@@ -1152,7 +1153,7 @@ pre:after {
 
 .dark-theme .sidebar {
     border-right: 1px solid rgba(255, 255, 255, 0.07);
-    background  : #343a40;
+    /* background  : #343a40; */
 }
 
 .dark-theme .sidebar:hover::-webkit-scrollbar-thumb {
@@ -1174,7 +1175,7 @@ pre:after {
 }
 
 .dark-theme .search input {
-    background: #343a40;
+    /* background: #343a40; */
     color     : #f1f3f5
 }
 
@@ -1183,7 +1184,7 @@ pre:after {
 }
 
 .dark-theme aside.sidebar {
-    background: #343a40;
+    /* background: #343a40; */
     color     : #f1f3f5
 }
 
@@ -1262,7 +1263,7 @@ pre:after {
     color: var(--theme-color, #CEC3FF);
 }
 
-.dark-theme .sidebar,
+/* .dark-theme .sidebar, */
 .dark-theme body {
     background-color: #fff;
 }
@@ -1416,7 +1417,7 @@ pre:after {
 }
 
 .dark-theme .btn-float:hover {
-    background-color: #f8f9fa;
+    background-color: #343a40;
     color           : #CEC3FF;
     border-color    : #CEC3FF;
 }
@@ -1426,7 +1427,7 @@ pre:after {
 }
 
 body, main, .mask, .sidebar, input {
-    transition: color 0.5s ease-in-out, background 1s ease-in-out, background-color 1s ease-in-out !important;
+    transition: color 0.5s ease-in-out, background 1s ease-in-out, background-color 1s ease-in-out ;
 }
 
 .box {

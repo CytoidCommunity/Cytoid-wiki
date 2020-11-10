@@ -11,7 +11,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="/site-source/css/style.css" title="vue">
   <link rel="stylesheet" href="/site-source/css/lang/zh/fonts.css">
+  <style>
+    body.notranload {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
 
+    }
+</style>
   <style>
     nav.app-nav li ul {
       min-width: 100px;
@@ -85,7 +94,7 @@
 
 </head>
 
-<body>
+<body class="notranload">
   <div id="app">Tix贵阳中 ...</div>
   <script src="/site-source/js/docsify/docsify.min.js"></script>
   <script src="/site-source/js/docsify/plugins/docsify-edit-on-github.js"></script>
