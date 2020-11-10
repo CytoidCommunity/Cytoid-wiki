@@ -488,7 +488,8 @@ body.close .content {
     .app-nav,
     .github-corner,
     .sidebar,
-    .sidebar-toggle {
+    .sidebar-toggle,
+    .btn-float {
         display: none
     }
 }
@@ -512,6 +513,10 @@ body.close .content {
     main {
         height    : auto;
         overflow-x: hidden
+    }
+
+    .markdown-section {
+        max-width: 90%
     }
 
     .sidebar {
