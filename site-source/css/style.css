@@ -62,7 +62,7 @@ div#app:empty:before {
 }
 
 .search input {
-    padding      : 0 20px ;
+    padding      : 0 20px !important;
     border-radius: 20px;
     background: none;
 }
@@ -91,7 +91,7 @@ kbd {
     border        : 1px solid #ccc;
     border-radius : 3px;
     display       : inline-block;
-    font-size     : 12px ;
+    font-size     : 12px !important;
     line-height   : 12px;
     margin-bottom : 3px;
     padding       : 3px 5px;
@@ -384,7 +384,7 @@ body.sticky .sidebar-toggle {
 }
 
 .markdown-section>:first-child {
-    margin-top: 0 
+    margin-top: 0 !important
 }
 
 .markdown-section hr {
@@ -1052,9 +1052,9 @@ pre:after {
 
 
 .btn-float-ios {
-    border-style      : none;
-    background-color  : transparent;
-    color             : #7B69C8;
+    border-style      : none!important;
+    background-color  : transparent!important;
+    color             : #7B69C8!important;
 
 }
 
@@ -1065,7 +1065,7 @@ pre:after {
 }
 
 .btn-float-ios:visited {
-    color       : #7B69C8;
+    color       : #7B69C8!important;
 }
 
 .btn-float:hover {
@@ -1404,7 +1404,7 @@ pre:after {
 }
 
 .dark-theme .btn-float-ios {
-    color    : #CEC3FF;
+    color    : #CEC3FF!important;
 }
 
 .dark-theme .btn-float:visited {
@@ -1413,17 +1413,17 @@ pre:after {
 }
 
 .dark-theme .btn-float-ios:visited {
-    color       :#CEC3FF;
+    color       :#CEC3FF!important;
 }
 
 .dark-theme .btn-float:hover {
-    background-color: #f8f9fa;
+    background-color: #343a40;
     color           : #CEC3FF;
     border-color    : #CEC3FF;
 }
 
 .dark-theme .btn-float2:hover {
-    color           : #CEC3FF;
+    color           : #CEC3FF!important;
 }
 
 body, main, .mask, .sidebar, input {
@@ -1431,7 +1431,7 @@ body, main, .mask, .sidebar, input {
 }
 
 .box {
-    transition: color 0s ;
+    transition: color 0s !important;
 }
 
 /* img box */
