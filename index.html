@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh-hans">
 
 <head>
@@ -18,7 +19,7 @@
             -o-transition: none !important;
             -ms-transition: none !important;
             transition: none !important;
-    
+            background: #999;
         }
     </style>    
     <style>
@@ -73,7 +74,7 @@
 
         *::-webkit-scrollbar-track {
             /*滚动条内部轨道*/
-            background: #ededed;
+            background: #ededed1a;
         }
 
         /*Thank https://juejin.im/post/6844903886185037832*/
@@ -89,7 +90,7 @@
 
 </head>
 
-<body data-page="README.md" class="ready">
+<body data-page="README.md" class="ready notranload">
     <section class="cover show has-mask"
         style="background: url(&quot;/./site-source/pic/background.jpg&quot;) center center / cover;display: grid;">
         <div style="z-index: 10;">
@@ -109,9 +110,6 @@
                     <a id="ReadWIKI" href="#/?id=main">阅读 wiki</a>
                 </p>
             </div>
-            <style>
-
-            </style>
             <p id="chooseLanguage" style="text-align:center;margin:0em 0;display:none;user-select:none;">
                 <a style="opacity: 0.75;" onclick="manualLang('Auto')">Auto</a> |
                 <a style="opacity: 0.75;" onclick="manualLang('en')">Eng</a> |
