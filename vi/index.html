@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cytoid Wiki</title>
+  <link rel="icon" href="/./site-source/pic/cytoid-girl.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="keywords" content="games,music,cytoid,rhythm">
+  <meta name="description" content="A communty-based rhythm game.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/site-source/css/style.css" title="vue">
+  <link rel="stylesheet" href="/site-source/css/lang/en/fonts.css">
+  <style>
+    body.notranload {
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -o-transition: none !important;
+      -ms-transition: none !important;
+      transition: none !important;
+      background: #999;
+    }
+  </style>
+  <style>
+    nav.app-nav li ul {
+      min-width: 100px;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .app-sub-sidebar {
+      order: -114514;
+    }
+
+    .active {
+      display: inline;
+    }
+  </style>
+
+  <style>
+    *::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 12px;
+      /*定义纵向滚动条宽度*/
+      height: 12px;
+      /*定义横向滚动条高度*/
+    }
+
+    .fancybox-iframe::-webkit-scrollbar {
+      /*event展示滚动条整体样式*/
+      width: 12px;
+      /*定义纵向滚动条宽度*/
+      height: 12px;
+      /*定义横向滚动条高度*/
+    }
+
+
+    *::-webkit-scrollbar-thumb {
+      /*滚动条内部滑块*/
+      border-radius: 8px;
+      background-color: hsla(220, 4%, 58%, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+      /*鼠标悬停滚动条内部滑块*/
+      background: #bbb;
+    }
+
+    *::-webkit-scrollbar-track {
+      /*滚动条内部轨道*/
+      background: #ededed1a;
+    }
+
+
+    /*Thank https://juejin.im/post/6844903886185037832*/
+  </style>
+
+  <script type="text/javascript" src="/site-source/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/site-source/js/jquery.easing.min.js"></script>
+
+  <link rel="stylesheet" href="/site-source/css/jquery.fancybox.min.css" />
+  <script src="/site-source/js/jquery.fancybox.min.js"></script>
+
+  <link rel="stylesheet" href="/site-source/css/font-awesome.min.css">
+
+  <script src="/site-source/js/zoomify.min.js"></script>
+  <link rel="stylesheet" href="/site-source/css/zoomify.min.css">
+
+
+</head>
+
+<body class="notranload">
+  <div id="app">Tix is Sleeping ...</div>
+  <script src="/site-source/js/docsify/docsify.min.js"></script>
+  <script src="/site-source/js/docsify/plugins/docsify-edit-on-github.js"></script>
+
+  <script>
+    window.$docsify = {
+      auto2top: true,
+      coverpage: false,
+      executeScript: true,
+      loadSidebar: true,
+      loadNavbar: false,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 5,
+      name: '<img src="/./site-source/pic/cytoid-girl.png" data-origin="./site-source/pic/cytoid-girl.png" alt="logo" style="width:130px;display:block;margin:0 auto;">Cytoid Wiki',
+      nameLink: '/',
+      search: [
+        '/'
+      ],
+      search: {
+        noData: 'No Reasult! (loudly)',
+        paths: 'auto',
+        placeholder: 'Search'
+      },
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/CytoidCommunity/Cytoid-wiki/blob/master/en/', null, 'Something Wrong? Please help us to improve on Github!'),
+        function (hook, vm) {
+          hook.doneEach(async function () {
+            loadIMG();
+          });
+        },
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> &copy;2020. All rights reserved.</span><br>',
+            '<span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span></br>',
+            '<span>Published with <a href="https://github.com/docsifyjs/docsify" target="_blank"><strong>docsify</strong></a>.</span>',
+            '<span>Power by <a href="https://github.com/docsifyjs/docsify" target="_blank"><strong>Now.sh</strong></a>. </span>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        }
+
+      ],
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Failed',
+        successText: 'Successed',
+      },
+      tabs: {
+        persist: true,      // default
+        sync: true,      // default
+        theme: 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      }
+
+    }
+  </script>
+
+  <script src="/site-source/js/docsify/plugins/search.min.js"></script>
+  <script src="/site-source/js/docsify/plugins/docsify-tabs.js"></script>
+  <!-- <script src="/site-source/js/docsify/plugins/zoom-image.js"></script> -->
+  <script src="/site-source/js/docsify/plugins/docsify-copy-code.min.js"></script>
+
+  <script src="/site-source/js/prismjs/prism-markdown.min.js"></script>
+  <script src="/site-source/js/prismjs/prism-json.min.js"></script>
+
+  <script src="/site-source/js/auto-dark-mode.js"></script>
+  <button id="btn-dark" class="btn-dark btn-float" title="Dark Mode" onclick="manualDark()">
+    <i class="fa fa-moon-o fa-rotate-270" aria-hidden="true"></i>
+  </button>
+  <!-- back to top button -->
+  <script src="/site-source/js/back-to-top.js"></script>
+  <button id="btn-top" class="btn-top btn-float" title="Go to top">
+    <i class="fa fa-angle-double-up fa-lg" aria-hidden="true"></i>
+  </button>
+  <script src="/site-source/js/btn-float-ios.js"></script>
+  <script src="/site-source/js/wikipro.js"></script>
+
+</body>
+
+</html>
