@@ -10,13 +10,12 @@
     - [注意事项](/charting/notice)
     - [资源下载](charting/source)
 
-- [Events](/events/)
-    - [周边](/events/special)
+- [Các sự kiện](/events/)
+    - [Các sự kiện trong Cytoid](/events/in-game-event)
     - [比赛](/events/race)
 
 - [Update](/update/)
     - [Cytoid 更新记录](/update/Cytoid)
     - [Wiki 更新记录](/update/wiki)
-    
-- [About](/about/)
 
+- [About](/about/)
