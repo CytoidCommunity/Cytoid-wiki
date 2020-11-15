@@ -1,4 +1,4 @@
-var langVer = 1;
+var langVer = 2;
 //
 // localStorage.getItem("langSupport")
 // localStorage.getItem("langVer")
