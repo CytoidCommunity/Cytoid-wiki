@@ -78,18 +78,18 @@
 
     - 最后, 您不太可能需要转换深度(Z 轴)坐标, 因为这没有数学意义. 但是您随时可以尝试! 😇
 
-**Root object**
+**根对象**
 
-- **texts**: array of text objects.
-- **sprites**: array of sprite objects.
-- 🌟 **lines**: array of line objects.
-- 🌟 **videos**: array of video objects. Experimental!
-- **controllers**: array of scene controller objects.
-    - You usually need only one controller to control the entire scene, but multiple controllers will come in handy if you need to define effects whose animation states overlap. For beginners, use only one controller.
-- 🌟 **note_controllers**: array of note controller objects.
-- **templates**: array of templates.
+- **texts**: 文本对象组.
+- **sprites**: sprite 对象组.
+- 🌟 **lines**: line 对象组.
+- 🌟 **videos**: 视频对象组. **试验性!**
+- **controllers**: 场景控制器对象组.
+    - 通常只需要一个控制器来控制整个场景, 但是如果您需要定义动画状态重叠的效果, 则多个控制器会派上用场. 对于初学者, 建议只使用一个控制器. 
+- 🌟 **note_controllers**: note控制器对象组.
+- **templates**: **模板**对象组.
 
-**Base state** (Parameters inherited by all objects)
+**基本状态** (所有对象的默认状态)
 
 - 🌟 There are two kinds of objects: **scene objects** (texts, sprites, lines, and videos) that appear in the scene, and **controller objects** (scene controllers and note controllers) that manipulate the scene components without an entity form.
 - States control how objects behave at different points of time. Not every moment of the object needs to be a state; only the "key" moments need to be defined.
