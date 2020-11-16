@@ -1,5 +1,9 @@
 - [HOME](/)
 
+- [Cytoid](/cytoid/)
+  - [Events](/cytoid/events)
+    - [In-game Events](/cytoid/events/in-game-events)
+
 - [Gameplay](/gameplay/)
     - [开始游戏](/gameplay/how_to_play)
     - [游戏机制](/gameplay/mechanism)
@@ -17,6 +21,5 @@
 - [Update](/update/)
     - [Cytoid 更新记录](/update/Cytoid)
     - [Wiki 更新记录](/update/wiki)
-    
-- [About](/about/)
 
+- [About](/about/)
