@@ -1,29 +1,27 @@
 ![img](../site-source/pic/sayaka_thumb.png ":no-zoom")
 
-# Cytoid 中文Wiki
+# Cytoid Official Wiki
 
-为没有有效途径访问[Cytoid](https://cytoid.io/)官方[wiki](https://sites.google.com/site/cytoidcommunity/home)的玩家设置的文档.
+Contents are partially localized from [the old wiki](https://sites.google.com/site/cytoidcommunity/home).
 
-内容翻译自Cytoid的官方[wiki](https://sites.google.com/site/cytoidcommunity/home).
+## What Cytoid Is
 
-## 什么是 Cytoid
+[Cytoid](https://cytoid.io/) is a rhythm game made by, and for the community, which is currently released on [App Store](https://itunes.apple.com/us/app/cytoid/id1266582726) ,[Google Play](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid) and [Taptap](https://www.taptap.com/app/158749).
 
-[Cytoid](https://cytoid.io/)是在[App Store](https://itunes.apple.com/us/app/cytoid/id1266582726) ,[Google Play](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid)和[Taptap](https://www.taptap.com/app/158749)上发布,由社区提供支持的,为触摸屏设计的音乐游戏.
+## What You Can Do
 
-## 你可以做的
+Want to contribute to the wiki? 
 
-想要为该文章做出贡献? 
+You can make suggestions on our github page, or check out [TigerHix's GitHub profile](https://github.com/tigerhix/) directly.
 
-请为wiki提出你的意见, 或尝试为[TigerHix](https://github.com/tigerhix/)捐款.
+!> ~~Don't forget to ask Tiger about the dev progress while you're at it.jpg~~ 
 
-!> ~~捐款别忘了留言催更.jpg~~ 
+> You can also donate on [Cytoid.io](https://cytoid.io).
 
-> 在[Cytoid.io](https://cytoid.io)有TigerHix的捐款方式
+## Copyright Diclaimers & Special Thanks
 
-## 版权说明 & 特别感谢
+If not explicitly stated by the article, all rights go to [Cytoid](https://github.com/Cytoid/Cytoid).
 
-文章若无说明,则原文所有者为 [Cytoid](https://github.com/Cytoid/Cytoid)
+All localizations are under CC-BY-NC 4.0
 
-翻译内容遵循CC-BY-NC 4.0
-
-[support](../site-source/part/support.md ':include')
+[support](./site-source/part/support.md ':include')
