@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-hans">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -10,17 +10,17 @@
   <meta name="description" content="A communty-based rhythm game.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="/site-source/css/style.css" title="vue">
-  <link rel="stylesheet" href="/site-source/css/lang/zh/fonts.css">
+  <link rel="stylesheet" href="/site-source/css/lang/en/fonts.css">
   <style>
     body.notranload {
-        -webkit-transition: none !important;
-        -moz-transition: none !important;
-        -o-transition: none !important;
-        -ms-transition: none !important;
-        transition: none !important;
-        background: #999;
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -o-transition: none !important;
+      -ms-transition: none !important;
+      transition: none !important;
+      background: #999;
     }
-</style>
+  </style>
   <style>
     nav.app-nav li ul {
       min-width: 100px;
@@ -95,7 +95,7 @@
 </head>
 
 <body class="notranload">
-  <div id="app">Tix贵阳中 ...</div>
+  <div id="app">Tix is Sleeping ...</div>
   <script src="/site-source/js/docsify/docsify.min.js"></script>
   <script src="/site-source/js/docsify/plugins/docsify-edit-on-github.js"></script>
 
@@ -115,12 +115,12 @@
         '/'
       ],
       search: {
-        noData: '没有结果!（超大声）',
+        noData: 'No Reasult! (loudly)',
         paths: 'auto',
-        placeholder: '搜索'
+        placeholder: 'Search'
       },
       plugins: [
-        EditOnGithubPlugin.create('https://github.com/CytoidCommunity/Cytoid-wiki/blob/master/zh/', null, '发现不对劲? 请在 GitHub 上帮助更正'),
+        EditOnGithubPlugin.create('https://github.com/CytoidCommunity/Cytoid-wiki/blob/master/en/', null, 'Something Wrong? Please help us to improve on Github!'),
         function (hook, vm) {
           hook.doneEach(async function () {
             loadIMG();
@@ -131,10 +131,9 @@
             '<hr/>',
             '<footer>',
             '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> &copy;2020. All rights reserved.</span><br>',
-            '<span>本页面是为节奏游戏 <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> 设计的社区 WIKI.</span></br>',
-            '<span> Cytoid 是由 <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> 和 <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a> 共同制作的.</br></span>',
-            '<span>Wiki 使用 <a href="https://github.com/docsifyjs/docsify" target="_blank"><strong>docsify</strong></a> 开发, </span>',
-            '<span>并使用 <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a> 发布.</span>',
+            '<span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span></br>',
+            '<span>Published with <a href="https://github.com/docsifyjs/docsify" target="_blank"><strong>docsify</strong></a>.</span>',
+            '<span>Power by <a href="https://github.com/docsifyjs/docsify" target="_blank"><strong>Now.sh</strong></a>. </span>',
             '</footer>'
           ].join('');
 
@@ -145,9 +144,9 @@
 
       ],
       copyCode: {
-        buttonText: '复制',
-        errorText: '失败',
-        successText: '成功',
+        buttonText: 'Copy',
+        errorText: 'Failed',
+        successText: 'Successed',
       },
       tabs: {
         persist: true,      // default

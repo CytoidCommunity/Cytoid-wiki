@@ -1445,7 +1445,8 @@ body, main, .mask, .sidebar, input {
         display: block;
         float: right;
         clear: right;
-    
+        object-fit: contain;
+
     }
 }
 

@@ -1,6 +1,6 @@
 ![img](../site-source/pic/sayaka_thumb.png ":no-zoom")
 
-# Cytoid 中文Wiki
+# Cytoid Wiki for Vietnamese
 
 为没有有效途径访问[Cytoid](https://cytoid.io/)官方[wiki](https://sites.google.com/site/cytoidcommunity/home)的玩家设置的文档.
 
@@ -26,4 +26,4 @@
 
 翻译内容遵循CC-BY-NC 4.0
 
-[support](./site-source/part/support.md ':include')
+[support](../site-source/part/support.md ':include')

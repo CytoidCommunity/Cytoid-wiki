@@ -1,10 +1,10 @@
 
-## Download Cytoid
+## 下载 Cytoid
 <div>
 <iframe src="https://www.taptap.com/widget/158749?platform=ios" style="height:90px;width:100%;max-width:480px;min-width:200px;border:0;"></iframe>
 </div>
 
-## Join Our Community
+## 加入 Cytoid 的大家庭
 
 <div class="column is-one-third-desktop is-half-tablet copy-from-cytoid">
     <style type="text/css" scoped>
@@ -38,21 +38,18 @@
     body.dark-theme .markdown-section h1 {
         color: #FFF;
     }
-	.clickable{
-		cursor: pointer;
-	}
     </style>
-    <div id="discord" class="box is-gradient clickable" onclick="window.open('https://discord.gg/cytoid')"><h1>Discord</h1>
+        <div id="qq" class="box is-gradient" onclick="window.open('https://jq.qq.com/?_wv=1027&k=PWzSblsO')"><h1>QQ群</h1>
         <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-            Want to learn how to make levels? Interested in weekly tournaments? Or perhaps just want to vibe? Then join us in our Discord community!</p>
+            对于很多人来说，Discord比较难访问，而且全英文交流也有不少人吃不消。怎么办？快来加入我们的QQ群吧。（点击无法加群？请到Cytoid的Taptap页获得最新群号）</p>
     </div>
-	<div id="qq" class="box is-gradient clickable" onclick="window.open('https://jq.qq.com/?_wv=1027&k=PWzSblsO')"><h1>QQ Group Chat</h1>
-	    <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-	        For those who are having trouble accessing Discord, try joining our group chat on QQ! (Having even more problems? Get the newest invite link from TapTap)</p>
-	</div>
+    <div id="discord" class="box is-gradient" onclick="window.open('https://discord.gg/cytoid')"><h1>DISCORD</h1>
+        <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+            想学习如何制作关卡吗？想来挑战一下高手云集的每周竞赛吗？或者，只是想和我们一起刷梗？现在就加入我们的 Discord 社区吧！</p>
+    </div>
 </div>
 
-## Supporting Cytoid
+## 支持 Cytoid
 
 <div class="column is-one-third-desktop is-half-tablet copy-from-cytoid">
     <style type="text/css" scoped>
@@ -86,8 +83,12 @@
         color: #FFF;
     }
     </style>
-    <div id="patreon" class="box is-gradient clickable" onclick="window.open('https://www.patreon.com/tigerhix')"><h1>Patreon</h1>
+    <div id="afdian" class="box is-gradient" onclick="window.open('https://afdian.net/@tigerhix')"><h1>爱发电</h1>
         <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-            Cytoid is 100% free and open-source. However, the budget we need to make the servers run properly is high. So if you're an enthusiast, why not consider...</p>
+            Cytoid 是 100% 免费并且开源的音乐游戏。不过，服务器的运营费用十分高昂。喜欢 Cytoid 的话，不妨考虑...</p>
+    </div>
+    <div id="patreon" class="box is-gradient" onclick="window.open('https://www.patreon.com/tigerhix')"><h1>PATREON</h1>
+        <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+            Cytoid 是 100% 免费并且开源的音乐游戏。不过，服务器的运营费用十分高昂。喜欢 Cytoid 的话，不妨考虑...</p>
     </div>
 </div>
