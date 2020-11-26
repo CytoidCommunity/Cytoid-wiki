@@ -1,6 +1,6 @@
 # StoryBoard 完整规格
 
-## 版本: 2.0.2
+**版本: 2.0.2**
 
 本说明详细讲解了StoryBoard的相关规格; 您可以以此为参考, 但我们强烈建议您在开始制作StoryBoard前**阅读整个文档**, 以了解StoryBoard的功能和局限性.
 
@@ -8,7 +8,7 @@
 
 [CytoidPlayer 2.0.2.zip](https://drive.google.com/file/d/1skBP8u_LTDloTxXr3cVl8YdJzmgMkywi/view?usp=drivesdk)
 
-🌟 **坐标系**
+## 🌟 坐标系
 
 - 在我们开始制作 storyboard 前, 让我们先了解游戏中的不同画布和坐标系:
     - 在**storyboard** 中, **sprites**, **texts** 和 **stage**会使用一个 800 (宽) * 600 (高) 的直角坐标系. 如图, 这个坐标系的中心是(0, 0), 右上角是 (400, 300), 左下角是 (-400, -300).
@@ -78,7 +78,7 @@
 
     - 最后, 您不太可能需要转换深度(Z 轴)坐标, 因为这没有数学意义. 但是您随时可以尝试! 😇
 
-**根对象**
+## 根对象
 
 - **texts**: 文本对象组.
 - **sprites**: sprite 对象组.
@@ -91,13 +91,14 @@
 
 **基本状态** (所有对象的默认状态)
 
-- 🌟 There are two kinds of objects: **scene objects** (texts, sprites, lines, and videos) that appear in the scene, and **controller objects** (scene controllers and note controllers) that manipulate the scene components without an entity form.
-- States control how objects behave at different points of time. Not every moment of the object needs to be a state; only the "key" moments need to be defined.
-- For instance, consider a title text that flies from the bottom to the center of the screen from time=0 to time=3. Theoretically, it has infinitely many states, because at every moment its position is different. However, there are only two "key" states: 1. text at the bottom at time=0; 2. text at the center at time=3. Simply define these two states, and the storyboard will automatically calculate all the states in between.
-- Every defined object has at least one state, which is the initial state. You can define extra states of this object in the `states` array.
-- **id**: an unique string identifier of this object. If not set, a random alphanumeric ID will be generated. Supports the `$note` placeholder (see the note controller section).
-- 🌟 **target_id**: *for scene objects only.* When `target_id` is set to an ID of an object, this object does not have its own entity form but will control the specified instance instead. Supports the `$note` placeholder (see the note controller section).
-    - This is useful if you want to *create animations that require overlapping states*. For example, if you want to move a sprite in an arc, it is impossible to do this with only one scene object. You need two—one moves the sprite in the X direction with one easing (say, `linear`), and another one moves the sprite in the Y direction with another easing (say, `easeOutQuad`). Like below:
+- 🌟 在故事板中, 我们一般把对象划分为两类: 出现在场景中的**sprites** (例如文本, 素材, 线条和视频), 和无场景内实体的**controllers** (场景控制器和音符控制器)
+- 状态控制着对象在不同时间的行为。撰写状态时, 不需要在物体实例化的每一帧都添加状态, 只需要在关键帧写状态即可。
+- 假设需要做一个在第0秒到第3秒从场景底部飞到屏幕中央的标题文字。逻辑上讲, 在这个区间里面的标题场景对象有无穷多的状态, 因为每个瞬间的位置都不一样。但是, 关键状态只有两个: 1. time为0时标题场景对象在底部; 2. time为3时标题场景对象在中央。故事板会自动根据你所填写的关键状态进行补间动画。
+- 每个被声明的对象都至少有一个状态, 即初始状态。你可以在`states`集合中自定义额外的状态。
+
+- **id**: 对象的唯一识别码(字符串). 如果没有被手动定义, 则将会被自动分配随机的数字与字母混合的ID. 支持使用`$note`的占位符 (见音符控制器部分).
+- 🌟 **target_id**: *只可使用于场景对象。* 当 `target_id` 被设置为任何对象的id时, 这个对象不会拥有自己的实体但会控制`target_id`所指向的目标实体。支持使用`$note`的占位符 (见音符控制器部分).
+    - 这有助于您 **创建状态重叠的动画**. 例如, 如果您想要以弧线为轨迹移动sprite, 使用单个场景对象几乎不可能做到这一点. 但现在, 您只需要以两个不同的缓动状态叠加, 首先以一种缓动状态 (例如`linear`) 让精灵沿着 X 方向运动, 并且让他沿着 Y 轴以另一种方法缓动 (例如`easeOutQuad`). 如下所示:
 
         ```json
         {
@@ -127,13 +128,13 @@
         }
         ```
 
-    - Another example would be to simplify complex states. Say you want to move a text from x=0 at t=0 to x=100 at t=5, while also setting its opacity from a=1 at t=2.5 to a=0 at t=7.5. Without using a separate targeting scene object, you have to manually do some mental calculations to write down the 4 key states.
-    - Keep in mind that the targeted object must be of same type of the current object. For example, you cannot set a sprite's target to be a text.
-- 🌟 **parent_id**: *for texts and sprites only.* ****When `parent_id` is set to an ID of an object, this object's movement follows the specified parent, i.e. this object's coordinate system is now relative to the parent's coordinate system. Supports the `$note` placeholder (see the note controller section).
-    - For example, you can set sprite A's parent to be sprite B, so that when sprite A moves with sprite B. Any translation of sprite A is now using sprite B's position as the origin.
-    - Another fun thing to try is to set a sprite's parent to a note controller. Since a note controller has an implied position of the actual note, the sprite should follow the note's movement.
-        - *No, you can't really make custom skins with this yet.* See the note controller section for a in-depth explanation.
-- **time**: the base time of this object state, measured in seconds. Note that this may not be equivalent to the true timing—see how an object's exact timing is calculated below.
+    - 还有另外一种用法: 简化复杂状态. 假如您要将一个text的状态进行如下修改: `t=0` 到 `t=5` 执行位移, 并在 `t=2.5` 到 `t=7.5` 修改透明度, 以前您需要手动计算四个关键帧的状态. 
+    - 请注意, target_id 所指对象必须与其属于同一种对象. 例如, 您不能将 sprite 的 target_id 设置为 text 的 id.
+- 🌟 **parent_id**: *仅适用于 texts和 sprites.* 当 `parent_id` 设置为某个其他对象的 ID 时, 前者成为后者的子对象, 子对象的坐标系将会以父对象为原点(参考系), 即子对象将会跟随父对象进行运动. 支持使用 `$note` 占位符 (详情请参阅 note 控制器部分).
+    - 例如, 您可以设置 sprite A 的 parent_id 为 sprite B 的id, 这样就能让 sprite A 跟随 sprite B 移动. sprite A 的任何运动都以 sprite B 的坐标为原点.
+    - 另一个有趣的实验是将 sprite 的 parent_id 设置为一个 note controller 的 id. 由于 note controller 的位置为 note 的实际位置, 因此这个 sprite 会跟随 note 移动.
+        - *但是, 您还不能用它创建自定义 note 皮肤.* 更多详情请见 "note controller" 部分.
+- **time**: 该对象的基准时间, 以秒为单位. 要注意的是, 这个时间可能不等于实际时间, 请阅读下文查看计算对象确切时间的方法.
     - **If `time` is not set and this is a scene object (i.e. text or sprite), this scene object is not spawned unless manually spawned by a trigger.**
     - If the value is in one of the following formats, an automatic replacement will be performed. Note that the quotes are necessary. `<Note ID>` supports the `$note` placeholder (see the note controller section).
         - `"start:<Note ID>"`: start time of the specified note
