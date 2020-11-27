@@ -135,18 +135,18 @@
     - 另一个有趣的实验是将 sprite 的 parent_id 设置为一个 note controller 的 id. 由于 note controller 的位置为 note 的实际位置, 因此这个 sprite 会跟随 note 移动.
         - *但是, 您还不能用它创建自定义 note 皮肤.* 更多详情请见 "note controller" 部分.
 - **time**: 该对象的基准时间, 以秒为单位. 要注意的是, 这个时间可能不等于实际时间, 请阅读下文查看计算对象确切时间的方法.
-    - **If `time` is not set and this is a scene object (i.e. text or sprite), this scene object is not spawned unless manually spawned by a trigger.**
-    - If the value is in one of the following formats, an automatic replacement will be performed. Note that the quotes are necessary. `<Note ID>` supports the `$note` placeholder (see the note controller section).
-        - `"start:<Note ID>"`: start time of the specified note
-        - `"end:<Note ID>"`: end time of the specified note
-        - `"intro:<Note ID>"`: intro time (i.e. when the note fades in) of the specified note
-        - `"start:<Note ID>:<Offset>"`: start time of the specified note + `<Offset>` (in seconds, can be negative)
-        - `"end:<Note ID>:<Offset>"`: end time of the specified note + `<Offset>` in seconds, can be negative)
-        - `"intro:<Note ID>:<Offset>"`: intro time (i.e. when the note fades in) of the specified note + `<Offset>` (in seconds, can be negative)
-        - 🌟 `"at:<Note ID>:<Percentage>"`: *for hold notes only.* start time of the specified note + (end time of the specified note - start time of the specified note) * `<Percentage>`
-            - When `<Percentage>` is `0`, this is equivalent to `start`
-            - When `<Percentage>` is `1`, this is equivalent to `end`
-    - This value can also be an array, if you want to create multiple identical states at once. For example:
+    - **如果一个场景对象 *(例如 text 和 sprite)* 没有设置 `time`, 这个场景对象将不会被启用, 除非这个场景对象被 trigger 启用.** *~~可是trigger被删了~~*
+    - 如果值为以下格式之一, 则将自动进行替换. 请注意引号是必需的. `<Note ID>` 支持以 `$note` 在 note_controller中表示当前note (详情请见 note controller 部分).
+        - `"start:<Note ID>"`: 选中 note 的时刻(如果是Hold/Long Hold, 则为其开始时刻)
+        - `"end:<Note ID>"`: 选中 note 的结束时刻(用于Hold/Long Hold, 如果用于其他note效果同start)
+        - `"intro:<Note ID>"`: 指定 note 出现时刻 (即 note 开始淡入的时刻)
+        - `"start:<Note ID>:<Offset>"`: 选中 note 的时刻 + `<Offset>` (以秒为单位, 可以为负数)
+        - `"end:<Note ID>:<Offset>"`: 选中 note 的结束时刻 + `<Offset>` (以秒为单位, 可以为负数)
+        - `"intro:<Note ID>:<Offset>"`: 指定 note 开始淡入的时刻 + `<Offset>` (以秒为单位, 可以为负数)
+        - 🌟 `"at:<Note ID>:<Percentage>"`: *仅用于Hold/Long Hold.* 选中note的开始时刻 + (选中 note 的结束时刻 - 选中note的开始时刻) * `<Percentage>`*(用于选取 hold 在某个百分比下的状态)*
+            - 当 `<Percentage>` 为 `0`, 等同于 `start`
+            - 当 `<Percentage>` 为 `1`, 等同于 `end`
+    - 可以用列表来创建多个相同的状态. 例如:
 
         ```json
         "states": [
@@ -157,7 +157,7 @@
         ]
         ```
 
-        is automatically expanded to
+        会自动编译成
 
         ```json
         "states": [
@@ -176,7 +176,7 @@
         ]
         ```
 
-- **relative_time**: the relative time to the parent state. For example,
+- **relative_time**: 相对于父状态的相对时间. 例如,
 
     ```json
     {
@@ -190,9 +190,9 @@
     }
     ```
 
-    The timing of state A would be `5` + `2.5` = `7.5`.
+    状态 A 的时间为 `5` + `2.5` = `7.5`.
 
-- **add_time**: the relative time to the last defined state. For example,
+- **add_time**: 到最后一个状态的相对时间. 例如,
 
     ```json
     {
@@ -209,17 +209,17 @@
     }
     ```
 
-    The timing of state B would be (`5` + `2.5`) + `3` = `10.5`.
+    状态 B 的时间为 (`5` + `2.5`) + `3` = `10.5`.
 
-- How an object's exact timing is calculated, from highest priority to lowest priority:
-    - if `add_time` is defined: timing of the last defined state + `add_time`
-    - if `relative_time` is defined, and `time` is also defined: `time` + `relative_time`
-    - if `relative_time` is defined, and there exists a parent state: timing of the parent state + `relative_time`
-    - if `relative_time` is defined, but there does not exist a parent state: current game time + `relative_time` **(Note: this is intended for triggers)**
-    - if both `add_time` and `relative_time` are undefined: `time`
-- **easing**: the easing used when animating this object from the current state to the next state. See [https://easings.net/](https://easings.net/). Default `linear`.
-- **destroy**: if set to `true`, this object is destroyed **when it fully transitions into this state**. For the sake of performance, it is ***strongly recommended*** to destroy an object when you do not need to use it anymore.
-    - In the following example along with the uses of triggers, the `Hello world!` text is spawned and displayed when note 4 is cleared, transitions into zero opacity before destroyed.
+- 计算对象准确时间的运算顺序:
+    - 如果定义了 `add_time`: 最后定义的姿态的时间 + `add_time`
+    - 如果定义了 `relative_time` ,同时也定义了 `time`: `time` + `relative_time`
+    - 如果定义了 `relative_time` ,同时存在一个父状态: 父状态的时间 + `relative_time`
+    - 如果定义了 `relative_time`, 但是没有父状态: 当前游戏时间 + `relative_time` **(注意: 仅用于 trigger)**
+    - 如果 `add_time` 和 `relative_time` 都没有定义: `time`
+- **easing**: 在状态的动画中使用缓动调整加速度. 访问 [https://easings.net/](https://easings.net/) 了解更多. 默认为 `linear` (线性).
+- **destroy**: 如果设置为 `true`, **当对象完全过渡到本状态时**, 将会销毁这个对象. 为了提高性能, ***强烈建议*** 您销毁不再需要使用的对象.
+    - 下面是一个触发器的使用示例, 当点击id为4的note时,将会生成并显示 `Hello world!` 文本, 并淡出消失*(不透明度为0)*, 最后文本被销毁.
 
         ```json
         ...	
@@ -248,20 +248,19 @@
         ...
         ```
 
-- **states**: array of the extra states of this object.
-    - You can define states in an inner state, which will be appended to the parent object. For example:
+- **states**: 存储对象额外状态的列表.
+    - 您可以在列表内再次定义状态, 该状态将被附加到父对象. 例如:
 
         ```json
         {
           ...
-        	Object definition
+        	定义对象(省略)
         	...
-        	"states": [ // States defined in the parent object
-        		{
+        	"states": [ // 父对象定义的状态
         			"template": "stateA",
         		},
         		{
-        			"states": [ // States defined in an inner state
+        			"states": [ // 内部状态中定义的状态
         				{
         					"template": "stateB"
         				},
@@ -277,12 +276,12 @@
         }
         ```
 
-        is equivalent to
+        等同于
 
         ```json
         {
           ...
-        	Object definition
+        	定义对象
         	...
         	"states": [
         		{
@@ -301,34 +300,34 @@
         }
         ```
 
-        This is useful when you want to reuse multiple states at once. See the `pulse` template in the storyboard example.
+        这对一次使用多个状态很有用. 请参阅后文中的 `pulse` 模板.
 
-**Scene object state** (Parameters inherited by text, sprite, video and line states)
+**场景对象状态** (适用于 text, sprite, video 和 line)
 
-- **x**: x-coordinate of the object. Default `0`. Default coordinate system stageX.
-- **y**: y-coordinate of the object. Default `0`. Default coordinate system stageY.
-- 🌟 **z**: z-coordinate of the object. Default `0`. Default coordinate system depth.
-    - Use only when perspective camera is enabled.
-- **rot_x**: rotation of the object on the x-axis in degrees. Default `0`.
-- **rot_y**: rotation of the object on the y-axis in degrees. Default `0`.
-- **rot_z**: rotation of the object on the z-axis in degrees. Default `0`.
-- **scale_x**: scale of the object on the x-axis. Default `1`.
-- **scale_y**: scale of the object on the y-axis. Default `1`.
-- **scale**: scale of the object on both axes. If used, `scale_x` and `scale_y` are overridden.
-- **pivot_x**: pivot of the object when rotating/scaling on the x-axis. `0` is at left and `1` is at right. Default `0.5` (center).
-- **pivot_y**: pivot of the object when rotating/scaling on the y-axis. `0` is at bottom and `1` is at top. Default `0.5` (center).
-- **opacity**: transparency of the object. `0` is fully invisible while `1` is fully visible. Default `0`.
-    - That means **all scene objects are invisible** until you animate `opacity` to any value greater than `0`.
-- **width**: width of the object. Default coordinate system stageX.
-- **height**: height of the object. Default coordinate system stageY.
-    - 🌟 Starting from 2.0.0, **text objects automatically fit to their content** (`text`). That means setting `width` and `height` on a text will not do anything.
-    - For sprites, the default dimensions are 200 (width) * 200 (height).
-- **layer:** layer of the object. Default `0`.
-    - `0`: The default layer. Behind all game elements except the background.
-    - `1`: Above all note elements, but under UI elements.
-    - `2`: Above all game elements.
-- **order**: order of the object ***within its `layer`***. For example, an object with order `3` will display in front of an object with order `2`, assuming they have the same `layer`. If both objects have the same order, the later defined object will display in front of the earlier defined object.
-    - 🌟 Remember to always set the proper `order` on sprites! Otherwise, they may not show up in the actual game even they show up in CytoidPlayer. If you are unsure, you can just set it to `0`.
+- **x**: 对象的 X 坐标. 默认为 `0`. 默认坐标系为 stageX.
+- **y**: 对象的 Y 坐标. 默认为 `0`. 默认坐标系为 stageY.
+- 🌟 **z**: 对象的 Z 坐标. 默认为 `0`. 默认坐标系为系统深度坐标.
+    - 仅在 perspective camera(透视相机) 启用时有效.
+- **rot_x**: 对象在 X 轴上的旋转度数. 默认为 `0`.
+- **rot_y**: 对象在 Y 轴上的旋转度数. 默认为 `0`.
+- **rot_z**: 对象在 Z 轴上的旋转度数. 默认为 `0`.
+- **scale_x**: 对象在 X 轴上的比例. 默认为 `1`.
+- **scale_y**: 对象在 Y 轴上的比例. 默认为 `1`.
+- **scale**: 对象在 X 和 Y 轴上的比例. 一旦启用, 将覆盖 `scale_x` 和 `scale_y` 的值.
+- **pivot_x**: 对象旋转/缩放时, 在 X 轴的中心. `0` 为最左端, `1` 为最右段. 默认为 `0.5` (中心).
+- **pivot_y**: 对象旋转/缩放时, 在 Y 轴的中心. `0` 为最底端, `1` 为最顶段. 默认为 `0.5` (中心).
+- **opacity**: 对象的不透明度. `0` 为完全透明(完全不可见), `1` 为完全不透明. 默认为 `0`.
+    - 这意味着 **所有的项目默认都是不可见的**, 除非你将 `opacity` 的值调整到一个比 `0` 大的值.
+- **width**: 项目的宽度. 默认坐标系为 stageX.
+- **height**: 项目的高度. 默认坐标系为 stageY.
+    - 🌟 从 Cytoid 2.0.0 开始, **文本会根据其内容自适应大小** (`text`). 因此为 text 设置参数 `width` 或 `height` 什么都不会发生.
+    - 对于 sprites, 默认大小为 `200 (宽) * 200 (高)`.
+- **layer:** 对象的图层位置. 默认为 `0`.
+    - `0`: 默认图层. 在背景之上, 其他所有游戏元素之下.
+    - `1`: 在note之下, UI 和 背景 之上.
+    - `2`: 在所有游戏元素之上.
+- **order**: 对象在 ***同一图层*** 的顺序. 例如, 一个 `order` 设置为 `3` 的对象将会显示在 `order` 设置为 `2` 的对象之上 (如果这两个对象的 `layer`相同). 如果两个对象 `order` 和 `layer` 都相同, 则后定义的将渲染在之前渲染的元素之上.
+    - 🌟 永远不要忘记为每个 sprite 设置正确的 `order`! 否则, 即使在 CytoidPlayer 正确显示, 也有可能会在实际游戏中出错. 如果你不确定它的值, 可以设置为 `0`.
 - **fill_width**: if `true`, `width` and `height` are ignored, and this scene object automatically scratches to the stage's width and has a height of `10000`.
     - Useful if you just want to make a sprite that fills the entire viewport, like a background image.
 
@@ -344,15 +343,15 @@
 
 **Sprite state**
 
-- **path**: relative path to the image file. For example, if the path is `"sprite.png"`, the file should be at the same location as the `storyboard.json` and named `sprite.png`. Only `.jpg` and `.png` are supported. **For best performance, keep resolution below 1920 px * 1080 px, and convert PNGs to JPGs when transparency is not needed.**
+- **path**: relative path to the image file. 例如, if the path is `"sprite.png"`, the file should be at the same location as the `storyboard.json` and named `sprite.png`. Only `.jpg` and `.png` are supported. **For best performance, keep resolution below 1920 px * 1080 px, and convert PNGs to JPGs when transparency is not needed.**
 - **preserve_aspect**: if `true`, the image aspect ratio is preserved. Default `true`.
-- **color**: color tint of the sprite in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
+- **color**: color tint of the sprite in the hex representation. Default `"#fff"` (white), which 等同于 untinted.
 
 🌟 **Video state** Experimental!
 
 - **path**: relative path to the video file. **Since supported video codecs are different across platforms and devices, it is strongly recommended to use a standard H.264 `.mp4` file at maximum 720p resolution.**
     - Video **will not pause** when the game is paused. This is a known issue.
-- **color**: color tint of the video in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
+- **color**: color tint of the video in the hex representation. Default `"#fff"` (white), which 等同于 untinted.
 
 🌟 **Note controller state**
 
@@ -396,7 +395,7 @@
     - `2`: The triangle that connects the scanline and the hold note will be hidden; the tail becomes shorter as the hold note progresses; the clear effect will be played at the hold note, not the scanline's position.
 - Now you know how to control a note with a note controller, you will soon find this job tedious: what if I want to control, say, all flick notes, or all notes from ID 300 to 500? **Note selectors** come to the rescue!
 - A note selector is an JSON object (i.e. wrapped in `{}` braces) with following properties:
-    - **type**: array of acceptable note types. For example, `[3,4,6,7]` selects all drags and c-drags.
+    - **type**: array of acceptable note types. 例如, `[3,4,6,7]` selects all drags and c-drags.
     - **start**: minimum ID of the note.
     - **end**: maximum ID of the note.
     - **direction**: direction of the note's page. `1` indicates that this note is scanned upwards, and `-1` indicates that this note is scanned downwards.
@@ -471,7 +470,7 @@
 
     Which, as you expect, aligns the 3 notes at x = 0.25.
 
-- **(Advanced)** An interesting detail: you can actually use note selectors in other scene objects, such as sprites and texts. For example:
+- **(Advanced)** An interesting detail: you can actually use note selectors in other scene objects, such as sprites and texts. 例如:
 
     ```json
     {
@@ -687,7 +686,7 @@
                 }
                 ```
 
-    - To move a note in a curve, use two note controllers, one animates `x` and one animates `y`, each with different `easing` (for example, `easeInCirc` and `easeOutCirc` so that the note follows a trajectory of quarter of a circle).
+    - To move a note in a curve, use two note controllers, one animates `x` and one animates `y`, each with different `easing` (例如, `easeInCirc` and `easeOutCirc` so that the note follows a trajectory of quarter of a circle).
     - Fix `y` to a constant value to mimic osu-style gameplay.
 
 🌟 **Line state**
@@ -785,8 +784,8 @@
 - **fov**: only takes effect if `perspective` is `true`. Controls the field of view of the perspective camera (basically equivalent to `size`, but for the perspective camera). Larger the field of view, smaller the scene. Default `53.2`.
     - Hint: to create the pulsing effect, increase this value from `53.2` to `59.2` (or any number larger than `53.2`), then decrease to `53.2` again.
     - `53.2` is a magic number that ensures even in perspective mode, the note size is approximately the same as in orthographic mode.
-- **x**: x-coordinate of the camera. A greater value shifts the whole scene to left, vice versa. A length of `1` is equivalent to half the screen width. Default `0`. Default coordinate system cameraX.
-- **y**: y-coordinate of the camera. A greater value shifts the whole scene to bottom, vice versa. A length of `1` is equivalent to half the screen height. Default `0`. Default coordinate system cameraY.
+- **x**: x-coordinate of the camera. A greater value shifts the whole scene to left, vice versa. A length of `1` 等同于 half the screen width. Default `0`. Default coordinate system cameraX.
+- **y**: y-coordinate of the camera. A greater value shifts the whole scene to bottom, vice versa. A length of `1` 等同于 half the screen height. Default `0`. Default coordinate system cameraY.
 - 🌟 **z**: z-coordinate of the camera. A greater value moves the camera closer to the notes, vice versa. Default `-10`. Default coordinate system depth.
 - **rot_x**, **rot_y**, **rot_z**: rotations of the camera. Default `0`.
     - Hint: if you rotate along the x or y axis, part of the scene may not be able to be seen; you have to adjust the coordinates of the camera accordingly. If change `rot_x`, move `y`; if change `rot_y`, move `x`.
