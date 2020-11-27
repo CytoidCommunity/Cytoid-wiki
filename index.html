@@ -134,6 +134,7 @@
     <script src="/site-source/js/i18n.js"></script>
 
     <script type="text/javascript">
+        $(document).ready(function(){$('[data-toggle="popover"]').popover()});
         toastr.options.newestOnTop = false;
         toastr.options.positionClass = "toast-top-center";
         toastr.options.showMethod = 'slideDown';
