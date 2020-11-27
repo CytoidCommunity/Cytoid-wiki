@@ -7,6 +7,7 @@
 - [制谱](/charting/)
     - [谱面制作](/charting/charting)
     - [故事板制作](/charting/storyboarding)
+        - [StoryBoard 格式详解](/charting/storyboard)
     - [注意事项](/charting/notice)
     - [资源下载](charting/source)
 
