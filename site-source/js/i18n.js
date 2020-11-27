@@ -96,7 +96,7 @@ function manualLang(lang) {
         loadLang(lang);
         localStorage.removeItem("lang");
     } else if (!isSupportLang(lang)) {
-        alert("Comming Soon!");
+        showMsg("Comming S∞n!");
         return;
     } else {
         localStorage.setItem("lang",lang);
