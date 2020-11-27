@@ -26,6 +26,7 @@
         ![_source_storyboard.md/Copy_of_dia_(1).png](_source_storyboard.md/Copy_of_dia_(1).png)
 
     - 最后, 游戏中还有一个 **Z 轴**, 用于处理3D坐标中的深度. 您无需关注这个坐标轴, 除非您在 `scene controller` 中,将 **perspective** 选项调至 `true`.
+        
         - 请注意, 相机默认朝 Z 轴的正方向观察, 它的默认位置为 Z = -10. 设置一个像 Z = -8 的值会使相机靠近 notes, 设置一个像 Z = -15 的值会使相机远离 notes.
 - 你可以像这样 **进行坐标系之间的转换**: `[coordinate system(原坐标系)]:[value(值)]`.
     - 例如, 您创建了一个 sprite, 想让它显示在note区域的最左侧底部, 正好位于在note 坐标系中的(0, 0). 但是, 这里需要的 `x` 和 `y` 是基于 stageX 和 stageY 的坐标系的, 这时就需要转换坐标系.
@@ -78,7 +79,7 @@
 
     - 最后, 您不太可能需要转换深度(Z 轴)坐标, 因为这没有数学意义. 但是您随时可以尝试! 😇
 
-## 根对象
+## 基本对象
 
 - **texts**: 文本对象组.
 - **sprites**: sprite 对象组.
@@ -89,7 +90,12 @@
 - 🌟 **note_controllers**: note控制器对象组.
 - **templates**: **模板**对象组.
 
-**基本状态** (所有对象的默认状态)
+
+## 对象状态
+
+> 译者: 编写StoryBoard, 实际上就是创建一个个对象, 让他们各司所职, 完成谱面演出. 为了控制各个对象的行为, 系统全面且详细的了解Cytoid StoryBoard中的对象, 是编写StoryBoard前必不可少的. 
+
+### 基本状态 (所有对象的默认状态)
 
 - 🌟 在故事板中, 我们一般把对象划分为两类: 出现在场景中的**sprites** (例如文本, 素材, 线条和视频), 和无场景内实体的**controllers** (场景控制器和音符控制器)
 - 状态控制着对象在不同时间的行为。撰写状态时, 不需要在物体实例化的每一帧都添加状态, 只需要在关键帧写状态即可。
@@ -253,11 +259,13 @@
 
         ```json
         {
-          ...
+            ...
         	定义对象(省略)
         	...
+
         	"states": [ // 父对象定义的状态
-        			"template": "stateA",
+        		{
+            	"template": "stateA",
         		},
         		{
         			"states": [ // 内部状态中定义的状态
@@ -280,9 +288,10 @@
 
         ```json
         {
-          ...
+            ...
         	定义对象
         	...
+
         	"states": [
         		{
         			"template": "stateA",
@@ -302,7 +311,11 @@
 
         这对一次使用多个状态很有用. 请参阅后文中的 `pulse` 模板.
 
-**场景对象状态** (适用于 text, sprite, video 和 line)
+### 场景对象状态
+
+> 译者: 场景对象, 有text, sprite(image sprite), video 和 line. 实际上, 他们都可以看做是sprite的变体, 都是向游戏中插入内容, 只不过对于插入内容的不同(文本, 图像, 视频, 矢量线), 要使用不同的场景对象. 这些不同的场景对象有不同的要求和默认行为, 请读者认真阅读, 注意其中的差异.
+
+#### 基本场景对象状态 (适用于 text, sprite, video 和 line)
 
 - **x**: 对象的 X 坐标. 默认为 `0`. 默认坐标系为 stageX.
 - **y**: 对象的 Y 坐标. 默认为 `0`. 默认坐标系为 stageY.
@@ -328,45 +341,110 @@
     - `2`: 在所有游戏元素之上.
 - **order**: 对象在 ***同一图层*** 的顺序. 例如, 一个 `order` 设置为 `3` 的对象将会显示在 `order` 设置为 `2` 的对象之上 (如果这两个对象的 `layer`相同). 如果两个对象 `order` 和 `layer` 都相同, 则后定义的将渲染在之前渲染的元素之上.
     - 🌟 永远不要忘记为每个 sprite 设置正确的 `order`! 否则, 即使在 CytoidPlayer 正确显示, 也有可能会在实际游戏中出错. 如果你不确定它的值, 可以设置为 `0`.
-- **fill_width**: if `true`, `width` and `height` are ignored, and this scene object automatically scratches to the stage's width and has a height of `10000`.
-    - Useful if you just want to make a sprite that fills the entire viewport, like a background image.
+- **fill_width**: 如果为 `true`, 则会忽略 `width` 和 `height` 的值, 并且该对象的宽度将被设置为屏幕宽度, 高度设置为 `10000`.
+    - 这有助于您制作一个充满屏幕的画面 (如替换背景图像).
 
-**Text state**
+#### Text 对象状态
 
-- **text**: the text to be displayed. Note that (very limited) [rich text](https://docs.unity3d.com/Manual/StyledText.html) is supported (bold, italic, inline size, inline color).
-- **color**: color of the text in the hex representation (i.e. "#fff" or "#4568dc"). Default `"#fff"` (white).
-- **size**: font size of the text. Default `20`.
-    - To animate the size of a text, animate its `scale` property. Do not animate `size`, which only takes integer values and is resource-intensive.
-- **align**: text alignment. `upperLeft`, `upperCenter`, `upperRight`, `middleLeft`, `middleCenter`, `middleRight`, `lowerLeft`, `lowerCenter`, `lowerRight` are supported. Default `middleCenter`.
-- 🌟 **letter_spacing**: letter spacing. Default `0`.
-- 🌟 **font_weight**: font weight. `regular`, `extraLight`, `bold`, `extraBold` are supported. Default `regular`.
+- **text**: 要显示的文本. 请注意, text中的文字支持 [富文本](https://docs.unity3d.com/Manual/StyledText.html), 但是只支持 **bold(加粗)**, *italic(倾斜)*, <font size=5>inline size(字体大小)</font>, <font color=red>inline color(字体颜色)</font>.
+- **color**: 字体颜色, 使用十六进制颜色 (例如 "#fff" 或 "#4568dc"). 默认值为 `"#fff"` (白色).
+- **size**: 字体大小, 默认值为 `20`.
+    - 要设置字体大小改变的动画, 请使用 `scale` 设置这种动画. 而不是使用 `size` 设置, `size` 只能为整数并且将消耗大量运行资源(可能造成卡顿).
+- **align**: 文本对齐. 支持 `upperLeft`, `upperCenter`, `upperRight`, `middleLeft`, `middleCenter`, `middleRight`, `lowerLeft`, `lowerCenter`, `lowerRight`. 默认为 `middleCenter`.
+- 🌟 **letter_spacing**: 行内字母间距. 默认为 `0`.
+- 🌟 **font_weight**: 字体粗细(字重). 支持 `regular`, `extraLight`, `bold`, `extraBold`. 默认为 `regular`.
 
-**Sprite state**
+#### Sprite 对象状态
 
-- **path**: relative path to the image file. 例如, if the path is `"sprite.png"`, the file should be at the same location as the `storyboard.json` and named `sprite.png`. Only `.jpg` and `.png` are supported. **For best performance, keep resolution below 1920 px * 1080 px, and convert PNGs to JPGs when transparency is not needed.**
-- **preserve_aspect**: if `true`, the image aspect ratio is preserved. Default `true`.
-- **color**: color tint of the sprite in the hex representation. Default `"#fff"` (white), which 等同于 untinted.
+- **path**: 图像文件的相对路径. 例如, 如果路径为 `"sprite.png"`, 这个文件应该跟 `storyboard.json` 在同一级目录下, 并且被命名为 `sprite.png`. 只支持 `.jpg` 和 `.png`. **受性能限制, 请保证图片大小不超过 1920*1080, 如果您不需要图片的透明像素, 请将 `PNG` 转换为 `JPG` 格式.**
+- **preserve_aspect**: 如果为 `true`, 无论怎么改变图像大小都不影响图片比例. 默认为 `true`.
+- **color**: sprite 对象的颜色, 使用十六进制颜色. 默认为`#fff` (白色), `#fff` (白色) 等同于无色.
 
-🌟 **Video state** Experimental!
+#### 🌟 Video 对象状态 *实验性!*
 
-- **path**: relative path to the video file. **Since supported video codecs are different across platforms and devices, it is strongly recommended to use a standard H.264 `.mp4` file at maximum 720p resolution.**
-    - Video **will not pause** when the game is paused. This is a known issue.
-- **color**: color tint of the video in the hex representation. Default `"#fff"` (white), which 等同于 untinted.
+- **path**: 视频文件的目录. **由于不同的设备支持的视频格式和视频解码性能有所不同, 强烈建议使用 `H.264` 编码的 `.mp4` 文件, 最好为 720p 以下画质.**
+    - Video 在游戏中 **不会暂停**(即使是在暂停界面). 这是已知问题.
+- **color**: video 对象的颜色, 使用十六进制颜色. 默认为`#fff` (白色), `#fff` (白色) 等同于无色.
 
-🌟 **Note controller state**
+#### 🌟 Line 对象状态
+
+- "Line" is actually a misnomer. A line object renders connected line segments. You can use it to mimic a scanline or draw any geometry shape, like a triangle.
+- Although the line state *technically* inherits from the scene object state, only a very limited subset of parameters in the scene object state are supported: `opacity`, `layer` and `order`.
+- **pos**: array of vertex objects.
+    - Each vertex is a JSON object with following properties:
+        - **x**: x-coordinate of the vertex. Default coordinate system noteX.
+        - **y**: y-coordinate of the vertex. Default coordinate system noteY.
+        - **z**: z-coordinate of the vertex. Default coordinate system depth.
+- **width**: width of the line segments. 默认为0.05`.
+- **color**: color of the line segments in the hex representation. 默认为"#fff"` (white).
+- An example to animate a triangle using two line states:
+
+    ```json
+    {
+      "time": 0,
+      "opacity": 1,
+      "pos": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 1,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "states": [
+        {
+          "time": 20,
+          "pos": [
+            {
+              "x": 0,
+              "y": 1
+            },
+            {
+              "x": 1,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 1
+            },
+            {
+              "x": 0,
+              "y": 1
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+    Try this yourself and figure out why the triangle animates like that! 😉
+
+### 🌟 Note controller(Note 控制器) 对象状态
 
 - A note controller overrides and animates the properties a single note defined in the chart file. This is the most powerful storybaord technique so far. **You can implement almost any desired gameplay in Cytoid using note controllers!**
 - **note**: integer ID of the note, as defined in the chart file.
-- **override_x**: if `true`, the x-coordinate of the note is overriden. See `x`, `x_multiplier` and `dx`. Default `false`.
+- **override_x**: if `true`, the x-coordinate of the note is overriden. See `x`, `x_multiplier` and `dx`. 默认为false`.
 - **x**: overridden x-coordinate of the note. Default coordinate system noteX.
+    
     - Reminder that you can unset this value by setting it to `null`.
-- **x_multiplier**: multiplies onto the x-coordinate of the note. Default `1`. Has no effect if `x` is already set.
-- **dx**: adds onto the x-coordinate of the note. Default `0`. Default coordinate system noteX. Has no effect if `x` is already set.
-- **override_y**: if `true`, the y-coordinate of the note is overriden. See `y`, `y_multiplier` and `dy`. Default `false`.
+- **x_multiplier**: multiplies onto the x-coordinate of the note. 默认为1`. Has no effect if `x` is already set.
+- **dx**: adds onto the x-coordinate of the note. 默认为0`. Default coordinate system noteX. Has no effect if `x` is already set.
+- **override_y**: if `true`, the y-coordinate of the note is overriden. See `y`, `y_multiplier` and `dy`. 默认为false`.
 - **y**: overridden y-coordinate of the note. Default coordinate system noteY.
+    
     - Reminder that you can unset this value by setting it to `null`.
-- **y_multiplier**: multiplies onto the y-coordinate of the note. Default `1`. Has no effect if `y` is already set.
-- **dy**: adds onto the y-coordinate of the note. Default `0`. Default coordinate system noteY. Has no effect if `y` is already set.
+- **y_multiplier**: multiplies onto the y-coordinate of the note. 默认为1`. Has no effect if `y` is already set.
+- **dy**: adds onto the y-coordinate of the note. 默认为0`. Default coordinate system noteY. Has no effect if `y` is already set.
     - **BUG WARNING! As of 2.0.2, this property is incorrectly implemented, and you have to add `1` to the value you want to set for notes that are in a chart page of `-1` direction.**
         - `dx` and `dy` will be replaced with `x_offset` and `y_offset` in the future. In the meantime, you can still use `dy`—just be very careful of it. If the note positions do not match with your expectations, add `1` to it.
 - How the x-coordinate of a note is calculated, from highest priority to lowest priority:
@@ -374,23 +452,24 @@
     - If `override_x` is `true` and `x` is not defined (`null`): original x-coordinate * `x_multiplier` + `dx`
     - Otherwise: original x-coordinate
     - Same applies to the y-coordinate.
-- **override_z**: if `true`, the z-coordinate of the note is overriden. See `z`. Default `false`.
+- **override_z**: if `true`, the z-coordinate of the note is overriden. See `z`. 默认为false`.
 - **z**: overridden z-coordinate of the note. Default coordinate system depth.
-- **override_rot_x**: if `true`, the rotation of the note on the x-axis is overriden. See `rot_x`. Default `false`.
-- **rot_x**: overridden rotation of the note on the x-axis in degrees. Default `0`.
-- **override_rot_y**: if `true`, the rotation of the note on the y-axis is overriden. See `rot_y`. Default `false`.
-- **rot_y**: overridden rotation of the note on the y-axis in degrees. Default `0`.
-- **override_rot_z**: if `true`, the rotation of the note on the z-axis is overriden. See `rot_z`. Default `false`.
-- **rot_z**: overridden rotation of the note on the z-axis in degrees. Default `0`.
-- **override_ring_color**: if `true`, the ring color of the note is overriden. See `ring_color`. Default `false`.
-- **ring_color**: overridden ring color of the note. When set to `null`, user ring color is used. Default `null`.
-- **override_fill_color**: if `true`, the fill color of the note is overriden. See `fill_color`. Default `false`.
-- **fill_color**: overridden fill color of the note. When set to `null`, user fill color is used. Default `null`.
-- **opacity_multiplier**: multiplies onto the opacity of the note. Default `1`.
-- **size_multiplier**: multiplies onto the size of the note. Default `1`.
+- **override_rot_x**: if `true`, the rotation of the note on the x-axis is overriden. See `rot_x`. 默认为false`.
+- **rot_x**: overridden rotation of the note on the x-axis in degrees. 默认为0`.
+- **override_rot_y**: if `true`, the rotation of the note on the y-axis is overriden. See `rot_y`. 默认为false`.
+- **rot_y**: overridden rotation of the note on the y-axis in degrees. 默认为0`.
+- **override_rot_z**: if `true`, the rotation of the note on the z-axis is overriden. See `rot_z`. 默认为false`.
+- **rot_z**: overridden rotation of the note on the z-axis in degrees. 默认为0`.
+- **override_ring_color**: if `true`, the ring color of the note is overriden. See `ring_color`. 默认为false`.
+- **ring_color**: overridden ring color of the note. When set to `null`, user ring color is used. 默认为null`.
+- **override_fill_color**: if `true`, the fill color of the note is overriden. See `fill_color`. 默认为false`.
+- **fill_color**: overridden fill color of the note. When set to `null`, user fill color is used. 默认为null`.
+- **opacity_multiplier**: multiplies onto the opacity of the note. 默认为1`.
+- **size_multiplier**: multiplies onto the size of the note. 默认为1`.
+    
     - **BUG WARNING! As of 2.0.2, this property only works on clicks and flicks.**
-- **hold_direction**: direction of the "tail" of a hold note; only applicable if `note` is a hold note. `1` is upwards and `-1` is downwards. When set to `null`, original hold direction is used. Default `null`.
-- **style**: controls specific styling of the note; only applicable to hold notes for now. `1` and `2` are supported. Default `1`.
+- **hold_direction**: direction of the "tail" of a hold note; only applicable if `note` is a hold note. `1` is upwards and `-1` is downwards. When set to `null`, original hold direction is used. 默认为null`.
+- **style**: controls specific styling of the note; only applicable to hold notes for now. `1` and `2` are supported. 默认为1`.
     - `1`: The default style.
     - `2`: The triangle that connects the scanline and the hold note will be hidden; the tail becomes shorter as the hold note progresses; the clear effect will be played at the hold note, not the scanline's position.
 - Now you know how to control a note with a note controller, you will soon find this job tedious: what if I want to control, say, all flick notes, or all notes from ID 300 to 500? **Note selectors** come to the rescue!
@@ -689,76 +768,13 @@
     - To move a note in a curve, use two note controllers, one animates `x` and one animates `y`, each with different `easing` (例如, `easeInCirc` and `easeOutCirc` so that the note follows a trajectory of quarter of a circle).
     - Fix `y` to a constant value to mimic osu-style gameplay.
 
-🌟 **Line state**
+### Scene controller(场景控制器) 对象状态
 
-- "Line" is actually a misnomer. A line object renders connected line segments. You can use it to mimic a scanline or draw any geometry shape, like a triangle.
-- Although the line state *technically* inherits from the scene object state, only a very limited subset of parameters in the scene object state are supported: `opacity`, `layer` and `order`.
-- **pos**: array of vertex objects.
-    - Each vertex is a JSON object with following properties:
-        - **x**: x-coordinate of the vertex. Default coordinate system noteX.
-        - **y**: y-coordinate of the vertex. Default coordinate system noteY.
-        - **z**: z-coordinate of the vertex. Default coordinate system depth.
-- **width**: width of the line segments. Default `0.05`.
-- **color**: color of the line segments in the hex representation. Default `"#fff"` (white).
-- An example to animate a triangle using two line states:
-
-    ```json
-    {
-      "time": 0,
-      "opacity": 1,
-      "pos": [
-        {
-          "x": 0,
-          "y": 0
-        },
-        {
-          "x": 1,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 1
-        },
-        {
-          "x": 0,
-          "y": 0
-        }
-      ],
-      "states": [
-        {
-          "time": 20,
-          "pos": [
-            {
-              "x": 0,
-              "y": 1
-            },
-            {
-              "x": 1,
-              "y": 0
-            },
-            {
-              "x": 1,
-              "y": 1
-            },
-            {
-              "x": 0,
-              "y": 1
-            }
-          ]
-        }
-      ]
-    }
-    ```
-
-    Try this yourself and figure out why the triangle animates like that! 😉
-
-**Scene controller state**
-
-- **storyboard_opacity**: `opacity` of all storyboard scene objects. Default `1`.
-- **ui_opacity**: opacity of the game UI (score, info, pause button...). Default `1`.
-- **scanline_opacity**: opacity of the scanline. Default `1`.
-- **background_dim**: opacity of the background dim. Default `0.85`.
-- **note_opacity_multiplier**: `opacity` of all notes will be multiplied by this value. Default `1`.
+- **storyboard_opacity**: `opacity` of all storyboard scene objects. 默认为1`.
+- **ui_opacity**: opacity of the game UI (score, info, pause button...). 默认为1`.
+- **scanline_opacity**: opacity of the scanline. 默认为1`.
+- **background_dim**: opacity of the background dim. 默认为0.85`.
+- **note_opacity_multiplier**: `opacity` of all notes will be multiplied by this value. 默认为1`.
 - **scanline_color**: override the scanline color. If not set (or set to `null`), `#ffffff` will be used when the chart is not changing speed, `#d25669` for speeding up,  `#a0c8bf` for speeding down.
 - **note_ring_color**: override the ring color of all note. If not set (or set to `null`), user ring color is used.
 - 🌟 **note_fill_colors**: override the fill colors of **different types of notes**.
@@ -777,64 +793,75 @@
         ```
 
     - Note: if any color is not set (or set to `null`), user color will be used.
-- **override_scanline_pos**: if `true`, the y-coordinate of the scanline is overriden. See `scanline_pos`. Default `false`.
+- **override_scanline_pos**: if `true`, the y-coordinate of the scanline is overriden. See `scanline_pos`. 默认为false`.
 - **scanline_pos**: overridden y-coordinate of the scanline. Default minimum `0` and maximum `1`, but out-of-bound values are also accepted. Default coordinate system noteY.
-- **perspective**: if `true`, a perspective camera is used; if `false`, an orthographic camera is used. Default `true`.
-- **size**: only takes effect if `perspective` is `false`. Controls the viewport size of the orthographic camera. Larger the size, smaller the scene. Default `5`.
-- **fov**: only takes effect if `perspective` is `true`. Controls the field of view of the perspective camera (basically equivalent to `size`, but for the perspective camera). Larger the field of view, smaller the scene. Default `53.2`.
+- **perspective**: if `true`, a perspective camera is used; if `false`, an orthographic camera is used. 默认为true`.
+- **size**: only takes effect if `perspective` is `false`. Controls the viewport size of the orthographic camera. Larger the size, smaller the scene. 默认为5`.
+- **fov**: only takes effect if `perspective` is `true`. Controls the field of view of the perspective camera (basically equivalent to `size`, but for the perspective camera). Larger the field of view, smaller the scene. 默认为53.2`.
     - Hint: to create the pulsing effect, increase this value from `53.2` to `59.2` (or any number larger than `53.2`), then decrease to `53.2` again.
     - `53.2` is a magic number that ensures even in perspective mode, the note size is approximately the same as in orthographic mode.
-- **x**: x-coordinate of the camera. A greater value shifts the whole scene to left, vice versa. A length of `1` 等同于 half the screen width. Default `0`. Default coordinate system cameraX.
-- **y**: y-coordinate of the camera. A greater value shifts the whole scene to bottom, vice versa. A length of `1` 等同于 half the screen height. Default `0`. Default coordinate system cameraY.
-- 🌟 **z**: z-coordinate of the camera. A greater value moves the camera closer to the notes, vice versa. Default `-10`. Default coordinate system depth.
-- **rot_x**, **rot_y**, **rot_z**: rotations of the camera. Default `0`.
+- **x**: x-coordinate of the camera. A greater value shifts the whole scene to left, vice versa. A length of `1` 等同于 half the screen width. 默认为0`. Default coordinate system cameraX.
+- **y**: y-coordinate of the camera. A greater value shifts the whole scene to bottom, vice versa. A length of `1` 等同于 half the screen height. 默认为0`. Default coordinate system cameraY.
+- 🌟 **z**: z-coordinate of the camera. A greater value moves the camera closer to the notes, vice versa. 默认为-10`. Default coordinate system depth.
+- **rot_x**, **rot_y**, **rot_z**: rotations of the camera. 默认为0`.
+    
     - Hint: if you rotate along the x or y axis, part of the scene may not be able to be seen; you have to adjust the coordinates of the camera accordingly. If change `rot_x`, move `y`; if change `rot_y`, move `x`.
-- 🌟 **Removed in 2.0.0. ~~vignette**: boolean to toggle the vignette effect. Default `false`.~~
+- 🌟 **Removed in 2.0.0. ~~vignette**: boolean to toggle the vignette effect. 默认为false`.~~
     - **~~vignette_intensity**: the intensity of the vignette effect. Ranged `0` to `1`.~~
     - **~~vignette_color**: the color of the vignette effect in the hex representation.~~
     - **~~vignette_start, vignette_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.~~
-- 🌟 **Removed in 2.0.0.** **~~chromatic**: boolean to toggle the chromatic aberration effect. Default `false`.~~
+- 🌟 **Removed in 2.0.0.** **~~chromatic**: boolean to toggle the chromatic aberration effect. 默认为false`.~~
     - **~~chromatic_intensity**: the intensity of the chromatic effect. Typically ranged `0` to `0.15`, although larger values can be set for distorting effects.~~
     - **~~chromatic_start, chromatic_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.~~
-- **chromatical**: boolean to toggle the chromatical ****effect. Default `false`.
+- **chromatical**: boolean to toggle the chromatical ****effect. 默认为false`.
     - This effect is basically an automated chromatic aberration effect.
     - **chromatical_fade**: the transparency of the chromatical effect. Ranged `0` to `1`.
     - **chromatical_intensity**: the intensity of the chromatical effect. Ranged `0` to `1`.
     - **chromatical_speed**: the speed of the chromatical effect. Ranged `0` to `3`.
-- **bloom**: boolean to toggle the bloom effect. Default `false`.
+- **bloom**: boolean to toggle the bloom effect. 默认为false`.
+    
     - **bloom_intensity**: Ranged `0` to `5`.
-- **radial_blur**: boolean to toggle the radial blur effect. Default `false`.
-    - **radial_blur_intensity**: Ranged `-0.5` to `0.5`. Default `0.025`.
-- **color_adjustment**: boolean to toggle color adjustment. Default `false`.
-    - **brightness**: Ranged `0` to `10`. Default `1`.
-    - **saturation**: Ranged `0` to `10`. Default `1`.
-    - **contrast**: Ranged `0` to `10`. Default `1`.
-- **color_filter**: boolean to toggle the screen color filter. Default `false`.
+- **radial_blur**: boolean to toggle the radial blur effect. 默认为false`.
+    
+    - **radial_blur_intensity**: Ranged `-0.5` to `0.5`. 默认为0.025`.
+- **color_adjustment**: boolean to toggle color adjustment. 默认为false`.
+    - **brightness**: Ranged `0` to `10`. 默认为1`.
+    - **saturation**: Ranged `0` to `10`. 默认为1`.
+    - **contrast**: Ranged `0` to `10`. 默认为1`.
+- **color_filter**: boolean to toggle the screen color filter. 默认为false`.
+    
     - **color_filter_color**: color of the screen filter in the hex representation.
-- **gray_scale**: boolean to toggle the gray scale effect. Default `false`.
+- **gray_scale**: boolean to toggle the gray scale effect. 默认为false`.
+    
     - **gray_scale_intensity**: Ranged `0` to `1`.
-- **noise**: boolean to toggle the noise effect. Default `false`.
-    - **noise_intensity**: Ranged `0` to `1`. Default `0.235`.
-- **sepia**: boolean to toggle the sepia effect. Default `false`.
+- **noise**: boolean to toggle the noise effect. 默认为false`.
+    
+    - **noise_intensity**: Ranged `0` to `1`. 默认为0.235`.
+- **sepia**: boolean to toggle the sepia effect. 默认为false`.
+    
     - **sepia_intensity**: Ranged `0` to `1`.
-- **dream**: boolean to toggle the dream effect. Default `false`.
+- **dream**: boolean to toggle the dream effect. 默认为false`.
+    
     - **dream_intensity**: Ranged `0` to `1`.
-- **fisheye**: boolean to toggle the fisheye effect. Default `false`.
-    - **fisheye_intensity**: Ranged `0` to `1`. Default `0.5`.
-- **shockwave**: boolean to toggle the shockwave ****effect. Default `false`.
-    - **shockwave_speed**: Ranged `0` to `10`.  Default `1`.
-- **focus**: boolean to toggle the focus (manga focus lines) ****effect. Default `false`.
-    - **focus_size**: Ranged `1` to `10`.  Default `1`.
+- **fisheye**: boolean to toggle the fisheye effect. 默认为false`.
+    
+    - **fisheye_intensity**: Ranged `0` to `1`. 默认为0.5`.
+- **shockwave**: boolean to toggle the shockwave ****effect. 默认为false`.
+    
+    - **shockwave_speed**: Ranged `0` to `10`.  默认为1`.
+- **focus**: boolean to toggle the focus (manga focus lines) ****effect. 默认为false`.
+    - **focus_size**: Ranged `1` to `10`.  默认为1`.
     - **focus_color**: color of the focus lines in the hex representation.
-    - **focus_speed**: Ranged `0` to `30`. Default `5`.
-    - **focus_intensity**: Ranged `0` to `1`. Default `0.25`.
-- **glitch**: boolean to toggle the glitch effect. Default `false`.
+    - **focus_speed**: Ranged `0` to `30`. 默认为5`.
+    - **focus_intensity**: Ranged `0` to `1`. 默认为0.25`.
+- **glitch**: boolean to toggle the glitch effect. 默认为false`.
+    
     - **glitch_intensity**: Ranged `0` to `1`.
-- **arcade**: boolean to toggle the focus (manga focus lines) ****effect. Default `false`.
-    - **arcade_intensity**: Ranged `0` to `1`.  Default `1`.
-    - **arcade_interference_size**: Ranged `0` to `10`. Default `1`.
-    - **arcade_interference_speed**: Ranged `0` to `10`. Default `0.5`.
-    - **arcade_contrast**: Ranged `0` to `10`. Default `1`.
+- **arcade**: boolean to toggle the focus (manga focus lines) ****effect. 默认为false`.
+    - **arcade_intensity**: Ranged `0` to `1`.  默认为1`.
+    - **arcade_interference_size**: Ranged `0` to `10`. 默认为1`.
+    - **arcade_interference_speed**: Ranged `0` to `10`. 默认为0.5`.
+    - **arcade_contrast**: Ranged `0` to `10`. 默认为1`.
 - **tape**: boolean to toggle the tape (screen flipping) effect.
 
 **Obsolete. Do not use—will be replaced with storyboard events in a future release.**
@@ -846,7 +873,7 @@
     - `~~noteClear`: If any note in `notes` is cleared, this trigger is fired.~~
     - `~~combo`: If the combo amount reachs `combo`, this trigger is fired.~~
     - `~~score`: If the score amount reaches `score`, this trigger is fired **and destroyed, regardless of `uses`**.~~
-- **~~uses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. Default `0`.~~
+- **~~uses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. 默认为0`.~~
 - **~~notes**: (only when `type` equals `noteClear`) a list of note ids.~~
     - ~~Example: if set to `[352, 353, 390]` and `type` is set to `noteClear`, this trigger will fire when any of the notes 352, 353, and 390 is cleared.~~
 - **~~combo**: (only when `type` equals `combo`) an integer.~~
