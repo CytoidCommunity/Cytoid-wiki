@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Overpass+Mono:400,700|Nunito:300,400,700&display=swap");
+@import url("https://fonts.font.im/css?family=Noto+Sans+SC:400,700|Overpass+Mono:400,700|Nunito:300,400,700&display=swap");
 
 body {
-    font-family: "Nunito", "Helvetica Neue", "Arial", sans-serif;
+    font-family: "Nunito", "Noto Sans SC", "Helvetica Neue", "Arial", sans-serif;
 }
 
 .markdown-section p.tip:before {
-    font-family: "Nunito", "Helvetica Neue", "Arial", sans-serif;
+    font-family: "Nunito", "Noto Sans SC", "Helvetica Neue", "Arial", sans-serif;
 }
 
 .markdown-section code,
