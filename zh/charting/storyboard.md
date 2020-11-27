@@ -18,14 +18,14 @@
     - **notes** 的坐标系和谱面相同. 如图, X/Y的坐标范围应为 [0, 1], 其中, (0, 0) 是该坐标系的左下角.
         - 这个坐标系的 X 轴和 Y 轴 被称为 `noteX` 和 `noteY`.
 
-    ![_source_StoryBoard.md/pic1.png](_source_StoryBoard.md/pic1.png ":no-zoom")
+    ![_source_StoryBoard.md/pic1.png](_source_StoryBoard.md/pic1.jpg ":no-zoom")
 
     - 游戏内的 **camera**(相机) 有他自己基于 [orthographic size(正交尺寸)](https://docs.unity3d.com/ScriptReference/Camera-orthographicSize.html) 的坐标系. 默认情况下, 相机位于 (0, 0).
         - 这个坐标系的 X 轴和 Y 轴 被称为 `cameraX` 和 `cameraY`.
 
-        ![_source_StoryBoard.md/Copy_of_dia.png](_source_StoryBoard.md/pic2.png ":no-zoom")
+        ![_source_StoryBoard.md/pic2.jpg](_source_StoryBoard.md/pic2.jpg ":no-zoom")
 
-        ![_source_StoryBoard.md/Copy_of_dia_(1).png](_source_StoryBoard.md/pic3.png ":no-zoom")
+        ![_source_StoryBoard.md/pic3.jpg](_source_StoryBoard.md/pic3.jpg ":no-zoom")
 
     - 最后, 游戏中还有一个 **Z 轴**, 用于处理3D坐标中的深度. 您无需关注这个坐标轴, 除非您在 `scene controller` 中,将 **perspective** 选项调至 `true`.
         
