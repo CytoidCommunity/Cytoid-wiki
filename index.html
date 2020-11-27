@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="/site-source/css/style.css" title="vue">
     <link rel="stylesheet" href="/site-source/css/lang/zh/fonts.css">
+    <link rel="stylesheet" href="/site-source/css/toastr.min.css">
     <style>
         body.notranload {
             -webkit-transition: none !important;
@@ -88,6 +89,7 @@
 
     <link rel="stylesheet" href="/site-source/css/jquery.fancybox.min.css">
     <script src="/site-source/js/jquery.fancybox.min.js"></script>
+    <script src="/site-source/js/toastr.min.js"></script>
 
     <link rel="stylesheet" href="/site-source/css/font-awesome.min.css">
 
@@ -130,6 +132,21 @@
     <script src="/site-source/js/btn-float-ios.js"></script>
     <script src="/site-source/js/auto-dark-mode.js"></script>
     <script src="/site-source/js/i18n.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){$('[data-toggle="popover"]').popover()});
+        toastr.options.newestOnTop = false;
+        toastr.options.positionClass = "toast-top-center";
+        toastr.options.showMethod = 'slideDown';
+        toastr.options.hideMethod = 'slideUp';
+        toastr.options.showEasing = 'easeInQuad';
+        toastr.options.hideEasing = 'easeOutQuad';
+        toastr.options.preventDuplicates = true;
+        toastr.options.timeOut = 1800; // How long the toast will display without user interaction
+        toastr.options.extendedTimeOut = 2500; // How long the toast will display after a user hovers over it
+        toastr.options.progressBar = true;
+        function showMsg(msg) {toastr.info(msg);}
+    </script>
 
 </body>
 
