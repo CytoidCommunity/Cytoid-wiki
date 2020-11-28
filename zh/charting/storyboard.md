@@ -854,7 +854,7 @@
         - 有一点需要特别留意, 尽管 note 控制器没有出现在游戏中, 反它们实际上有个"隐性位置", 这个位置与 **对应 note 的位置重合**! 因此, 如果您需要将某个场景对象与一个 note 对齐, 只需要为这个 note 定义一个 note 控制器, 然后将场景对象的 `parent_id` 设置为 note 控制器的 ID 即可.
 - 常用技巧:
     - 要创建下落式玩法, 只需将 `override_y` 设置为 `true`, 并让 note 按照 `time` = `intro:$note` 且 `y` = `2`(或者任意超出屏幕边缘的值), 到 `time` = `intro:$note` 且 `y` = `0` 的始末状态运动.
-        - 在 [Interference: Finale](https://cytoid.io/levels/io.cytoid.interference3) EX 难度的 StoryBoard 中, 出现了下落式和扫描线式两种玩法混合. 这是因为在谱面中, 需要下落式的note都被放置在了 X = 4 上, 因此只需在 StoryBoard 中选择所有 X = 4 的 note, 重新安排它们的 X 坐标, 并让它们按照下落式的方式处理, 使得其他的 note 保持"正常".
+        - 在 [Interference: Finale](https://cytoid.io/levels/io.cytoid.interference3) EX 难度的 StoryBoard 中, 出现了下落式和扫描线式两种玩法混合. 这是因为在谱面中, 需要下落式的note都被放置在了 X = 0.4 上, 因此只需在 StoryBoard 中选择所有 X = 0.4 的 note, 重新安排它们的 X 坐标, 并让它们按照下落式的方式处理, 使得其他的 note 保持"正常".
             - 注意: 由于小数存在精度损失, 请不要像这样选择位于 X = 0.4 的note:
 
                 ```json
@@ -876,7 +876,7 @@
     - 要按照曲线移动 note, 请使用两个 note 控制器. 一个控制 `x` 坐标运动, 一个控制 `y` 坐标运动, 并为它们设置不同的 `easing`(缓动) (例如, 分别设置为 `easeInCirc` 和 `easeOutCirc`, 使 note 按照 1/4 圆的轨迹运动).
     - 固定 `y` 坐标, 以模仿 osu! 的游戏玩法.
 
-**以下为过时内容. 请勿使用, 未来将会被StoryBoard事件取代.**
+**以下为过时内容. 请勿使用, 未来将会被 StoryBoard 事件取代.**
 
 ### ~~Trigger State *(Experimental)*~~ *被移除*
 
