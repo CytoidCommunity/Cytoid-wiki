@@ -8,7 +8,7 @@
 
 ***在下方下载Cytoid Player!***
 
-[CytoidPlayer 2.0.2.zip](https://drive.google.com/file/d/1skBP8u_LTDloTxXr3cVl8YdJzmgMkywi/view?usp=drivesdk)
+[CytoidPlayer 2.0.2.7z](https://teages.lanzous.com/ij8S1iuq9be)
 
 ## 🌟 坐标系
 
