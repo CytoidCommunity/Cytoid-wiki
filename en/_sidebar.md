@@ -3,10 +3,9 @@
 - [Cytoid](/cytoid/)
   - [Events](/cytoid/events)
     - [In-game Events](/cytoid/events/in-game-events)
-
-- [Gameplay](/gameplay/)
-    - [How to Play](/gameplay/how_to_play)
-    - [Game Mechanics](/gameplay/mechanism)
+  - [Game mechanics](/cytoid/gameplay/)
+      - [Note types](/cytoid/gameplay/general)
+      - [Ranked v.s. Practice](/cytoid/gameplay/play-modes)
     
 - [Charting](/charting/)
     - [Charting](/charting/charting)
