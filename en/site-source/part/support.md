@@ -1,6 +1,9 @@
 
 ## Download Cytoid
 <div>
+<a href='https://play.google.com/store/apps/details?id=me.tigerhix.cytoid&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="height:50px;"><img data-no-zoom alt='Get it on Google Play' style="height:50px;" src='https://lh3.googleusercontent.com/qF9r3ZjtgG-qyHdmjecArtKiulz1gmwL_xl9R3_fzk6igSeoN0wYbJSKEX5d_fxJRwYZJpHbqcLB3i9atl-9dOfUl9an7U43TfZ9PtQ=s0'/></a>
+<a href="https://apps.apple.com/us/app/cytoid/id1266582726?itsct=apps_box&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; height: 50px;"><img data-no-zoom src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp;releaseDate=1502668800&h=b28e0b0057e276627e4d9b04dd553ae0" alt="Download on the App Store" style="border-radius: 13px; height: 50px;"></a>
+
 <iframe src="https://www.taptap.com/widget/158749?platform=ios" style="height:90px;width:100%;max-width:480px;min-width:200px;border:0;"></iframe>
 </div>
 
