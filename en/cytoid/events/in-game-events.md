@@ -51,7 +51,7 @@
   - Charter: ECIC1 and geswat001122
   - Difficulty: 8 - 13 - 15+
 
-###### Các tier trong sự kiện:
+###### Tiers in this event:
 - Tier 1: Obtain grade of A or higher on Easy, Hard or EX difficulty of "Ginevra", "DhAneLLeis", "Hopeful Restart"
 - Tier 2: Obtain grade of S or higher on Hard or EX difficulty of "Ginevra", "DhAneLLeis", "Hopeful Restart"
 - Tier 3: Obtain grade of SSS or higher on EX difficulty of "Ginevra", and obtain grade of SS or higher on EX difficulty of "DhAneLLeis", and obtain grade of AA or higher on EX difficulty of "DhAneLLeis" "Hopeful Restart"
