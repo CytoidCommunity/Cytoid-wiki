@@ -8,7 +8,7 @@
 
 ***在下方下载Cytoid Player!***
 
-[CytoidPlayer 2.0.2.zip](https://drive.google.com/file/d/1skBP8u_LTDloTxXr3cVl8YdJzmgMkywi/view?usp=drivesdk)
+[CytoidPlayer 2.0.2.7z](https://teages.lanzous.com/ij8S1iuq9be)
 
 ## 🌟 坐标系
 
@@ -18,14 +18,14 @@
     - **notes** 的坐标系和谱面相同. 如图, X/Y的坐标范围应为 [0, 1], 其中, (0, 0) 是该坐标系的左下角.
         - 这个坐标系的 X 轴和 Y 轴 被称为 `noteX` 和 `noteY`.
 
-    ![_source_StoryBoard.md/dia_(3).png](_source_StoryBoard.md/dia_(3).png)
+    ![_source_StoryBoard.md/pic1.png](_source_storyboard.md/pic1.jpg ":no-zoom")
 
     - 游戏内的 **camera**(相机) 有他自己基于 [orthographic size(正交尺寸)](https://docs.unity3d.com/ScriptReference/Camera-orthographicSize.html) 的坐标系. 默认情况下, 相机位于 (0, 0).
         - 这个坐标系的 X 轴和 Y 轴 被称为 `cameraX` 和 `cameraY`.
 
-        ![_source_StoryBoard.md/Copy_of_dia.png](_source_StoryBoard.md/Copy_of_dia.png)
+        ![_source_StoryBoard.md/pic2.jpg](_source_storyboard.md/pic2.jpg ":no-zoom")
 
-        ![_source_StoryBoard.md/Copy_of_dia_(1).png](_source_StoryBoard.md/Copy_of_dia_(1).png)
+        ![_source_StoryBoard.md/pic3.jpg](_source_storyboard.md/pic3.jpg ":no-zoom")
 
     - 最后, 游戏中还有一个 **Z 轴**, 用于处理3D坐标中的深度. 您无需关注这个坐标轴, 除非您在 `scene controller` 中,将 **perspective** 选项调至 `true`.
         
@@ -616,7 +616,7 @@
         }
         ```
 
-    - 选中全部nite (等效于不使用任何过滤器):
+    - 选中全部 note (等效于不使用任何过滤器):
 
         ```json
         {}
@@ -854,7 +854,7 @@
         - 有一点需要特别留意, 尽管 note 控制器没有出现在游戏中, 反它们实际上有个"隐性位置", 这个位置与 **对应 note 的位置重合**! 因此, 如果您需要将某个场景对象与一个 note 对齐, 只需要为这个 note 定义一个 note 控制器, 然后将场景对象的 `parent_id` 设置为 note 控制器的 ID 即可.
 - 常用技巧:
     - 要创建下落式玩法, 只需将 `override_y` 设置为 `true`, 并让 note 按照 `time` = `intro:$note` 且 `y` = `2`(或者任意超出屏幕边缘的值), 到 `time` = `intro:$note` 且 `y` = `0` 的始末状态运动.
-        - 在 [Interference: Finale](https://cytoid.io/levels/io.cytoid.interference3) EX 难度的 StoryBoard 中, 出现了下落式和扫描线式两种玩法混合. 这是因为在谱面中, 需要下落式的note都被放置在了 X = 4 上, 因此只需在 StoryBoard 中选择所有 X = 4 的 note, 重新安排它们的 X 坐标, 并让它们按照下落式的方式处理, 使得其他的 note 保持"正常".
+        - 在 [Interference: Finale](https://cytoid.io/levels/io.cytoid.interference3) EX 难度的 StoryBoard 中, 出现了下落式和扫描线式两种玩法混合. 这是因为在谱面中, 需要下落式的note都被放置在了 X = 0.4 上, 因此只需在 StoryBoard 中选择所有 X = 0.4 的 note, 重新安排它们的 X 坐标, 并让它们按照下落式的方式处理, 使得其他的 note 保持"正常".
             - 注意: 由于小数存在精度损失, 请不要像这样选择位于 X = 0.4 的note:
 
                 ```json
@@ -876,7 +876,7 @@
     - 要按照曲线移动 note, 请使用两个 note 控制器. 一个控制 `x` 坐标运动, 一个控制 `y` 坐标运动, 并为它们设置不同的 `easing`(缓动) (例如, 分别设置为 `easeInCirc` 和 `easeOutCirc`, 使 note 按照 1/4 圆的轨迹运动).
     - 固定 `y` 坐标, 以模仿 osu! 的游戏玩法.
 
-**以下为过时内容. 请勿使用, 未来将会被StoryBoard事件取代.**
+**以下为过时内容. 请勿使用, 未来将会被 StoryBoard 事件取代.**
 
 ### ~~Trigger State *(Experimental)*~~ *被移除*
 
