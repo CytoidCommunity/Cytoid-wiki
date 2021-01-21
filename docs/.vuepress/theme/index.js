@@ -1,3 +1,7 @@
+module.exports = {
+  extend: '@vuepress/theme-default'
+}
+
 const path = require('path')
 
 // Theme API.

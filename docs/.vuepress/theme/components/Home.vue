@@ -25,6 +25,16 @@
       </p>
 
       <p
+        v-if="data.subactionText && data.subactionLink"
+        class="action"
+      >
+        <NavLink
+          class="subaction-button"
+          :item="subactionLink"
+        />
+      </p>
+
+      <p
         v-if="data.actionText && data.actionLink"
         class="action"
       >
@@ -73,6 +83,13 @@ export default {
       return this.$page.frontmatter
     },
 
+    subactionLink () {
+      return {
+        link: this.data.subactionLink,
+        text: this.data.subactionText
+      }
+    },
+
     actionLink () {
       return {
         link: this.data.actionLink,
@@ -105,6 +122,18 @@ export default {
       font-size 1.6rem
       line-height 1.3
       color lighten($textColor, 40%)
+    .subaction-button
+      display inline-block
+      font-size 1.2rem
+      color #fff
+      background-color $accentColor
+      padding 0.8rem 1.6rem
+      border-radius 4px
+      transition background-color .1s ease
+      box-sizing border-box
+      border-bottom 1px solid darken($accentColor, 10%)
+      &:hover
+        background-color lighten($accentColor, 10%)
     .action-button
       display inline-block
       font-size 1.2rem
@@ -166,6 +195,9 @@ export default {
         margin 1.2rem auto
       .description
         font-size 1.2rem
+      .subaction-button
+        font-size 1rem
+        padding 0.6rem 1.2rem
       .action-button
         font-size 1rem
         padding 0.6rem 1.2rem
