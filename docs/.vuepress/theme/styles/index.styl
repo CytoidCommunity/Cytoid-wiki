@@ -197,14 +197,14 @@ html.darkmode
 
 .search-box
   input
-    background #fff url(/site-source/pic/search.svg) 0.6rem 0.6rem no-repeat !important
+    background #fff url(/site-source/pic/search.svg) 0.8rem 0.6rem no-repeat !important
 
 
 body.darkmode
   color $textDarkColor
   .search-box
     input
-      background #282c34 url(/site-source/pic/search.svg) 0.6rem 0.6rem no-repeat !important
+      background #282c34 url(/site-source/pic/search.svg) 0.8rem 0.6rem no-repeat !important
       border $codeBgColor
   .navbar
     background-color $backgroundNavBarDarkColor
@@ -237,6 +237,11 @@ body.darkmode
       background-color $indexBGDarkColor
   th, td
     border 1px solid $indexBorderDarkColor
+
+body, html, .sidebar, .navbar
+  transition color 0.2s, background 0.2s, border-bottom 0.2s ease
+.sidebar-sub-header
+  transition color 0.2s, background 0.2s, border-bottom 0.2s ease
 
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar

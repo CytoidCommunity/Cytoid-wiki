@@ -110,7 +110,7 @@ export default {
 
 .sidebar-heading
   color $textColor
-  transition color .15s ease
+  // transition color .2s ease
   cursor pointer
   font-size 1.1em
   font-weight bold
