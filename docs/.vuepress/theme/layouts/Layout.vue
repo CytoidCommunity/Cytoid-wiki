@@ -5,6 +5,9 @@
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
+
+    <FloatButton />
+
     <Navbar
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
@@ -49,6 +52,7 @@ import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
+import FloatButton from '@theme/components/FloatButton.vue'
 
 export default {
   name: 'Layout',
@@ -57,7 +61,8 @@ export default {
     Home,
     Page,
     Sidebar,
-    Navbar
+    Navbar,
+    FloatButton
   },
 
   data () {
