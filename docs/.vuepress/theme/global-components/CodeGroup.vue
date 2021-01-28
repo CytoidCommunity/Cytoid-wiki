@@ -97,9 +97,9 @@ export default {
     font-weight: 600;
   }
   .theme-code-group__nav-tab-active {
-    border-bottom: #42b983 1px solid;
+    border-bottom: $badgeTipColor 1px solid;
   }
   .pre-blank {
-    color: #42b983;
+    color: $badgeTipColor;
   }
 </style>

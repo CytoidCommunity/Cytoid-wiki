@@ -58,5 +58,5 @@ export default {
     margin-top 0
     padding-top 1rem
     opacity 1
-    border-top 1px solid #eaecef
+    border-top 1px solid $borderColor
 </style>

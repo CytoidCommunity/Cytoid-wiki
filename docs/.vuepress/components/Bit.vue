@@ -17,13 +17,13 @@
 <style lang="stylus">
 .bit-sponsor
   font-weight 600
-  background-color #f3f6f8
+  background-color $bitBackgroundColor
   padding 0.6em 1.2em
   border-radius 8px
   display inline-block
   margin 1em 0 !important
   a
-    color #999
+    color $liteBordardColor
   img
     height 40px
     margin-left 15px

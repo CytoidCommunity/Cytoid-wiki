@@ -137,7 +137,7 @@ body
   z-index -2
 .background-dim
   position fixed
-  background #ffffff
+  background $backgroundColor
   opacity 0.7
   width 100vw
   height 100vh
@@ -150,7 +150,7 @@ body
   margin 0px auto
   display grid
   text-align center
-  background #fffc
+  background $backgroundDimColor
   position relative
   z-index 0
   .hero
@@ -181,7 +181,7 @@ body
       margin 1em
       font-size 1.2rem
       color $accentColor
-      background-color #fff
+      background-color $backgroundColor
       padding 0.8rem 1.6rem
       border-radius 2rem
       transition background-color .1s ease
@@ -193,7 +193,7 @@ body
       display inline-block
       margin 1em
       font-size 1.2rem
-      color #fff
+      color $backgroundColor
       background-color $accentColor
       padding 0.8rem 1.6rem
       border-radius 2rem
