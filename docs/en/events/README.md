@@ -49,7 +49,7 @@ lang: en-US
 - MYUKKE. - Ginevra
   - Charter: Helamind_CW and he2o3
   - Difficulty: 4 - 8 - 12
--  N.H.I - DhAneLLeis
+- N.H.I - DhAneLLeis
   - Charter: Triquinacene
   - Difficulty: 4 - 10 - 15
 - cosMo@暴走P - Hopeful Restart

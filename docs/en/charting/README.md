@@ -1,7 +1,9 @@
 ---
-title: Charting
+title: Start Charting
 lang: en-US
 ---
+
+# Start Charting
 
 Welcome to the world of charting fanmade Cytus/Cytoid Charts! To get started, you need the following things:
 

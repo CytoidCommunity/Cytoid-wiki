@@ -65,49 +65,60 @@ module.exports = () => ({
           '/en/gameplay/': [
             {
               title: "Gameplay",
-              sidebarDepth: 3,
+              sidebarDepth: 2,
               collapsable: false,
               children: [
-                '',
-                'general',
-                'mechanism'
+                ''
               ]
             }
           ],
           '/en/charting/': [
             {
-              title: "Charting ABC",
+              title: "Getting Start",
               sidebarDepth: 3,
               collapsable: false,
               children: [
                 '',
-                'level.json',
-                'packing',
+                'abc',
+              ]
+            },
+            {
+              title: "Charting Tools",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                'tools/cylheim',
+                'tools/pctyx',
+                'tools/mobile',
+                'tools/cy2unity',
+                'tools/cyunity',
+                'tools/other'
+              ]
+            },
+            {
+              title: "Testing with Cytoid",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                'cytoid/level.json',
+                'cytoid/packing'
+              ]
+            },
+            {
+              title: "Share on Cytoid IO",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                'cytoidio/rules',
+                'cytoidio/upload'
+              ]
+            },
+            {
+              title: "More",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
                 'charting-and-you'
-              ]
-            },
-            {
-              title: "Charting with C2 format",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'c2/',
-                'c2/cylheim',
-                'c2/pctyx',
-                'c2/cy2unity',
-                'c2/mobile',
-                'c2/other'
-              ]
-            },
-            {
-              title: "Charting with C1 format",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'c1/',
-                'c1/pctyx',
-                'c1/cyunity',
-                'c1/cylheim'
               ]
             }
           ],
@@ -129,7 +140,8 @@ module.exports = () => ({
               collapsable: false,
               children: [
                 '',
-                'other'
+                'official',
+                'community'
               ]
             }
           ],
