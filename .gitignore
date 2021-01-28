@@ -7,4 +7,6 @@ dist
 yarn.lock
 package-lock.json
 
-.vuepress/
+.vuepress-org
+wiki-html
+docubc/

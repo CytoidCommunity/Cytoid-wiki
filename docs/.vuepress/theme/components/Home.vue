@@ -4,45 +4,57 @@
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
   >
     <header class="hero">
-      <img
-        v-if="data.heroImage"
-        :src="$withBase(data.heroImage)"
-        :alt="data.heroAlt || 'hero'"
-      >
+      <div style="z-index: 1;">
+        <img
+          v-if="data.heroImage"
+          :src="$withBase(data.heroImage)"
+          :alt="data.heroAlt || 'hero'"
+        >
 
-      <h1
-        v-if="data.heroText !== null"
-        id="main-title"
-      >
-        {{ data.heroText || $title || 'Hello' }}
-      </h1>
+        <h1
+          v-if="data.heroText !== null"
+          id="main-title"
+        >
+          <span>
+            {{ data.heroText || $title || 'Hello' }}
+            <small>
+              {{ data.heroVersion || '' }}
+            </small>
+          </span>
+        </h1>
 
-      <p
-        v-if="data.tagline !== null"
-        class="description"
-      >
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-      </p>
+        <p
+          v-if="data.tagline !== null"
+          class="description"
+        >
+          {{ data.tagline || $description || 'Let\'s shape the music world together.' }}
+        </p>
 
-      <p
-        v-if="data.subactionText && data.subactionLink"
-        class="action"
-      >
-        <NavLink
-          class="subaction-button"
-          :item="subactionLink"
-        />
-      </p>
+        <div
+          class = "guide-btn-box"
+        >
+          <div
+            v-if="data.subactionText && data.subactionLink"
+            class="action"
+          >
+            <NavLink
+              class="subaction-button"
+              :item="subactionLink"
+            />
+          </div>
 
-      <p
-        v-if="data.actionText && data.actionLink"
-        class="action"
-      >
-        <NavLink
-          class="action-button"
-          :item="actionLink"
-        />
-      </p>
+          <div
+            v-if="data.actionText && data.actionLink"
+            class="action"
+          >
+            <NavLink
+              class="action-button"
+              :item="actionLink"
+            />
+          </div>
+        </div>
+
+      </div>
     </header>
 
     <div
@@ -67,6 +79,11 @@
     >
       {{ data.footer }}
     </div>
+    <div class="background-img"> 123
+    </div>
+    <div class="background-dim"> 123
+    </div>
+
   </main>
 </template>
 
@@ -101,46 +118,85 @@ export default {
 </script>
 
 <style lang="stylus">
+html
+  height 100%
+body
+  height 100%
+  #app
+    height 100%
+.theme-container
+  height 100%
+  //background url("/site-source/pic/backgrounds/palescreen.jpg") center center / cover
+.background-img
+  background url("/./site-source/pic/background.jpg") center center / cover
+  position fixed
+  width 100vw
+  height 100vh
+  top 0
+  right 0
+  z-index -2
+.background-dim
+  position fixed
+  background #ffffff
+  opacity 0.7
+  width 100vw
+  height 100vh
+  top 0
+  right 0
+  z-index -1
 .home
-  padding $navbarHeight 2rem 0
+  padding 15% 2rem 0
   max-width $homePageWidth
   margin 0px auto
-  display block
+  display grid
+  text-align center
+  background #fffc
+  position relative
+  z-index 0
   .hero
     text-align center
     img
-      max-width: 100%
-      max-height 280px
+      max-width: 130px
+      max-height 100%
       display block
       margin 3rem auto 1.5rem
     h1
       font-size 3rem
+      small
+        font-size: 1rem;
+        position : absolute;
     h1, .description, .action
       margin 1.8rem auto
     .description
       max-width 35rem
       font-size 1.6rem
       line-height 1.3
-      color lighten($textColor, 40%)
+      color lighten($textColor, 20%)
+    .guide-btn-box
+      max-width 400px
+      margin auto
+      display inline-flex
     .subaction-button
       display inline-block
+      margin 1em
       font-size 1.2rem
-      color #fff
-      background-color $accentColor
+      color $accentColor
+      background-color #fff
       padding 0.8rem 1.6rem
-      border-radius 4px
+      border-radius 2rem
       transition background-color .1s ease
       box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
+      border 2px solid darken($accentColor, 10%)
       &:hover
-        background-color lighten($accentColor, 10%)
+        color darken($accentColor, 50%)
     .action-button
       display inline-block
+      margin 1em
       font-size 1.2rem
       color #fff
       background-color $accentColor
       padding 0.8rem 1.6rem
-      border-radius 4px
+      border-radius 2rem
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($accentColor, 10%)

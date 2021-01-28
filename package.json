@@ -11,6 +11,7 @@
     "docs:eject": "vuepress eject"
   },
   "devDependencies": {
+    "vue-toasted": "^1.1.28",
     "vuepress": "^1.7.1"
   }
 }
