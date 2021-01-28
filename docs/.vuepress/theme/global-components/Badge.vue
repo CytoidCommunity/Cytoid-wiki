@@ -41,4 +41,15 @@ export default {
     background-color $badgeWarningColor
   & + &
     margin-left 5px
+
+body.darkmode 
+  .badge
+    background-color $badgeTipDarkColor
+    &.tip, &.green
+      background-color $badgeTipDarkColor
+    &.error
+      background-color $badgeErrorDarkColor
+    &.warning, &.warn, &.yellow
+      background-color $badgeWarningDarkColor
+
 </style>

@@ -189,6 +189,44 @@ th, td
     .sidebar
       top 0
 
+html.darkmode
+  background-color $backgroundDarkColor
+
+body.darkmode
+  color $textDarkColor
+  background-color $backgroundDarkColor
+  .navbar
+    background-color $backgroundDimDarkColor
+    border-bottom 1px solid $borderDarkColor
+  .sidebar
+    background-color $backgroundDarkColor
+    border-right 1px solid $borderDarkColor
+  p.demo
+    border 1px solid $subBorderDarkColor
+  a
+    color $accentDarkColor
+  p a code
+    color $accentDarkColor
+
+  kbd
+    background $subBorder2DarkColor
+    border solid 0.15rem $subBorderDarkColor
+    border-bottom solid 0.25rem $subBorderDarkColor
+
+  blockquote
+    color $liteBordardDarkColor;
+    border-left .2rem solid $indexBorderDarkColor
+  h2
+    border-bottom 1px solid $borderDarkColor
+  hr
+    border-top 1px solid $borderDarkColor
+  tr
+    border-top 1px solid $indexBorderDarkColor
+    &:nth-child(2n)
+      background-color $indexBGDarkColor
+  th, td
+    border 1px solid $indexBorderDarkColor
+
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar
     .sidebar
@@ -196,5 +234,6 @@ th, td
 
     .page
       padding-left 0
+
 
 @require 'mobile.styl'

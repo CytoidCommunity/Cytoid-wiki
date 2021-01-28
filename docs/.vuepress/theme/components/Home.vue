@@ -260,4 +260,36 @@ body
     .feature
       h2
         font-size 1.25rem
+
+body.darkmode
+  .background-dim
+    background $backgroundDarkColor
+  .home
+    background $backgroundDimDarkColor
+    .hero
+      .description
+        color lighten($textDarkColor, 20%)
+      .subaction-button
+        color $accentDarkColor
+        background-color $backgroundDarkColor
+        border 2px solid darken($accentDarkColor, 10%)
+        &:hover
+          color darken($accentDarkColor, 50%)
+      .action-button
+        color $backgroundDarkColor
+        background-color $accentDarkColor
+        border-bottom 1px solid darken($accentDarkColor, 10%)
+        &:hover
+          background-color lighten($accentDarkColor, 10%)
+    .features
+      border-top 1px solid $borderDarkColor
+    .feature
+      h2
+        color lighten($textDarkColor, 10%)
+      p
+        color lighten($textDarkColor, 25%)
+    .footer
+      border-top 1px solid $borderDarkColor
+      color lighten($textDarkColor, 25%)
+
 </style>

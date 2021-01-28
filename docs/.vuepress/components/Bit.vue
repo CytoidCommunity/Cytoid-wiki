@@ -29,4 +29,9 @@
     margin-left 15px
   img, span
     vertical-align middle
+body.darkmode
+  .bit-sponsor
+    background-color $bitBackgroundDarkColor
+    a
+      color $liteBordardDarkColor
 </style>

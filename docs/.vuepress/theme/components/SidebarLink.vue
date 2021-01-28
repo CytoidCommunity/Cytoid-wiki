@@ -130,4 +130,14 @@ a.sidebar-link
     border-left none
     &.active
       font-weight 500
+
+body.darkmode
+  a.sidebar-link
+    color $textDarkColor
+    &:hover
+      color $accentDarkColor
+    &.active
+      color $accentDarkColor
+      border-left-color $accentDarkColor
+
 </style>

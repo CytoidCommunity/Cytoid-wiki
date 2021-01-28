@@ -69,37 +69,49 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .theme-code-group {}
+.theme-code-group {}
+.theme-code-group__nav {
+  margin-bottom: -35px;
+  background-color: $codeBgColor;
+  padding-bottom: 22px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.theme-code-group__ul {
+  margin: auto 0;
+  padding-left: 0;
+  display: inline-flex;
+  list-style: none;
+}
+.theme-code-group__li {}
+.theme-code-group__nav-tab {
+  border: 0;
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+.theme-code-group__nav-tab-active {
+  border-bottom: $badgeTipColor 1px solid;
+}
+.pre-blank {
+  color: $badgeTipColor;
+}
+
+body.darkmode
   .theme-code-group__nav {
-    margin-bottom: -35px;
-    background-color: $codeBgColor;
-    padding-bottom: 22px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    padding-left: 10px;
-    padding-top: 10px;
-  }
-  .theme-code-group__ul {
-    margin: auto 0;
-    padding-left: 0;
-    display: inline-flex;
-    list-style: none;
-  }
-  .theme-code-group__li {}
-  .theme-code-group__nav-tab {
-    border: 0;
-    padding: 5px;
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 0.85em;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 600;
+    background-color: $codeBgDarkColor;
   }
   .theme-code-group__nav-tab-active {
-    border-bottom: $badgeTipColor 1px solid;
+    border-bottom: $badgeTipDarkColor 1px solid;
   }
   .pre-blank {
-    color: $badgeTipColor;
+    color: $badgeTipDarkColor;
   }
+
 </style>

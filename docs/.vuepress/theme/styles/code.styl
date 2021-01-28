@@ -135,3 +135,34 @@ div[class~="language-php"]:before
   content "php"
 
 @import '~prismjs/themes/prism-tomorrow.css'
+
+// Dark Mode NEED RECHECKED
+body.darkmode
+  {$contentClass}
+    code
+      color lighten($textDarkColor, 20%)
+      .token
+        &.deleted
+          color $codeDarkColor
+        &.inserted
+          color $accentDarkColor
+
+  {$contentClass}
+    pre, pre[class*="language-"]
+      background-color $codeBgDarkColor
+      code
+        color $backgroundDarkColor
+
+  div[class*="language-"]
+    background-color $codeBgDarkColor
+    &::before
+      color rgba(255, 255, 255, 0.4)
+    &.line-numbers-mode
+      .highlight-lines .highlighted
+          &:before
+            background-color rgba(0, 0, 0, 66%)
+      .line-numbers-wrapper
+        color rgba(255, 255, 255, 0.3)
+      &::after
+        border-right 1px solid rgba(0, 0, 0, 66%)
+        background-color $codeBgDarkColor

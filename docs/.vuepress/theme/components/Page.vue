@@ -59,4 +59,9 @@ export default {
     padding-top 1rem
     opacity 1
     border-top 1px solid $borderColor
+
+body.darkmode
+  .page-footer
+    .inner
+      border-top 1px solid $borderDarkColor
 </style>

@@ -153,4 +153,18 @@ export default {
     &:hover, &.router-link-active
       margin-bottom -2px
       border-bottom 2px solid lighten($accentColor, 8%)
+
+body.darkmode
+  .nav-links
+    a
+      &:hover, &.router-link-active
+        color $accentDarkColor
+  @media (min-width: $MQMobile)
+    .nav-links a
+      &:hover, &.router-link-active
+        color $textDarkColor
+    .nav-item > a:not(.external)
+      &:hover, &.router-link-active
+        border-bottom 2px solid lighten($accentDarkColor, 8%)
+
 </style>

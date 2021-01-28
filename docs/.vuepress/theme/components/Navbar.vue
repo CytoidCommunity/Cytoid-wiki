@@ -137,4 +137,9 @@ $navbar-horizontal-padding = 1.5rem
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
+
+body.darkmode
+  .navbar
+    .site-name
+      color $textDarkColor
 </style>

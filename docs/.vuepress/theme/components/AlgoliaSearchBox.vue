@@ -168,4 +168,33 @@ export default {
       margin -3px 3px 0
       vertical-align middle
 
+body.darkmode
+  .algolia-search-wrapper
+    .algolia-autocomplete
+      .ds-dropdown-menu
+        background-color $backgroundDarkColor
+        border 1px solid $liteBordardDarkColor
+        &:before
+          border-color $liteBordardDarkColor
+        .ds-suggestion
+          border-bottom 1px solid $borderDarkColor
+      .algolia-docsearch-suggestion--highlight
+        color $algoliaDarkColor
+      .algolia-docsearch-suggestion
+        border-color $borderDarkColor
+        .algolia-docsearch-suggestion--category-header
+          background $accentDarkColor
+          color $backgroundDarkColor
+        .algolia-docsearch-suggestion--title
+          color $textDarkColor
+        .algolia-docsearch-suggestion--subcategory-column
+          border-color $borderDarkColor
+          background $algoliaBGDarkColor
+        .algolia-docsearch-suggestion--subcategory-column-text
+          color $algolia2DarkColor
+      .algolia-docsearch-footer
+        border-color $borderDarkColor
+      .ds-cursor .algolia-docsearch-suggestion--content
+        background-color $algoliaBG2DarkColor !important
+        color $textDarkColor
 </style>

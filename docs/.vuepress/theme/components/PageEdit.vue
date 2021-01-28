@@ -152,4 +152,14 @@ export default {
       float none
       text-align left
 
+body.darkmode
+  .page-edit
+    .edit-link
+      a
+        color lighten($textDarkColor, 25%)
+    .last-updated
+      .prefix
+        color lighten($textDarkColor, 25%)
+      .time
+        color $pageEditDarkColor
 </style>

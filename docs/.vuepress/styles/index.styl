@@ -22,3 +22,13 @@ pre.vue-container
       color $indexEMColor
       font-weight light
 
+body.darkmode
+  pre.vue-container
+    border-color: $badgeTipColor;
+    & > code
+      code
+        background-color: $badgeTipColor !important;
+        color $indexTextColor
+      em
+        color $indexEMColor
+

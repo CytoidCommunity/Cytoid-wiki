@@ -249,4 +249,31 @@ export default {
       border-radius 0.25rem
       white-space nowrap
       margin 0
+
+body.darkmode
+  .dropdown-wrapper
+    .dropdown-title
+      color $textDarkColor
+    .mobile-dropdown-title
+      color $textDarkColor
+        &:hover
+          color $accentDarkColor
+    .nav-dropdown
+      .dropdown-item
+        h4
+          border-top 1px solid $subBorder2DarkColor
+        a
+          &:hover
+            color $accentDarkColor
+          &.router-link-active
+            color $accentDarkColor
+            &::after
+              border-left 5px solid $accentDarkColor
+
+  @media (min-width: $MQMobile)
+    .dropdown-wrapper
+      .nav-dropdown
+        background-color $backgroundDarkColor
+        border 1px solid $subBorderDarkColor
+        border-bottom-color $arrowBgDarkColor
 </style>

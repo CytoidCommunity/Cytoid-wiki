@@ -138,4 +138,15 @@ export default {
   transition height .1s ease-out
   font-size 0.95em
   overflow hidden
+
+body.darkmode
+  .sidebar-heading
+    color $textDarkColor
+    &.clickable
+      &.active
+        color $accentDarkColor
+        border-left-color $accentDarkColor
+      &:hover
+        color $accentDarkColor
+
 </style>

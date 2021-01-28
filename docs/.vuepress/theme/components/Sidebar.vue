@@ -61,4 +61,10 @@ export default {
         top calc(1rem - 2px)
     & > .sidebar-links
       padding 1rem 0
+
+body.darkmode
+  .sidebar
+    .nav-links
+      border-bottom 1px solid $borderDarkColor
+
 </style>
