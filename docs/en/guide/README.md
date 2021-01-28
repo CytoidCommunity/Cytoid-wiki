@@ -27,3 +27,10 @@ You can make suggestions on our github page, or check out [TigerHix's GitHub pro
 If not explicitly stated by the article, all rights go to [Cytoid](https://github.com/Cytoid/Cytoid).
 
 [support](/site-source/part/support.md ':include')
+
+
+Dark Mode
+
+<a onclick="document.querySelector('html').classList.add('darkmode');document.querySelector('body').classList.add('darkmode')">Dark</a>
+
+<a onclick="document.querySelector('html').classList.remove('darkmode');document.querySelector('body').classList.remove('darkmode')">Light</a>

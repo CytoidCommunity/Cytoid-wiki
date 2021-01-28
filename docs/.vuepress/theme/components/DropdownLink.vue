@@ -275,5 +275,5 @@ body.darkmode
       .nav-dropdown
         background-color $backgroundDarkColor
         border 1px solid $subBorderDarkColor
-        border-bottom-color $arrowBgDarkColor
+        border-bottom-color $subBorderDarkColor
 </style>

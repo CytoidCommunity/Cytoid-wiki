@@ -142,4 +142,6 @@ body.darkmode
   .navbar
     .site-name
       color $textDarkColor
+    a 
+      color $textDarkColor
 </style>

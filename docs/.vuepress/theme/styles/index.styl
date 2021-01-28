@@ -8,6 +8,8 @@
 html, body
   padding 0
   margin 0
+
+html
   background-color $backgroundColor
 
 body
@@ -15,6 +17,7 @@ body
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size 16px
+  background-color transparent
   color $textColor
 
 .page
@@ -194,17 +197,16 @@ html.darkmode
 
 body.darkmode
   color $textDarkColor
-  background-color $backgroundDarkColor
   .search-box
     input
-      background #282c34 url(/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat
+      background #282c3488 url(/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat
       border #282c34
   .navbar
-    background-color $backgroundDimDarkColor
-    border-bottom 1px solid $borderDarkColor
+    background-color $backgroundNavBarDarkColor
+    border-bottom 1px solid $borderFarmworkDarkColor
   .sidebar
     background-color $backgroundDarkColor
-    border-right 1px solid $borderDarkColor
+    border-right 1px solid $borderFarmworkDarkColor
   p.demo
     border 1px solid $subBorderDarkColor
   a
