@@ -10,3 +10,4 @@ package-lock.json
 .vuepress-org
 wiki-html
 docubc/
+docs/en/markdown.md

@@ -51,16 +51,20 @@ body.darkmode
       background-color $customBlocksBGDarkColor
       border-color $badgeTipDarkColor
     &.warning
-      background-color rgba(255,229,100,.3)
+      background-color $indexBGDarkColor
       border-color darken($customBlocksWarnDarkColor, 35%)
       color darken($customBlocksWarnDarkColor, 70%)
       .custom-block-title
         color darken($customBlocksWarnDarkColor, 50%)
       a
         color $textDarkColor
+      p
+        color darken($customBlocksWarnDarkColor, 50%)
     &.danger
-      background-color $customBlocksBG2DarkColor
+      background-color $indexBGDarkColor
       a
         color $textDarkColor
+      p
+        color $codeDarkColor
     &.details
       background-color $subBorder2DarkColor
