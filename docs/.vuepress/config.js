@@ -1,24 +1,28 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
-module.exports = () => ({
-  dest: './wiki-html',
-  permalink: '/:regular',
+module.exports = ctx => ({
+  dest: '../../vuepress',
   locales: {
     '/': {
+      lang: 'Auto',
+      title: 'Cytoid Wiki',
+      description: 'A wiki for Cytoid and powered by community.'
+    },
+    '/en/': {
       lang: 'en-US',
       title: 'Cytoid Wiki',
       description: 'A wiki for Cytoid and powered by community.'
     },
     '/zh/': {
-      lang: 'zh-CN',
+      lang: 'zh-Hans',
       title: 'Cytoid Wiki',
-      description: '社区驱动的Cytoid Wiki'
+      description: '社区驱动的 Cytoid Wiki.'
     }
   },
   head: [
-    ['link', { rel: 'icon', href: `/site-source/pic/cytoid-girl.png` }],
+    ['link', { rel: 'icon', href: `/logo.png` }],
     // ['link', { rel: 'manifest', href: '/manifest.json' }],
-    // ['meta', { name: 'theme-color', content: '#7B69C8' }],
+    // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     // ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     // ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     // ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
@@ -41,7 +45,15 @@ module.exports = () => ({
     // }) : null,
     smoothScroll: true,
     locales: {
-      '/': {
+      '/':{
+        label: 'Auto',
+        selectText: '',
+        ariaLabel: '',
+        editLinkText: '',
+        lastUpdated: '',
+        nav: require('./nav/en')
+      },
+      '/en/': {
         label: 'English',
         selectText: 'Languages',
         ariaLabel: 'Select language',
@@ -157,6 +169,123 @@ module.exports = () => ({
             }
           ]
         }
+      },
+      '/zh/': {
+        label: '中文',
+        selectText: '语言',
+        ariaLabel: '选择语言',
+        editLinkText: '在 GitHub 上编辑',
+        lastUpdated: 'Last Updated',
+        footer: '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span><br><span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span><br><span>Written by Discord Community and Localizers.</span><br><span>Published with <a href="https://github.com/vuejs/vuepress" target="_blank"><strong>VuePress</strong></a>. </span><span>Powered by <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a>. </span>',
+        nav: require('./nav/zh'),
+        sidebar: {
+          '/zh/guide/': [
+            {
+              title: "主页",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                '',
+                'start',
+                '../about/'
+              ]
+            }
+          ],
+          '/zh/gameplay/': [
+            {
+              title: "游玩",
+              sidebarDepth: 2,
+              collapsable: false,
+              children: [
+                ''
+              ]
+            }
+          ],
+          '/zh/charting/': [
+            {
+              title: "开始制谱",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                '',
+                'abc',
+              ]
+            },
+            {
+              title: "制谱工具",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                'tools/cylheim',
+                'tools/pctyx',
+                'tools/mobile',
+                'tools/cy2unity',
+                'tools/cyunity',
+                'tools/other'
+              ]
+            },
+            {
+              title: "使用 Cytoid 测试谱面",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                'cytoid/level.json',
+                'cytoid/packing'
+              ]
+            },
+            {
+              title: "在 Cytoid IO 分享谱面",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                'cytoidio/rules',
+                'cytoidio/upload'
+              ]
+            },
+            {
+              title: "更多",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                'charting-and-you'
+              ]
+            }
+          ],
+          '/zh/storyboard/': [
+            {
+              title: "StroyBoard",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                '',
+                'specification'
+              ]
+            }
+          ],
+          '/zh/events/': [
+            {
+              title: "活动",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                '',
+                'official',
+                'community'
+              ]
+            }
+          ],
+          '/zh/about/': [
+            {
+              title: "关于",
+              sidebarDepth: 3,
+              collapsable: false,
+              children: [
+                '',
+                'cytoid'
+              ]
+            }
+          ]
+        }
       }
     }
   },
@@ -167,9 +296,9 @@ module.exports = () => ({
   //     updatePopup: true
   //   }],
   //   ['@vuepress/medium-zoom', true],
-  //   // ['@vuepress/google-analytics', {
-  //   //   ga: 'UA-128189152-1'
-  //   // }],
+  //   ['@vuepress/google-analytics', {
+  //     ga: 'UA-128189152-1'
+  //   }],
   //   ['container', {
   //     type: 'vue',
   //     before: '<pre class="vue-container"><code>',

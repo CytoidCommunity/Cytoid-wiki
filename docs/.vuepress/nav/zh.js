@@ -32,11 +32,11 @@ module.exports = [
           },
           {
             text: '关于 Cytoid',
-            link: '/en/about/cytoid'
+            link: '/zh/about/cytoid'
           },
           {
             text: 'Wiki 更新记录',
-            link: '/en/about/wiki'
+            link: '/zh/about/wiki'
           }
         ]
       }
