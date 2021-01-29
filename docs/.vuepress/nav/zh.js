@@ -1,7 +1,7 @@
 module.exports = [
   {
     text: '指导',
-    link: '/en/gameplay/'
+    link: '/zh/guide/'
   },
   {
     text: '游玩',
@@ -28,11 +28,15 @@ module.exports = [
         items: [
           {
             text: '关于 Wiki',
-            link: '/zh/about.html'
+            link: '/zh/about/'
           },
           {
-            text: 'Wiki 更新日志',
-            link: '/zh/update.html'
+            text: '关于 Cytoid',
+            link: '/en/about/cytoid'
+          },
+          {
+            text: 'Wiki 更新记录',
+            link: '/en/about/wiki'
           }
         ]
       }

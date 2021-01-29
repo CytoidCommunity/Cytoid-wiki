@@ -97,6 +97,14 @@ export default {
       window.scroll({top: 0, left: 0, behavior: 'smooth' });
       // window.location.replace(window.location.pathname+"#")
     }
+    function showBackToTopBTN() {
+      let pageOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      if (pageOffset >= 60) {
+        document.querySelector(".btn-top").style.display = "";
+      } else {
+        document.querySelector(".btn-top").style.display = "none";
+      }
+    }
   }
 }
 
