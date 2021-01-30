@@ -1,7 +1,6 @@
 ---
 title: StoryBoard Specification
-lang: zh-Hans
-finish: true
+lang: vi
 ---
 # Full Specification
 

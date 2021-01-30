@@ -98,9 +98,11 @@ export default {
   },
   mounted() {
     const supportLang = {
-      zh: "zh",
+      "zh": "zh",
       "zh-CN": "zh",
-      en: "en",
+      "en": "en",
+      "zh-Hans_CN": "zh",
+      "zh-Hans": "zh"
     };
 
     window.onload = function () {
@@ -157,7 +159,7 @@ body {
 }
 
 .home {
-  padding: 15% 2rem 0;
+  padding: 15vh 2rem 0;
   max-width: $homePageWidth;
   margin: 0px auto;
   display: grid;
