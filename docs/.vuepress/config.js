@@ -1,10 +1,10 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
-  dest: '../../vuepress',
+  dest: './wiki-html',
   locales: {
     '/': {
-      lang: 'Auto',
+      lang: 'en-US',
       title: 'Cytoid Wiki',
       description: 'A wiki for Cytoid and powered by community.'
     },
@@ -50,8 +50,7 @@ module.exports = ctx => ({
         selectText: '',
         ariaLabel: '',
         editLinkText: '',
-        lastUpdated: '',
-        nav: require('./nav/en')
+        lastUpdated: ''
       },
       '/en/': {
         label: 'English',

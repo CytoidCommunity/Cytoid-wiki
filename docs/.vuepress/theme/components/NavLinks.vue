@@ -57,12 +57,12 @@ export default {
         const currentLink = this.$page.path
         const routes = this.$router.options.routes
         const themeLocales = this.$site.themeConfig.locales || {}
-        const languageDropdown = {
+        var languageDropdown = {
           text: this.$themeLocaleConfig.selectText || 'Languages',
           ariaLabel: this.$themeLocaleConfig.ariaLabel || 'Select language',
-          items: Object.keys(locales).map(path => {
+          items: Object.keys(locales).filter(path => path!='/').map(path => {
             const locale = locales[path]
-            const text = themeLocales[path] && themeLocales[path].label || locale.lang
+            var text = themeLocales[path] && themeLocales[path].label || locale.lang
             let link
             // Stay on the current page
             if (locale.lang === this.$lang) {
@@ -72,7 +72,8 @@ export default {
               link = currentLink.replace(this.$localeConfig.path, path)
               // fallback to homepage
               if (!routes.some(route => route.path === link)) {
-                link = path
+                link = path // Notice that didn't offer for this language
+                text = `${text} ⨯`
               }
             }
             return { text, link }
