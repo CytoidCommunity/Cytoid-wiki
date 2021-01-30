@@ -12,7 +12,7 @@
 ###### Level in this events:
 - PTB10 - Interference: Finale
   - Charter: lumixanth, ptb10 and suconhh
-  - Storyboarder: wandererzariq và tigerhix
+  - Storyboarder: wandererzariq and tigerhix
   - Difficulty: 10 - 14 - 15+
 - nm-γ - Hex Tiamat
   - Charter: geswat001122 and thebombman
@@ -29,12 +29,12 @@
 - Tier 2: Obtain 95% accuracy or higher on Hard or EX difficulty of "Interference: Finale", "Hex Tiamat", "Mechanted", "Omnia Vanitas".
 - Tier 3:
   - With HYPER mod, obtain 99% accuracy or higher on EX difficulty of "Hex Tiamat", "Mechanted", "Omnia Vanitas" and Hard difficulty of "Interference: Finale"
-  - In addition, obtain 93% accuracy or higher on EX difficulty of "Interference: Finale" (HYPER mod not necessary)
+  - In addition, obtain 93% accuracy or higher on EX difficulty of "Interference: Finale" (HYPER mod is not necessary)
 
 ### Summer Festival
 ###### Informations:
 - This is the first in-game Cytoid event (not include CytoidFes 2020)
-- Event duration:from 2020/8/20 đến 2020/9/16
+- Event duration: from 2020/8/20 to 2020/9/16
 - Artists in this event: MYUKKE., N.H.I and cosMo@暴走P
 
 ###### Rewards:
@@ -51,7 +51,7 @@
   - Charter: ECIC1 and geswat001122
   - Difficulty: 8 - 13 - 15+
 
-###### Các tier trong sự kiện:
+###### Tiers in this event:
 - Tier 1: Obtain grade of A or higher on Easy, Hard or EX difficulty of "Ginevra", "DhAneLLeis", "Hopeful Restart"
 - Tier 2: Obtain grade of S or higher on Hard or EX difficulty of "Ginevra", "DhAneLLeis", "Hopeful Restart"
 - Tier 3: Obtain grade of SSS or higher on EX difficulty of "Ginevra", and obtain grade of SS or higher on EX difficulty of "DhAneLLeis", and obtain grade of AA or higher on EX difficulty of "DhAneLLeis" "Hopeful Restart"
