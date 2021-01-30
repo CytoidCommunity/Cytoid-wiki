@@ -105,6 +105,18 @@ export default {
         document.querySelector(".btn-top").style.display = "none";
       }
     }
+    function isIOS() {
+      if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+          return true;
+      } else {
+          return false;
+      }
+    }
+
+    if (isIOS()) {
+        document.getElementById('btn-dark').className += ' btn-float-ios';
+        document.getElementById('btn-top').className += ' btn-float-ios';
+    }
   }
 }
 
@@ -166,6 +178,30 @@ export default {
 @media (max-width: $MQMobileNarrow) 
   .btn-float 
     right: 15px;
+
+
+.btn-float-ios
+  border-style: none!important;
+  background-color: transparent!important;
+  color: $accentColor!important;
+  svg
+    fill: $accentColor;
+  &:hover
+    color: $accentColor!important;
+  &:visited 
+    color: $accentColor!important;
+
+.btn-float-ios
+  border-style: none!important;
+  background-color: transparent!important;
+  color: $accentColor!important;
+  svg
+    fill: $accentColor;
+  &:hover
+    color: $accentColor!important;
+  &:visited 
+    color: $accentColor!important;
+
   
 body.darkmode 
   .btn-float
@@ -185,4 +221,15 @@ body.darkmode
       background-color: $backgroundDarkColor;
       color: $accentDarkColor;
       border-color: $accentDarkColor;
+  .btn-float-ios
+    border-style: none!important;
+    background-color: transparent!important;
+    color: $accentDarkColor!important;
+    svg
+      fill: $accentDarkColor!important;
+    &:hover
+      color: $accentDarkColor!important;
+    &:visited 
+      color: $accentDarkColor!important;
+
 </style>
