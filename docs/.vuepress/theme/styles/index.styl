@@ -265,6 +265,36 @@ body, html, .sidebar, .navbar
 .sidebar-sub-header
   transition color 0.2s, background 0.2s, border-bottom 0.2s ease
 
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.fancybox-iframe::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: hsla(220, 4%, 58%, 0.3);
+  transition: background-color 0.3s;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ededed1a;
+}
+
+
+/*Thank https://juejin.im/post/6844903886185037832*/
+
+
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar
     .sidebar

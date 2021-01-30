@@ -1,0 +1,37 @@
+
+*::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 12px;
+  /*定义纵向滚动条宽度*/
+  height: 12px;
+  /*定义横向滚动条高度*/
+}
+
+.fancybox-iframe::-webkit-scrollbar {
+  /*event展示滚动条整体样式*/
+  width: 12px;
+  /*定义纵向滚动条宽度*/
+  height: 12px;
+  /*定义横向滚动条高度*/
+}
+
+
+*::-webkit-scrollbar-thumb {
+  /*滚动条内部滑块*/
+  border-radius: 8px;
+  background-color: hsla(220, 4%, 58%, 0.3);
+  transition: background-color 0.3s;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  /*鼠标悬停滚动条内部滑块*/
+  background: #bbb;
+}
+
+*::-webkit-scrollbar-track {
+  /*滚动条内部轨道*/
+  background: #ededed1a;
+}
+
+
+/*Thank https://juejin.im/post/6844903886185037832*/
