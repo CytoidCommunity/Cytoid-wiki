@@ -1,77 +1,79 @@
 ---
-title: StoryBoard Specification
+title: StoryBoard 格式详解
 lang: zh-Hans
+author: 作者 TigerHix, 翻译&重排版 Teages_L
 finish: true
 ---
-# Full Specification
+# StoryBoard 格式详解
 
-> Version: 2.0.2
+**版本: 2.0.2**
 
-This specification details the storyboard schema; you can use this as a reference, but it is strongly encouraged to **read the entire document** before you start storyboarding to get a glimpse of the power (and limitations) of storyboarding.
+本说明详细讲解了StoryBoard的相关规格; 您可以以此为参考, 但我们强烈建议您在开始制作StoryBoard前**阅读整个文档**, 以了解StoryBoard的功能和局限性.
 
-***Download the latest CytoidPlayer here!***
+***在下方下载Cytoid Player!***
 
-[CytoidPlayer 2.0.2.zip](https://drive.google.com/file/d/1skBP8u_LTDloTxXr3cVl8YdJzmgMkywi/view?usp=drivesdk)
+[CytoidPlayer 2.0.2.7z](https://teages.lanzous.com/ij8S1iuq9be)
 
-## 🌟 **Coordinate systems**
+## 🌟 坐标系
 
-- Before we get into storyboarding, let's understand the game's different canvas and their coordinate systems:
-    - The canvas for **storyboard** **sprites and texts**, or **stage**, has a resolution of 800 (width) * 600 (height). (0, 0) is at the center. (400, 300) is the upper right corner. (-400, -300) is the lower left corner.
-        - The X and Y axes are called stageX and stageY.
-    - The canvas for **notes** use the same unit as in charts, spanning [0, 1] in the X-axis and [0, 1] in the Y-axis, where (0, 0) is the lower left corner.
-        - The X and Y axes are called noteX and noteY.
+- 在我们开始制作 StoryBoard 前, 让我们先了解游戏中的不同画布和坐标系:
+    - 在**StoryBoard** 中, **sprites**, **texts** 和 **stage**会使用一个 800 (宽) * 600 (高) 的直角坐标系. 如图, 这个坐标系的中心是(0, 0), 右上角是 (400, 300), 左下角是 (-400, -300).
+        - 这个坐标系的 X 轴和 Y 轴 被称为 `stageX` 和 `stageY`.
+    - **notes** 的坐标系和谱面相同. 如图, X/Y的坐标范围应为 [0, 1], 其中, (0, 0) 是该坐标系的左下角.
+        - 这个坐标系的 X 轴和 Y 轴 被称为 `noteX` 和 `noteY`.
 
-    ![_source_storyboard.md/dia_(3).png](_source_storyboard.md/dia_(3).png)
+    ![./_source_specification.md/pic1.png](./_source_specification.md/pic1.jpg ":no-zoom")
 
-    - The game **camera** has its own frame of reference based on its [orthographic size](https://docs.unity3d.com/ScriptReference/Camera-orthographicSize.html). By default, camera is positioned at (0, 0).
-        - The X and Y axes are called cameraX and cameraY.
+    - 游戏内的 **camera**(相机) 有他自己基于 [orthographic size(正交尺寸)](https://docs.unity3d.com/ScriptReference/Camera-orthographicSize.html) 的坐标系. 默认情况下, 相机位于 (0, 0).
+        - 这个坐标系的 X 轴和 Y 轴 被称为 `cameraX` 和 `cameraY`.
 
-        ![_source_storyboard.md/Copy_of_dia.png](_source_storyboard.md/Copy_of_dia.png)
+        ![./_source_specification.md/pic2.jpg](./_source_specification.md/pic2.jpg ":no-zoom")
 
-        ![_source_storyboard.md/Copy_of_dia_(1).png](_source_storyboard.md/Copy_of_dia_(1).png)
+        ![./_source_specification.md/pic3.jpg](./_source_specification.md/pic3.jpg ":no-zoom")
 
-    - Finally, there is also an Z axis for parameters that are, well, on the game's **Z axis**, or, the depth axis. You do not care about this axis unless you have set **perspective** to true in a scene controller.
-        - Note that the camera is looking at the +Z direction, and is by default at Z = -10. Setting a value like Z = -8 will put camera closer to the notes, while a value like Z = -15 will distance it away from the notes.
-- For any storyboard object property that uses a coordinate system above, you can **transform their coordinate systems** by using the following format: `[coordinate system]:[value]`.
-    - For example, say you have a sprite which you would like to display at the left of the bottom boundary of the gameplay/note area, which is exactly (0, 0) when expressed in noteX and noteY coordinate systems. However, the `x` and `y` values of a sprite by default use the stageX and stageY coordinate systems.
-        - Before coordinate system transformations are introduced in 2.0.0, this is typically done by calculating the screen aspect ratio to estimate the corresponding coordinate in the stage canvas. This requires the storyboarder to create different storyboards for different screen aspect ratios (as seen [here](https://cytoid.io/levels/tigertiger.deadsoul)), and does not take into consideration that players can change their horizontal/vertical margins of the gameplay/note area.
-        - Starting from 2.0.0, we can simply use coordinate system transformations to express the actual coordinate, like below:
+    - 最后, 游戏中还有一个 **Z 轴**, 用于处理3D坐标中的深度. 您无需关注这个坐标轴, 除非您在 `scene controller` 中,将 **perspective** 选项调至 `true`.
+        
+        - 请注意, 相机默认朝 Z 轴的正方向观察, 它的默认位置为 Z = -10. 设置一个像 Z = -8 的值会使相机靠近 notes, 设置一个像 Z = -15 的值会使相机远离 notes.
+- 你可以像这样 **进行坐标系之间的转换**: `[coordinate system(原坐标系)]:[value(值)]`.
+    - 例如, 您创建了一个 sprite, 想让它显示在note区域的最左侧底部, 正好位于在note 坐标系中的(0, 0). 但是, 这里需要的 `x` 和 `y` 是基于 stageX 和 stageY 的坐标系的, 这时就需要转换坐标系.
+        - 在 Cytoid 2.0.0 引入坐标系转换之前, 通常计算屏幕宽高比来判断note区域的对应坐标. 这就要求 StoryBoard制作者要面向不同的屏幕比例创建不同的谱面 (就像 [这个谱](https://cytoid.io/levels/tigertiger.deadsoul)), 也没有考虑到玩家可以修改游玩区域大小 (通过相应设置).
+        - 从 Cytoid 2.0.0 开始, 我们可以使用坐标系转换来表示实际坐标, 如下所示:
 
             ```json
             {
               ...
-              Sprite definition
+              Sprite 定义
               ...
               "x": "noteX:0",
               "y": "noteY:0"
             }
             ```
 
-            When the storyboard is loaded into the game, Cytoid automatically calculates the actual `x` and `y` values—without getting into the boring technical details, all you need to know is that the sprite will show up at the desired position of (0, 0) on the note canvas!
+            StoryBoard在游戏中加载以后, Cytoid 会自动计算实际的 `x` 和 `y` 的值--无需探究无聊的技术细节, 你只需要知道 sprite 会显示在note坐标系中的 (0, 0)! (如你所愿!)
 
-    - A more practical problem: how can we stretch a sprite to be a square such that its top and bottom are aligned to the screen boundaries?
-        - A naive attempt would be:
+    - 一个更实际的问题: 如何将sprite拉伸为正方形, 并且使其顶部和底部与屏幕边界对齐?
+        - 一个天真~~naive~~的尝试:
 
             ```json
             {
               ...
-              Sprite definition
+              Sprite 定义
               ...
-              "preserve_aspect": false, // Allow stretching of the sprite
+              "preserve_aspect": false, // 允许 sprite 变形
               "width": 600,
               "height": 600
             }
             ```
 
-            Unfortunately, this would not work: this is not necessarily a square. In fact, only devices with a 4:3 screen aspect ratio will render this as a square. Recall that the stage canvas resolution is 800 * 600 on **any** device, so 1 unit in stageX does not necessarily equal 1 unit in stageY.
+            不幸的是, 这可能不会像想象中那样运行: 它不一定会渲染成一个正方形. 实际上, 只有屏幕比例为 4:3 的设备才会将其渲染为正方形. 回想一下,在**任何设备**上, stage 的坐标系大小均为 800 * 600, 因此 stageX 中的一个单位不一定等于 stageX 中的一个单位.
 
-            - More simply put, when we set a sprite's `width` and `height` to be both 600, what we actually mean is that this sprite takes up 600/800=3/4 of the screen width and 600/600=all of the screen height. Therefore, to make it a square, 3/4 of the screen width must be equal to all of the screen height, which enforces a 4:3 screen ratio.
-        - To align the square with top and bottom boundaries of the screen, the `height` necessarily equals `600`; the problem stems from our defined `width`. So what went wrong? **We assumed 1 unit of `width` (stageX) is equal to 1 unit of `height` (stageY),** which we now know is not the case. Then, if we can somehow make `width` use the same unit as `height`...
+            - 简而言之, 当我们将一个 sprite 的 `width` 和 `height` 都设置为 600, 实际上 sprite 占据了屏幕宽度的 600/800 = 3/4, 屏幕高度的600/600 = 全部. 因此, 要使其成为正方形, 屏幕宽度的3/4必须等于屏幕高度, 这样就能强制实现 4:3 的屏幕比例. 
+        - 为了使正方形与屏幕的上下边界对齐, `height` 的值必须为 `600`; 问题是我们该如何给 `width` 赋值. 因此, 我们 **只需要将 `stageX` 转换为实际长度相同的 `stageY`**. 怎么做? 只需像下面这样使用坐标转换...
 
             ```json
             {
               ...
-              Sprite definition
+              Sprite 定义
               ...
               "preserve_aspect": false,
               "width": "stageY:600",
@@ -79,30 +81,36 @@ This specification details the storyboard schema; you can use this as a referenc
             }
             ```
 
-            And that is it! We delegated the calculation to Cytoid—`stageY:600` means 600 units in the stageY coordinate system. Whatever that value is, this has made sure our sprite will stretch to a square.
+            就是这样! 我们委托 Cytoid 计算 `stageY:600` 的实际长度, 并将这个实际长度转换为 `stageX` 的值. 无论实际长度是多少, sprite 总是被渲染成一个正方形.
 
-    - Finally, you should probably not transform any value to/from the depth coordinate system, as it does not make mathematical sense. But you can do it nonetheless! Feel free to try. 😇
+    - 最后, 您不太可能需要转换深度(Z 轴)坐标, 因为这没有数学意义. 但是您随时可以尝试! 😇
 
-## **Root object**
+## 基本对象
 
-- **texts**: array of text objects.
-- **sprites**: array of sprite objects.
-- 🌟 **lines**: array of line objects.
-- 🌟 **videos**: array of video objects. Experimental!
-- **controllers**: array of scene controller objects.
-    - You usually need only one controller to control the entire scene, but multiple controllers will come in handy if you need to define effects whose animation states overlap. For beginners, use only one controller.
-- 🌟 **note_controllers**: array of note controller objects.
-- **templates**: array of templates.
+- **texts**: 文本对象组.
+- **sprites**: sprite 对象组.
+- 🌟 **lines**: line 对象组.
+- 🌟 **videos**: 视频对象组. **试验性!**
+- **controllers**: 场景控制器对象组.
+    - 通常只需要一个控制器来控制整个场景, 但是如果您需要定义动画状态重叠的效果, 则多个控制器会派上用场. 对于初学者, 建议只使用一个控制器. 
+- 🌟 **note_controllers**: note控制器对象组.
+- **templates**: **模板**对象组.
 
-**Base state** (Parameters inherited by all objects)
 
-- 🌟 There are two kinds of objects: **scene objects** (texts, sprites, lines, and videos) that appear in the scene, and **controller objects** (scene controllers and note controllers) that manipulate the scene components without an entity form.
-- States control how objects behave at different points of time. Not every moment of the object needs to be a state; only the "key" moments need to be defined.
-- For instance, consider a title text that flies from the bottom to the center of the screen from time=0 to time=3. Theoretically, it has infinitely many states, because at every moment its position is different. However, there are only two "key" states: 1. text at the bottom at time=0; 2. text at the center at time=3. Simply define these two states, and the storyboard will automatically calculate all the states in between.
-- Every defined object has at least one state, which is the initial state. You can define extra states of this object in the `states` array.
-- **id**: an unique string identifier of this object. If not set, a random alphanumeric ID will be generated. Supports the `$note` placeholder (see the note controller section).
-- 🌟 **target_id**: *for scene objects only.* When `target_id` is set to an ID of an object, this object does not have its own entity form but will control the specified instance instead. Supports the `$note` placeholder (see the note controller section).
-    - This is useful if you want to *create animations that require overlapping states*. For example, if you want to move a sprite in an arc, it is impossible to do this with only one scene object. You need two—one moves the sprite in the X direction with one easing (say, `linear`), and another one moves the sprite in the Y direction with another easing (say, `easeOutQuad`). Like below:
+## 对象状态
+
+> 译者: 编写StoryBoard, 实际上就是创建一个个对象, 让他们各司所职, 完成谱面演出. 为了控制各个对象的行为, 系统全面且详细的了解Cytoid StoryBoard中的对象, 是编写StoryBoard前必不可少的. 
+
+### 基本状态 (所有对象的默认状态)
+
+- 🌟 在故事板中, 我们一般把对象划分为两类: 出现在场景中的**sprites** (例如文本, 素材, 线条和视频), 和无场景内实体的**controllers** (场景控制器和音符控制器)
+- 状态控制着对象在不同时间的行为。撰写状态时, 不需要在物体实例化的每一帧都添加状态, 只需要在关键帧写状态即可。
+- 假设需要做一个在第0秒到第3秒从场景底部飞到屏幕中央的标题文字。逻辑上讲, 在这个区间里面的标题场景对象有无穷多的状态, 因为每个瞬间的位置都不一样。但是, 关键状态只有两个: 1. time为0时标题场景对象在底部; 2. time为3时标题场景对象在中央。故事板会自动根据你所填写的关键状态进行补间动画。
+- 每个被声明的对象都至少有一个状态, 即初始状态。你可以在`states`集合中自定义额外的状态。
+
+- **id**: 对象的唯一识别码(字符串). 如果没有被手动定义, 则将会被自动分配随机的数字与字母混合的ID. 支持使用`$note`的占位符 (见音符控制器部分).
+- 🌟 **target_id**: *只可使用于场景对象。* 当 `target_id` 被设置为任何对象的id时, 这个对象不会拥有自己的实体但会控制`target_id`所指向的目标实体。支持使用`$note`的占位符 (见音符控制器部分).
+    - 这有助于您 **创建状态重叠的动画**. 例如, 如果您想要以弧线为轨迹移动sprite, 使用单个场景对象几乎不可能做到这一点. 但现在, 您只需要以两个不同的缓动状态叠加, 首先以一种缓动状态 (例如`linear`) 让精灵沿着 X 方向运动, 并且让他沿着 Y 轴以另一种方法缓动 (例如`easeOutQuad`). 如下所示:
 
         ```json
         {
@@ -132,25 +140,25 @@ This specification details the storyboard schema; you can use this as a referenc
         }
         ```
 
-    - Another example would be to simplify complex states. Say you want to move a text from x=0 at t=0 to x=100 at t=5, while also setting its opacity from a=1 at t=2.5 to a=0 at t=7.5. Without using a separate targeting scene object, you have to manually do some mental calculations to write down the 4 key states.
-    - Keep in mind that the targeted object must be of same type of the current object. For example, you cannot set a sprite's target to be a text.
-- 🌟 **parent_id**: *for texts and sprites only.* ****When `parent_id` is set to an ID of an object, this object's movement follows the specified parent, i.e. this object's coordinate system is now relative to the parent's coordinate system. Supports the `$note` placeholder (see the note controller section).
-    - For example, you can set sprite A's parent to be sprite B, so that when sprite A moves with sprite B. Any translation of sprite A is now using sprite B's position as the origin.
-    - Another fun thing to try is to set a sprite's parent to a note controller. Since a note controller has an implied position of the actual note, the sprite should follow the note's movement.
-        - *No, you can't really make custom skins with this yet.* See the note controller section for a in-depth explanation.
-- **time**: the base time of this object state, measured in seconds. Note that this may not be equivalent to the true timing—see how an object's exact timing is calculated below.
-    - **If `time` is not set and this is a scene object (i.e. text or sprite), this scene object is not spawned unless manually spawned by a trigger.**
-    - If the value is in one of the following formats, an automatic replacement will be performed. Note that the quotes are necessary. `<Note ID>` supports the `$note` placeholder (see the note controller section).
-        - `"start:<Note ID>"`: start time of the specified note
-        - `"end:<Note ID>"`: end time of the specified note
-        - `"intro:<Note ID>"`: intro time (i.e. when the note fades in) of the specified note
-        - `"start:<Note ID>:<Offset>"`: start time of the specified note + `<Offset>` (in seconds, can be negative)
-        - `"end:<Note ID>:<Offset>"`: end time of the specified note + `<Offset>` in seconds, can be negative)
-        - `"intro:<Note ID>:<Offset>"`: intro time (i.e. when the note fades in) of the specified note + `<Offset>` (in seconds, can be negative)
-        - 🌟 `"at:<Note ID>:<Percentage>"`: *for hold notes only.* start time of the specified note + (end time of the specified note - start time of the specified note) * `<Percentage>`
-            - When `<Percentage>` is `0`, this is equivalent to `start`
-            - When `<Percentage>` is `1`, this is equivalent to `end`
-    - This value can also be an array, if you want to create multiple identical states at once. For example:
+    - 还有另外一种用法: 简化复杂状态. 假如您要将一个text的状态进行如下修改: `t=0` 到 `t=5` 执行位移, 并在 `t=2.5` 到 `t=7.5` 修改透明度, 以前您需要手动计算四个关键帧的状态. 
+    - 请注意, target_id 所指对象必须与其属于同一种对象. 例如, 您不能将 sprite 的 target_id 设置为 text 的 id.
+- 🌟 **parent_id**: *仅适用于 texts和 sprites.* 当 `parent_id` 设置为某个其他对象的 ID 时, 前者成为后者的子对象, 子对象的坐标系将会以父对象为原点(参考系), 即子对象将会跟随父对象进行运动. 支持使用 `$note` 占位符 (详情请参阅 note 控制器部分).
+    - 例如, 您可以设置 sprite A 的 parent_id 为 sprite B 的id, 这样就能让 sprite A 跟随 sprite B 移动. sprite A 的任何运动都以 sprite B 的坐标为原点.
+    - 另一个有趣的实验是将 sprite 的 parent_id 设置为一个 note controller 的 id. 由于 note controller 的位置为 note 的实际位置, 因此这个 sprite 会跟随 note 移动.
+        - *但是, 您还不能用它创建自定义 note 皮肤.* 更多详情请见 "note controller" 部分.
+- **time**: 该对象的基准时间, 以秒为单位. 要注意的是, 这个时间可能不等于实际时间, 请阅读下文查看计算对象确切时间的方法.
+    - **如果一个场景对象 *(例如 text 和 sprite)* 没有设置 `time`, 这个场景对象将不会被启用, 除非这个场景对象被 trigger 启用.** *~~可是trigger被删了~~*
+    - 如果值为以下格式之一, 则将自动进行替换. 请注意引号是必需的. `<Note ID>` 支持以 `$note` 在 note_controller中表示当前note (详情请见 note controller 部分).
+        - `"start:<Note ID>"`: 选中 note 的时刻(如果是Hold/Long Hold, 则为其开始时刻)
+        - `"end:<Note ID>"`: 选中 note 的结束时刻(用于Hold/Long Hold, 如果用于其他note效果同start)
+        - `"intro:<Note ID>"`: 指定 note 出现时刻 (即 note 开始淡入的时刻)
+        - `"start:<Note ID>:<Offset>"`: 选中 note 的时刻 + `<Offset>` (以秒为单位, 可以为负数)
+        - `"end:<Note ID>:<Offset>"`: 选中 note 的结束时刻 + `<Offset>` (以秒为单位, 可以为负数)
+        - `"intro:<Note ID>:<Offset>"`: 指定 note 开始淡入的时刻 + `<Offset>` (以秒为单位, 可以为负数)
+        - 🌟 `"at:<Note ID>:<Percentage>"`: *仅用于Hold/Long Hold.* 选中note的开始时刻 + (选中 note 的结束时刻 - 选中note的开始时刻) * `<Percentage>`*(用于选取 hold 在某个百分比下的状态)*
+            - 当 `<Percentage>` 为 `0`, 等同于 `start`
+            - 当 `<Percentage>` 为 `1`, 等同于 `end`
+    - 可以用列表来创建多个相同的状态. 例如:
 
         ```json
         "states": [
@@ -161,7 +169,7 @@ This specification details the storyboard schema; you can use this as a referenc
         ]
         ```
 
-        is automatically expanded to
+        会自动编译成
 
         ```json
         "states": [
@@ -180,7 +188,7 @@ This specification details the storyboard schema; you can use this as a referenc
         ]
         ```
 
-- **relative_time**: the relative time to the parent state. For example,
+- **relative_time**: 相对于父状态的相对时间. 例如,
 
     ```json
     {
@@ -194,9 +202,9 @@ This specification details the storyboard schema; you can use this as a referenc
     }
     ```
 
-    The timing of state A would be `5` + `2.5` = `7.5`.
+    状态 A 的时间为 `5` + `2.5` = `7.5`.
 
-- **add_time**: the relative time to the last defined state. For example,
+- **add_time**: 到最后一个状态的相对时间. 例如,
 
     ```json
     {
@@ -213,17 +221,17 @@ This specification details the storyboard schema; you can use this as a referenc
     }
     ```
 
-    The timing of state B would be (`5` + `2.5`) + `3` = `10.5`.
+    状态 B 的时间为 (`5` + `2.5`) + `3` = `10.5`.
 
-- How an object's exact timing is calculated, from highest priority to lowest priority:
-    - if `add_time` is defined: timing of the last defined state + `add_time`
-    - if `relative_time` is defined, and `time` is also defined: `time` + `relative_time`
-    - if `relative_time` is defined, and there exists a parent state: timing of the parent state + `relative_time`
-    - if `relative_time` is defined, but there does not exist a parent state: current game time + `relative_time` **(Note: this is intended for triggers)**
-    - if both `add_time` and `relative_time` are undefined: `time`
-- **easing**: the easing used when animating this object from the current state to the next state. See [https://easings.net/](https://easings.net/). Default `linear`.
-- **destroy**: if set to `true`, this object is destroyed **when it fully transitions into this state**. For the sake of performance, it is ***strongly recommended*** to destroy an object when you do not need to use it anymore.
-    - In the following example along with the uses of triggers, the `Hello world!` text is spawned and displayed when note 4 is cleared, transitions into zero opacity before destroyed.
+- 计算对象准确时间的运算顺序:
+    - 如果定义了 `add_time`: 最后定义的姿态的时间 + `add_time`
+    - 如果定义了 `relative_time` ,同时也定义了 `time`: `time` + `relative_time`
+    - 如果定义了 `relative_time` ,同时存在一个父状态: 父状态的时间 + `relative_time`
+    - 如果定义了 `relative_time`, 但是没有父状态: 当前游戏时间 + `relative_time` **(注意: 仅用于 trigger)**
+    - 如果 `add_time` 和 `relative_time` 都没有定义: `time`
+- **easing**: 在状态的动画中使用缓动调整加速度. 访问 [https://easings.net/](https://easings.net/) 了解更多. 默认为` `linear` (线性).
+- **destroy**: 如果设置为 `true`, **当对象完全过渡到本状态时**, 将会销毁这个对象. 为了提高性能, ***强烈建议*** 您销毁不再需要使用的对象.
+    - 下面是一个触发器的使用示例, 当点击id为4的note时,将会生成并显示 `Hello world!` 文本, 并淡出消失*(不透明度为0)*, 最后文本被销毁.
 
         ```json
         ...	
@@ -252,20 +260,21 @@ This specification details the storyboard schema; you can use this as a referenc
         ...
         ```
 
-- **states**: array of the extra states of this object.
-    - You can define states in an inner state, which will be appended to the parent object. For example:
+- **states**: 存储对象额外状态的列表.
+    - 您可以在列表内再次定义状态, 该状态将被附加到父对象. 例如:
 
         ```json
         {
-          ...
-        	Object definition
+            ...
+        	定义对象(省略)
         	...
-        	"states": [ // States defined in the parent object
+
+        	"states": [ // 父对象定义的状态
         		{
-        			"template": "stateA",
+            	"template": "stateA",
         		},
         		{
-        			"states": [ // States defined in an inner state
+        			"states": [ // 内部状态中定义的状态
         				{
         					"template": "stateB"
         				},
@@ -281,13 +290,14 @@ This specification details the storyboard schema; you can use this as a referenc
         }
         ```
 
-        is equivalent to
+        等同于
 
         ```json
         {
-          ...
-        	Object definition
+            ...
+        	定义对象
         	...
+
         	"states": [
         		{
         			"template": "stateA",
@@ -305,407 +315,77 @@ This specification details the storyboard schema; you can use this as a referenc
         }
         ```
 
-        This is useful when you want to reuse multiple states at once. See the `pulse` template in the storyboard example.
+        这对一次使用多个状态很有用. 请参阅后文中的 `pulse` 模板.
 
-## **Scene object state** (Parameters inherited by text, sprite, video and line states)
+### 场景对象状态
 
-- **x**: x-coordinate of the object. Default `0`. Default coordinate system stageX.
-- **y**: y-coordinate of the object. Default `0`. Default coordinate system stageY.
-- 🌟 **z**: z-coordinate of the object. Default `0`. Default coordinate system depth.
-    - Use only when perspective camera is enabled.
-- **rot_x**: rotation of the object on the x-axis in degrees. Default `0`.
-- **rot_y**: rotation of the object on the y-axis in degrees. Default `0`.
-- **rot_z**: rotation of the object on the z-axis in degrees. Default `0`.
-- **scale_x**: scale of the object on the x-axis. Default `1`.
-- **scale_y**: scale of the object on the y-axis. Default `1`.
-- **scale**: scale of the object on both axes. If used, `scale_x` and `scale_y` are overridden.
-- **pivot_x**: pivot of the object when rotating/scaling on the x-axis. `0` is at left and `1` is at right. Default `0.5` (center).
-- **pivot_y**: pivot of the object when rotating/scaling on the y-axis. `0` is at bottom and `1` is at top. Default `0.5` (center).
-- **opacity**: transparency of the object. `0` is fully invisible while `1` is fully visible. Default `0`.
-    - That means **all scene objects are invisible** until you animate `opacity` to any value greater than `0`.
-- **width**: width of the object. Default coordinate system stageX.
-- **height**: height of the object. Default coordinate system stageY.
-    - 🌟 Starting from 2.0.0, **text objects automatically fit to their content** (`text`). That means setting `width` and `height` on a text will not do anything.
-    - For sprites, the default dimensions are 200 (width) * 200 (height).
-- **layer:** layer of the object. Default `0`.
-    - `0`: The default layer. Behind all game elements except the background.
-    - `1`: Above all note elements, but under UI elements.
-    - `2`: Above all game elements.
-- **order**: order of the object ***within its `layer`***. For example, an object with order `3` will display in front of an object with order `2`, assuming they have the same `layer`. If both objects have the same order, the later defined object will display in front of the earlier defined object.
-    - 🌟 Remember to always set the proper `order` on sprites! Otherwise, they may not show up in the actual game even they show up in CytoidPlayer. If you are unsure, you can just set it to `0`.
-- **fill_width**: if `true`, `width` and `height` are ignored, and this scene object automatically scratches to the stage's width and has a height of `10000`.
-    - Useful if you just want to make a sprite that fills the entire viewport, like a background image.
+> 译者: 场景对象, 有text, sprite(image sprite), video 和 line. 实际上, 他们都可以看做是sprite的变体, 都是向游戏中插入内容, 只不过对于插入内容的不同(文本, 图像, 视频, 矢量线), 要使用不同的场景对象. 这些不同的场景对象有不同的要求和默认行为, 请读者认真阅读, 注意其中的差异.
 
-## **Text state**
+#### 基本场景对象状态
 
-- **text**: the text to be displayed. Note that (very limited) [rich text](https://docs.unity3d.com/Manual/StyledText.html) is supported (bold, italic, inline size, inline color).
-- **color**: color of the text in the hex representation (i.e. "#fff" or "#4568dc"). Default `"#fff"` (white).
-- **size**: font size of the text. Default `20`.
-    - To animate the size of a text, animate its `scale` property. Do not animate `size`, which only takes integer values and is resource-intensive.
-- **align**: text alignment. `upperLeft`, `upperCenter`, `upperRight`, `middleLeft`, `middleCenter`, `middleRight`, `lowerLeft`, `lowerCenter`, `lowerRight` are supported. Default `middleCenter`.
-- 🌟 **letter_spacing**: letter spacing. Default `0`.
-- 🌟 **font_weight**: font weight. `regular`, `extraLight`, `bold`, `extraBold` are supported. Default `regular`.
+> 适用于 text, sprite, video 和 line
 
-## **Sprite state**
+- **x**: 对象的 X 坐标. 默认为` `0`. 默认坐标系为 stageX.
+- **y**: 对象的 Y 坐标. 默认为` `0`. 默认坐标系为 stageY.
+- 🌟 **z**: 对象的 Z 坐标. 默认为` `0`. 默认坐标系为系统深度坐标.
+    - 仅在 perspective camera(透视相机) 启用时有效.
+- **rot_x**: 对象在 X 轴上的旋转度数. 默认为` `0`.
+- **rot_y**: 对象在 Y 轴上的旋转度数. 默认为` `0`.
+- **rot_z**: 对象在 Z 轴上的旋转度数. 默认为` `0`.
+- **scale_x**: 对象在 X 轴上的比例. 默认为` `1`.
+- **scale_y**: 对象在 Y 轴上的比例. 默认为` `1`.
+- **scale**: 对象在 X 和 Y 轴上的比例. 一旦启用, 将覆盖 `scale_x` 和 `scale_y` 的值.
+- **pivot_x**: 对象旋转/缩放时, 在 X 轴的中心. `0` 为最左端, `1` 为最右段. 默认为` `0.5` (中心).
+- **pivot_y**: 对象旋转/缩放时, 在 Y 轴的中心. `0` 为最底端, `1` 为最顶段. 默认为` `0.5` (中心).
+- **opacity**: 对象的不透明度. `0` 为完全透明(完全不可见), `1` 为完全不透明. 默认为` `0`.
+    - 这意味着 **所有的项目默认都是不可见的**, 除非你将 `opacity` 的值调整到一个比 `0` 大的值.
+- **width**: 项目的宽度. 默认坐标系为 stageX.
+- **height**: 项目的高度. 默认坐标系为 stageY.
+    - 🌟 从 Cytoid 2.0.0 开始, **文本会根据其内容自适应大小** (`text`). 因此为 text 设置参数 `width` 或 `height` 什么都不会发生.
+    - 对于 sprites, 默认大小为 `200 (宽) * 200 (高)`.
+- **layer:** 对象的图层位置. 默认为` `0`.
+    - `0`: 默认图层. 在背景之上, 其他所有游戏元素之下.
+    - `1`: 在note之下, UI 和 背景 之上.
+    - `2`: 在所有游戏元素之上.
+- **order**: 对象在 ***同一图层*** 的顺序. 例如, 一个 `order` 设置为 `3` 的对象将会显示在 `order` 设置为 `2` 的对象之上 (如果这两个对象的 `layer`相同). 如果两个对象 `order` 和 `layer` 都相同, 则后定义的将渲染在之前渲染的元素之上.
+    - 🌟 永远不要忘记为每个 sprite 设置正确的 `order`! 否则, 即使在 CytoidPlayer 正确显示, 也有可能会在实际游戏中出错. 如果你不确定它的值, 可以设置为 `0`.
+- **fill_width**: 如果为 `true`, 则会忽略 `width` 和 `height` 的值, 并且该对象的宽度将被设置为屏幕宽度, 高度设置为 `10000`.
+    - 这有助于您制作一个充满屏幕的画面 (如替换背景图像).
 
-- **path**: relative path to the image file. For example, if the path is `"sprite.png"`, the file should be at the same location as the `storyboard.json` and named `sprite.png`. Only `.jpg` and `.png` are supported. **For best performance, keep resolution below 1920 px * 1080 px, and convert PNGs to JPGs when transparency is not needed.**
-- **preserve_aspect**: if `true`, the image aspect ratio is preserved. Default `true`.
-- **color**: color tint of the sprite in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
+#### Text 对象状态
 
-## 🌟 **Video state** Experimental!
+- **text**: 要显示的文本. 请注意, text中的文字支持 [富文本](https://docs.unity3d.com/Manual/StyledText.html), 但是只支持 **bold(加粗)**, *italic(倾斜)*, <font size=5>inline size(字体大小)</font>, <font color=red>inline color(字体颜色)</font>.
+- **color**: 字体颜色, 使用十六进制颜色 (例如 "#fff" 或 "#4568dc"). 默认值为 `"#fff"` (白色).
+- **size**: 字体大小, 默认值为 `20`.
+    - 要设置字体大小改变的动画, 请使用 `scale` 设置这种动画. 而不是使用 `size` 设置, `size` 只能为整数并且将消耗大量运行资源(可能造成卡顿).
+- **align**: 文本对齐. 支持 `upperLeft`, `upperCenter`, `upperRight`, `middleLeft`, `middleCenter`, `middleRight`, `lowerLeft`, `lowerCenter`, `lowerRight`. 默认为` `middleCenter`.
+- 🌟 **letter_spacing**: 行内字母间距. 默认为` `0`.
+- 🌟 **font_weight**: 字体粗细(字重). 支持 `regular`, `extraLight`, `bold`, `extraBold`. 默认为` `regular`.
 
-- **path**: relative path to the video file. **Since supported video codecs are different across platforms and devices, it is strongly recommended to use a standard H.264 `.mp4` file at maximum 720p resolution.**
-    - Video **will not pause** when the game is paused. This is a known issue.
-- **color**: color tint of the video in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
+#### Sprite 对象状态
 
-## 🌟 **Note controller state**
+- **path**: 图像文件的相对路径. 例如, 如果路径为 `"sprite.png"`, 这个文件应该跟 `StoryBoard.json` 在同一级目录下, 并且被命名为 `sprite.png`. 只支持 `.jpg` 和 `.png`. **受性能限制, 请保证图片大小不超过 1920*1080, 如果您不需要图片的透明像素, 请将 `PNG` 转换为 `JPG` 格式.**
+- **preserve_aspect**: 如果为 `true`, 无论怎么改变图像大小都不影响图片比例. 默认为` `true`.
+- **color**: sprite 对象的颜色, 使用十六进制颜色. 默认为`#fff` (白色), `#fff` (白色) 等同于无色.
 
-- A note controller overrides and animates the properties a single note defined in the chart file. This is the most powerful storybaord technique so far. **You can implement almost any desired gameplay in Cytoid using note controllers!**
-- **note**: integer ID of the note, as defined in the chart file.
-- **override_x**: if `true`, the x-coordinate of the note is overriden. See `x`, `x_multiplier` and `dx`. Default `false`.
-- **x**: overridden x-coordinate of the note. Default coordinate system noteX.
-    - Reminder that you can unset this value by setting it to `null`.
-- **x_multiplier**: multiplies onto the x-coordinate of the note. Default `1`. Has no effect if `x` is already set.
-- **dx**: adds onto the x-coordinate of the note. Default `0`. Default coordinate system noteX. Has no effect if `x` is already set.
-- **override_y**: if `true`, the y-coordinate of the note is overriden. See `y`, `y_multiplier` and `dy`. Default `false`.
-- **y**: overridden y-coordinate of the note. Default coordinate system noteY.
-    - Reminder that you can unset this value by setting it to `null`.
-- **y_multiplier**: multiplies onto the y-coordinate of the note. Default `1`. Has no effect if `y` is already set.
-- **dy**: adds onto the y-coordinate of the note. Default `0`. Default coordinate system noteY. Has no effect if `y` is already set.
-    - **BUG WARNING! As of 2.0.2, this property is incorrectly implemented, and you have to add `1` to the value you want to set for notes that are in a chart page of `-1` direction.**
-        - `dx` and `dy` will be replaced with `x_offset` and `y_offset` in the future. In the meantime, you can still use `dy`—just be very careful of it. If the note positions do not match with your expectations, add `1` to it.
-- How the x-coordinate of a note is calculated, from highest priority to lowest priority:
-    - If `override_x` is `true` and `x` is defined: `x`
-    - If `override_x` is `true` and `x` is not defined (`null`): original x-coordinate * `x_multiplier` + `dx`
-    - Otherwise: original x-coordinate
-    - Same applies to the y-coordinate.
-- **override_z**: if `true`, the z-coordinate of the note is overriden. See `z`. Default `false`.
-- **z**: overridden z-coordinate of the note. Default coordinate system depth.
-- **override_rot_x**: if `true`, the rotation of the note on the x-axis is overriden. See `rot_x`. Default `false`.
-- **rot_x**: overridden rotation of the note on the x-axis in degrees. Default `0`.
-- **override_rot_y**: if `true`, the rotation of the note on the y-axis is overriden. See `rot_y`. Default `false`.
-- **rot_y**: overridden rotation of the note on the y-axis in degrees. Default `0`.
-- **override_rot_z**: if `true`, the rotation of the note on the z-axis is overriden. See `rot_z`. Default `false`.
-- **rot_z**: overridden rotation of the note on the z-axis in degrees. Default `0`.
-- **override_ring_color**: if `true`, the ring color of the note is overriden. See `ring_color`. Default `false`.
-- **ring_color**: overridden ring color of the note. When set to `null`, user ring color is used. Default `null`.
-- **override_fill_color**: if `true`, the fill color of the note is overriden. See `fill_color`. Default `false`.
-- **fill_color**: overridden fill color of the note. When set to `null`, user fill color is used. Default `null`.
-- **opacity_multiplier**: multiplies onto the opacity of the note. Default `1`.
-- **size_multiplier**: multiplies onto the size of the note. Default `1`.
-    - **BUG WARNING! As of 2.0.2, this property only works on clicks and flicks.**
-- **hold_direction**: direction of the "tail" of a hold note; only applicable if `note` is a hold note. `1` is upwards and `-1` is downwards. When set to `null`, original hold direction is used. Default `null`.
-- **style**: controls specific styling of the note; only applicable to hold notes for now. `1` and `2` are supported. Default `1`.
-    - `1`: The default style.
-    - `2`: The triangle that connects the scanline and the hold note will be hidden; the tail becomes shorter as the hold note progresses; the clear effect will be played at the hold note, not the scanline's position.
-- Now you know how to control a note with a note controller, you will soon find this job tedious: what if I want to control, say, all flick notes, or all notes from ID 300 to 500? **Note selectors** come to the rescue!
-- A note selector is an JSON object (i.e. wrapped in `{}` braces) with following properties:
-    - **type**: array of acceptable note types. For example, `[3,4,6,7]` selects all drags and c-drags.
-    - **start**: minimum ID of the note.
-    - **end**: maximum ID of the note.
-    - **direction**: direction of the note's page. `1` indicates that this note is scanned upwards, and `-1` indicates that this note is scanned downwards.
-    - **min_x**: minimum x-coordinate of the note.
-    - **max_x**: maximum x-coordinate of the note.
-- Note selectors are best understood by thinking them as "filters" on notes. Following are some examples:
-    - Select all click notes with ID ranged from 250-275:
+#### 🌟 Video 对象状态 *实验性!*
 
-        ```json
-        {
-        	"type": [0],
-        	"start": 250,
-        	"end": 275
-        }
-        ```
+- **path**: 视频文件的目录. **由于不同的设备支持的视频格式和视频解码性能有所不同, 强烈建议使用 `H.264` 编码的 `.mp4` 文件, 最好为 720p 以下画质.**
+    - Video 在游戏中 **不会暂停**(即使是在暂停界面). 这是已知问题.
+- **color**: video 对象的颜色, 使用十六进制颜色. 默认为`#fff` (白色), `#fff` (白色) 等同于无色.
 
-    - Select all notes on the left side of the screen:
+#### 🌟 Line 对象状态
 
-        ```json
-        {
-          "min_x": 0,
-          "max_x": 0.5
-        }
-        ```
-
-    - Select all notes which will be scanned by the scanline downwards:
-
-        ```json
-        {
-        	"direction": -1
-        }
-        ```
-
-    - Select all notes (equivalently, apply no filters):
-
-        ```json
-        {}
-        ```
-
-- To use a note selector, simply set it as the `note` of a predefined note controller:
-
-    ```json
-    {
-      "note": {
-        "start": 7,
-    		"end": 9
-      },
-      "override_x": true,
-      "x": 0.25
-    }
-    ```
-
-    When loaded into the game, Cytoid filters the notes with the conditions defined in the selector. In this case, we know exactly 3 notes will be selected. This note controller is then automatically expanded into 3 note controllers:
-
-    ```json
-    {
-      "note": 7,
-      "override_x": true,
-      "x": 0.25
-    },
-    {
-      "note": 8,
-      "override_x": true,
-      "x": 0.25
-    },
-    {
-      "note": 9,
-      "override_x": true,
-      "x": 0.25
-    }
-    ```
-
-    Which, as you expect, aligns the 3 notes at x = 0.25.
-
-- **(Advanced)** An interesting detail: you can actually use note selectors in other scene objects, such as sprites and texts. For example:
-
-    ```json
-    {
-    ...
-    	"sprites": [
-    		{
-    			"note": {},
-    			"path": "image.jpg"
-    		}
-    	]
-    ...
-    }
-    ```
-
-    This spawns an image for every note. Pretty useless, right?—You will see in a second how this will be useful in conjunction with the `$note` placeholder.
-
-- The last piece of our note controller toolbox is the `**$note` placeholder**. It can be used in `id`, `parent_id`, `target_id` and `time`; each occurrence will be replaced by the note ID in the current context. Do not worry if this sounds confusing to you at first, because it is.
-    - We start with an example to illustrate why we need the `$note` placeholder. Imagine we want to fade out a note as soon as it appears (similar to the ["hidden" mod in osu!](https://osu.ppy.sh/help/wiki/Game_modifier/Hidden)). Let's say this note has an ID of 100. We can come up with the note controller pretty quickly:
-
-        ```json
-        {
-        	"note": 100,
-          "opacity": 1,
-        	"time": "intro:100",
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:100:0.2"
-        		}
-        	]
-        }
-        ```
-
-        As soon as the note appears, this note controller starts to take effect and eventually fades out the note completely after 0.2 seconds. It works, so what is the problem?
-
-    - The problem is this solution does not scale. What if we want to fade out all the notes after they appear? It is tempting to use a note selector that we just learned, but...
-
-        ```json
-        {
-        	"note": {},
-          "opacity": 1,
-        	"time": "intro:???", // What note ID should we use?
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:???:0.2" // What note ID should we use?
-        		}
-        	]
-        }
-        ```
-
-        Recall that from our previous knowledge, a note selector is just a useful "syntax sugar" that creates a note controller for every selected note with *the same set of properties*. In this case, every note controller do not actually share the same set of properties; the values of `time` must point to the intro time of *different* notes in each expanded note controller. This is what we would like to see:
-
-        ```json
-        {
-        	"note": 1,
-          "opacity": 1,
-        	"time": "intro:1",
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:1:0.2"
-        		}
-        	]
-        },
-        {
-        	"note": 2,
-          "opacity": 1,
-        	"time": "intro:2", // Different from the first note controller!
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:2:0.2" // Different from the first note controller!
-        		}
-        	]
-        },
-        ...
-        ```
-
-        This is where the `$note` placeholder can help us. Recall that every occurrence of  `$note` in property `id`, `parent_id`, `target_id` or `time` is replaced by the note ID in the current context, or, more simply put, by the note ID of the controller where the property is located. In other words, we can write:
-
-        ```json
-        {
-        	"note": {},
-          "opacity": 1,
-        	"time": "intro:$note",
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:$note:0.2"
-        		}
-        	]
-        }
-        ```
-
-        Which is first automatically expanded into:
-
-        ```json
-        {
-        	"note": 1,
-          "opacity": 1,
-        	"time": "intro:$note",
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:$note:0.2"
-        		}
-        	]
-        },
-        {
-        	"note": 2,
-          "opacity": 1,
-        	"time": "intro:$note",
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:$note:0.2"
-        		}
-        	]
-        },
-        ...
-        ```
-
-        Then every `$note` is automatically replaced by the actual note ID in their context:
-
-        ```json
-        { 
-          // Within this note controller, $note is always 1
-        	"note": 1,
-          "opacity": 1,
-        	"time": "intro:1", // $note replaced by 1
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:1:0.2" // $note replaced by 1
-        		}
-        	]
-        },
-        {
-          // Within this note controller, $note is always 2
-        	"note": 2,
-          "opacity": 1,
-        	"time": "intro:2", // $note replaced by 2
-        	"states": [
-        		{
-        			"opacity": 0,
-        			"time": "intro:2:0.2" // $note replaced by 2
-        		}
-        	]
-        },
-        ...
-        ```
-
-        Which is exactly what we want. Isn't that beautiful?
-
-    - **(Advanced)** Protip: we showed how to use `$note` in `time`, but how about in `id`, `parent_id` and `target_id`? It turns out, like note selectors, the `$note` placeholder can be used in any other scene object. We just showed above how to spawn a sprite for every note, so let's see how to make them appear together with the note—or, custom note skins!
-
-        ```json
-        {
-        ...
-        	"note_controllers": [
-        		{
-        			"note": {},
-        			"id": "note_controller_$note",
-        			"time": 0,
-        			"opacity_multiplier": 0
-        		} // Creates a note controller for each note, each with a distinct id, and makes the note invisible
-        	],
-        	"sprites": [
-        		{
-        			"path": "image.jpg"
-        			"note": {}, // Spawn an image for each note...
-        			"parent_id": "note_controller_$note", // ...that locates and moves relative to the note (i.e. follows the note)
-        			"opacity": 0,			
-        			"time": "intro:$note", // ...that is hidden until the note appears
-        			"states": [
-        				{
-        					"opacity": 1,
-        					"time": "start:$note" // ...that becomes fully visible when the note is meant to be hit
-        				},
-        				{
-        					"add_time": 0.5,
-        					"destroy": true // Destroy after 0.5 seconds
-        				}
-        			]
-        		}
-        	]
-        ...
-        }
-        ```
-
-        Unfortunately, this looks more promising than it actually is. If you hit the notes early, the note controller no longer has a valid position, so the skin sprite resets its position and "teleports" to the center of the screen. When storyboard events are implemented in the future, we will be able to destroy the sprite as soon as the note is cleared, mimicking note skinning more convincingly.
-
-        - An important takeaway here, though, is that although note controllers do not appear in the game, they actually have an **implicit position**, which is aligned with the position of their target note! Therefore, if you ever want to align some scene object with a note, just define a note controller for that note and set the parent of the scene object to the note controller.
-- A few common tricks:
-    - To create vertical-scrolling style gameplay, simply set `override_y` to `true`, and animate `y` from `2` (or any value that is surely out of the vertical screen boundary) at time = `intro:$note` to `0` at time = `start:$note`.
-        - In the [Interference: Finale](https://cytoid.io/levels/io.cytoid.interference3) EX storyboard, vertical-scrolling style gameplay is mixed with scanline gameplay. This is achieved by the charter first predefining a set of notes in the storyboard at a fixed X value, say, 0.4. Then the storyboarder uses a note selector that selects notes at X = 0.4 and animates them so that only they would fall onto the bottom of the screen, while other notes remain "normal."
-            - Note: Due to accuracy issues of decimals, do not select notes at X = 0.4 like this:
-
-                ```json
-                {
-                	"min_x": 0.4,
-                	"max_x": 0.4
-                }
-                ```
-
-                Instead, do:
-
-                ```json
-                {
-                	"min_x": 0.39999,
-                	"max_x": 0.40001
-                }
-                ```
-
-    - To move a note in a curve, use two note controllers, one animates `x` and one animates `y`, each with different `easing` (for example, `easeInCirc` and `easeOutCirc` so that the note follows a trajectory of quarter of a circle).
-    - Fix `y` to a constant value to mimic osu-style gameplay.
-
-## 🌟 **Line state**
-
-- "Line" is actually a misnomer. A line object renders connected line segments. You can use it to mimic a scanline or draw any geometry shape, like a triangle.
-- Although the line state *technically* inherits from the scene object state, only a very limited subset of parameters in the scene object state are supported: `opacity`, `layer` and `order`.
-- **pos**: array of vertex objects.
-    - Each vertex is a JSON object with following properties:
-        - **x**: x-coordinate of the vertex. Default coordinate system noteX.
-        - **y**: y-coordinate of the vertex. Default coordinate system noteY.
-        - **z**: z-coordinate of the vertex. Default coordinate system depth.
-- **width**: width of the line segments. Default `0.05`.
-- **color**: color of the line segments in the hex representation. Default `"#fff"` (white).
-- An example to animate a triangle using two line states:
+- "Line" 其实不太能准确描述这个对象. line 对象能轻松地制作出各种由线段组成的形状. 你可以用它模仿扫描线, 或者绘制任何您能想到的, 由线段组成的图形, 例如三角形.
+- 尽管 line 继承了场景的状态, 但是支持*非常*有限, 只有这些能够使用: `opacity`, `layer` 和 `order`.
+- **pos**: 线的端点.
+    - 每一个端点都是一个有着如下属性的 JSON 对象:
+        - **x**: 顶点的 X 坐标. 默认坐标系为 `noteX`.
+        - **y**: 顶点的 Y 坐标. 默认坐标系为 `noteY`.
+        - **z**: 顶点的 Z 坐标. 默认坐标系为 `noteZ`.
+- **width**: 线段的宽度. 默认为`0.05`.
+- **color**: 线段的颜色, 使用十六进制颜色. 默认为`"#fff"` (白色).
+- 使用两个 line 对象建立三角形的示例:
 
     ```json
     {
@@ -755,20 +435,20 @@ This specification details the storyboard schema; you can use this as a referenc
     }
     ```
 
-    Try this yourself and figure out why the triangle animates like that! 😉
+    不如自己尝试一下, 看看为什么三角形会有这样的动画! 😉
 
-## **Scene controller state**
+### 场景控制器(Scene controller) 对象状态
 
-- **storyboard_opacity**: `opacity` of all storyboard scene objects. Default `1`.
-- **ui_opacity**: opacity of the game UI (score, info, pause button...). Default `1`.
-- **scanline_opacity**: opacity of the scanline. Default `1`.
-- **background_dim**: opacity of the background dim. Default `0.85`.
-- **note_opacity_multiplier**: `opacity` of all notes will be multiplied by this value. Default `1`.
-- **scanline_color**: override the scanline color. If not set (or set to `null`), `#ffffff` will be used when the chart is not changing speed, `#d25669` for speeding up,  `#a0c8bf` for speeding down.
-- **note_ring_color**: override the ring color of all note. If not set (or set to `null`), user ring color is used.
-- 🌟 **note_fill_colors**: override the fill colors of **different types of notes**.
-    - Format: `[click 1, click 2, drag 1, drag 2, hold 1, hold 2, long hold 1, long hold 2, flick 1, flick 2, c-drag 1, c-drag 2]`
-    - The following example sets the color of all click notes to `#4568dc` and the color of all flick notes to `#000000`:
+- **StoryBoard_opacity**:  所有StoryBoard对象的 `opacity`. 默认为`1`.
+- **ui_opacity**: 游戏 UI 的不透明度 (得分, 歌曲信息, 暂停键...). 默认为`1`.
+- **scanline_opacity**: 扫描线的不透明度. 默认为`1`.
+- **background_dim**: 背景遮罩的不透明度. 默认为`0.85`.
+- **note_opacity_multiplier**: 所有note的 `opacity` 的倍率. 默认为`1`.
+- **scanline_color**: 覆盖扫描线颜色. 默认 (或者被设置为 `null`时), 一般情况为 `#ffffff`, 发生扫描线加速事件时为 `#d25669`, 发生扫描线减速事件时为 `#a0c8bf`. (加减速事件由谱面文件中`event_list`决定)
+- **note_ring_color**: 覆盖 note 的外圈颜色. 默认 (或者设置为 `null`), 会使用用户设置.
+- 🌟 **note_fill_colors**: 覆盖 **不同种类 note** 的颜色.
+    - 格式: `[click 1, click 2, drag 1, drag 2, hold 1, hold 2, long hold 1, long hold 2, flick 1, flick 2, c-drag 1, c-drag 2]`
+    - 下面的示例中, click 的颜色都被设置为 `#4568dc` flick 的颜色都被设置为 `#000000`, 其余使用用户设置:
 
         ```json
         ...
@@ -781,80 +461,438 @@ This specification details the storyboard schema; you can use this as a referenc
         ...
         ```
 
-    - Note: if any color is not set (or set to `null`), user color will be used.
-- **override_scanline_pos**: if `true`, the y-coordinate of the scanline is overriden. See `scanline_pos`. Default `false`.
-- **scanline_pos**: overridden y-coordinate of the scanline. Default minimum `0` and maximum `1`, but out-of-bound values are also accepted. Default coordinate system noteY.
-- **perspective**: if `true`, a perspective camera is used; if `false`, an orthographic camera is used. Default `true`.
-- **size**: only takes effect if `perspective` is `false`. Controls the viewport size of the orthographic camera. Larger the size, smaller the scene. Default `5`.
-- **fov**: only takes effect if `perspective` is `true`. Controls the field of view of the perspective camera (basically equivalent to `size`, but for the perspective camera). Larger the field of view, smaller the scene. Default `53.2`.
-    - Hint: to create the pulsing effect, increase this value from `53.2` to `59.2` (or any number larger than `53.2`), then decrease to `53.2` again.
-    - `53.2` is a magic number that ensures even in perspective mode, the note size is approximately the same as in orthographic mode.
-- **x**: x-coordinate of the camera. A greater value shifts the whole scene to left, vice versa. A length of `1` is equivalent to half the screen width. Default `0`. Default coordinate system cameraX.
-- **y**: y-coordinate of the camera. A greater value shifts the whole scene to bottom, vice versa. A length of `1` is equivalent to half the screen height. Default `0`. Default coordinate system cameraY.
-- 🌟 **z**: z-coordinate of the camera. A greater value moves the camera closer to the notes, vice versa. Default `-10`. Default coordinate system depth.
-- **rot_x**, **rot_y**, **rot_z**: rotations of the camera. Default `0`.
-    - Hint: if you rotate along the x or y axis, part of the scene may not be able to be seen; you have to adjust the coordinates of the camera accordingly. If change `rot_x`, move `y`; if change `rot_y`, move `x`.
-- 🌟 **Removed in 2.0.0. ~~vignette**: boolean to toggle the vignette effect. Default `false`.~~
-    - **~~vignette_intensity**: the intensity of the vignette effect. Ranged `0` to `1`.~~
-    - **~~vignette_color**: the color of the vignette effect in the hex representation.~~
-    - **~~vignette_start, vignette_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.~~
-- 🌟 **Removed in 2.0.0.** **~~chromatic**: boolean to toggle the chromatic aberration effect. Default `false`.~~
-    - **~~chromatic_intensity**: the intensity of the chromatic effect. Typically ranged `0` to `0.15`, although larger values can be set for distorting effects.~~
-    - **~~chromatic_start, chromatic_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.~~
-- **chromatical**: boolean to toggle the chromatical ****effect. Default `false`.
-    - This effect is basically an automated chromatic aberration effect.
-    - **chromatical_fade**: the transparency of the chromatical effect. Ranged `0` to `1`.
-    - **chromatical_intensity**: the intensity of the chromatical effect. Ranged `0` to `1`.
-    - **chromatical_speed**: the speed of the chromatical effect. Ranged `0` to `3`.
-- **bloom**: boolean to toggle the bloom effect. Default `false`.
-    - **bloom_intensity**: Ranged `0` to `5`.
-- **radial_blur**: boolean to toggle the radial blur effect. Default `false`.
-    - **radial_blur_intensity**: Ranged `-0.5` to `0.5`. Default `0.025`.
-- **color_adjustment**: boolean to toggle color adjustment. Default `false`.
-    - **brightness**: Ranged `0` to `10`. Default `1`.
-    - **saturation**: Ranged `0` to `10`. Default `1`.
-    - **contrast**: Ranged `0` to `10`. Default `1`.
-- **color_filter**: boolean to toggle the screen color filter. Default `false`.
-    - **color_filter_color**: color of the screen filter in the hex representation.
-- **gray_scale**: boolean to toggle the gray scale effect. Default `false`.
-    - **gray_scale_intensity**: Ranged `0` to `1`.
-- **noise**: boolean to toggle the noise effect. Default `false`.
-    - **noise_intensity**: Ranged `0` to `1`. Default `0.235`.
-- **sepia**: boolean to toggle the sepia effect. Default `false`.
-    - **sepia_intensity**: Ranged `0` to `1`.
-- **dream**: boolean to toggle the dream effect. Default `false`.
-    - **dream_intensity**: Ranged `0` to `1`.
-- **fisheye**: boolean to toggle the fisheye effect. Default `false`.
-    - **fisheye_intensity**: Ranged `0` to `1`. Default `0.5`.
-- **shockwave**: boolean to toggle the shockwave ****effect. Default `false`.
-    - **shockwave_speed**: Ranged `0` to `10`.  Default `1`.
-- **focus**: boolean to toggle the focus (manga focus lines) ****effect. Default `false`.
-    - **focus_size**: Ranged `1` to `10`.  Default `1`.
-    - **focus_color**: color of the focus lines in the hex representation.
-    - **focus_speed**: Ranged `0` to `30`. Default `5`.
-    - **focus_intensity**: Ranged `0` to `1`. Default `0.25`.
-- **glitch**: boolean to toggle the glitch effect. Default `false`.
-    - **glitch_intensity**: Ranged `0` to `1`.
-- **arcade**: boolean to toggle the focus (manga focus lines) ****effect. Default `false`.
-    - **arcade_intensity**: Ranged `0` to `1`.  Default `1`.
-    - **arcade_interference_size**: Ranged `0` to `10`. Default `1`.
-    - **arcade_interference_speed**: Ranged `0` to `10`. Default `0.5`.
-    - **arcade_contrast**: Ranged `0` to `10`. Default `1`.
-- **tape**: boolean to toggle the tape (screen flipping) effect.
+    - 注意: 如果没有设置任何颜色 (或者都设置为 `null`), 会使用用户设置的颜色.
+- **override_scanline_pos**: 如果为 `true`, 则允许覆盖扫描线的Y坐标, 参见 `scanline_pos`. 默认为`false`.
+- **scanline_pos**: 覆盖扫描线的y坐标. 默认情况下, 最小值为 `0`, 最大值为 `1`, 但允许越界. 默认坐标系为 `noteY`.(如果`override_scanline_pos`的值不为true, 则不生效)
+- **perspective**: 如果为 `true`, 则使用perspective camera(透视相机, 用于渲染3D场景); 如果为 `false`, 则使用 orthographic camera (正交相机, 用于渲染2D场景). 默认为`true`.
+- **size**: 仅在 `perspective` 为 `false` 时生效. 控制正交相机的视图大小. 值越大, 场景越小. 默认为`5`.
+- **fov**: 仅在 `perspective` 为 `true` 时生效. 控制透视相机的视野 (基本与 `size` 效果相同, 但仅用于透视相机). 视野越大, 场景越小. 默认为`53.2`.
+    - 提示: 要创造脉冲效果(pulsing effect), 请将此值从 `53.2` 提升至 `59.2` (或者任意比 `53.2` 大的值), 然后再降回 `53.2`.
+    - `53.2` 是一个有趣的值, 在这个值下, 透视相机的 note 大小与正交相机的 note 大小相同.
+- **x**: 相机的 X 坐标. 较大的值会使整个场景向左移动, 反之亦然. 值为 `1` 时等同于移动半个屏幕. 默认为`0`. 默认坐标系为 cameraX.
+- **y**: 相机的 Y 坐标. 较大的值会使整个场景向下移动, 反之亦然. 值为 `1` 时等同于移动半个屏幕. 默认为`0`. 默认坐标系为 cameraY.
+- 🌟 **z**: 相机的 Z 坐标. 较大的值会使相机靠近场景, 反之亦然. 默认为`-10`. 默认坐标系为系统深度.
+- **rot_x**, **rot_y**, **rot_z**: 相机的旋转角度. 默认为`0`.
+    
+    - 提示: 如果沿着 x 轴或 y 轴选择, 可能无法看到部分场景; 您必须相应地调整相机的坐标. 修改了 `rot_x` 则移动 `y`; 修改了 `rot_y` 则移动 `x`.
 
-**Obsolete. Do not use—will be replaced with storyboard events in a future release.**
+- **chromatical**: 开启 chromatical(色度) 滤镜, `true` 或`false`. 默认为`false`.
+    - 这个效果可以模仿真实摄像机在镜头无法将所有颜色融合到同一点时产生的效果. 产生的效果沿着图像明暗分隔边界出现"条纹".
+    - **chromatical_fade**: 色度效果的透明度. 范围从 `0` 到 `1`.
+    - **chromatical_intensity**: 色度效果的强度. 范围从 `0` 到 `1`.
+    - **chromatical_speed**: 色度效果的速度. 范围从 `0` 到 `3`.
 
-## **~~Trigger State *(Experimental)*~~**
+- **bloom**: 开启 bloom(泛光) 滤镜. 默认为`false`.
+    - **bloom_intensity**: 范围从 `0` 到 `5`.
+
+- **radial_blur**: 开启 blur(模糊) 滤镜, `true` 或 `false`. 默认为`false`.
+    - **radial_blur_intensity**: 范围从 `-0.5` 到 `0.5`. 默认为`0.025`.
+
+- **color_adjustment**: 开启 color adjustment 滤镜. 默认为`false`.
+    - **brightness**: 范围从 `0` 到 `10`. 默认为`1`.
+    - **saturation**: 范围从 `0` 到 `10`. 默认为`1`.
+    - **contrast**: 范围从 `0` 到 `10`. 默认为`1`.
+
+- **color_filter**: 开启 screen color filter 滤镜. 默认为`false`.
+    - **color_filter_color**: screen filter 的颜色, 采用16进制颜色.
+
+- **gray_scale**: 开启 gray scale 滤镜. 默认为`false`.
+    - **gray_scale_intensity**: 范围从 `0` 到 `1`.
+
+- **noise**: 开启 noise 滤镜. 默认为`false`.
+    - **noise_intensity**: 范围从 `0` 到 `1`. 默认为`0.235`.
+
+- **sepia**: 开启 sepia 滤镜. 默认为`false`.
+    - **sepia_intensity**: 范围从 `0` 到 `1`.
+
+- **dream**: 开启 dream 滤镜. 默认为`false`.
+    - **dream_intensity**: 范围从 `0` 到 `1`.
+
+- **fisheye**: 开启 fisheye 滤镜. 默认为`false`.
+    - **fisheye_intensity**: 范围从 `0` 到 `1`. 默认为`0.5`.
+
+- **shockwave**: 开启 the shockwave 滤镜. 默认为`false`.
+    - **shockwave_speed**: 范围从 `0` 到 `10`.  默认为`1`.
+
+- **focus**: 开启 the focus (manga focus lines) 滤镜. 默认为`false`.
+    - **focus_size**: 范围从 `1` 到 `10`.  默认为`1`.
+    - **focus_color**: 焦点线的颜色, 采用十六进制颜色.
+    - **focus_speed**: 范围从 `0` 到 `30`. 默认为`5`.
+    - **focus_intensity**: 范围从 `0` 到 `1`. 默认为`0.25`.
+
+- **glitch**: 开启 glitch 滤镜. 默认为`false`.
+    - **glitch_intensity**: 范围从 `0` 到 `1`.
+
+- **arcade**: 开启 the focus (manga focus lines) 滤镜. 默认为`false`.
+    - **arcade_intensity**: 范围从 `0` 到 `1`.  默认为`1`.
+    - **arcade_interference_size**: 范围从 `0` 到 `10`. 默认为`1`.
+    - **arcade_interference_speed**: 范围从 `0` 到 `10`. 默认为`0.5`.
+    - **arcade_contrast**: 范围从 `0` 到 `10`. 默认为`1`.
+
+- **tape**: 开启 the tape (screen flipping) 滤镜.
+
+- 🌟 **在Cytoid 2.0.0 中被移除.** ~~**vignette**: boolean to toggle the vignette effect. 默认为`false`.~~
+    - ~~**vignette_intensity**: the intensity of the vignette effect. 范围从 `0` 到 `1`.~~
+    - ~~**vignette_color**: the color of the vignette effect , 采用16进制颜色.~~
+    - ~~**vignette_start, vignette_end**: just play around with these values because no one knows what they exactly mean. 范围从 `0` 到 `1`.~~
+- 🌟 **在Cytoid 2.0.0 中被移除.** ~~**chromatic**: boolean to toggle the chromatic aberration effect. 默认为`false`.~~
+    - ~~**chromatic_intensity**: the intensity of the chromatic effect. Typically ranged `0` to `0.15`, although larger values can be set for distorting effects.~~
+    - ~~**chromatic_start, chromatic_end**: just play around with these values because no one knows what they exactly mean. 范围从 `0` 到 `1`.~~
+
+### 🌟 Note 控制器(Note controller) 对象状态
+
+- note 控制器能将谱面中的单个或多个note动画化, 使其成为StoryBoard的一部分. 这是目前为止最强大的StoryBoard技术. **您可以使用 Note 控制器, 在 Cytoid 中实现任何需要的游戏玩法!**
+- **note**: 需要控制的 note 的 ID, 由谱面文件定义(note_list列表中的单个对象的"id"的值).
+
+- **override_x**: 如果为 `true`, 被选中的 note 的 X 轴坐标将允许被覆盖. 详见 `x`, `x_multiplier` 和 `dx` 词条. 默认为`false`.
+- **x**: 覆盖被选中的 note 的 X 轴坐标. 默认坐标系为 noteX.
+    - 注意: 您可将这个值设置为 `null` 取消设置这个值.
+- **x_multiplier**: 选中note的 X 轴数值的倍率. 默认为`1`. 如果已经设置了 `x`, 则这个值无效.
+- **dx**: 使 note 沿着 X 轴偏移该距离. 默认为`0`. 默认坐标系为 noteX. 如果已经设置了 `x`, 则这个值无效.
+
+- **override_y**: 如果为 `true`, 被选中的 note 的 Y 轴坐标将允许被覆盖. 详见 `y`, `y_multiplier` 和 `dy` 词条. 默认为`false`.
+- **y**: 覆盖被选中的 note 的 Y 轴坐标. 默认坐标系为 noteY.
+    - 注意: 您可将这个值设置为 `null` 取消设置这个值.
+- **y_multiplier**: 选中note的 Y 轴数值的倍率. 默认为`1`. 如果已经设置了 `y`, 则这个值无效.
+- **dy**: 使 note 沿着 Y 轴偏移该距离. 默认为`0`. 默认坐标系为 noteY. 如果已经设置了 `y`, 则这个值无效.
+    - **BUG 警告! 在 Cytoid 2.0.2 中, 这个效果可能存在错误, 如果出现了错误, 您需要在所有扫线方向为 `-1` 的页面中, 往您想要的值的基础上加 `1`.**
+        - 在未来的某个版本中, `dx` 和 `dy` 将被替换为 `x_offset` 和 `y_offset`. 与此同时, 您仍然能使用 `dy`—但是要非常小心. 如果 note 的位置与您期望的不符, 请在其基础上加 `1`.
+- 如何根据优先级, 从高到低计算 note 的 X 轴坐标:
+    - 如果将 `override_x` 设置为 `true` 并且为 `x` 设置了值: `x`
+    - 如果将 `override_x` 设置为 `true` 并且没有为 `x` 设置值 (或者为 `null`): 原始的 X 坐标(由谱面本身定义) * `x_multiplier` + `dx`
+    - 否则: 原始的 X 坐标
+    - Y 轴坐标按照同样的方法计算.
+
+- **override_z**: 如果为 `true`, 会覆盖note的 Z 轴坐标. 详情请见 `z` 词条. 默认为`false`.
+- **z**: 覆盖被选中的 note 的 Z 轴坐标. 默认坐标系为 系统深度.
+- **override_rot_x**: 如果为 `true`, 则允许覆盖 note 的 X 坐标. 详情请见 `rot_x`. 默认为`false`.
+- **rot_x**: 覆盖被选中的 note 的 X 坐标. 默认为`0`.
+- **override_rot_y**: 如果为 `true`, 则允许覆盖 note 的 Y 坐标. 详情请见 `rot_y`. 默认为`false`.
+- **rot_y**: 覆盖被选中的 note 的 Y 坐标. 默认为`0`.
+- **override_rot_z**: 如果为 `true`, 则允许覆盖 note 的 Z 坐标. 详情请见 `rot_z`. 默认为`false`.
+- **rot_z**: 覆盖被选中的 note 的 Z 坐标. 默认为`0`.
+- **override_ring_color**: 如果为 `true`, 则允许覆盖 note 的 外环颜色. 详情请见 `ring_color`. 默认为`false`.
+- **ring_color**: 要覆盖的外环颜色. 设置为 `null` 时, 将使用用户设置. 默认为`null`.
+- **override_fill_color**: 如果为 `true`, 则允许覆盖 note 的填充颜色. 详情请见 `fill_color`. 默认为`false`.
+- **fill_color**: 要覆盖 note 的填充颜色. 设置为 `null` 时, 将使用用户设置. 默认为`null`.
+- **opacity_multiplier**: note 不透明度的倍率. 默认为`1`.
+- **size_multiplier**: note 大小的倍率. 默认为`1`.
+    - **BUG 警告! 在 Cytoid 2.0.2 中, 这个仅适用于 click 和 flick.**
+
+- **hold_direction**: Hold 尾部的方向; 仅对 Hold 有效果(不含Long Hold). 值为 `1` 时向上, 值为 `-1` 时向下. 设置为 `null` 时, 将采用原本的 Hold 方向. 默认为`null`.
+- **style**: 为 note 设置特定样式; 目前仅对 Hold(含Long Hold) 有效. 允许的值为 `1` 和 `2`. 默认为`1`.
+    - `1`: 默认样式.
+    - `2`: 隐藏 Hold 与扫描线连接的三角形特效; Hold 尾的长度会逐渐变短; Hold 的按键特效将在 Hold 头播放(而不是扫描线处). (用于模拟下落式玩法)
+
+- 觉得对每一个note逐个添加 note 控制器很乏味? 要怎么做才能批量选择所有的 flick, 或者 ID 300 到 500 的全部 note? **Note selectors(note 选择器)** 能助您一臂之力!
+- note 选择器是一个 JSON 对象 (即内容被 `{}` 所括起来), 其有如下属性:
+    - **type**: 要选择的 note 类型. 例如, 用 `[3,4,6,7]` 选择 drag 和 c-drags(包括父子锁链).
+    - **start**: 选择范围的最小 ID.
+    - **end**: 选择范围的最大 ID.
+    - **direction**: 选择处于某个扫线方向的 note. `1` 表示将选中位于扫线方向向上的页面的note, `-1` 表示将选中位于扫线方向向下的页面的note.
+    - **min_x**: 选择范围的最小 X 坐标.
+    - **max_x**: 选择范围的最大 X 坐标.
+- Note 选择器可视作为 note 的 "过滤器", 只要不符合其中的一个条件, 这个 note 就不会被选中. 下面是一些使用示例:
+    - 选中 ID 为 250-275 的所有 Click:
+
+        ```json
+        {
+        	"type": [0],
+        	"start": 250,
+        	"end": 275
+        }
+        ```
+
+    - 选中在屏幕左半边的所有 note:
+
+        ```json
+        {
+          "min_x": 0,
+          "max_x": 0.5
+        }
+        ```
+
+    - 选中所有处于扫描线向下扫描的页面的 note:
+
+        ```json
+        {
+        	"direction": -1
+        }
+        ```
+
+    - 选中全部 note (等效于不使用任何过滤器):
+
+        ```json
+        {}
+        ```
+
+- 要调用 note 选择器, 只需要将 note 选择器作为 `note` 的值:
+
+    ```json
+    {
+      "note": {
+        "start": 7,
+    		"end": 9
+      },
+      "override_x": true,
+      "x": 0.25
+    }
+    ```
+
+    载入游戏时, Cytoid 会根据 note 选择器的值过滤 note. 在这个案例中, 我们清楚地知道要选中哪 3 个 note. 原本的 note 控制器会根据结果自动展开为 3 个 note 控制器:
+
+    ```json
+    {
+      "note": 7,
+      "override_x": true,
+      "x": 0.25
+    },
+    {
+      "note": 8,
+      "override_x": true,
+      "x": 0.25
+    },
+    {
+      "note": 9,
+      "override_x": true,
+      "x": 0.25
+    }
+    ```
+
+    如你所愿, 这 3 个note 都会被移动到 x = 0.25 的位置.
+
+- **(高级)** 有趣的细节: 在其他的场景对象中也可以使用 note, 例如 sprite 和 text. 这里有个例子:
+
+    ```json
+    {
+    ...
+    	"sprites": [
+    		{
+    			"note": {},
+    			"path": "image.jpg"
+    		}
+    	]
+    ...
+    }
+    ```
+
+    这将为每个 note 都生成一个 sprite. 觉得没用?—在后文中, 您将会看见 `$note` 占位符如何化腐朽为神奇.
+
+- 对于 note 控制器工具的介绍已接近尾声, 最后压轴出场的是 **`$note` 占位符**. 它可被用于 `id`, `parent_id`, `target_id` 甚至是 `time`; 它会自动调用上下文中的 note. 感到困惑? 没关系, 请听我娓娓道来.
+    - 让我们先理解为什么需要 `$note` 占位符. 想象一下, 如果我们需要让 note 出现后立即淡出 (与 [osu 中的 "hidden" mod](https://osu.ppy.sh/help/wiki/Game_modifier/Hidden) 相似). 假设这个 note 的 ID 为 100. 要实现这个效果自然需要用到 note 控制器:
+
+        ```json
+        {
+        	"note": 100,
+          "opacity": 1,
+        	"time": "intro:100",
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:100:0.2"
+        		}
+        	]
+        }
+        ```
+
+        note 一出现, note 控制器立即生效, 并在 0.2 秒后使 note 完全淡出. 效果完美! 但似乎有些问题?
+
+    - 如果note很多, 那这种办法太繁琐了! 如果我们要让所有的 note 都带这个效果呢? 你决定继续使用 note 控制器, 但...
+
+        ```json
+        {
+        	"note": {},
+          "opacity": 1,
+        	"time": "intro:???", // 要填哪个 note ID?
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:???:0.2" // 要填哪个 note ID?
+        		}
+        	]
+        }
+        ```
+
+        回想一下前面所学的知识, note 控制器只是一个 "通用的方法", 可视为多个子控制器的合集, 游戏运行时会为每一个子控制器都分配*相同的参数*. 实际上我们需要对每一个 note 控制器单独设置*不同的参数*. `time` 的值需要按照 *不同的 note* 设置*不同的值*. 就像下面这样:
+
+        ```json
+        {
+        	"note": 1,
+          "opacity": 1,
+        	"time": "intro:1",
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:1:0.2"
+        		}
+        	]
+        },
+        {
+        	"note": 2,
+          "opacity": 1,
+        	"time": "intro:2", // Different from the first note controller!
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:2:0.2" // Different from the first note controller!
+        		}
+        	]
+        },
+        ...
+        ```
+
+        这正是 `$note` 占位符大展拳脚的地方. 回想一下, 如果用 `$note` 代替 `id`, `parent_id`, `target_id` 或 `time` 中上下文出现的 note ID, 或者更简单地说, 让它代替每个子控制器的实际 note ID, 可以这样使用:
+
+        ```json
+        {
+        	"note": {},
+          "opacity": 1,
+        	"time": "intro:$note",
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:$note:0.2"
+        		}
+        	]
+        }
+        ```
+
+        游戏首先将其扩展为:
+
+        ```json
+        {
+        	"note": 1,
+          "opacity": 1,
+        	"time": "intro:$note",
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:$note:0.2"
+        		}
+        	]
+        },
+        {
+        	"note": 2,
+          "opacity": 1,
+        	"time": "intro:$note",
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:$note:0.2"
+        		}
+        	]
+        },
+        ...
+        ```
+
+        再自动以上下文中出现的的 note ID 取代 `$note`:
+
+        ```json
+        { 
+          // 在这个 note 控制器中, $note 始终为 1
+        	"note": 1,
+          "opacity": 1,
+        	"time": "intro:1", // 以 1 替换 $note
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:1:0.2" // 以 1 替换 $note
+        		}
+        	]
+        },
+        {
+          // 在这个 note 控制器中, $note 始终为 2
+        	"note": 2,
+          "opacity": 1,
+        	"time": "intro:2", // 以 2 替换 $note
+        	"states": [
+        		{
+        			"opacity": 0,
+        			"time": "intro:2:0.2" // 以 2 替换 $note
+        		}
+        	]
+        },
+        ...
+        ```
+
+        这正是我们想要的, 简洁又易懂的代码! 
+
+    - **(高级)** 特别提示: 我们演示了如何在 `time` 中使用 `$note`, 那在 `id`, `parent_id` 甚至是 `target_id` 中如何使用呢? 实际上, 就想使用 note 选择器一样, `$note` 占位符可在任何其他场景对象就使用. 刚刚我们展示了任何为每个 note 生成sprite, 那让我们看看如何让它跟 note (或者说, 自定义 note 皮肤!) 一起出现.
+
+        ```json
+        {
+        ...
+        	"note_controllers": [
+        		{
+        			"note": {},
+        			"id": "note_controller_$note",
+        			"time": 0,
+        			"opacity_multiplier": 0
+        		} // 为每个 note 创建一个 note 控制器，每个 note 都有不同的 ID，并使该 note 不可见
+        	],
+        	"sprites": [
+        		{
+        			"path": "image.jpg",
+        			"note": {}, // 为每个 note 生成图片...
+        			"parent_id": "note_controller_$note", // ...相对于 note 进行定位或移动 (即跟随 note 运动)
+        			"opacity": 0,			
+        			"time": "intro:$note", // ...直到 note 出现才隐藏
+        			"states": [
+        				{
+        					"opacity": 1,
+        					"time": "start:$note" // ...点击 note 时, 使 note 完全可见
+        				},
+        				{
+        					"add_time": 0.5,
+        					"destroy": true // 点击的 0.5 秒后销毁
+        				}
+        			]
+        		}
+        	]
+        ...
+        }
+        ```
+
+        不幸的是, 这一切有些理想化. 如果您过早的点击了 note, note 控制器将失去有效位置, 因此作为 note 皮肤的 sprite 的位置将被重置, 并闪现至屏幕中心. 未来我们将推出 StoryBoard 事件, 使用 StoryBoard 事件, 我们可以在点击 note 的同时销毁 sprite, 使 note 皮肤更加真实.
+
+        - 有一点需要特别留意, 尽管 note 控制器没有出现在游戏中, 反它们实际上有个"隐性位置", 这个位置与 **对应 note 的位置重合**! 因此, 如果您需要将某个场景对象与一个 note 对齐, 只需要为这个 note 定义一个 note 控制器, 然后将场景对象的 `parent_id` 设置为 note 控制器的 ID 即可.
+- 常用技巧:
+    - 要创建下落式玩法, 只需将 `override_y` 设置为 `true`, 并让 note 按照 `time` = `intro:$note` 且 `y` = `2`(或者任意超出屏幕边缘的值), 到 `time` = `intro:$note` 且 `y` = `0` 的始末状态运动.
+        - 在 [Interference: Finale](https://cytoid.io/levels/io.cytoid.interference3) EX 难度的 StoryBoard 中, 出现了下落式和扫描线式两种玩法混合. 这是因为在谱面中, 需要下落式的note都被放置在了 X = 0.4 上, 因此只需在 StoryBoard 中选择所有 X = 0.4 的 note, 重新安排它们的 X 坐标, 并让它们按照下落式的方式处理, 使得其他的 note 保持"正常".
+            - 注意: 由于小数存在精度损失, 请不要像这样选择位于 X = 0.4 的note:
+
+                ```json
+                {
+                	"min_x": 0.4,
+                	"max_x": 0.4
+                }
+                ```
+
+                最好这样做:
+
+                ```json
+                {
+                	"min_x": 0.39999,
+                	"max_x": 0.40001
+                }
+                ```
+
+    - 要按照曲线移动 note, 请使用两个 note 控制器. 一个控制 `x` 坐标运动, 一个控制 `y` 坐标运动, 并为它们设置不同的 `easing`(缓动) (例如, 分别设置为 `easeInCirc` 和 `easeOutCirc`, 使 note 按照 1/4 圆的轨迹运动).
+    - 固定 `y` 坐标, 以模仿 osu! 的游戏玩法.
+
+**以下为过时内容. 请勿使用, 未来将会被 StoryBoard 事件取代.**
+
+### ~~Trigger State *(Experimental)*~~ *被移除*
 
 - ~~Note that triggers are currently poorly optimized. Spawning high-resolution sprites may result in lag spikes.~~
-- **~~type**: type of the trigger.~~
-    - `~~noteClear`: If any note in `notes` is cleared, this trigger is fired.~~
-    - `~~combo`: If the combo amount reachs `combo`, this trigger is fired.~~
-    - `~~score`: If the score amount reaches `score`, this trigger is fired **and destroyed, regardless of `uses`**.~~
-- **~~uses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. Default `0`.~~
-- **~~notes**: (only when `type` equals `noteClear`) a list of note ids.~~
-    - ~~Example: if set to `[352, 353, 390]` and `type` is set to `noteClear`, this trigger will fire when any of the notes 352, 353, and 390 is cleared.~~
-- **~~combo**: (only when `type` equals `combo`) an integer.~~
-- **~~score**: (only when `type` equals `score`) an integer.~~
-- **~~spawn**: a list of object ids to spawn.~~
-- **~~destroy**: a list of object ids to destroy. (Destroyed objects can be spawned again by another trigger.)~~
+- ~~**type**: type of the trigger.~~
+    - ~~`noteClear`: If any note in `notes` is cleared, this trigger is fired.~~
+    - ~~`combo`: If the combo amount reachs `combo`, this trigger is fired.~~
+    - ~~`score`: If the score amount reaches `score`, this trigger is fired **and destroyed, regardless of `uses`**.~~
+- ~~**uses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. 默认为`0`.~~
+- ~~**notes**: (only when `type` equals `noteClear`) a list of note ids.~~
+    - ~~Example: if set to `[352, 353, 390]` and `type` is set to `noteClear`, this trigger will fire when anys 352, 353, and 390 is cleared.~~
+- ~~**combo**: (only when `type` equals `combo`) an integer.~~
+- ~~**score**: (only when `type` equals `score`) an integer.~~
+- ~~**spawn**: a list of object ids to spawn.~~
+- ~~**destroy**: a list of object ids to destroy. (Destroyed objects can be spawned again by another trigger.)~~

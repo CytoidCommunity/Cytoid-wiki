@@ -1,13 +1,13 @@
 ---
-title: Start
+title: 开始
 lang: zh-Hans
 ---
 
-# Start
+# 开始
 
-## Learn How to Play
+## 如何游玩 Cytoid 
 
-## Learn How to CHart
+## 如何为 Cytoid 制作谱面
 
-## Learn How to Write a StoryBoard
+## 如何编写 StoryBoard
 

@@ -20,14 +20,14 @@ This specification details the storyboard schema; you can use this as a referenc
     - The canvas for **notes** use the same unit as in charts, spanning [0, 1] in the X-axis and [0, 1] in the Y-axis, where (0, 0) is the lower left corner.
         - The X and Y axes are called noteX and noteY.
 
-    ![_source_storyboard.md/dia_(3).png](_source_storyboard.md/dia_(3).png)
+    ![./_source_specification.md/pic1.png](./_source_specification.md/pic1.jpg)
 
     - The game **camera** has its own frame of reference based on its [orthographic size](https://docs.unity3d.com/ScriptReference/Camera-orthographicSize.html). By default, camera is positioned at (0, 0).
         - The X and Y axes are called cameraX and cameraY.
 
-        ![_source_storyboard.md/Copy_of_dia.png](_source_storyboard.md/Copy_of_dia.png)
+        ![./_source_specification.md/pic1.png](./_source_specification.md/pic2.jpg)
 
-        ![_source_storyboard.md/Copy_of_dia_(1).png](_source_storyboard.md/Copy_of_dia_(1).png)
+        ![./_source_specification.md/pic1.png](./_source_specification.md/pic3.jpg)
 
     - Finally, there is also an Z axis for parameters that are, well, on the game's **Z axis**, or, the depth axis. You do not care about this axis unless you have set **perspective** to true in a scene controller.
         - Note that the camera is looking at the +Z direction, and is by default at Z = -10. Setting a value like Z = -8 will put camera closer to the notes, while a value like Z = -15 will distance it away from the notes.

@@ -18,6 +18,13 @@
     >
       <span class="prefix">{{ lastUpdatedText }}:</span>
       <span class="time">{{ lastUpdated }}</span>
+    </div><div class="empty"></br></div>
+    <div
+      v-if="author"
+      class="author"
+    >
+      <span class="prefix">{{ authorText }}:</span>
+      <span class="name">{{ author }}</span>
     </div>
   </footer>
 </template>
@@ -42,6 +49,20 @@ export default {
         return this.$site.themeConfig.lastUpdated
       }
       return 'Last Updated'
+    },
+
+    author () {
+      return this.$page.frontmatter.author
+    },
+
+    authorText () {
+      if (typeof this.$themeLocaleConfig.author === 'string') {
+        return this.$themeLocaleConfig.author
+      }
+      if (typeof this.$site.themeConfig.author === 'string') {
+        return this.$site.themeConfig.author
+      }
+      return 'author'
     },
 
     editLink () {
@@ -142,6 +163,15 @@ export default {
     .time
       font-weight 400
       color $pageEditColor
+  .author
+    float right
+    font-size 0.9em
+    .prefix
+      font-weight 500
+      color lighten($textColor, 25%)
+    .name
+      font-weight 400
+      color $pageEditColor
 
 @media (max-width: $MQMobile)
   .page-edit
@@ -151,6 +181,14 @@ export default {
       font-size 0.8em
       float none
       text-align left
+    .author
+      font-size 0.8em
+      float none
+      text-align left
+    .empty
+      br
+        display none
+
 
 body.darkmode
   .page-edit
@@ -161,5 +199,10 @@ body.darkmode
       .prefix
         color lighten($textDarkColor, 25%)
       .time
+        color $pageEditDarkColor
+    .author
+      .prefix
+        color lighten($textDarkColor, 25%)
+      .name
         color $pageEditDarkColor
 </style>

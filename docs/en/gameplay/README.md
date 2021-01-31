@@ -13,14 +13,14 @@ lang: en-US
 
 ### Click
 
-![Click](/en/gameplay/_source_general.md/click.gif ":class=side-img")
+![Click](./_source_README.md/click.gif ":class=side-img")
 
 - You just have to tap whenever the inner colored circle is close to the outer ring.
 
 
 ### Drag
 
-![Drag](/en/gameplay/_source_general.md/drag.gif ":class=side-img")
+![Drag](./_source_README.md/drag.gif ":class=side-img")
 
 - Simply slide along the line through the small circles.
 - You don't need to wait for the scanner, but don't drag too far ahead because you might mess up your rhythm.
@@ -28,7 +28,7 @@ lang: en-US
 
 ### C-Drag
 
-![C-Drag](/en/gameplay/_source_general.md/c-drag.gif ":class=side-img")
+![C-Drag](./_source_README.md/c-drag.gif ":class=side-img")
 
 - This is a "hybrid note" of Click and Drag.
 - Its "drag head" has click note's mechanics. 
@@ -36,7 +36,7 @@ lang: en-US
 
 ### Hold
 
-![Hold](/en/gameplay/_source_general.md/hold.gif ":class=side-img")
+![Hold](./_source_README.md/hold.gif ":class=side-img")
 
 - Have your finger on the circle before the scanner has reached it.
 - Hold it there until the scanner has gone to the end of the line coming out of the circle.
@@ -44,7 +44,7 @@ lang: en-US
 
 ### Long hold
 
-![Long Hold](/en/gameplay/_source_general.md/long_hold.gif ":class=side-img")
+![Long Hold](./_source_README.md/long_hold.gif ":class=side-img")
 
 - A variant of the hold note.
 - You usually need to hold your finger longer than a page.
@@ -52,7 +52,7 @@ lang: en-US
 
 ### Flick
 
-![Flick](/en/gameplay/_source_general.md/flick.gif ":class=side-img")
+![Flick](./_source_README.md/flick.gif ":class=side-img")
 
 - A different version of click notes.
 - You need to tap and slide away from it horizontally.

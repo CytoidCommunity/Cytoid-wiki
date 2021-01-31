@@ -1,6 +1,7 @@
 ---
 title: level.json
 lang: zh-Hans
+author: Author alxdre, Editor Melodion
 ---
 # Building level.json file
 
