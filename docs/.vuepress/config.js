@@ -25,7 +25,9 @@ module.exports = ctx => ({
     }
   },
   head: [
-    ['link', { rel: 'icon', href: `/logo.png` }],
+    ['link', { rel: 'icon', href: `/site-source/pic/cytoid-girl.png` }],
+    ['link', { rel: 'stylesheet', href: '//cdn.jsdelivr.net/npm/katex@0.7.0/dist/katex.min.css' }],
+    // ['link', { rel: "stylesheet", href: "//cdn.jsdelivr.net/github-markdown-css/2.6.0/github-markdown.css" }]
     // ['link', { rel: 'manifest', href: '/manifest.json' }],
     // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     // ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -441,5 +443,11 @@ module.exports = ctx => ({
   extraWatchFiles: [
     '.vuepress/nav/en.js',
     '.vuepress/nav/zh.js'
-  ]
+  ],
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-katex'))
+      md.use(require('markdown-it-attrs'))
+    }
+  }
 })

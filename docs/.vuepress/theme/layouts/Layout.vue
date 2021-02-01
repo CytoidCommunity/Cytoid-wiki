@@ -8,6 +8,7 @@
 
     <FloatButton />
 
+
     <Navbar
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
