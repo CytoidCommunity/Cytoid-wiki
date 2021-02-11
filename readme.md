@@ -7,3 +7,10 @@ Run the program:
 yarn install
 yarn docs:run
 ```
+
+Build the site:
+```
+yarn install
+yarn docs:build
+```
+
