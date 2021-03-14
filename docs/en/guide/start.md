@@ -5,7 +5,7 @@ lang: en-US
 
 # Start
 
-## Learn How to clay
+## Learn How to play
 
 ## Learn How to chart
 
