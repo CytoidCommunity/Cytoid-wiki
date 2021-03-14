@@ -2,6 +2,7 @@
 title: Rules
 lang: en-US
 author: TheBombMan (Alan Liu)
+finish: true
 ---
 
 # {{ $frontmatter.title }}
