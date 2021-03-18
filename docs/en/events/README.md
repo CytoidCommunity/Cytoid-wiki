@@ -12,7 +12,7 @@ lang: en-US
 - Artists in this event: PTB10, nm-γ, rareguy and Helblinde
 
 ###### Rewards:<br>
-- New character: **Leati**<br>
+- New character: **Laeti**<br>
 
 ###### Level in this events:
 - PTB10 - Interference: Finale
