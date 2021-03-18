@@ -8,6 +8,7 @@
       <p><strong>⚠</strong><strong>{{notFinishMsg}}</strong></p>
     </div>
     <PageNav v-bind="{ sidebarItems }" />
+    <SideImage />
 
     <slot name="bottom" />
     <div
@@ -26,9 +27,11 @@
 <script>
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
+import SideImage from '@theme/components/SideImage.vue'
 
 export default {
-  components: { PageEdit, PageNav },
+  components: { PageEdit, PageNav,
+    SideImage },
   props: ['sidebarItems'],
 
   computed: {
@@ -49,6 +52,73 @@ export default {
     isnotFinish () {
       return !(this.$page.frontmatter.finish || false)
     }
+  },
+  updated () {
+    function updateSideImg(){
+      const floatIMG = document.querySelectorAll(".side-img")
+      // console.log(floatIMG.length)
+      const length = floatIMG.length
+      for (let img = 0; img < length; img++ ) {
+        // console.log(floatIMG[img])
+        let oldImg = floatIMG[img]
+        let src = oldImg.src;
+        let info = oldImg.alt;
+
+        let newItemIMG = document.createElement("img");
+        newItemIMG.src = src;
+        newItemIMG.setAttribute('data-orgain',src);
+        newItemIMG.className = 'img-side medium-zoom-image';
+        newItemIMG.alt = info;
+
+        let newItemP = document.createElement("p");
+        newItemP.innerHTML = info;
+
+        let newItem = document.createElement("div");
+        newItem.className = "img-side";
+
+        newItem.appendChild(newItemIMG);
+        newItem.appendChild(newItemP);
+        // console.log(newItem)
+
+        oldImg.before(newItem)
+        floatIMG[img].style.display = "none"
+        floatIMG[img].className = ''
+      }
+    }
+    updateSideImg()
+  },
+  mounted () {
+    function updateSideImg(){
+      const floatIMG = document.querySelectorAll(".side-img")
+      // console.log(floatIMG.length)
+      for (let img = 0; img < floatIMG.length; img++ ) {
+        // console.log(floatIMG[img])
+        let oldImg = floatIMG[img]
+        let src = oldImg.src;
+        let info = oldImg.alt;
+
+        let newItemIMG = document.createElement("img");
+        newItemIMG.src = src;
+        newItemIMG.setAttribute('data-orgain',src);
+        newItemIMG.className = 'img-side medium-zoom-image';
+        newItemIMG.alt = info;
+
+        let newItemP = document.createElement("p");
+        newItemP.innerHTML = info;
+
+        let newItem = document.createElement("div");
+        newItem.className = "img-side";
+
+        newItem.appendChild(newItemIMG);
+        newItem.appendChild(newItemP);
+        // console.log(newItem)
+
+        oldImg.before(newItem)
+        floatIMG[img].style.display = "none"
+        floatIMG[img].className = ''
+      }
+    }
+    updateSideImg()
   }
 }
 </script>

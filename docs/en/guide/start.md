@@ -5,9 +5,9 @@ lang: en-US
 
 # Start
 
-## Learn How to Play
+## Learn How to play
 
-## Learn How to CHart
+## Learn How to chart
 
-## Learn How to Write a StoryBoard
+## Learn How to write a StoryBoard
 
