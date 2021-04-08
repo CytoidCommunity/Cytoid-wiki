@@ -56,4 +56,4 @@ finish: true
 - Things such as sexual content, pornography, and imagery of “private” parts are disallowed, but some content are acceptable to a respectable degree, including nudity or offensive language.
 ::: warning Notice from author
 This game is not osu!. Please respect the game by not calling levels or charts “beatmaps” or call RT “PP”.
-:::
+
