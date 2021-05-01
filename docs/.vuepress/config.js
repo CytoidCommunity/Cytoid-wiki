@@ -64,9 +64,9 @@ module.exports = ctx => ({
         selectText: 'Languages',
         ariaLabel: 'Select language',
         editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Hmm... Something went wrong? Please wait... We have not done yet :(',
+        lastUpdated: '',
         author: 'Author',
-        notFinish: 'Under Construction',
+        notFinish: 'Hmm... Something went wrong? Please wait... We have not done yet :(',
         footer: '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span><br><span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span><br><span>Written by Discord Community and Localizers.</span><br><span>Published with <a href="https://github.com/vuejs/vuepress" target="_blank"><strong>VuePress</strong></a>. </span><span>Powered by <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a>. </span>',
         nav: require('./nav/en'),
         sidebar: {
