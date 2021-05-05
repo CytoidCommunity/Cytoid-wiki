@@ -12,7 +12,7 @@ This specification details the storyboard schema; you can use this as a referenc
 
 [CytoidPlayer 2.0.2.zip](https://drive.google.com/file/d/1skBP8u_LTDloTxXr3cVl8YdJzmgMkywi/view?usp=drivesdk)
 
-## 🌟 **Coordinate systems**
+## :star: **Coordinate systems**
 
 - Before we get into storyboarding, let's understand the game's different canvas and their coordinate systems:
     - The canvas for **storyboard** **sprites and texts**, or **stage**, has a resolution of 800 (width) * 600 (height). (0, 0) is at the center. (400, 300) is the upper right corner. (-400, -300) is the lower left corner.
@@ -80,27 +80,27 @@ This specification details the storyboard schema; you can use this as a referenc
 
             And that is it! We delegated the calculation to Cytoid—`stageY:600` means 600 units in the stageY coordinate system. Whatever that value is, this has made sure our sprite will stretch to a square.
 
-    - Finally, you should probably not transform any value to/from the depth coordinate system, as it does not make mathematical sense. But you can do it nonetheless! Feel free to try. 😇
+    - Finally, you should probably not transform any value to/from the depth coordinate system, as it does not make mathematical sense. But you can do it nonetheless! Feel free to try. :innocent:
 
 ## **Root object**
 
 - **texts**: array of text objects.
 - **sprites**: array of sprite objects.
-- 🌟 **lines**: array of line objects.
-- 🌟 **videos**: array of video objects. Experimental!
+- :star: **lines**: array of line objects.
+- :star: **videos**: array of video objects. Experimental!
 - **controllers**: array of scene controller objects.
     - You usually need only one controller to control the entire scene, but multiple controllers will come in handy if you need to define effects whose animation states overlap. For beginners, use only one controller.
-- 🌟 **note_controllers**: array of note controller objects.
+- :star: **note_controllers**: array of note controller objects.
 - **templates**: array of templates.
 
 **Base state** (Parameters inherited by all objects)
 
-- 🌟 There are two kinds of objects: **scene objects** (texts, sprites, lines, and videos) that appear in the scene, and **controller objects** (scene controllers and note controllers) that manipulate the scene components without an entity form.
+- :star: There are two kinds of objects: **scene objects** (texts, sprites, lines, and videos) that appear in the scene, and **controller objects** (scene controllers and note controllers) that manipulate the scene components without an entity form.
 - States control how objects behave at different points of time. Not every moment of the object needs to be a state; only the "key" moments need to be defined.
 - For instance, consider a title text that flies from the bottom to the center of the screen from time=0 to time=3. Theoretically, it has infinitely many states, because at every moment its position is different. However, there are only two "key" states: 1. text at the bottom at time=0; 2. text at the center at time=3. Simply define these two states, and the storyboard will automatically calculate all the states in between.
 - Every defined object has at least one state, which is the initial state. You can define extra states of this object in the `states` array.
 - **id**: an unique string identifier of this object. If not set, a random alphanumeric ID will be generated. Supports the `$note` placeholder (see the note controller section).
-- 🌟 **target_id**: *for scene objects only.* When `target_id` is set to an ID of an object, this object does not have its own entity form but will control the specified instance instead. Supports the `$note` placeholder (see the note controller section).
+- :star: **target_id**: *for scene objects only.* When `target_id` is set to an ID of an object, this object does not have its own entity form but will control the specified instance instead. Supports the `$note` placeholder (see the note controller section).
     - This is useful if you want to *create animations that require overlapping states*. For example, if you want to move a sprite in an arc, it is impossible to do this with only one scene object. You need two—one moves the sprite in the X direction with one easing (say, `linear`), and another one moves the sprite in the Y direction with another easing (say, `easeOutQuad`). Like below:
 
         ```json
@@ -133,7 +133,7 @@ This specification details the storyboard schema; you can use this as a referenc
 
     - Another example would be to simplify complex states. Say you want to move a text from x=0 at t=0 to x=100 at t=5, while also setting its opacity from a=1 at t=2.5 to a=0 at t=7.5. Without using a separate targeting scene object, you have to manually do some mental calculations to write down the 4 key states.
     - Keep in mind that the targeted object must be of same type of the current object. For example, you cannot set a sprite's target to be a text.
-- 🌟 **parent_id**: *for texts and sprites only.* ****When `parent_id` is set to an ID of an object, this object's movement follows the specified parent, i.e. this object's coordinate system is now relative to the parent's coordinate system. Supports the `$note` placeholder (see the note controller section).
+- :star: **parent_id**: *for texts and sprites only.* ****When `parent_id` is set to an ID of an object, this object's movement follows the specified parent, i.e. this object's coordinate system is now relative to the parent's coordinate system. Supports the `$note` placeholder (see the note controller section).
     - For example, you can set sprite A's parent to be sprite B, so that when sprite A moves with sprite B. Any translation of sprite A is now using sprite B's position as the origin.
     - Another fun thing to try is to set a sprite's parent to a note controller. Since a note controller has an implied position of the actual note, the sprite should follow the note's movement.
         - *No, you can't really make custom skins with this yet.* See the note controller section for a in-depth explanation.
@@ -146,7 +146,7 @@ This specification details the storyboard schema; you can use this as a referenc
         - `"start:<Note ID>:<Offset>"`: start time of the specified note + `<Offset>` (in seconds, can be negative)
         - `"end:<Note ID>:<Offset>"`: end time of the specified note + `<Offset>` in seconds, can be negative)
         - `"intro:<Note ID>:<Offset>"`: intro time (i.e. when the note fades in) of the specified note + `<Offset>` (in seconds, can be negative)
-        - 🌟 `"at:<Note ID>:<Percentage>"`: *for hold notes only.* start time of the specified note + (end time of the specified note - start time of the specified note) * `<Percentage>`
+        - :star: `"at:<Note ID>:<Percentage>"`: *for hold notes only.* start time of the specified note + (end time of the specified note - start time of the specified note) * `<Percentage>`
             - When `<Percentage>` is `0`, this is equivalent to `start`
             - When `<Percentage>` is `1`, this is equivalent to `end`
     - This value can also be an array, if you want to create multiple identical states at once. For example:
@@ -310,7 +310,7 @@ This specification details the storyboard schema; you can use this as a referenc
 
 - **x**: x-coordinate of the object. Default `0`. Default coordinate system stageX.
 - **y**: y-coordinate of the object. Default `0`. Default coordinate system stageY.
-- 🌟 **z**: z-coordinate of the object. Default `0`. Default coordinate system depth.
+- :star: **z**: z-coordinate of the object. Default `0`. Default coordinate system depth.
     - Use only when perspective camera is enabled.
 - **rot_x**: rotation of the object on the x-axis in degrees. Default `0`.
 - **rot_y**: rotation of the object on the y-axis in degrees. Default `0`.
@@ -324,14 +324,14 @@ This specification details the storyboard schema; you can use this as a referenc
     - That means **all scene objects are invisible** until you animate `opacity` to any value greater than `0`.
 - **width**: width of the object. Default coordinate system stageX.
 - **height**: height of the object. Default coordinate system stageY.
-    - 🌟 Starting from 2.0.0, **text objects automatically fit to their content** (`text`). That means setting `width` and `height` on a text will not do anything.
+    - :star: Starting from 2.0.0, **text objects automatically fit to their content** (`text`). That means setting `width` and `height` on a text will not do anything.
     - For sprites, the default dimensions are 200 (width) * 200 (height).
 - **layer:** layer of the object. Default `0`.
     - `0`: The default layer. Behind all game elements except the background.
     - `1`: Above all note elements, but under UI elements.
     - `2`: Above all game elements.
 - **order**: order of the object ***within its `layer`***. For example, an object with order `3` will display in front of an object with order `2`, assuming they have the same `layer`. If both objects have the same order, the later defined object will display in front of the earlier defined object.
-    - 🌟 Remember to always set the proper `order` on sprites! Otherwise, they may not show up in the actual game even they show up in CytoidPlayer. If you are unsure, you can just set it to `0`.
+    - :star: Remember to always set the proper `order` on sprites! Otherwise, they may not show up in the actual game even they show up in CytoidPlayer. If you are unsure, you can just set it to `0`.
 - **fill_width**: if `true`, `width` and `height` are ignored, and this scene object automatically scratches to the stage's width and has a height of `10000`.
     - Useful if you just want to make a sprite that fills the entire viewport, like a background image.
 
@@ -342,8 +342,8 @@ This specification details the storyboard schema; you can use this as a referenc
 - **size**: font size of the text. Default `20`.
     - To animate the size of a text, animate its `scale` property. Do not animate `size`, which only takes integer values and is resource-intensive.
 - **align**: text alignment. `upperLeft`, `upperCenter`, `upperRight`, `middleLeft`, `middleCenter`, `middleRight`, `lowerLeft`, `lowerCenter`, `lowerRight` are supported. Default `middleCenter`.
-- 🌟 **letter_spacing**: letter spacing. Default `0`.
-- 🌟 **font_weight**: font weight. `regular`, `extraLight`, `bold`, `extraBold` are supported. Default `regular`.
+- :star: **letter_spacing**: letter spacing. Default `0`.
+- :star: **font_weight**: font weight. `regular`, `extraLight`, `bold`, `extraBold` are supported. Default `regular`.
 
 ## **Sprite state**
 
@@ -351,13 +351,13 @@ This specification details the storyboard schema; you can use this as a referenc
 - **preserve_aspect**: if `true`, the image aspect ratio is preserved. Default `true`.
 - **color**: color tint of the sprite in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
 
-## 🌟 **Video state** Experimental!
+## :star: **Video state** <Badge text="experimental" type="warning"/>
 
 - **path**: relative path to the video file. **Since supported video codecs are different across platforms and devices, it is strongly recommended to use a standard H.264 `.mp4` file at maximum 720p resolution.**
     - Video **will not pause** when the game is paused. This is a known issue.
 - **color**: color tint of the video in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
 
-## 🌟 **Note controller state**
+## :star: **Note controller state**
 
 - A note controller overrides and animates the properties a single note defined in the chart file. This is the most powerful storybaord technique so far. **You can implement almost any desired gameplay in Cytoid using note controllers!**
 - **note**: integer ID of the note, as defined in the chart file.
@@ -371,8 +371,12 @@ This specification details the storyboard schema; you can use this as a referenc
     - Reminder that you can unset this value by setting it to `null`.
 - **y_multiplier**: multiplies onto the y-coordinate of the note. Default `1`. Has no effect if `y` is already set.
 - **dy**: adds onto the y-coordinate of the note. Default `0`. Default coordinate system noteY. Has no effect if `y` is already set.
-    - **BUG WARNING! As of 2.0.2, this property is incorrectly implemented, and you have to add `1` to the value you want to set for notes that are in a chart page of `-1` direction.**
-        - `dx` and `dy` will be replaced with `x_offset` and `y_offset` in the future. In the meantime, you can still use `dy`—just be very careful of it. If the note positions do not match with your expectations, add `1` to it.
+
+    ::: warning BUG WARNING! 
+    As of 2.0.2, this property is incorrectly implemented, and you have to add `1` to the value you want to set for notes that are in a chart page of `-1` direction.
+    :::
+
+  - `dx` and `dy` will be replaced with `x_offset` and `y_offset` in the future. In the meantime, you can still use `dy`—just be very careful of it. If the note positions do not match with your expectations, add `1` to it.
 - How the x-coordinate of a note is calculated, from highest priority to lowest priority:
     - If `override_x` is `true` and `x` is defined: `x`
     - If `override_x` is `true` and `x` is not defined (`null`): original x-coordinate * `x_multiplier` + `dx`
@@ -392,7 +396,11 @@ This specification details the storyboard schema; you can use this as a referenc
 - **fill_color**: overridden fill color of the note. When set to `null`, user fill color is used. Default `null`.
 - **opacity_multiplier**: multiplies onto the opacity of the note. Default `1`.
 - **size_multiplier**: multiplies onto the size of the note. Default `1`.
-    - **BUG WARNING! As of 2.0.2, this property only works on clicks and flicks.**
+
+    :::warning BUG WARNING!
+    As of 2.0.2, this property only works on clicks and flicks.
+    :::
+
 - **hold_direction**: direction of the "tail" of a hold note; only applicable if `note` is a hold note. `1` is upwards and `-1` is downwards. When set to `null`, original hold direction is used. Default `null`.
 - **style**: controls specific styling of the note; only applicable to hold notes for now. `1` and `2` are supported. Default `1`.
     - `1`: The default style.
@@ -693,7 +701,7 @@ This specification details the storyboard schema; you can use this as a referenc
     - To move a note in a curve, use two note controllers, one animates `x` and one animates `y`, each with different `easing` (for example, `easeInCirc` and `easeOutCirc` so that the note follows a trajectory of quarter of a circle).
     - Fix `y` to a constant value to mimic osu-style gameplay.
 
-## 🌟 **Line state**
+## :star: **Line state**
 
 - "Line" is actually a misnomer. A line object renders connected line segments. You can use it to mimic a scanline or draw any geometry shape, like a triangle.
 - Although the line state *technically* inherits from the scene object state, only a very limited subset of parameters in the scene object state are supported: `opacity`, `layer` and `order`.
@@ -754,7 +762,7 @@ This specification details the storyboard schema; you can use this as a referenc
     }
     ```
 
-    Try this yourself and figure out why the triangle animates like that! 😉
+    Try this yourself and figure out why the triangle animates like that! :wink:
 
 ## **Scene controller state**
 
@@ -765,7 +773,7 @@ This specification details the storyboard schema; you can use this as a referenc
 - **note_opacity_multiplier**: `opacity` of all notes will be multiplied by this value. Default `1`.
 - **scanline_color**: override the scanline color. If not set (or set to `null`), `#ffffff` will be used when the chart is not changing speed, `#d25669` for speeding up,  `#a0c8bf` for speeding down.
 - **note_ring_color**: override the ring color of all note. If not set (or set to `null`), user ring color is used.
-- 🌟 **note_fill_colors**: override the fill colors of **different types of notes**.
+- :star: **note_fill_colors**: override the fill colors of **different types of notes**.
     - Format: `[click 1, click 2, drag 1, drag 2, hold 1, hold 2, long hold 1, long hold 2, flick 1, flick 2, c-drag 1, c-drag 2]`
     - The following example sets the color of all click notes to `#4568dc` and the color of all flick notes to `#000000`:
 
@@ -790,16 +798,16 @@ This specification details the storyboard schema; you can use this as a referenc
     - `53.2` is a magic number that ensures even in perspective mode, the note size is approximately the same as in orthographic mode.
 - **x**: x-coordinate of the camera. A greater value shifts the whole scene to left, vice versa. A length of `1` is equivalent to half the screen width. Default `0`. Default coordinate system cameraX.
 - **y**: y-coordinate of the camera. A greater value shifts the whole scene to bottom, vice versa. A length of `1` is equivalent to half the screen height. Default `0`. Default coordinate system cameraY.
-- 🌟 **z**: z-coordinate of the camera. A greater value moves the camera closer to the notes, vice versa. Default `-10`. Default coordinate system depth.
+- :star: **z**: z-coordinate of the camera. A greater value moves the camera closer to the notes, vice versa. Default `-10`. Default coordinate system depth.
 - **rot_x**, **rot_y**, **rot_z**: rotations of the camera. Default `0`.
     - Hint: if you rotate along the x or y axis, part of the scene may not be able to be seen; you have to adjust the coordinates of the camera accordingly. If change `rot_x`, move `y`; if change `rot_y`, move `x`.
-- 🌟 **Removed in 2.0.0. ~~vignette**: boolean to toggle the vignette effect. Default `false`.~~
-    - **~~vignette_intensity**: the intensity of the vignette effect. Ranged `0` to `1`.~~
-    - **~~vignette_color**: the color of the vignette effect in the hex representation.~~
-    - **~~vignette_start, vignette_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.~~
-- 🌟 **Removed in 2.0.0.** **~~chromatic**: boolean to toggle the chromatic aberration effect. Default `false`.~~
-    - **~~chromatic_intensity**: the intensity of the chromatic effect. Typically ranged `0` to `0.15`, although larger values can be set for distorting effects.~~
-    - **~~chromatic_start, chromatic_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.~~
+- :star: **vignette** <Badge text="removed" type="warning"/>: boolean to toggle the vignette effect. Default `false`.
+    - **vignette_intensity**: the intensity of the vignette effect. Ranged `0` to `1`.
+    - **vignette_color**: the color of the vignette effect in the hex representation.
+    - **vignette_start, vignette_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.
+- :star: **chromatic** <Badge text="removed" type="warning"/>: boolean to toggle the chromatic aberration effect. Default `false`.
+    - **chromatic_intensity**: the intensity of the chromatic effect. Typically ranged `0` to `0.15`, although larger values can be set for distorting effects.
+    - **chromatic_start, chromatic_end**: just play around with these values because no one knows what they exactly mean. Ranged `0` to `1`.
 - **chromatical**: boolean to toggle the chromatical ****effect. Default `false`.
     - This effect is basically an automated chromatic aberration effect.
     - **chromatical_fade**: the transparency of the chromatical effect. Ranged `0` to `1`.
@@ -841,19 +849,23 @@ This specification details the storyboard schema; you can use this as a referenc
     - **arcade_contrast**: Ranged `0` to `10`. Default `1`.
 - **tape**: boolean to toggle the tape (screen flipping) effect.
 
-**Obsolete. Do not use—will be replaced with storyboard events in a future release.**
+****
 
-## **~~Trigger State *(Experimental)*~~**
+## **Trigger State** <Badge text="experimental" type="warning"/>
 
-- ~~Note that triggers are currently poorly optimized. Spawning high-resolution sprites may result in lag spikes.~~
-- **~~type**: type of the trigger.~~
-    - `~~noteClear`: If any note in `notes` is cleared, this trigger is fired.~~
-    - `~~combo`: If the combo amount reachs `combo`, this trigger is fired.~~
-    - `~~score`: If the score amount reaches `score`, this trigger is fired **and destroyed, regardless of `uses`**.~~
-- **~~uses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. Default `0`.~~
-- **~~notes**: (only when `type` equals `noteClear`) a list of note ids.~~
-    - ~~Example: if set to `[352, 353, 390]` and `type` is set to `noteClear`, this trigger will fire when any of the notes 352, 353, and 390 is cleared.~~
-- **~~combo**: (only when `type` equals `combo`) an integer.~~
-- **~~score**: (only when `type` equals `score`) an integer.~~
-- **~~spawn**: a list of object ids to spawn.~~
-- **~~destroy**: a list of object ids to destroy. (Destroyed objects can be spawned again by another trigger.)~~
+::: warning Obsolete
+Do not use—will be replaced with storyboard events in a future release.
+:::
+
+- Note that triggers are currently poorly optimized. Spawning high-resolution sprites may result in lag spikes.
+- **type**: type of the trigger.
+    - `noteClear`: If any note in `notes` is cleared, this trigger is fired.
+    - `combo`: If the combo amount reachs `combo`, this trigger is fired.
+    - `score`: If the score amount reaches `score`, this trigger is fired **and destroyed, regardless of `uses`**.
+- **ses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. Default `0`.
+- **notes**: (only when `type` equals `noteClear`) a list of note ids.
+    - Example: if set to `[352, 353, 390]` and `type` is set to `noteClear`, this trigger will fire when any of the notes 352, 353, and 390 is cleared.
+- **combo**: (only when `type` equals `combo`) an integer.
+- **score**: (only when `type` equals `score`) an integer.
+- **spawn**: a list of object ids to spawn.
+- **destroy**: a list of object ids to destroy. (Destroyed objects can be spawned again by another trigger.)
