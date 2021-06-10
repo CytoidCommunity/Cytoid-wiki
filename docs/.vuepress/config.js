@@ -103,7 +103,7 @@ module.exports = ctx => ({
               ]
             },
             {
-              title: "Charting tools",
+              title: "Chart editors",
               sidebarDepth: 3,
               collapsable: false,
               children: [
