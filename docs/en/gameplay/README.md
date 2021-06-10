@@ -4,10 +4,6 @@ lang: en-US
 ---
 # {{$frontmatter.title}}
 
-## Table of contents
-
-[[toc]]
-
 ## Game UI
 
 ## Note types
