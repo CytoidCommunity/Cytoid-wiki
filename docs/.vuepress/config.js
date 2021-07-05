@@ -139,7 +139,7 @@ module.exports = ctx => ({
               collapsable: false,
               children: [
                 'charting-and-you',
-                'chart.json'
+                'chart-json'
               ]
             }
           ],
@@ -259,7 +259,7 @@ module.exports = ctx => ({
               collapsable: false,
               children: [
                 'charting-and-you',
-                'chart.json'
+                'chart-json'
               ]
             }
           ],
