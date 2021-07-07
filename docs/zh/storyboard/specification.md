@@ -559,7 +559,7 @@ finish: true
         - 在未来的某个版本中, `dx` 和 `dy` 将被替换为 `x_offset` 和 `y_offset`. 与此同时, 您仍然能使用 `dy`—但是要非常小心. 如果 note 的位置与您期望的不符, 请在其基础上加 `1`.
 - 如何根据优先级, 从高到低计算 note 的 X 轴坐标:
     - 如果将 `override_x` 设置为 `true` 并且为 `x` 设置了值: `x`
-    - 如果将 `override_x` 设置为 `true` 并且没有为 `x` 设置值 (或者为 `null`): 原始的 X 坐标(由谱面本身定义) * `x_multiplier` + `dx`
+    - 如果将 `override_x` 设置为 `false` 并且没有为 `x` 设置值 (或者为 `null`): 原始的 X 坐标(由谱面本身定义) * `x_multiplier` + `dx`
     - 否则: 原始的 X 坐标
     - Y 轴坐标按照同样的方法计算.
 
