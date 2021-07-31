@@ -1,7 +1,6 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
-  evergreen: true,
   dest: './wiki-html',
   locales: {
     '/': {
