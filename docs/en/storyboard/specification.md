@@ -379,7 +379,7 @@ This specification details the storyboard schema; you can use this as a referenc
   - `dx` and `dy` will be replaced with `x_offset` and `y_offset` in the future. In the meantime, you can still use `dy`—just be very careful of it. If the note positions do not match with your expectations, add `1` to it.
 - How the x-coordinate of a note is calculated, from highest priority to lowest priority:
     - If `override_x` is `true` and `x` is defined: `x`
-    - If `override_x` is `true` and `x` is not defined (`null`): original x-coordinate * `x_multiplier` + `dx`
+    - If `override_x` is `false` and `x` is not defined (`null`): original x-coordinate * `x_multiplier` + `dx`
     - Otherwise: original x-coordinate
     - Same applies to the y-coordinate.
 - **override_z**: if `true`, the z-coordinate of the note is overriden. See `z`. Default `false`.

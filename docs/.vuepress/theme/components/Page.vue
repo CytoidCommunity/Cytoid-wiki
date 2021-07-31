@@ -2,7 +2,7 @@
   <main class="page">
     <slot name="top" />
 
-    <Content class="theme-default-content" />
+    <Content id="main" class="theme-default-content preload" />
     <PageEdit />
     <div class="not-finish" v-if="isnotFinish">
       <p><strong>⚠</strong><strong>{{notFinishMsg}}</strong></p>
@@ -53,9 +53,10 @@ export default {
       return !(this.$page.frontmatter.finish || false)
     }
   },
-  updated () {
-    function updateSideImg(){
-      const floatIMG = document.querySelectorAll(".side-img")
+  methods: {
+    updateSideImg() {
+      const floatIMG = document.querySelectorAll(".preload .side-img")
+      document.getElementById("main").classList.remove("preload")
       // console.log(floatIMG.length)
       const length = floatIMG.length
       for (let img = 0; img < length; img++ ) {
@@ -74,7 +75,9 @@ export default {
         newItemP.innerHTML = info;
 
         let newItem = document.createElement("div");
-        newItem.className = "img-side";
+        // newItem.className = "img-side";
+        newItem.className = oldImg.className;
+        newItem.classList.replace("side-img", "img-side")
 
         newItem.appendChild(newItemIMG);
         newItem.appendChild(newItemP);
@@ -85,41 +88,19 @@ export default {
         floatIMG[img].className = ''
       }
     }
-    updateSideImg()
+  },
+  updated () {
+    this.$nextTick(function(){
+      this.updateSideImg()
+    })
   },
   mounted () {
-    function updateSideImg(){
-      const floatIMG = document.querySelectorAll(".side-img")
-      // console.log(floatIMG.length)
-      for (let img = 0; img < floatIMG.length; img++ ) {
-        // console.log(floatIMG[img])
-        let oldImg = floatIMG[img]
-        let src = oldImg.src;
-        let info = oldImg.alt;
+    this.$nextTick(function(){
+      this.updateSideImg()
+    })
+    // this.updateSideImg()
+  },
 
-        let newItemIMG = document.createElement("img");
-        newItemIMG.src = src;
-        newItemIMG.setAttribute('data-orgain',src);
-        newItemIMG.className = 'img-side medium-zoom-image';
-        newItemIMG.alt = info;
-
-        let newItemP = document.createElement("p");
-        newItemP.innerHTML = info;
-
-        let newItem = document.createElement("div");
-        newItem.className = "img-side";
-
-        newItem.appendChild(newItemIMG);
-        newItem.appendChild(newItemP);
-        // console.log(newItem)
-
-        oldImg.before(newItem)
-        floatIMG[img].style.display = "none"
-        floatIMG[img].className = ''
-      }
-    }
-    updateSideImg()
-  }
 }
 </script>
 
