@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "https://github.com/CytoidCommunity/Cytoid-wiki.git",
   "author": "Teages <Teages@teages.xyz>",
-  "license": "None",
+  "license": "MIT",
   "scripts": {
     "docs:run": "vuepress dev docs",
     "docs:build": "vuepress build docs",
