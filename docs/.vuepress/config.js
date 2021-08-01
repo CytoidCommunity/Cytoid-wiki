@@ -1,6 +1,7 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
+  evergreen: true,
   dest: './wiki-html',
   locales: {
     '/': {
@@ -64,119 +65,12 @@ module.exports = ctx => ({
         selectText: 'Languages',
         ariaLabel: 'Select language',
         editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
+        lastUpdated: '',
         author: 'Author',
-        notFinish: 'Under Construction',
+        notFinish: 'Hmm... Something went wrong? Please wait... We have not done yet :(',
         footer: '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span><br><span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span><br><span>Written by Discord Community and Localizers.</span><br><span>Published with <a href="https://github.com/vuejs/vuepress" target="_blank"><strong>VuePress</strong></a>. </span><span>Powered by <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a>. </span>',
         nav: require('./nav/en'),
-        sidebar: {
-          '/en/guide/': [
-            {
-              title: "Home",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'start',
-                '../about/'
-              ]
-            }
-          ],
-          '/en/gameplay/': [
-            {
-              title: "Gameplay",
-              sidebarDepth: 2,
-              collapsable: false,
-              children: [
-                ''
-              ]
-            }
-          ],
-          '/en/charting/': [
-            {
-              title: "Getting Start",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'abc',
-              ]
-            },
-            {
-              title: "Charting Tools",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'tools/cylheim',
-                'tools/pctyx',
-                'tools/mobile',
-                'tools/cy2unity',
-                'tools/cyunity',
-                'tools/other'
-              ]
-            },
-            {
-              title: "Testing with Cytoid",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'cytoid/level.json',
-                'cytoid/packing'
-              ]
-            },
-            {
-              title: "Share on Cytoid IO",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'cytoidio/rules',
-                'cytoidio/upload'
-              ]
-            },
-            {
-              title: "More",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'charting-and-you'
-              ]
-            }
-          ],
-          '/en/storyboard/': [
-            {
-              title: "StroyBoard",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'specification'
-              ]
-            }
-          ],
-          '/en/events/': [
-            {
-              title: "Events",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'official',
-                'community'
-              ]
-            }
-          ],
-          '/en/about/': [
-            {
-              title: "About",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'cytoid'
-              ]
-            }
-          ]
-        }
+        sidebar: require('./sidebar/en')
       },
       '/zh/': {
         label: '中文',
@@ -185,7 +79,7 @@ module.exports = ctx => ({
         editLinkText: '在 GitHub 上编辑',
         lastUpdated: '上次编辑',
         author: '作者',
-        notFinish: '施工中',
+        notFinish: '还没做完, 再咕咕咕一会(',
         footer: '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span><br><span>本页面是 <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> 的社区wiki. Cytoid 是由 <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> 和 <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a> 制作的社区节奏游戏.</span><br><span>由 Discord 社区及其他本地化人员编写.</span><br><span>使用 <a href="https://github.com/vuejs/vuepress" target="_blank"><strong>VuePress</strong></a> 为框架. </span><span>使用 <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a> 发布. </span>',
         nav: require('./nav/zh'),
         sidebar: {
@@ -257,7 +151,8 @@ module.exports = ctx => ({
               sidebarDepth: 3,
               collapsable: false,
               children: [
-                'charting-and-you'
+                'charting-and-you',
+                'chart-json'
               ]
             }
           ],

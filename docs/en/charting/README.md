@@ -1,34 +1,47 @@
 ---
-title: Start Charting
+title: Getting started (Charting)
 lang: en-US
 ---
 
-# Start Charting
+# Getting started
 
-Welcome to the world of charting fanmade Cytus/Cytoid Charts! To get started, you need the following things:
+Welcome to the Charting section of this wiki, we will help you know the charting basics, software (tools) you may need to make a chart.
 
-A charting program. For now, we have Cytunity and PCTyx to use. (Windows only. If you have a Mac or Linux, look for options that allow you to run these programs)
+## A few definitions
 
-A song file. Cytunity accepts .wav or .ogg formats, while PCTyx accepts .mp3, .m4a, or .ogg formats.
+### What is a chart?
 
-You can use Audacity (A free application) to convert song files to the right formats if needed (and even cut/add extra space). Link
+In Cytoid, a chart is known as a difficulty of a level. But in charting standard, a chart is a file which contains data about timing, placement of notes in a difficulty.
 
-If you need to convert to .mp3 format, see here
+### What is charting?
 
-A background picture to use. Make sure it is reasonably good quality/size and either in 16:9 or 4:3 ratio. Cytunity only takes .png, while PCTyx takes both .jpg or .png formats. It is recommended that you write down or save the link from where you got it, because you will need to include the link to the image and the artist's name in the level.json.
+Simply, it means making a chart.
 
-A level.json.
+### Who is a charter?
 
-The Next Step
-Things you need to know: 
+You may see it in level information, maybe you can guess this, a charter is a chart maker (or a level maker).
 
-Cytunity's support for Cytoid is limited. This is because Cytunity does not support flicks, Long Holds and BPM changes.
+## How can I make a chart?
 
-PCTyx is more modern in terms of charting support, although less intuitive when you start it. It's recommended to start using PCTyx if you want to have all the of the charting features available to you.
+There are two ways to make a chart: using a chart editor and using a text editor. Chart editors are often used because they might save your time and get better results.
+However, you can do more features when using a text editor, like [Luna Flina's "Galaxy Collapse"](https://cytoid.io/levels/flina.touhou.collapse) (actually it isn't fully made with a text editor, just hide scanline parts).
 
-If you decided to use Cytunity go here.
+### What do I need to make a chart with a chart editor?
 
-If you decided to use PCTyx go here.
+- A chart editor.
 
-If you have finished a chart, go here.
+- An audio editor (to add silence), if you don't know any audio editor, try [Audacity](https://www.audacityteam.org).
 
+- A bit charting knowledge and rules, see [here](./charting-and-you).
+
+### What do I need to make a chart with a text editor?
+
+- A text editor, like Notepad.
+
+- An audio editor (to add silence), if you don't know any audio editor, try [Audacity](https://www.audacityteam.org).
+
+- A bit charting knowledge and rules, see [here](./charting-and-you).
+
+And... the most important thing, you have to know and understand chat formats supported by Cytoid.
+
+That's it! Next, you will learn how to edit an audio file, click "Next"!

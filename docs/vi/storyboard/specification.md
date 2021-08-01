@@ -12,7 +12,7 @@ This specification details the storyboard schema; you can use this as a referenc
 
 [CytoidPlayer 2.0.2.zip](https://drive.google.com/file/d/1skBP8u_LTDloTxXr3cVl8YdJzmgMkywi/view?usp=drivesdk)
 
-## 🌟 **Coordinate systems**
+## 🌟 Coordinate systems
 
 - Before we get into storyboarding, let's understand the game's different canvas and their coordinate systems:
     - The canvas for **storyboard** **sprites and texts**, or **stage**, has a resolution of 800 (width) * 600 (height). (0, 0) is at the center. (400, 300) is the upper right corner. (-400, -300) is the lower left corner.
@@ -324,14 +324,16 @@ This specification details the storyboard schema; you can use this as a referenc
     - That means **all scene objects are invisible** until you animate `opacity` to any value greater than `0`.
 - **width**: width of the object. Default coordinate system stageX.
 - **height**: height of the object. Default coordinate system stageY.
-    - 🌟 Starting from 2.0.0, **text objects automatically fit to their content** (`text`). That means setting `width` and `height` on a text will not do anything.
+    ::: warning NOTICE!
+    Starting from 2.0.0, **text objects automatically fit to their content** (`text`). That means setting `width` and `height` on a text will not do anything.
+    :::
     - For sprites, the default dimensions are 200 (width) * 200 (height).
 - **layer:** layer of the object. Default `0`.
     - `0`: The default layer. Behind all game elements except the background.
     - `1`: Above all note elements, but under UI elements.
     - `2`: Above all game elements.
 - **order**: order of the object ***within its `layer`***. For example, an object with order `3` will display in front of an object with order `2`, assuming they have the same `layer`. If both objects have the same order, the later defined object will display in front of the earlier defined object.
-    - 🌟 Remember to always set the proper `order` on sprites! Otherwise, they may not show up in the actual game even they show up in CytoidPlayer. If you are unsure, you can just set it to `0`.
+    ::: TIPS Remember to always set the proper `order` on sprites! Otherwise, they may not show up in the actual game even they show up in CytoidPlayer. If you are unsure, you can just set it to `0`.
 - **fill_width**: if `true`, `width` and `height` are ignored, and this scene object automatically scratches to the stage's width and has a height of `10000`.
     - Useful if you just want to make a sprite that fills the entire viewport, like a background image.
 
@@ -351,13 +353,15 @@ This specification details the storyboard schema; you can use this as a referenc
 - **preserve_aspect**: if `true`, the image aspect ratio is preserved. Default `true`.
 - **color**: color tint of the sprite in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
 
-## 🌟 **Video state** Experimental!
+## **Video state** (experimental)
 
 - **path**: relative path to the video file. **Since supported video codecs are different across platforms and devices, it is strongly recommended to use a standard H.264 `.mp4` file at maximum 720p resolution.**
-    - Video **will not pause** when the game is paused. This is a known issue.
+    ::: warning NOTICE!
+    Video **will not pause** when the game is paused. This is a known issue.
+    :::
 - **color**: color tint of the video in the hex representation. Default `"#fff"` (white), which is equivalent to untinted.
 
-## 🌟 **Note controller state**
+## **Note controller state**
 
 - A note controller overrides and animates the properties a single note defined in the chart file. This is the most powerful storybaord technique so far. **You can implement almost any desired gameplay in Cytoid using note controllers!**
 - **note**: integer ID of the note, as defined in the chart file.
@@ -371,7 +375,9 @@ This specification details the storyboard schema; you can use this as a referenc
     - Reminder that you can unset this value by setting it to `null`.
 - **y_multiplier**: multiplies onto the y-coordinate of the note. Default `1`. Has no effect if `y` is already set.
 - **dy**: adds onto the y-coordinate of the note. Default `0`. Default coordinate system noteY. Has no effect if `y` is already set.
-    - **BUG WARNING! As of 2.0.2, this property is incorrectly implemented, and you have to add `1` to the value you want to set for notes that are in a chart page of `-1` direction.**
+    ::: warning BUG WARNING! 
+    As of 2.0.2, this property is incorrectly implemented, and you have to add `1` to the value you want to set for notes that are in a chart page of `-1` direction.**
+    :::
         - `dx` and `dy` will be replaced with `x_offset` and `y_offset` in the future. In the meantime, you can still use `dy`—just be very careful of it. If the note positions do not match with your expectations, add `1` to it.
 - How the x-coordinate of a note is calculated, from highest priority to lowest priority:
     - If `override_x` is `true` and `x` is defined: `x`
@@ -841,19 +847,24 @@ This specification details the storyboard schema; you can use this as a referenc
     - **arcade_contrast**: Ranged `0` to `10`. Default `1`.
 - **tape**: boolean to toggle the tape (screen flipping) effect.
 
-**Obsolete. Do not use—will be replaced with storyboard events in a future release.**
 
-## **~~Trigger State *(Experimental)*~~**
+## **Trigger State (experimental)**
 
-- ~~Note that triggers are currently poorly optimized. Spawning high-resolution sprites may result in lag spikes.~~
-- **~~type**: type of the trigger.~~
-    - `~~noteClear`: If any note in `notes` is cleared, this trigger is fired.~~
-    - `~~combo`: If the combo amount reachs `combo`, this trigger is fired.~~
-    - `~~score`: If the score amount reaches `score`, this trigger is fired **and destroyed, regardless of `uses`**.~~
-- **~~uses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. Default `0`.~~
-- **~~notes**: (only when `type` equals `noteClear`) a list of note ids.~~
-    - ~~Example: if set to `[352, 353, 390]` and `type` is set to `noteClear`, this trigger will fire when any of the notes 352, 353, and 390 is cleared.~~
-- **~~combo**: (only when `type` equals `combo`) an integer.~~
-- **~~score**: (only when `type` equals `score`) an integer.~~
-- **~~spawn**: a list of object ids to spawn.~~
-- **~~destroy**: a list of object ids to destroy. (Destroyed objects can be spawned again by another trigger.)~~
+::: danger Obsolete!
+Do not use—will be replaced with storyboard events in a future release.
+:::
+
+::: warning NOTICE!
+Triggers are currently poorly optimized. Spawning high-resolution sprites may result in lag spikes.
+:::
+- **type**: type of the trigger.
+    - `noteClear`: If any note in `notes` is cleared, this trigger is fired.
+    - `combo`: If the combo amount reachs `combo`, this trigger is fired.
+    - `score`: If the score amount reaches `score`, this trigger is fired **and destroyed, regardless of `uses`**.
+- **uses**: maximum amount of times this trigger is allowed to fire. If set to `0`, this trigger is allowed to fire indefinitely. Default `0`.
+- **notes**: (only when `type` equals `noteClear`) a list of note ids.
+    - Example: if set to `[352, 353, 390]` and `type` is set to `noteClear`, this trigger will fire when any of the notes 352, 353, and 390 is cleared.
+- **combo**: (only when `type` equals `combo`) an integer.
+- **score**: (only when `type` equals `score`) an integer.
+- **spawn**: a list of object ids to spawn.
+- **destroy**: a list of object ids to destroy. (Destroyed objects can be spawned again by another trigger.)

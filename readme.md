@@ -20,4 +20,4 @@ yarn install
 yarn docs:build
 ```
 
-> Cytoid Wiki Team ©2020. All rights reserved.
+> Cytoid Wiki Team ©2020-2021. All rights reserved.

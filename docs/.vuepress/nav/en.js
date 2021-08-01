@@ -12,7 +12,7 @@ module.exports = [
     link: '/en/charting/'
   },
   {
-    text: 'StoryBoard',
+    text: 'Storyboard',
     link: '/en/storyboard/'
   },
   {
@@ -20,14 +20,14 @@ module.exports = [
     link: '/en/events/'
   },
   {
-    text: 'Learn More',
-    ariaLabel: 'Learn More',
+    text: 'Learn more',
+    ariaLabel: 'Learn more',
     items: [
       {
         text: 'More',
         items: [
           {
-            text: 'About Wiki',
+            text: 'About this wiki',
             link: '/en/about/'
           },
           {
