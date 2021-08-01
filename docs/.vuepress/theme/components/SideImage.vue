@@ -60,7 +60,7 @@ div.img-side{
   background-color: #6e6e6e1d;
   border-radius: 6px
 }
-img.img-side, img.side-img{
+div.img-side img.img-side, img.side-img{
   display: block;
   float: right;
   clear: right;
@@ -78,7 +78,7 @@ div.img-side{
   float: right;
   clear: right;
 }
-img.img-side, img.side-img{
+div.img-side img.img-side, img.side-img{
   width: 300px;
   display: block;
   float: right;

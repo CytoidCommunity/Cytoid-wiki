@@ -1448,7 +1448,7 @@ body, main, .mask, .sidebar, input {
         object-fit: contain;
         background-color: #11111111;
     }
-    img.side-img{
+    div.side-img img.side-img{
         width: 300px;
         display: block;
         float: right;

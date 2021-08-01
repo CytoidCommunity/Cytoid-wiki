@@ -65,10 +65,13 @@ module.exports = ctx => ({
         selectText: 'Languages',
         ariaLabel: 'Select language',
         editLinkText: 'Edit this page on GitHub',
-        lastUpdated: '',
+        lastUpdated: 'Last Update',
         author: 'Author',
         notFinish: 'Hmm... Something went wrong? Please wait... We have not done yet :(',
-        footer: '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span><br><span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span><br><span>Written by Discord Community and Localizers.</span><br><span>Published with <a href="https://github.com/vuejs/vuepress" target="_blank"><strong>VuePress</strong></a>. </span><span>Powered by <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a>. </span>',
+        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span>
+                  <span>Written by Discord Community and Localizers.</span>
+                  <span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
+                  `,
         nav: require('./nav/en'),
         sidebar: require('./sidebar/en')
       },
@@ -80,117 +83,12 @@ module.exports = ctx => ({
         lastUpdated: '上次编辑',
         author: '作者',
         notFinish: '还没做完, 再咕咕咕一会(',
-        footer: '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span><br><span>本页面是 <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> 的社区wiki. Cytoid 是由 <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> 和 <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a> 制作的社区节奏游戏.</span><br><span>由 Discord 社区及其他本地化人员编写.</span><br><span>使用 <a href="https://github.com/vuejs/vuepress" target="_blank"><strong>VuePress</strong></a> 为框架. </span><span>使用 <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a> 发布. </span>',
+        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span>
+                  <span>Written by Discord Community and Localizers.</span>
+                  <span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
+                  `,
         nav: require('./nav/zh'),
-        sidebar: {
-          '/zh/guide/': [
-            {
-              title: "主页",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'start',
-                '../about/'
-              ]
-            }
-          ],
-          '/zh/gameplay/': [
-            {
-              title: "游玩",
-              sidebarDepth: 2,
-              collapsable: false,
-              children: [
-                ''
-              ]
-            }
-          ],
-          '/zh/charting/': [
-            {
-              title: "开始制谱",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'abc',
-              ]
-            },
-            {
-              title: "制谱工具",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'tools/cylheim',
-                'tools/pctyx',
-                'tools/mobile',
-                'tools/cy2unity',
-                'tools/cyunity',
-                'tools/other'
-              ]
-            },
-            {
-              title: "使用 Cytoid 测试谱面",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'cytoid/level.json',
-                'cytoid/packing'
-              ]
-            },
-            {
-              title: "在 Cytoid IO 分享谱面",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'cytoidio/rules',
-                'cytoidio/upload'
-              ]
-            },
-            {
-              title: "更多",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'charting-and-you',
-                'chart-json'
-              ]
-            }
-          ],
-          '/zh/storyboard/': [
-            {
-              title: "StroyBoard",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'specification'
-              ]
-            }
-          ],
-          '/zh/events/': [
-            {
-              title: "活动",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'official',
-                'community'
-              ]
-            }
-          ],
-          '/zh/about/': [
-            {
-              title: "关于",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'cytoid'
-              ]
-            }
-          ]
-        }
+        sidebar: require('./sidebar/zh')
       },
       '/vi/': {
         label: 'Tiếng Việt',
@@ -200,141 +98,40 @@ module.exports = ctx => ({
         lastUpdated: 'Last Updated',
         author: 'Author',
         notFinish: 'Under Construction',
-        footer: '<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span><br><span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span><br><span>Written by Discord Community and Localizers.</span><br><span>Published with <a href="https://github.com/vuejs/vuepress" target="_blank"><strong>VuePress</strong></a>. </span><span>Powered by <a href="https://vercel.com/" target="_blank"><strong>Vercel</strong></a>. </span>',
+        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span>
+                  <span>Written by Discord Community and Localizers.</span>
+                  <span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
+                  `,
         nav: require('./nav/vi'),
-        sidebar: {
-          '/vi/guide/': [
-            {
-              title: "Home",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'start',
-                '../about/'
-              ]
-            }
-          ],
-          '/vi/gameplay/': [
-            {
-              title: "Gameplay",
-              sidebarDepth: 2,
-              collapsable: false,
-              children: [
-                ''
-              ]
-            }
-          ],
-          '/vi/charting/': [
-            {
-              title: "Getting Start",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'abc',
-              ]
-            },
-            {
-              title: "Charting Tools",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'tools/cylheim',
-                'tools/pctyx',
-                'tools/mobile',
-                'tools/cy2unity',
-                'tools/cyunity',
-                'tools/other'
-              ]
-            },
-            {
-              title: "Testing with Cytoid",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'cytoid/level.json',
-                'cytoid/packing'
-              ]
-            },
-            {
-              title: "Share on Cytoid IO",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'cytoidio/rules',
-                'cytoidio/upload'
-              ]
-            },
-            {
-              title: "More",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                'charting-and-you'
-              ]
-            }
-          ],
-          '/vi/storyboard/': [
-            {
-              title: "StroyBoard",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'specification'
-              ]
-            }
-          ],
-          '/vi/events/': [
-            {
-              title: "Events",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'official',
-                'community'
-              ]
-            }
-          ],
-          '/vi/about/': [
-            {
-              title: "About",
-              sidebarDepth: 3,
-              collapsable: false,
-              children: [
-                '',
-                'cytoid'
-              ]
-            }
-          ]
-        }
+        sidebar: require('./sidebar/vi')
       }
     }
   },
-  // plugins: [
-  //   ['@vuepress/back-to-top', true],
-  //   ['@vuepress/pwa', {
-  //     serviceWorker: true,
-  //     updatePopup: true
-  //   }],
-  //   ['@vuepress/medium-zoom', true],
-  //   ['@vuepress/google-analytics', {
-  //     ga: 'UA-128189152-1'
-  //   }],
-  //   ['container', {
-  //     type: 'vue',
-  //     before: '<pre class="vue-container"><code>',
-  //     after: '</code></pre>'
-  //   }],
-  //   ['container', {
-  //     type: 'upgrade',
-  //     before: info => `<UpgradePath title="${info}">`,
-  //     after: '</UpgradePath>'
-  //   }],
-  //   ['flowchart']
-  // ],
+  plugins: [
+    // ['@vuepress/pwa', {
+    //   serviceWorker: true,
+    //   updatePopup: true
+    // }],
+    ['@vuepress/medium-zoom', {
+      options: {
+        background: "#000000cc"
+      }
+    }],
+    // ['@vuepress/google-analytics', {
+    //   ga: 'UA-128189152-1'
+    // }],
+    // ['container', {
+    //   type: 'vue',
+    //   before: '<pre class="vue-container"><code>',
+    //   after: '</code></pre>'
+    // }],
+    // ['container', {
+    //   type: 'upgrade',
+    //   before: info => `<UpgradePath title="${info}">`,
+    //   after: '</UpgradePath>'
+    // }],
+    // ['flowchart']
+  ],
   extraWatchFiles: [
     '.vuepress/nav/en.js',
     '.vuepress/nav/zh.js'
