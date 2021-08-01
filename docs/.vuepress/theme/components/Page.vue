@@ -115,6 +115,7 @@ export default {
   padding-top 0
   padding-bottom 0
   .inner
+    display grid
     margin-top 0
     padding-top 1rem
     opacity 1
