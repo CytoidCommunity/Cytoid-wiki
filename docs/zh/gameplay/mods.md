@@ -1,180 +1,63 @@
 ---
 title: Mods
-lang: en-US
-finish: false
+lang: zh-Hans
+author: 冰糖酱-BillZhou233
 ---
+
 # {{$frontmatter.title}}
 
-Modifiers (or mods) 
+和很多自制类音游一样, Cytoid 也提供了玩法拓展功能即 Mods, 您可在谱面难度选择页面右上角的手柄菜单中选择启用. 接下来的部分将分类介绍它们 (顺序可能与游戏内不同) .
 
-## HP modifiers
+## 血条类
 
-### HYPER
+Hyper 与 Another 将会在基本游戏规则之外追加一个血量计, 归零时即为游玩失败 ~~你美丽 jajaja~~. Another 下的血量计比 Hyper 更加严格. 此外, 段位模式下也会使用 Another 血条.
 
-![Hyper](./_source_mods.md/Hyper.png){.side-img .icon-img}
+两者的具体规则如下:
 
-> Add an HP bar to the game.
+|模式|起始血量|Perfect|Great|Good|Bad|Miss|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Hyper|75 * 难度|+2 HP|-1%|-3%|-6%|-8%|
+|Another|75 * 难度|+2 HP|-4%|-8%|-15%|-20%|
 
-- By enabling Hyper, it will add an HP bar to the game, initial HP value is ``difficulty * 75`` (1000 if it's ? difficulty). If it reaches to 0, you will automatically fail the game.
-- HYPER works differently in Ranked and Practice
+请注意: Perfect 回血是 __按数值增加__ 而其他判定则是 __按百分比减少__.
 
-::: details Practice
-|                     |   Perfect   |   Great   |    Good   |    Bad    |     Miss    |
-|---------------------|:-----------:|:---------:|:---------:|:---------:|:-----------:|
-| Click               |          +1 |       -1% |       -3% |       -6% |         -8% |
-| Hold                |        +0.5 |     -1.5% |       -4% |       -9% |        -12% |
-| Long hold           |        +0.5 |     -1.5% |       -4% |       -9% |        -12% |
-| Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -8% (-2.4%) |
-| C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -8% (-2.4%) |
-| Flick               |          +1 |    -0.75% |    -2.75% |       -4% |         -6% |
+此外, 在游戏中 FC 和 AP 也归为血条类, 它们的效果如下:
+
+- FC: 断连将结束本局游戏.
+- AP: 打出任一非 Perfect 判定将结束本局游戏.
+
+不能叠加使用.
+
+## 镜像类
+
+- Flip X: 谱面左右镜像翻转.
+- Flip Y: 谱面上下镜像翻转.
+- Flip All: 谱面旋转 180 度 ~~倒打~~.
+
+不能叠加使用 ~~但是可以通过旋转设备的方式叠加 Flip All 和其他两者~~.
+
+## 速度类
+
+- Fast: 启用后 Note __更迟__ 出现且出现时动画速度 __加快__.
+- Slow: 启用后 Note __更早__ 出现且出现时动画速度 __减慢__.
+
+Fast / Slow 不可叠加使用, 大部分玩家在游玩时偏向于使用 Fast.
+
+除上述 Mods 外, 高级设置中的 __实验性 Note AR__ 也会影响谱面中的 Note 速度, 该选项可与上述 Mods 叠加使用. 若要了解实验性 Note AR 与 Fast 对速度的相互作用可参看 [这个视频](https://www.bilibili.com/video/BV1ua4y1a7qT).
+
+### 隐藏类
+
+- No Scanner: 隐藏判定线.
+- Invisible: 隐藏 Note.
+
+可以叠加使用.
+
+## 自动预览
+
+::: tip
+自动预览模式启用后, 歌曲结束后将直接跳过谱面结算, 返回谱面难度选择页面.
 :::
 
-::: details Ranked
-|                     |   Perfect   |   Great   |    Good   |    Bad    |     Miss    |
-|---------------------|:-----------:|:---------:|:---------:|:---------:|:-----------:|
-| Click               |          +1 |      +0.5 |       -1% |       -3% |         -8% |
-| Hold                |        +0.5 |     +0.25 |     -1.5% |       -4% |        -12% |
-| Long hold           |        +0.5 |     +0.25 |     -1.5% |       -4% |        -12% |
-| Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -8% (-2.4%) |
-| C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -8% (-2.4%) |
-| Flick               |          +1 |      +0.5 |    -0.75% |    -2.75% |         -6% |
-:::
+- 启用 Auto 后会自动清除全部 Note, 便于预览谱面.
 
-### ANOTHER
-
-![Another](./_source_mods.md/Another.png){.side-img .icon-img}
-
-> Same as HYPER, but more difficult.
-
-- All its mechanics are same as HYPER, but it's adjusted to make more damage if you get a note cleared is not Perfect.
-- Like HYPER, ANOTHER also works differently in Ranked and Practice
-
-::: details Practice
-|                     |   Perfect   |   Great   |    Good   |    Bad    |    Miss    |
-|---------------------|:-----------:|:---------:|:---------:|:---------:|:----------:|
-| Click               |          +1 |       -4% |       -8% |      -15% |       -20% |
-| Hold                |        +0.5 |       -6% |      -12% |      -20% |       -25% |
-| Long hold           |        +0.5 |       -6% |      -12% |      -20% |       -25% |
-| Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -20% (-6%) |
-| C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -20% (-6%) |
-| Flick               |          +1 |       -3% |       -6% |      -12% |       -15% |
-:::
-
-::: details Ranked
-|                     |   Perfect   | Great     |    Good   |    Bad    |    Miss    |
-|---------------------|:-----------:|-----------|:---------:|:---------:|:----------:|
-| Click               |          +1 |         0 |       -4% |       -8% |       -20% |
-| Hold                |        +0.5 |         0 |       -6% |      -12% |       -25% |
-| Long hold           |        +0.5 |         0 |       -6% |      -12% |       -25% |
-| Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -20% (-6%) |
-| C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -20% (-6%) |
-| Flick               |          +1 |         0 |       -3% |       -6% |       -15% |
-:::
-
-### Full combo
-
-![Full combo](./_source_mods.md/FullCombo.png){.side-img .icon-img}
-
-> Game over if missed a note.
-
-### All perfect
-
-![All perfect](./_source_mods.md/AllPerfect.png){.side-img .icon-img}
-
-> Game over if the note cleared is not perfect.
-
-## Flipping modifiers
-
-### Flip X
-
-![Flip X](./_source_mods.md/FlipX.png){.side-img .icon-img}
-
-> Flips the level on the x-axis.
-
-### Flip Y
-
-![Flip Y](./_source_mods.md/FlipY.png){.side-img .icon-img}
-
-> Flips the level on the y-axis.
-
-### Flip All
-
-![Flip All](./_source_mods.md/FlipAll.png){.side-img .icon-img}
-
-> Flip the level on both axes, i.e. rotate by 180°.
-
-## Approach rate adjusting modifiers
-
-### Fast
-
-![Fast](./_source_mods.md/Fast.png){.side-img .icon-img}
-
-> Notes fade in later.
-
-When Fast is enabled, notes will fade in later, i.e approach rate is higher.
-
-### Slow
-
-![Slow](./_source_mods.md/Slow.png){.side-img .icon-img}
-
-> Notes fade in earlier.
-
-When Slow is enabled, notes will fade in earlier, i.e approach rate is lower.
-
-## Invisibling modifiers
-
-### No scanner
-
-![No scanner](./_source_mods.md/NoScanner.png){.side-img .icon-img}
-
-> The scanner is hidden.
-
-### Invisible
-
-![Invisible](./_source_mods.md/Invisible.png){.side-img .icon-img}
-
-> All notes are hidden.
-
-## Autoplaying modifiers
-
-::: warning NOTICE!
-Enabling any autoplaying modifiers, your score won't be saved (that means your score won't be submitted to CytoidIO, you don't gain any EXP or rating)
-:::
-
-### Auto
-
-![Auto](./_source_mods.md/Auto.png){.side-img .icon-img}
-
-> Autoplay the level
-
-- The game will automatically hit all notes
-
-### Auto Drag
-
-![Auto Drag](./_source_mods.md/AutoDrag.png){.side-img .icon-img}
-
-> Autoplay the drag notes
-
-- The game will automatically hit Drag notes
-
-### Auto Flick
-
-![Auto Flick](./_source_mods.md/AutoFlick.png){.side-img .icon-img}
-
-> Autoplay the flick notes
-
-- The game will automatically hit Flick notes
-
-### Auto Hold
-
-![Auto Hold](./_source_mods.md/AutoHold.png){.side-img .icon-img}
-
-> Autoplay the hold notes
-
-- The game will automatically hit Flick notes
-
-<style type="text/css">
-.icon-img {
-    max-width: 100px;
-}
-</style>
+- 启用注明了 Note 种类的 Auto 后则只会自动清除对应种类的 Note, 其余种类的 Note 仍需要手动点击. 注明种类的 Auto 可以叠加使用.
