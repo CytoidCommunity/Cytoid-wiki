@@ -28,15 +28,11 @@ module.exports = [
         items: [
           {
             text: 'About Wiki',
-            link: '/vi/about/'
+            link: '/vi/about/wiki'
           },
           {
             text: 'About Cytoid',
             link: '/vi/about/cytoid'
-          },
-          {
-            text: 'Wiki Update',
-            link: '/vi/about/wiki'
           }
         ]
       }

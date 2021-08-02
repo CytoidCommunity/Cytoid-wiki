@@ -140,6 +140,7 @@ module.exports = ctx => ({
     extendMarkdown: md => {
       md.use(require('markdown-it-katex'))
       md.use(require('markdown-it-attrs'))
-    }
+    },
+    lineNumbers: true
   }
 })

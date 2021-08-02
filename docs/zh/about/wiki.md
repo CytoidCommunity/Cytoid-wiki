@@ -1,5 +1,7 @@
 ---
-title: Wiki 更新记录
+title: 关于 Wiki
 lang: zh-Hans
 ---
-# Wiki 更新记录
+# 关于 Wiki
+
+## Wiki 更新记录

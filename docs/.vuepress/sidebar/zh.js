@@ -7,7 +7,7 @@ module.exports = {
       children: [
         '',
         'start',
-        '../about/'
+        '../about/wiki'
       ]
     }
   ],
@@ -104,7 +104,7 @@ module.exports = {
       sidebarDepth: 3,
       collapsable: false,
       children: [
-        '',
+        'wiki',
         'cytoid'
       ]
     }

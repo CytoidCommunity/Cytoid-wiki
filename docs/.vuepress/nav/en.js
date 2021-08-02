@@ -27,16 +27,12 @@ module.exports = [
         text: 'More',
         items: [
           {
-            text: 'About this wiki',
-            link: '/en/about/'
+            text: 'About wiki',
+            link: '/en/about/wiki'
           },
           {
             text: 'About Cytoid',
             link: '/en/about/cytoid'
-          },
-          {
-            text: 'Wiki Update',
-            link: '/en/about/wiki'
           }
         ]
       }
