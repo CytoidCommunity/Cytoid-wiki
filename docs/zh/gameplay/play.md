@@ -136,3 +136,59 @@ R 判中, 单个 Note 的精准度按下表计算:
 和分数类似, Great 判定获得的精准度也和相对打击偏差成 __线性相关__, 打击偏差越大, 获得的精准度越少.
 
 总体的精准度计算同样为每个 Note 的精准度 __取平均值__.
+
+### Rating 计算方式
+
+::: tip
+本段部分摘录自官方说明[《Rating 和你》](https://www.bilibili.com/read/cv6536670)以及 [Notion](https://www.notion.so/Rating-System-509becb063954a699d1be1fc82eecd70) 上的解说.
+:::
+
+Rating (rt) 是用于展现玩家实力的数值.
+
+每次使用 R 判游玩一张谱面并提交成功后, 游戏会计算一份 __单曲 Rating__, 并记录在您的档案库中, 用于计算您的 __整体 Rating__.
+
+它们的计算方式如下:
+
+> 单曲 Rating = 表现评分 (与精准度有关)  * 谱面等级
+>
+> 整体 Rating = (最高的 30 个单曲 Rating + 最近 60 天中最高的 10 个单曲 Rating) / 40
+>
+> 表现评分 y 的计算按照与精准度 x 有关的如下分段函数:
+> $$y=
+\begin{cases}
+ & 0.5\sqrt{\frac{x}{70}} \text{, } 0 < x < 70 \\
+ & 0.7-0.2\log_{10}{(\frac{100-x}{3})} \text{, } 70 \leqslant x < 97 \\
+ & 0.7-0.16\log_{10}{(\frac{100-x}{3})} \text{, } 97 \leqslant x < 99.7 \\
+ & 0.78-0.08\log_{10}{(\frac{100-x}{3})} \text{, } 99.7 \leqslant x < 99.97 \\
+ & 2x-199 \text{, } 99.97 \leqslant x < 100
+\end{cases}$$
+> 不想看到这么复杂的函数式? 画成图像大概长这样:
+> ![](./_source_play.md/rt-graph.png)
+
+<!--
+LaTeX Source:
+y=
+\begin{cases}
+ & 0.5\sqrt{\frac{x}{70}} \text{, } 0 < x < 70 \\
+ & 0.7-0.2\log_{10}{(\frac{100-x}{3})} \text{, } 70 \leqslant x < 97 \\
+ & 0.7-0.16\log_{10}{(\frac{100-x}{3})} \text{, } 97 \leqslant x < 99.7 \\
+ & 0.78-0.08\log_{10}{(\frac{100-x}{3})} \text{, } 99.7 \leqslant x < 99.97 \\
+ & 2x-199 \text{, } 99.97 \leqslant x < 100
+\end{cases}
+Thanks to https://www.codecogs.com/latex/eqneditor.php
+-->
+
+以下是该套计算公式的补充说明:
+
+- ? 难度的谱面不参与 Rating 计算.
+- 对于同一谱面 ID, 不同难度的单曲 Rating 分别计算.
+- 谱面等级的取值为 1 ~ 16, 对应谱面的难度等级 (16 对应 15+) . 因此, 单曲和整体 Rating 的最大值均为 16.
+- 用于计算“最高的 30 个单曲 Rating”的谱面 ID (同一难度) __不可重复__.
+- 用于计算“最近 60 天中最高的 10 个单曲 Rating”的谱面 ID (同一难度) __可以重复__.
+- 在计算整体 Rating 时, “最近 60 天中最高的 10 个单曲 Rating”会进行 __浮动改动__.
+  - 在距离结算时间的 0 ~ 30 天内, 它不会有任何改变.
+  - 在随后的 30 ~ 60 天内, 它会额外乘以一个线性参数, 从 1 逐渐降为 0.
+  - 这意味着, 如果您超过一个月没有进行任何游玩, 你的 Rating 就会开始持续下降, 直到上述公式中的“最近 60 天中最高的 10 个单曲 Rating”归零为止.
+  - 同时, 只要你在一个月内保持活跃 (10 次游玩以上) , 你的 Rating 就 __不会下降__. 所以, 记得常来 Cytoid 玩!
+
+您可以在游戏内查看 Rating 的全球排行榜. 此外, 您可以登入 Cytoid 官网, 进入 __工作室 > Cytoid 分析__ 页面, 查看 Rating 计算明细.
