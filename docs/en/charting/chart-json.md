@@ -128,7 +128,7 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
     - `5` <Badges text="Unsupported" type="danger">: Fade out of the UI
     - `6` <Badges text="Unsupported" type="danger">: The animation shows the UI
     - `7` <Badges text="Unsupported" type="danger">: Animation hides the UI
-    - `8` <Badges text="Unsupported" type="danger">: Self-definning text
+    - `8` <Badges text="Unsupported" type="danger">: Message
 
   - `args` <Badges text="string" type="tips"/>: Event arguments
     - Type `0` and `1`:
