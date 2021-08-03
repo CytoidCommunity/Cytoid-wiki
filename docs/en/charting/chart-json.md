@@ -19,8 +19,8 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
 
 ### Parameter types
 
-- <Badge text="Cytoid-only" type="warning">: This badge means it is a Cytoid unique parameter. Only Cytoid, CytoidPlayer and a few chart editors support it.
-- <Badge text="Unsupported" type="danger">: This badge means it is an unsupported parameter in Cytoid. Cytoid will ignore it.
+- <Badge text="Cytoid-only" type="warning"/>: This badge means it is a Cytoid unique parameter. Only Cytoid, CytoidPlayer and a few chart editors support it.
+- <Badge text="Unsupported" type="danger"/>: This badge means it is an unsupported parameter in Cytoid. Cytoid will ignore it.
 
 ## Units
 
@@ -38,21 +38,21 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
 
 - `time_base` <Badge text="int"/>: The time base, as explained before. We recommend using a value of `480`.
 
-- `start_offset_time` <Badge text="double"/> <Badge text="Unsupported" type="danger">: Start offset time
+- `start_offset_time` <Badge text="double"/> <Badge text="Unsupported" type="danger"/>: Start offset time
 
-- `end_offset_time` <Badge text="double"/> <Badge text="Unsupported" type="danger">: End offset time
+- `end_offset_time` <Badge text="double"/> <Badge text="Unsupported" type="danger"/>: End offset time
 
-- `is_start_without_ui` <Badge text="boolean"/> <Badge text="Unsupported" type="danger">: Start the game without UI. If the value is `true`, the game UI will not appear when playing.
+- `is_start_without_ui` <Badge text="boolean"/> <Badge text="Unsupported" type="danger"/>: Start the game without UI. If the value is `true`, the game UI will not appear when playing.
 
-- `music_offset` <Badge text="int"/> <Badge text="Cytoid-only" type="warning">: The offset of the music.
+- `music_offset` <Badge text="int"/> <Badge text="Cytoid-only" type="warning"/>: The offset of the music.
 
 - `skip_music_on_completion` : If the value is `true`, the game will skip the music when the player finishes the chart and ignore the player's current settings of it as well.
 
-- `display_boundaries` <Badge text="boolean"/> <Badge text="Cytoid-only" type="warning">: Display the scanline boundaries or not, override user's current settings.
+- `display_boundaries` <Badge text="boolean"/> <Badge text="Cytoid-only" type="warning"/>: Display the scanline boundaries or not, override user's current settings.
 
-- `horizontal_margin` <Badge text="int"/> <Badge text="Cytoid-only" type="warning">: Horizontal margin, ranged from `1` to `5`. If it's assigned, it will override user's current settings.
+- `horizontal_margin` <Badge text="int"/> <Badge text="Cytoid-only" type="warning"/>: Horizontal margin, ranged from `1` to `5`. If it's assigned, it will override user's current settings.
 
-- `Vertical_margin` <Badge text="int"/> <Badge text="Cytoid-only" type="warning">: Vertical margin, ranged from `1` to `5`. If it's assigned, it will override user's current settings.
+- `Vertical_margin` <Badge text="int"/> <Badge text="Cytoid-only" type="warning"/>: Vertical margin, ranged from `1` to `5`. If it's assigned, it will override user's current settings.
 
 - `page_list` <Badge text="array"/>: A list of pages.
 
@@ -72,7 +72,7 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
 
 - `scan_line_direction` <Badge text="int"/>: The direction of the scanner (scanline). `-1` means scanline going down, `1` means scanline going up.
 
-- `PositionFunction` <Badge text="Unsupported" type="danger">: Page position function.
+- `PositionFunction` <Badge text="Unsupported" type="danger"/>: Page position function.
   - `type`: Function type, using a value of `0` currently.
   - `arguments`: Function arguments.
 
@@ -95,8 +95,8 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
   - `5`: Flick
   - `6`: C-Drag head
   - `7`: C-Drag child
-  - `8` <Badge text="Unsupported" type="danger">: Falling click
-  - `9` <Badge text="Unsupported" type="danger">: Falling drag
+  - `8` <Badge text="Unsupported" type="danger"/>: Falling click
+  - `9` <Badge text="Unsupported" type="danger"/>: Falling drag
 
 - `id` <Badge text="int"/>: Note ID. Put it in numerical order, make sure IDs don't overlap with others.
 
@@ -112,7 +112,7 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
 
 - `has_sibling` <Badge text="boolean"/>
 
-- `NoteDirection` <Badge text="int"/> <Badge text="Unsupported" type="danger">: The direction of the falling note (only type `8` and `9`).
+- `NoteDirection` <Badge text="int"/> <Badge text="Unsupported" type="danger"/>: The direction of the falling note (only type `8` and `9`).
 
 #### `event_order_list`
 
@@ -122,20 +122,20 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
   - `type` <Badge text="int"/>: Event type.
     - `0`: Speed up
     - `1`: Speed down
-    - `2` <Badge text="Unsupported" type="danger">: Show UI
-    - `3` <Badge text="Unsupported" type="danger">: Hide the UI
-    - `4` <Badge text="Unsupported" type="danger">: Fade into the UI
-    - `5` <Badge text="Unsupported" type="danger">: Fade out of the UI
-    - `6` <Badge text="Unsupported" type="danger">: The animation shows the UI
-    - `7` <Badge text="Unsupported" type="danger">: Animation hides the UI
-    - `8` <Badge text="Unsupported" type="danger">: Message
+    - `2` <Badge text="Unsupported" type="danger"/>: Show UI
+    - `3` <Badge text="Unsupported" type="danger"/>: Hide the UI
+    - `4` <Badge text="Unsupported" type="danger"/>: Fade into the UI
+    - `5` <Badge text="Unsupported" type="danger"/>: Fade out of the UI
+    - `6` <Badge text="Unsupported" type="danger"/>: The animation shows the UI
+    - `7` <Badge text="Unsupported" type="danger"/>: Animation hides the UI
+    - `8` <Badge text="Unsupported" type="danger"/>: Message
 
-  - `args` <Badge text="string" />: Event arguments
+  - `args` <Badge text="string"/>: Event arguments
     - Type `0` and `1`:
       - `W`: When the scanline returns to the basic speed
       - `R`: When the scanline becomes faster than the basic speed
       - `G`: When the scanline becomes slower than the basic speed
-    - From type `2` to type `7` <Badge text="Unsupported" type="danger">:
+    - From type `2` to type `7` <Badge text="Unsupported" type="danger"/>:
       - `0`: Combo
       - `1`: Score
       - `2`: Song title
@@ -144,4 +144,4 @@ Cytus II (C2) chart format is a JSON file, that means you can edit easily in any
       - `5`: Boundary line
       - `6`: Audio spectrum
       - `7`: Progress bar
-    - Type `8` <Badge text="Unsupported" type="danger">: It will be under this structure: `<Message>,<Color>`
+    - Type `8` <Badge text="Unsupported" type="danger"/>: It will be under this structure: `<Message>,<Color>`
