@@ -113,6 +113,7 @@ module.exports = ctx => ({
     //   updatePopup: true
     // }],
     ['@vuepress/medium-zoom', {
+      selector: "img:not(.no-zoom)",
       options: {
         background: "#000000cc"
       }
@@ -140,6 +141,7 @@ module.exports = ctx => ({
     extendMarkdown: md => {
       md.use(require('markdown-it-katex'))
       md.use(require('markdown-it-attrs'))
-    }
+    },
+    lineNumbers: true
   }
 })

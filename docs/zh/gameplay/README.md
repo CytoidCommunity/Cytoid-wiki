@@ -256,7 +256,7 @@ Rating (rt) 是用于展现玩家实力的数值. Cytoid 有一套详细的算�
  & 2x-199 \text{, } 99.97 \leqslant x < 100
 \end{cases}$$
 > 不想看到这么复杂的函数式? 画成图像大概长这样:
-> ![](./_source_README.md/rt-graph.png)
+> ![](./_source_play.md/rt-graph.png)
 
 <!--
 LaTeX Source:

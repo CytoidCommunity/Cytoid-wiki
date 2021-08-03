@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6
 
   {$contentClass}:not(.custom) > &
     margin-top (0.5rem - $navbarHeight)
-    padding-top ($navbarHeight + 1rem)
+    padding-top 3rem
     margin-bottom 0
 
     &:first-child
@@ -133,14 +133,31 @@ h1, h2, h3, h4, h5, h6
 
 h1
   font-size 2.2rem
+  {$contentClass}:not(.custom) > &
+    padding-top ($navbarHeight + 1rem)
 
 h2
   font-size 1.65rem
   padding-bottom .3rem
   border-bottom 1px solid $borderColor
+  {$contentClass}:not(.custom) > &
+    padding-top 4rem
 
 h3
   font-size 1.35rem
+  {$contentClass}:not(.custom) > &
+    padding-top 3.8rem
+
+h4
+  font-size 1.15rem
+  {$contentClass}:not(.custom) > &
+    padding-top 3.5rem
+
+h5
+  font-size 1rem
+
+h6
+  font-size 0.9rem
 
 a.header-anchor
   font-size 0.85em

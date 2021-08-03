@@ -1,6 +1,6 @@
 ---
-title: Charting ABC
+title: Charting Basic
 lang: en-US
 ---
 
-# Charting ABC
+# Charting Basic

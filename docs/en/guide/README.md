@@ -2,11 +2,11 @@
 title: Cytoid Wiki
 lang: en-US
 ---
-![img](/site-source/pic/sayaka_thumb.png ":no-zoom")
+![img](/site-source/pic/sayaka_thumb.png){.no-zoom}
 
 # Cytoid Official Wiki
 
-Contents are partially localized from [the old wiki](https://sites.google.com/site/cytoidcommunity/home).
+> Contents are partially localized from [the old wiki](https://sites.google.com/site/cytoidcommunity/home).
 
 ## What Cytoid Is
 
