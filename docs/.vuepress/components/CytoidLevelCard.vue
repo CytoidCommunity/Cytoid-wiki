@@ -7,7 +7,7 @@
     <div class="background-dim" />
     <div
       class="background"
-      :style="'background-image: url('+getbgUrl()+')'"
+      :style="'background-image: url('+leveldata.cover.thumbnail+')'"
     />
     <a class="link" :href="'https://cytoid.io/levels/'+leveldata.uid" target="_blank" />
     <div class="index">
@@ -88,9 +88,6 @@ export default {
           });
       }
     },
-    getbgUrl() {
-      return this.leveldata.cover.original.replace('assets.cytoid.io','images.cytoid.io') + '?h=200&w=320'
-    }
   },
   mounted() {
     this.$nextTick(function(){
@@ -116,14 +113,13 @@ export default {
     z-index -1
   .background-dim
     opacity 1
-    background #333!important
+    background #333
     z-index -2
   .background
     opacity 0.6
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(1px);
   .link
     display inline
     z-index 0
