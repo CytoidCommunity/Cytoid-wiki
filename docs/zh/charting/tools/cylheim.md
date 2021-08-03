@@ -72,7 +72,7 @@ next: ../cytoid/packing.md
 
 ### 认识UI
 
-完成新建项目的工作后, 我们先来认识下UI界面![UI](./_sources_cylheim.md/ui.jpg)
+完成新建项目的工作后, 我们先来认识下UI界面![编辑器 UI](./_sources_cylheim.md/editor_ui.jpg)
 
 #### 1. 工具栏&标题栏
 
