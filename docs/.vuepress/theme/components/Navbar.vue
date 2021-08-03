@@ -124,6 +124,16 @@ $navbar-horizontal-padding = 1.5rem
     .search-box
       flex: 0 0 auto
       vertical-align top
+  &:after
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: inherit;
+    filter: blur(1px);
+    z-index: -1;
 
 @media (max-width: $MQMobile)
   .navbar

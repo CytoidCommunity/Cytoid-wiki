@@ -28,15 +28,11 @@ module.exports = [
         items: [
           {
             text: '关于 Wiki',
-            link: '/zh/about/'
+            link: '/zh/about/wiki'
           },
           {
             text: '关于 Cytoid',
             link: '/zh/about/cytoid'
-          },
-          {
-            text: 'Wiki 更新记录',
-            link: '/zh/about/wiki'
           }
         ]
       }

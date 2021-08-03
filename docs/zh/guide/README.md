@@ -4,11 +4,7 @@ lang: zh-Hans
 ---
 
 ![img](/site-source/pic/sayaka_thumb.png ":no-zoom")
-# Cytoid 中文Wiki
-
-为没有有效途径访问[Cytoid](https://cytoid.io/)官方[wiki](https://sites.google.com/site/cytoidcommunity/home)的玩家设置的文档.
-
-内容翻译自Cytoid的官方[wiki](https://sites.google.com/site/cytoidcommunity/home).
+# Cytoid 中文 Wiki
 
 ## 什么是 Cytoid
 
