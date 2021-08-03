@@ -15,7 +15,8 @@
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-katex": "^2.0.3",
     "vue-toasted": "^1.1.28",
-    "vuepress": "^1.7.1"
+    "vuepress": "^1.7.1",
+    "axios": "^0.21.1"
   },
   "dependencies": {
     "axios": "^0.21.1"
