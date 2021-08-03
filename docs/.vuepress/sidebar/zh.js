@@ -93,8 +93,7 @@ module.exports = {
       collapsable: false,
       children: [
         '',
-        'official',
-        'community'
+        'official'
       ]
     }
   ],

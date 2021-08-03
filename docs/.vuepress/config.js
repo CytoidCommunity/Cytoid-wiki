@@ -113,6 +113,7 @@ module.exports = ctx => ({
     //   updatePopup: true
     // }],
     ['@vuepress/medium-zoom', {
+      selector: "img:not(.no-zoom)",
       options: {
         background: "#000000cc"
       }
