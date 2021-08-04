@@ -45,7 +45,7 @@ Fast / Slow 不可叠加使用, 大部分玩家在游玩时偏向于使用 Fast.
 
 除上述 Mods 外, 高级设置中的 __实验性 Note AR__ 也会影响谱面中的 Note 速度, 该选项可与上述 Mods 叠加使用. 若要了解实验性 Note AR 与 Fast 对速度的相互作用可参看 [这个视频](https://www.bilibili.com/video/BV1ua4y1a7qT).
 
-### 隐藏类
+## 隐藏类
 
 - No Scanner: 隐藏判定线.
 - Invisible: 隐藏 Note.
