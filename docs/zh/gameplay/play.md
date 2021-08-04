@@ -1,12 +1,12 @@
 ---
-title: 游戏规则
+title: 游戏玩法
 lang: zh-Hans
 author: 冰糖酱-BillZhou233
 ---
 
 # {{$frontmatter.title}}
 
-Cytoid 的规则很简单, 您只需要配合音乐与谱面在对应的时机击中屏幕上出现的 Note 来获取高分.
+Cytoid 的玩法很简单, 您只需要配合音乐与谱面在对应的时机击中屏幕上出现的 Note 来获取高分.
 
 ## Note 类型
 

@@ -1,7 +1,7 @@
 module.exports = {
-    '/en/guide/': [
+    '/en/overview/': [
       {
-        title: "Home",
+        title: "Overview",
         sidebarDepth: 3,
         collapsable: false,
         children: [

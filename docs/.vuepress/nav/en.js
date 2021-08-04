@@ -1,7 +1,7 @@
 module.exports = [
   {
-    text: 'Guide',
-    link: '/en/guide/'
+    text: 'Overview',
+    link: '/en/overview/'
   },
   {
     text: 'Gameplay',

@@ -1,7 +1,7 @@
 module.exports = {
-  '/zh/guide/': [
+  '/zh/overview/': [
     {
-      title: "主页",
+      title: "概述",
       sidebarDepth: 3,
       collapsable: false,
       children: [
@@ -20,7 +20,8 @@ module.exports = {
         '',
         'installation',
         'play',
-        'mods'
+        'mods',
+        'settings'
       ]
     }
   ],
