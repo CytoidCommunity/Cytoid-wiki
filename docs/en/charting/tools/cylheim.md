@@ -17,13 +17,11 @@ title: Charting with Cylheim
 
 5. Go to the Cylheim folder, run *Cylheim.exe.* If this is your first time running Cylheim, this screen will be shown up, just click *I accept*.
 
-![Terms of use agreement screen](_sources_cylheim.md/welcome.jpg)
+![Terms of use agreement screen](./_sources_cylheim.md/welcome.jpg)
 
-::: warning Notice: If there is a message appearing like the image below, please install .NET 6 Desktop Runtime at [here](https://dotnet.microsoft.com/download/dotnet/6.0).
+However, if there is a message appearing like the image below, please install .NET 6 Desktop Runtime at [here](https://dotnet.microsoft.com/download/dotnet/6.0).
 
-![.NET not installed error](_sources_cylheim.md/dotnet_error.png)
-
-:::
+![.NET not installed error](./_sources_cylheim.md/dotnet_error.png)
 
 # Using Cylheim
 
@@ -31,7 +29,7 @@ Before we start, you should prepare an edited audio file (we have mentioned how 
 
 For easier chart management, we recommend that you should put in a separate folder for each track, like this:
 
-![Chart management](_sources_cylheim.md/folder1.jpg)
+![Chart management](./_sources_cylheim.md/folder1.jpg)
 
 When you're finished, you can move to the next section.
 
@@ -39,7 +37,7 @@ When you're finished, you can move to the next section.
 
 After opening Cylheim (or accepting Cylheim's terms of use in the first run), you can see the welcome screen
 
-![Welcome screen](_sources_cylheim.md/welcome2.jpg)
+![Welcome screen](./_sources_cylheim.md/welcome2.jpg)
 
 Next, click *New Project* and create the project file in the folder
 
@@ -49,7 +47,7 @@ Next, click *New Project* and create the project file in the folder
 
 Now, we will take a look of Cylheim's UI
 
-![Basic UI](_sources_cylheim.md/editor_ui.jpg)
+![Basic UI](./_sources_cylheim.md/editor_ui.jpg)
 
 1. Toolbar & Title bar: You can hover the
     icons to know their function.
@@ -66,7 +64,7 @@ Now, we will take a look of Cylheim's UI
 
 Click the + button in the chart list, a window will be appeared
 
-![New Chart](_sources_cylheim.md/new_chart.jpg)
+![New Chart](./_sources_cylheim.md/new_chart.jpg)
 
 The UI has break into four parts by lines, from up to down their
 function are: **import chart file**, **basic information of the chart**, **editor appearance** and **presets for the appearance**.
@@ -85,7 +83,7 @@ Click **Create** and you're done
 
 #### Understanding the Shortcuts
 
-You can also go to **Settings-Shortcut** to edit the Shortcut for your own preference.
+You can also go to **Settings --> Shortcut** to edit the Shortcut for your own preference.
 
 |Default shortcut             |Function                            |
 |-----------------------------|------------------------------------|
@@ -111,15 +109,14 @@ Move your cursor to where you want to add the note, then **left click**
 
 ##### Add Hold / Long Hold
 
-at where the hold note starts, **left click** and hold, then move your
-cursor to where the hold ends and release the click
+At where the hold note starts, **left click** and hold, then move your cursor to where the hold ends and release the click.
 
-Tip: Long holds
-
+::: tip Tips: Long holds
 While holding, you can use Shortcuts and go to next page, which also
 extends the hold to the next page
 
 Hold will turn into Long Hold when the Hold is longer than one page
+::::
 
 ##### Add Flick
 
@@ -129,20 +126,14 @@ Hold will turn into Long Hold when the Hold is longer than one page
 
 **Right click and hold** on where the drag starts, move the cursor to where more drags should be added and **left click,** you may continue holding the **right click** button and repeat to add more drags
 
-::: tip Tips: Connecting and Disconnecting drags
-Select the drags you want to connect and click the **Connect** button from the toolbar. Same do if you want to disconnect, select the drags and click the **Disconnect** button
-:::
+::: tip Tips
+Connecting and Disconnecting drags: Select the drags you want to connect and click the **Connect** button from the toolbar.Same do if you want to disconnect, select the drags and click the **Disconnect** button.
 
-::: tip Tips: extend drags
-Select then **Right click and hold** the drag you want to extend and **Left click** on where to extend
-:::
+Extending drags: Select then **Right click and hold** the drag you want to extend and **Left click** on where to extend.
 
-::: tip Tips: cross pages drag
-Use the shortcut to switch pages while holding **Right click** to make your drags cross page
-:::
+Cross pages drag: Use the shortcut to switch pages while holding **Right click** to make your drags cross page
 
-::: tip Tip: Click-drag (C-Drag)
-While adding, hold **shift** and the drag will become a Click-Drag
+Click-drag (C-Drag): While adding, hold **shift** and the drag will become a C-Drag
 :::
 
 #### Scanline speed
@@ -172,13 +163,10 @@ You can also change the size to exactly what you want by opening
 You may do so by opening **Sidebar --> Tempo Manager**
 :::
 
-:::tip Tip: changing existing BPM
-Find out that the start BPM is wrong? need to change an existing BPM?
-You can add an BPM on the same tick to override them.
-:::
+:::tip Tips
+Changing existing BPM: Find out that the start BPM is wrong? Need to change an existing BPM? You can add an BPM on the same tick to override them.
 
-::: tip Tip: keeping where things are while changing BPM
-Changing BPM may off-sync existing stuffs on the chart (Notes, Event, Chart /Page duration), *Tempo Manager* have an option to keep these in-sync.
+Keeping where things are while changing BPM: Changing BPM may off-sync existing stuffs on the chart (Notes, Event, Chart/Page duration), *Tempo Manager* have an option to keep these in-sync.
 :::
 
 #### Generating events
