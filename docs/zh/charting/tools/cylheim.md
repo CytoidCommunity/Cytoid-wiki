@@ -12,21 +12,19 @@ next: ../cytoid/packing.md
 
 ## 安装 Cylheim
 
-在安装Cylheim之前, 你需要安装 **.net 6.0 Disktop Runtime**
+1. 前往 [Cylheim 的存储库](https://github.com/Horiztar/Cylheim-Windows/)
 
-不用担心, 这很简单, 只需要按照你的系统版本, 下载对应的安装包并安装即可:
+2. 在右侧找到 [Releases](https://github.com/Horiztar/Cylheim-Windows/releases)
 
-[Windows x86](https://download.visualstudio.microsoft.com/download/pr/f9d240ba-00d1-40c3-b338-68854dca2d69/95ec529098d264c9eb1a487f3db46010/windowsdesktop-runtime-6.0.0-preview.4.21254.5-win-x86.exe)
+3. 下载与你使用环境对应架构的压缩包或者**安装包(推荐)**. 如果你不知道要选什么, 可以试试下载x64的版本. 
 
-[Windows x64(建议)](https://download.visualstudio.microsoft.com/download/pr/dbef10d0-2761-4c02-804d-9ef4b03abcd0/48ebf973c0edad04bf6dce60a256f3fa/windowsdesktop-runtime-6.0.0-preview.4.21254.5-win-x64.exe)
+::: tip 快速安装
+我们建议你下载安装包, 这样你就可以像安装其他软件一样安装 Cylheim 了.
+:::
 
-不知道应该用哪个? 可以先试试能不能成功安装 **x64** 的版本. 
+安装 Cylheim 后, 你应该可以在桌面看到 Cylheim 的快捷方式, 双击即可启动 Cylheim.
 
-安装成功后, 请下载对应版本的的Cylheim,  并解压到一个空文件夹中.
-
-进入解压出来的文件夹中, 双击 **Cylheim.exe**, 启动程序.
-
-如果Cylheim成功启动了, 你应该能看到这样的界面
+如果Cylheim成功启动了, 你应该能看到这样的界面: 
 
 ![同意用户条款](./_sources_cylheim.md/welcome.jpg)
 
@@ -50,9 +48,7 @@ next: ../cytoid/packing.md
 
 > PS: 这首曲目通过CC BY-NC-SA 3.0发布, 同时也是本文使用的分享协议
 
-[已经对齐节拍线的音频文件可以在这里下载到]()
-
-
+<!-- [已经对齐节拍线的音频文件可以在这里下载到]() -->
 
 为了方便进行谱面管理, 推荐为每一首曲目都创建一个单独的文件夹. 就像这样:![](./_sources_cylheim.md/folder1.jpg)
 
