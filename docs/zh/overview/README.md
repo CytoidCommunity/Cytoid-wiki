@@ -9,30 +9,27 @@ lang: zh-Hans
 
 ## 什么是 Cytoid
 
-[Cytoid](https://cytoid.io/)是在[App Store](https://itunes.apple.com/us/app/cytoid/id1266582726) ,[Google Play](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid)和[Taptap](https://www.taptap.com/app/158749)上发布,由社区提供支持的,为触摸屏设计的音乐游戏.
+[Cytoid](https://cytoid.io/) 是在 [App Store](https://apps.apple.com/cn/app/cytoid/id1266582726) 和 [Google Play 商店](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid) 发布, 由社区提供支持的, 为触摸屏设计的音乐游戏.
 
 ## 你可以做的
 
 想要为该文章做出贡献? 
 
-请为wiki提出你的意见, 或尝试为[TigerHix](https://github.com/tigerhix/)捐款.
+请为 wiki 提出你的意见, 或尝试为 [TigerHix](https://github.com/tigerhix/) 捐款.
 
 ~~捐款别忘了留言催更.jpg~~ 
 
-> 在[Cytoid.io](https://cytoid.io)有TigerHix的捐款方式
+> 在 [Cytoid.io](https://cytoid.io) 有 TigerHix 的捐款方式
 
 ## 版权说明 & 特别感谢
 
-文章若无说明,则原文所有者为 [Cytoid](https://github.com/Cytoid/Cytoid)
+文章若无说明, 则原文所有者为 [Cytoid](https://github.com/Cytoid/Cytoid).
 
-翻译内容遵循CC-BY-NC 4.0
-
+翻译内容遵循 CC-BY-NC 4.0.
 
 ## 下载 Cytoid
-<p></p>
-<div>
-<iframe src="https://www.taptap.com/widget/158749?platform=ios" style="height:90px;width:100%;max-width:480px;min-width:200px;border:0;"></iframe>
-</div>
+
+请根据您的设备系统, 在 [App Store](https://apps.apple.com/cn/app/cytoid/id1266582726) 或 [Google Play 商店](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid) 下载 Cytoid.
 
 ## 加入 Cytoid 的大家庭
 
