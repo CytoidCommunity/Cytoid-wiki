@@ -1,21 +1,34 @@
 ---
 title: Charting with Cylheim
+lang: en
+finish: true
+author: Thanh9356(translate), Teages(Article), GattoKai(Video)
+next: ../cytoid/packing.md
 ---
 
 # Getting binaries and running Cylheim 
 
 1. Go to Cylheim repository on GitHub at [*here*](https://github.com/Horiztar/Cylheim-Windows/)
 
-2. Look at the right sidebar, click on *Releases*
+2. Look at the right sidebar, click on [*Releases*](https://github.com/Horiztar/Cylheim-Windows/releases)
 
-3. Download the zipped file depending on your architecture
+3. Download the zipped file or **the installer(Recommend)** depending on your architecture
 
-::: warning Notice: Please choose the correct architecture (if you don't know, take a look at Settings or Control Panel). If not, Cylheim might not work properly.
+::: tip Quick Setup
+We recommend you to download the installer, then you can install Cylheim like other software. 
 :::
+
+::: warning Notice
+Please choose the correct architecture (if you don't know, take a look at Settings or Control Panel). If not, Cylheim might not work properly.
+:::
+
+If you downloaded the zipped file, follow from the step 4. If not, you can find the shortcut of Cylheim on you desktop, then follow from the step 6. 
 
 4. Extract the zipped file to the folder you wanted, if you can't open and extract the file, download [*7-Zip*](https://www.7-zip.org/)
 
-5. Go to the Cylheim folder, run *Cylheim.exe.* If this is your first time running Cylheim, this screen will be shown up, just click *I accept*.
+5. Go to the Cylheim folder, run *Cylheim.exe.* 
+
+6. If this is your first time running Cylheim, this screen will be shown up, just click *I accept*.
 
 ![Terms of use agreement screen](./_sources_cylheim.md/welcome.jpg)
 
