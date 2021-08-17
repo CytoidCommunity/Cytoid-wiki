@@ -1,0 +1,20 @@
+{
+    "name": "Cytoid Wiki",
+    "short_name": "Cytoid Wiki",
+    "icons": [
+        {
+            "src": "/site-source/pic/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/site-source/pic/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#343A40",
+    "theme_color": "#7B69C8"
+}

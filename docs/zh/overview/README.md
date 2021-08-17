@@ -28,8 +28,10 @@ lang: zh-Hans
 翻译内容遵循 CC-BY-NC 4.0.
 
 ## 下载 Cytoid
-
-请根据您的设备系统, 在 [App Store](https://apps.apple.com/cn/app/cytoid/id1266582726) 或 [Google Play 商店](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid) 下载 Cytoid.
+<div style="margin: 0.5rem 0;">
+<PlayStore link="https://play.google.com/store/apps/details?id=me.tigerhix.cytoid"/>
+<AppStore link="https://apps.apple.com/cn/app/cytoid/id1266582726"/>
+</div>
 
 ## 加入 Cytoid 的大家庭
 
@@ -48,10 +50,6 @@ lang: zh-Hans
 ## 支持 Cytoid
 <p></p>
 <div class="column is-one-third-desktop is-half-tablet copy-from-cytoid">
-    <div id="afdian" class="box is-gradient" onclick="window.open('https://afdian.net/@tigerhix')"><h1>爱发电</h1>
-        <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-            Cytoid 是 100% 免费并且开源的音乐游戏。不过，服务器的运营费用十分高昂。喜欢 Cytoid 的话，不妨考虑...</p>
-    </div>
     <div id="patreon" class="box is-gradient" onclick="window.open('https://www.patreon.com/tigerhix')"><h1>PATREON</h1>
         <p style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
             Cytoid 是 100% 免费并且开源的音乐游戏。不过，服务器的运营费用十分高昂。喜欢 Cytoid 的话，不妨考虑...</p>
