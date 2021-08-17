@@ -13,4 +13,4 @@ finish: true
 
 ## Next Step
 
-[Ready to go? Read PCtyx’s official documentation.](https://github.com/CatalinTermure/Cytoid-Chart-Editor/wiki)
+[Ready to go? Read Mobile Chart Editor’s official documentation.](https://github.com/CatalinTermure/Cytoid-Chart-Editor/wiki)
