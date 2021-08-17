@@ -36,7 +36,7 @@ If you have done correctly, you should have the compiler looks something like th
 ## Packing it manually
 
 To do so, first make sure you have the following files:
-- A `level.json` file
+- A [`level.json`](../cytoid/level.json.md) file
 - A chart file (at least)
 - Music file (`.ogg` recommended)
 - Music preview file
@@ -46,14 +46,14 @@ You can also include the storyboard file(s) if you have it (them).
 
 After that, after selecting everything, zip it (add everything to a `.zip` file). Then, change the `.zip` extension type to the `.cytoidlevel` type and rename the file to your ID (i.e., If your ID is ```abcd.efg```, rename the zip to ```abcd.efg.cytoidlevel```).
 
-## Packing by using PCtyx
+## Packing with a help of PCtyx
 
 You can also make a level.json file on PCtyx.
 After finishing your chart on PCtyx, go back to the menu and click *Cytoid Settings*, and you should then see the following:
 
  ![](./_sources_packing.md/6.jpg)
 
-Just type what it tells you to do, choose the chart files, then you finished.
+Just type what it tells you to do, choose the chart files, then you're finished.
 
 ::: warning WARNING!
 
@@ -65,7 +65,7 @@ For the *SB color*, if you didn't use any other layer (except for the Main layer
 
  ![](./_sources_packing.md/7.png)
 
-If you have typed everything, you should have something like this:
+If you have typed everything necessary, you should have something like this:
 
  ![](./_sources_packing.md/8.png)
 
