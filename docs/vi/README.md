@@ -7,6 +7,6 @@ tagline: Let's shape the music world together.
 subactionText: Cytoid IO
 subactionLink: https://Cytoid.io
 actionText: Read Wiki
-actionLink: /en/guide/
+actionLink: /vi/overview/
 footer: Cytoid Wiki Team ©2020-2021. All rights reserved.
 ---

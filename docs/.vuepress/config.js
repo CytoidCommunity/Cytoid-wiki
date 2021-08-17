@@ -29,18 +29,18 @@ module.exports = ctx => ({
     ['link', { rel: 'icon', href: `/site-source/pic/cytoid-girl.png` }],
     ['link', { rel: 'stylesheet', href: '//cdn.jsdelivr.net/npm/katex@0.7.0/dist/katex.min.css' }],
     // ['link', { rel: "stylesheet", href: "//cdn.jsdelivr.net/github-markdown-css/2.6.0/github-markdown.css" }]
-    // ['link', { rel: 'manifest', href: '/manifest.json' }],
-    // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    // ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    // ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    // ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
-    // ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
-    // ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-    // ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#7B69C8' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/site-source/pic/apple-touch-icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#7B69C8' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/site-source/pic/msapplication-icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#7B69C8' }]
   ],
   // theme: '@vuepress/vue',
   themeConfig: {
-    // repo: 'vuejs/vuepress',
+    repo: 'CytoidCommunity/Cytoid-wiki',
     editLinks: true,
     // docsDir: 'packages/docs/docs',
     // #697 Provided by the official algolia team.
@@ -108,10 +108,10 @@ module.exports = ctx => ({
     }
   },
   plugins: [
-    // ['@vuepress/pwa', {
-    //   serviceWorker: true,
-    //   updatePopup: true
-    // }],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
+    }],
     ['@vuepress/medium-zoom', {
       selector: "img:not(.no-zoom)",
       options: {
@@ -142,6 +142,6 @@ module.exports = ctx => ({
       md.use(require('markdown-it-katex'))
       md.use(require('markdown-it-attrs'))
     },
-    lineNumbers: true
+    lineNumbers: false
   }
 })

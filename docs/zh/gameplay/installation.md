@@ -8,11 +8,7 @@ author: 冰糖酱-BillZhou233
 
 ## 游戏下载
 
-对于中国大陆玩家, 请到 TapTap (安卓) / App Store (iOS) 下载.
-
-对于其他国家或地区玩家, 请在 Google Play Store (Android) / App Store (iOS) 下载.
-
-相关渠道的链接: [TapTap](https://www.taptap.com/app/158749) | [App Store](https://apps.apple.com/cn/app/cytoid/id1266582726) | [Google Play Store](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid)
+请根据您的设备系统, 在 [App Store](https://apps.apple.com/cn/app/cytoid/id1266582726) 或 [Google Play 商店](https://play.google.com/store/apps/details?id=me.tigerhix.cytoid) 下载 Cytoid.
 
 ## 谱面下载
 
