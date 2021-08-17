@@ -6,7 +6,7 @@ author: KS62
 
 # Upload your level
 
-You’re very satisfied with your chart ! Now how do I upload it to let the world play it ?
+You’re very satisfied with your chart! Now how do I upload it to let the world play it?
 
 It’s very simple, all you need beforehand are:
 1.	A Cytoid ID
@@ -47,7 +47,7 @@ If the error is this:
   ![File not found](./_sources_upload.md/3.png)
 
 This could mean:
-1.	You didn’t zip (more then) one of the file(s) that was specified in the level.json
+1.	You didn’t zip (more than) one of the file(s) that was specified in the level.json
 2.	You zipped the folder and not the files
 3.	You have the level.json’s path(s) wrong
 
@@ -56,15 +56,15 @@ Check all three of them before uploading again
 :::warning WARNING :
 
 Capitals or not will also mess up the paths, make sure they are exactly what the files are named.
-This is also why we recommend you to only use lower-case letters as files name.
-Also, **do not** use special letters ( Japanese, Unicode symbols etc.).
+This is also why we recommend you only use lower-case letters as the file’s name.
+Also, **do not** use special letters ( Japanese, Unicode symbols, etc.).
 
 :::
 
 ::: warning WARNING:
 
 cytoid.io cannot detect if you also have the necessary resources for your **Storyboard**,<br>
-and because just missing an image will *broke* the whole storyboard, **you really should double check when you're uploading a Storyboard chart that have sprites**
+and because just missing one image will * break* the whole storyboard, **you really should double-check when you're uploading a Storyboard chart that has sprites**
 
 :::
 
@@ -72,12 +72,11 @@ If the error is this:
 
  ![Unauthorized](./_sources_upload.md/4.png)
  
-This means your login time has expired, please reflash the page, login and try again.<br>
-~~unless it’s a server problem, you should be able to upload charts again after this.~~
+This means your login time has expired, please reflash the page, log in, and try again.
 
 ## After upload
 
-If your chart uploaded successfully, you will be moved to this page:
+If your chart is uploaded successfully, you will be moved to this page:
  
   ![Edit](./_sources_upload.md/5.jpg)
 
@@ -95,13 +94,14 @@ As of Cytoid 2.0.2, the game can’t show the description in-game
 
 You can write anything in the description or don’t even add one as long as it’s following the rules (no NSFW, racism, etc.),
 
-Same goes to tags but you should at least add the artist and your charter name in the tags
+The same goes for tags but you should at least add the artist and your charter name in the tags
 
 Finally, when everything is finished, you can click on the *PRIVATE* button and click on the *Public* button, click *SAVE* and your chart is now downloadable on cytoid.io and Cytoid’s build-in chart downloader!
 
 ::: tip Information
 
-We used a scene of a MV illustrated by [banishment](https://www.pixiv.net/en/users/23223750) as an example image for this article. Here's the link to the [music video](
+We used a scene of an MV illustrated by [banishment](https://www.pixiv.net/en/users/23223750) as an example image for this article. Here's the link to the [music video](
 https://youtu.be/Gl8sikQ807E).
 
 :::
+
