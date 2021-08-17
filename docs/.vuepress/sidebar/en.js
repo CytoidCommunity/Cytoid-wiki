@@ -26,7 +26,7 @@ module.exports = {
     ],
     '/en/charting/': [
       {
-        title: "Introduction",
+        title: "Introduction & Preparing",
         sidebarDepth: 3,
         collapsable: false,
         children: [
@@ -48,7 +48,7 @@ module.exports = {
         ]
       },
       {
-        title: "Testing your levels",
+        title: "Finishing your levels",
         sidebarDepth: 3,
         collapsable: false,
         children: [
@@ -66,7 +66,7 @@ module.exports = {
         ]
       },
       {
-        title: "More",
+        title: "Extras",
         sidebarDepth: 3,
         collapsable: false,
         children: [
