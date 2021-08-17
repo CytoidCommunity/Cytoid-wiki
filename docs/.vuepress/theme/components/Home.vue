@@ -99,17 +99,26 @@ export default {
   mounted() {
     const supportLang = {
       "zh": "zh",
-      "zh-CN": "zh",
+      "zh-cn": "zh",
       "en": "en",
-      "zh-Hans_CN": "zh",
-      "zh-Hans": "zh"
+      "zh-hans_cn": "zh",
+      "zh-hans": "zh"
     };
+    const defaultLang = "en"
 
     window.onload = function () {
       function autoLang() {
         if (document.querySelector("#home-path").innerText == "/") {
-          const userLang = navigator.language;
-          const newUrl = supportLang[userLang] || "en";
+          let newUrl = "none"
+          for (const userLang of navigator.languages) {
+            newUrl = supportLang[userLang.toLowerCase()] || "none";
+            if (newUrl != "none") {
+              break;
+            }
+          }
+          if (newUrl == "none") {
+            newUrl = defaultLang
+          }
           window.location.replace(newUrl);
         }
       }

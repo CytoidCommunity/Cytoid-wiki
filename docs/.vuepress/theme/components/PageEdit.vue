@@ -18,7 +18,7 @@
     >
       <span class="prefix">{{ lastUpdatedText }}:</span>
       <span class="time">{{ lastUpdated }}</span>
-    </div><div class="empty"></br></div>
+    </div><div class="empty"><br></div>
     <div
       v-if="author"
       class="author"
@@ -72,8 +72,8 @@ export default {
 
       const {
         repo,
-        docsDir = '',
-        docsBranch = 'master',
+        docsDir = 'docs',
+        docsBranch = 'main',
         docsRepo = repo
       } = this.$site.themeConfig
 

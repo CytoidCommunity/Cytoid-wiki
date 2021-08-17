@@ -1,7 +1,7 @@
 module.exports = {
-  '/vi/guide/': [
+  '/vi/overview/': [
     {
-      title: "Home",
+      title: "Overview",
       sidebarDepth: 3,
       collapsable: false,
       children: [
