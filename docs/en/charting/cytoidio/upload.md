@@ -70,7 +70,9 @@ If your chart is uploaded successfully, the website will redirect to this page:
 In here you have:
 
 **Analytics** : does nothing as of now.
+
 **Edit listing** : add descriptions, add tags, and set the visibility of a chart.
+
 **Edit level** : upload a new version of a chart if you need to and preview level information.
 
 :::warning NOTICE
