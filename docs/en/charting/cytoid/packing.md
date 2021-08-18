@@ -7,10 +7,10 @@ author: KS62
 # Packing into Cytoid
 
 You have finished your chart! Now how can we play it on Cytoid?
-You will need to pack your files into a Cytoidlevel.
+You will need to pack your files into a `.cytoidlevel` file.
 
 ## Packing by using Cylheim
-After finishing a chart in Cylheim, Click the top-left button and look down, click *Export to Cytoid*. You will see the following window:
+After finishing, click the top-left button and look down, then *Export to Cytoid*. You will see the following window:
 
  ![](./_sources_packing.md/1.png)
 
