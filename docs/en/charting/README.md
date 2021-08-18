@@ -1,9 +1,9 @@
 ---
-title: "Charting: Getiing started"
+title: "Charting: Getting started"
 lang: en-US
 ---
 
-# Charting: Getiing started
+# Charting: Getting started
 
 Welcome to the Charting section of this wiki, we will help you know the charting basics, software (tools) you may need to make a chart.
 
