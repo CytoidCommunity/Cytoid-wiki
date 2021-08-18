@@ -9,8 +9,8 @@ author: KS62
 You’re very satisfied with your chart! Now how do I upload it to let the world play it?
 
 It’s very simple, all you need beforehand are:
-1.	A Cytoid ID
-2.	A ```.cytoidlevel``` file
+1. A Cytoid ID
+2. A ```.cytoidlevel``` file
 
 ::: tip Links
 
@@ -23,7 +23,7 @@ read [this article](../cytoid/packing.md) to learn how to make one.
 
 :::
 
-After these you can login in [cytoid.io](https://cytoid.io/session/login) and go to [https://cytoid.io/studio/levels](https://cytoid.io/studio/levels).<br>
+After these you can log in to [cytoid.io](https://cytoid.io/session/login) and go to [https://cytoid.io/studio/levels](https://cytoid.io/studio/levels).<br>
 Here you will see something like this:
  
  ![The Studio](./_sources_upload.md/1.png)
@@ -40,22 +40,22 @@ If the error is this:
   ![ID error](./_sources_upload.md/2.png)
 
 This means your ID is in the wrong format, <br>
-remember that ID **cannot** have capitals and spaces, and you **need** to add a ```.```, ```_``` or ```-``` in between after the first word.
+remember that ID **cannot** have capitals or spaces, and you **need** to add a ```.```, ```_``` or ```-``` in between after the first word.
 
 If the error is this:
  
   ![File not found](./_sources_upload.md/3.png)
 
 This could mean:
-1.	You didn’t zip (more than) one of the file(s) that was specified in the level.json
-2.	You zipped the folder and not the files
-3.	You have the level.json’s path(s) wrong
+-	You didn’t zip (more than) one of the file(s) that was specified in the level.json
+-	You zipped the folder and not the files
+-	You have the level.json’s path(s) wrong
 
 Check all three of them before uploading again
 
 :::warning WARNING :
 
-Capitals or not will also mess up the paths, make sure they are exactly what the files are named.
+Upper-case and Lower-case letters will also mess up the paths' names, make sure they are exactly what the files are named.
 This is also why we recommend you only use lower-case letters as the file’s name.
 Also, **do not** use special letters ( Japanese, Unicode symbols, etc.).
 
@@ -64,7 +64,7 @@ Also, **do not** use special letters ( Japanese, Unicode symbols, etc.).
 ::: warning WARNING:
 
 cytoid.io cannot detect if you also have the necessary resources for your **Storyboard**,<br>
-and because just missing one image will * break* the whole storyboard, **you really should double-check when you're uploading a Storyboard chart that has sprites**
+and because just missing one image/file will *break* the whole storyboard, **you really should double-check when you're uploading a Storyboard chart that uses other files**
 
 :::
 
@@ -74,21 +74,27 @@ If the error is this:
  
 This means your login time has expired, please reflash the page, log in, and try again.
 
+If the error is this:
+
+ ![Missing fields](./_sources_upload.md/5.png)
+
+ You forgot to add some required field(s) in the level.json, learn how to add them [here](../cytoid/level.json.md)
+
 ## After upload
 
 If your chart is uploaded successfully, you will be moved to this page:
  
-  ![Edit](./_sources_upload.md/5.jpg)
+  ![Edit](./_sources_upload.md/6.jpg)
 
 In here you have:
 
 **Analytics** : does nothing as of now.<br>
 **Edit listing** : add description, add tags and set the visibility of a chart.<br>
-**Edit level** : upload a new version of a chart if you need to, the bottom does nothing as of now.
+**Edit level** : upload a new version of the chart(s) if you need to, the bottom does nothing as of now.
 
 :::tip Notice:
 
-As of Cytoid 2.0.2, the game can’t show the description in-game
+As of Cytoid 2.0.2, the game cannot show the description in-game
 
 :::
 
