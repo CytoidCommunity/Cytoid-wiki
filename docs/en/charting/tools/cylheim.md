@@ -19,7 +19,7 @@ Please choose the correct architecture (if you don't know, see in Settings or Co
 
 :::
 
-> *If you downloaded the zipped file, follow from the step 4. If not, you can find the shortcut of Cylheim on your desktop, then follow from the step 6.*
+> *If you downloaded the zipped file, follow from step 4. If not, you can find the shortcut of Cylheim on your desktop, then follow from the step 6.*
 
 4. Extract the zipped file to the folder you wanted (if you can't open and extract the file, download [*7-Zip*](https://www.7-zip.org/)).
 
