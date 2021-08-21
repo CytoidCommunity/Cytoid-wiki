@@ -88,14 +88,31 @@ module.exports = {
     ],
     '/en/events/': [
       {
-        title: "Events",
+        title: "Cytoid Events",
         sidebarDepth: 3,
         collapsable: false,
         children: [
-          '',
-          'official'
+          ''
         ]
-      }
+      },
+      {
+        title: "Official Events",
+        sidebarDepth: 3,
+        collapsable: false,
+        children: [
+          'official',
+          'charting-contest',
+          'octopus'
+        ]
+      },
+      // {
+      //   title: "Community Events",
+      //   sidebarDepth: 3,
+      //   collapsable: false,
+      //   children: [
+      //     'community'
+      //   ]
+      // }
     ],
     '/en/about/': [
       {

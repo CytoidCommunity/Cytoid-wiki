@@ -69,7 +69,7 @@ $diff-badge-size = 2.3rem
     background: linear-gradient(to top left, #6f0000, #200122);
   .ex
     background: linear-gradient(to top left, #6f0000, #200122);
-@media (max-width: $MQMobileNarrow)
+@media (max-width: (($MQMobileNarrow + $MQMobile)/2))
   .difficulty-badge .has-name
     .name
       display: none!important

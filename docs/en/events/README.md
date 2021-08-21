@@ -1,15 +1,17 @@
 ---
-title: Cytoid Events
+title: Cytoid Events (In-game Events)
 lang: en-US
 ---
 # Cytoid in-game events
 
-## Cytoid Xmas 2020
-### Informations:
+## Latest Event
+
+### Cytoid Xmas 2020
+#### Informations:
 - **Event duration**: from `2020/12/25` to `2021/01/03`
 - **Artists in this event**: Punjidixie
 
-### Rewards:
+#### Rewards:
 - **New Level**: **Snow Candy**  
 
 ::: details Level in this event
@@ -18,13 +20,15 @@ lang: en-US
   - **Difficulty**: <CtdDiff type="easy" diff="3"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="11"/>
 :::
 
-## Signal Interference
-### Informations:   
+## Previous Events
+
+### Signal Interference
+#### Informations:   
 - **Event duration**: from `2020/10/30` to `2020/12/04`
 - **Artists in this event**: PTB10, nm-γ, rareguy and Helblinde
 - This event is held for the Haloween day in 2020.
 
-### Rewards:  
+#### Rewards:  
 - **New character**: **Laeti**  
 
 ::: details Level in this event
@@ -51,13 +55,13 @@ lang: en-US
   - In addition, obtain 93% accuracy or higher on EX difficulty of **Interference: Finale** (HYPER mod is not necessary)
 :::
 
-## Summer Festival
-### Informations:
+### Summer Festival
+#### Informations:
 - **Event duration**: from `2020/8/20` to `2020/9/16`
 - **Artists in this event**: MYUKKE., N.H.I and cosMo@暴走P
 - This is the first in-game Cytoid event
 
-### Rewards:
+#### Rewards:
 - **New character**: **Sora**  
 
 ::: details Level in this event
@@ -82,12 +86,12 @@ lang: en-US
 
 <!-- Example
 
-## Event name
-### Informations:
+### Event name
+#### Informations:
 - **Event duration**: from `0000/00/00` to `0000/00/00`
 - **Artists in this event**: 
 
-### Rewards:
+#### Rewards:
 - **New character**: **Character_Name**  
 
 ::: details Level in this event
