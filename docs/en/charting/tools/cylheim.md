@@ -57,7 +57,7 @@ Next, click *New Project* and create the project file in the folder
 
 Now, we will take a look at Cylheim's UI
 
-![Basic UI](./_sources_cylheim.md/editor_ui.jpg)
+![Basic UI](./_sources_cylheim.md/editor_ui.png)
 
 1. Toolbar & Title bar: You can hover over the icons to know their function.
 
@@ -67,7 +67,7 @@ Now, we will take a look at Cylheim's UI
 
 4. Sidebar: Use it to perform advanced operations in the chart.
 
-5. Status bar: from left to right: Cylheim status, chart inspection (not included in the image), total note count, selected note count, previewing aspect ratio, note size controller, audio/tap FX volume, notifications.
+5. Status bar: from left to right: Cylheim status, chart inspection, total note count, selected note count, previewing aspect ratio, note size controller, audio/tap FX volume, notifications.
 
 ### Creating a new chart
 
@@ -156,7 +156,7 @@ Cylheim uses C2's format, so for speed changes, you can consider one of these op
 
 Cylheim has two buttons to perform.
 
-![Half page buttons](./_sources_cylheim.md/halfpagebutton.jpg)
+![Half page buttons](./_sources_cylheim.md/halfpagebutton.png)
 
 You can also change the size to exactly what you want by opening
 **Sidebar --> Page manager**.
