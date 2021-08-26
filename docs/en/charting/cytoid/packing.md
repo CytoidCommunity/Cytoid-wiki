@@ -25,8 +25,8 @@ Click on *Add chart info* first then this will show up:
 You **must** add the chart file and change the difficulty from the slider (that goes from ? to 15+).
 And for *Convert unsupported features in Cytoid as a storyboard (for simulation)*, you **only** have to tick the box if you have added/changed the following:
 
-1. Any event type other than **Speed up / Speed down**
-2. Argument changed in Page Manager
+- Any event type other than **Speed up / Speed down**
+- Argument changed in Page Manager
 
 If you have done correctly, you should have the compiler looks something like this:
 
@@ -39,7 +39,7 @@ To do so, first make sure you have the following files:
 - A [`level.json`](../cytoid/level.json.md) file
 - A chart file (at least)
 - Music file (`.ogg` recommended)
-- Music preview file
+- Music preview file (has to be less than 30 seconds)
 - Background image (`.jpg` or `.png`)
 
 You can also include the storyboard file(s) if you have it (them).
