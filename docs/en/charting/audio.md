@@ -43,8 +43,12 @@ You'll get a window like this:
 
 Set the time to place the first label to 0
 
-Set Label Interval to ``120/BPM``. The BPM here is your starting BPM if you chart varying BPM music. In this case, the song starts with 250 BPM, so the value is ``120/250=0.48``
+Set Label Interval to ${\frac{120}{BPM}}$. The $BPM$ here is the starting BPM of your song file.
 
+In this case, the song starts with 250 BPM, so the value is:
+$$
+{\frac{120}{250}}=0.48
+$$
 Then do this set of things:
 
 1. Label Text (optional, empty it if you want)
@@ -67,7 +71,7 @@ As you can see, it starts in the middle between the label *2* and *3*. To zero t
 
 ::: tip NOTE
 
-We recommend you syncing the labels that is an even number (or an odd number if you're using 1 as the begin numbering) because of how syncing works in both BPM changing and Page editing
+We recommend you syncing the labels that are an even number (or an odd number if you're using 1 as the begin numbering) because of how syncing works in both BPM changing and Page editing
 
 :::
 
