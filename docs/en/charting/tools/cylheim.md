@@ -11,7 +11,7 @@ finish: false
 
 2. Look at the Right Sidebar, click on *Releases*.
 
-3. Download the zipped file or **the installer(Recommended)** depending on your architecture
+3. Download the zipped file or **the installer(Recommended)** depending on your architecture.
 
 ::: warning NOTICE!
 
@@ -49,13 +49,13 @@ When you open Cylheim (or after accepting Cylheim's terms of use in the first ru
 
 ![Welcome screen](./_sources_cylheim.md/welcome2.jpg)
 
-Next, click *New Project* and create the project file in the folder
+Next, click *New Project* and create the project file in the folder.
 
 ![Creating a new project](./_sources_cylheim.md/new_project.jpg)
 
 ### A look at the UI
 
-Now, we will take a look at Cylheim's UI
+Now, we will take a look at Cylheim's UI:
 
 ![Basic UI](./_sources_cylheim.md/editor_ui.png)
 
@@ -113,7 +113,7 @@ You can add all kinds of notes with your mouse easily (excluding C-Drag).
 
 ##### Add Click notes
 
-Move your cursor to where you want to add the note, then **left-click**
+Move your cursor to where you want to add the note, then **left-click**.
 
 ##### Add Hold / Long hold notes
 
@@ -144,7 +144,7 @@ Extending drags: Select then **right-click and hold** the drag you want and **le
 
 Cross-page drag: Use the shortcut to switch between pages while holding **right-click** to make your drag notes cross-page.
 
-Click-drag (C-Drag): While adding, hold **Shift** and then drag will become a C-Drag
+Click-drag (C-Drag): While adding, hold **Shift** and then drag will become a C-Drag.
 
 :::
 
@@ -177,7 +177,7 @@ Don't know why? [Try reading C2's chart format article](../chart-json).
 
 :::
 
-You may do so by opening **Sidebar --> Tempo Manager**
+You may do so by opening **Sidebar --> Tempo Manager**.
 
 :::tip Tips
 
@@ -194,11 +194,11 @@ You can use the shortcut **Ctrl + E** to let Cylheim do it automatically.
 
 #### Playback speed
 
-Playback speed may need to be changed to get more accurate sounds
+Playback speed may need to be changed to get more accurate sounds.
 
 ::: tip Tip
 
-You can increase the accuracy of slow playback by turning on **Alter audio sampling rate for playback speed adaptation** in **Settings --> Audio**
+You can increase the accuracy of slow playback by turning on **Alter audio sampling rate for playback speed adaptation** in **Settings --> Audio**.
 
 But it will pitch down the song you're playing.
 
@@ -210,7 +210,7 @@ But it will pitch down the song you're playing.
 
 Cylheim has a built-in chart player at the Playback window button on the toolbar.
 
-Use recording software to record the video (you can try [OBS Studio](https://obsproject.com/download))
+Use recording software to record the video (you can try [OBS Studio](https://obsproject.com/download)).
 
 ::: tip Tips
 
@@ -220,7 +220,7 @@ If you need to record with a low-end computer due to different reasons, we have 
 - Slowdown playback and speed it up with video editors
 - Close all unused apps to save some CPU usage (Cylheim uses CPU resources for the playback window)
 
-If these tips aren't helpful, try using Xbox Game Bar or using another video recorder
+If these tips aren't helpful, try using Xbox Game Bar or using another video recorder.
 
 :::
 
@@ -228,7 +228,7 @@ If these tips aren't helpful, try using Xbox Game Bar or using another video rec
 
 Cylheim has a build-in Cytoid level packer, which will export your chart into a Cytoid level.
 
-Click the top-left button and see in the menu, click *Export to Cytoid*
+Click the top-left button and see in the menu, click *Export to Cytoid*.
 
 Follow the tips, fill in the metadata and chart, and finished!
 
