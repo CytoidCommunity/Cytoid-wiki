@@ -10,7 +10,7 @@ You seem very proud of your chart! Now we'll learn how to upload it to let peopl
 
 You need to check these to proceed:
 
-1. A Cytoid ID (sign up [here](https://cytoid.io/session/signup) in case you don't have a Cytoid ID)
+1. A Cytoid ID (sign up [here](https://cytoid.io/session/signup) if you don't have one)
 2. A `.cytoidlevel` file (read [this article](../cytoid/packing.md) to learn how to make one)
 
 After checking, you can log in to [CytoidIO](https://cytoid.io/session/login) and go to [https://cytoid.io/studio/levels](https://cytoid.io/studio/levels). Here you will see something like this:
@@ -51,7 +51,7 @@ CytoidIO cannot detect if you also have the necessary resources for your **story
 
 ### Unauthorized error
 
-It means your login time has expired. You can refresh the page, login, and try again. Unless it’s a server problem, you can try uploading the level.
+It means your login time has expired. You can refresh the page, log in, and try again. Unless it’s a server problem, you can try uploading the level.
 
  ![Unauthorized](./_sources_upload.md/4.png){.side-img}
 
@@ -65,15 +65,15 @@ It means you forgot to add the required field(s). You may have to check and fill
 
 If your chart is uploaded successfully, the website will redirect to this page:
 
-![Edit](./_sources_upload.md/6.jpg)
+![Edit](./_sources_upload.md/6.png)
 
 In here you have:
 
-**Analytics** : does nothing as of now.
+**Analytics**: does nothing as of now.
 
-**Edit listing** : add descriptions, add tags, and set the visibility of a chart.
+**Edit listing**: add descriptions, add tags, and set the visibility of a chart.
 
-**Edit level** : upload a new version of a chart if you need to and preview level information.
+**Edit level**: upload a new version of a chart if you need to and preview level information.
 
 :::warning NOTICE
 
@@ -87,6 +87,6 @@ Finally, click on the *PRIVATE* button and click on the *Public* button, click *
 
 ::: tip Information
 
-We used a scene of an MV illustrated by [banishment](https://www.pixiv.net/en/users/23223750) as an example image for this article. Here's the link to the [music video](https://youtu.be/Gl8sikQ807E).
+We used an art drew by [鵜飼沙樹](https://www.pixiv.net/users/48456) as an example background image for this article. Here's the link to the [art](https://www.pixiv.net/artworks/92258191).
 
 :::
