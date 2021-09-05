@@ -35,13 +35,11 @@ Then you have something like this:
 
 ![](./_sources_audio.md/after.png)
 
-Click anywhere to deselect. Now go to Tools --> Regular Interval Labels
+Double click or **Ctrl + A** to select all. Now go to Tools --> Regular Interval Labels
 
 You'll get a window like this:
 
-![Regular Interval Labels Window](./_sources_audio.md/labels_window.png){}
-
-Set the time to place the first label to 0
+![Regular Interval Labels Window](./_sources_audio.md/labels_window.png){.side-img}
 
 Set Label Interval to ${\frac{120}{BPM}}$. The $BPM$ here is the starting BPM of your song file.
 
