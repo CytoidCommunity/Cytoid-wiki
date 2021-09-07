@@ -6,8 +6,8 @@
   "author": "Teages <Teages@teages.xyz>",
   "license": "MIT",
   "scripts": {
-    "docs:run": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "docs:eject": "vuepress eject"
   },
   "devDependencies": {

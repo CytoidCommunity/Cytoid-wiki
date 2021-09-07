@@ -52,6 +52,10 @@ module.exports = (options, ctx) => {
           '/zh/': '警告'
         }
       }],
+      ['vuepress-plugin-container', {
+        type: 'acard',
+        defaultTitle: ''
+      }],
       ['container', {
         type: 'details',
         before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
