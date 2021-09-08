@@ -19,7 +19,7 @@ You need to read [PCtyx’s official documentation](https://docs.google.com/docu
 
 4.   On *Assets*, choose the zipped file depending on your current operating system (OS) and architecture
 
-5.   Check your file again, the file will look like this: `pctyxeditor_<version>_<OS><architecture>.zip`. Example: `pctyxeditor_300a03_win64.zip (means version: 300a03, OS: Windows, Architecture: x64)`
+5.   Check your file again, the file will look like this: `pctyxeditor_<version>_<OS><architecture>.zip`. Example: `pctyxeditor_300a03_win64.zip` (means version: 300a03, OS: Windows, Architecture: x64)
 
 6.   Extract the downloaded file in somewhere you wanted
 
@@ -44,10 +44,11 @@ Run Terminal and execute this command:
 ```shell
 chmod a+x PCtyxEditor
 ```
-- Method 2: Allowing without using Terminal  
-Right-click on PCtyxEditor file, choose Properties à Permissions, check the Allow executing file as program box
-
-**Warning: Depending on your current distro and desktop environment, this method might not work**
+- Method 2: Allowing without using Terminal
+:::warning Warning!
+Depending on your current distro and desktop environment, this method might not work or be different from the instruction.
+:::
+Right-click on PCtyxEditor file, choose Properties → Permissions, check the Allow executing file as program box
 
 3. Run PCtyxEditor file
 
