@@ -4,18 +4,18 @@ lang: en-US
 ---
 
 # Official Events
-Here are Official Events:
-- [Charting Contest](./charting-contest)
-
 
 ## Charting Contest
 Charting Contest have been held for **17** times.
 
 - [Charting Contest Judgement Criteria](https://cytoid.io/posts/contest-judgement-criteria)
 
-[**View All**](./charting-contest)
+[**More information**](./charting-contest)
 
 ## Octopus Tournament
-Octopus Tournament have been held for **X** times.
 
-[**View All**](./octopus)
+- Octopus Tournament was an official event orgranized by Cytoid Discord server.
+- Octopus Tournament had been held for **157** times since 2018/06/29.
+- Status: Discontinued
+
+[**View All on CytoidIO**](https://cytoid.io/collections/octopus.tournament)
