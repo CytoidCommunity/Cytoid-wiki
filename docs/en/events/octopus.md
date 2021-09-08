@@ -4,7 +4,7 @@ lang: en-US
 ---
 # Octopus Tournament
 
-## Basic infomation
+## Basic information
 
 - Octopus Tournament was an official event organized by Cytoid's Discord server. It had been held for **157** times.
 
