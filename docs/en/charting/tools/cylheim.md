@@ -91,8 +91,6 @@ Cylheim's controls are simple to learn!
 
 #### Understanding the Shortcuts
 
-You can also go to **Settings --> Shortcut** to edit the shortcuts for your preference.
-
 |Default shortcut             |Function                                |
 |-----------------------------|----------------------------------------|
 |Space                        |Start/stop the chart playback           |
@@ -106,6 +104,8 @@ You can also go to **Settings --> Shortcut** to edit the shortcuts for your pref
 |Ctrl+Shift+A                 |Select all notes                        |
 |Scroll wheel up / Page Up    |Go to the previous page                 |
 |Scroll wheel down / Page Down|Go to the next page                     |
+
+You can also go to **Settings --> Shortcut** to edit the shortcuts for your preference.
 
 #### Add notes
 
@@ -173,7 +173,7 @@ Don't know why? [Try reading C2's chart format article](../chart-json).
 **Only** change the BPM when:
 
 - Changing Page size doesn't give you the result you wanted
-- When the song itself changes its' BPM
+- The song itself changes its' BPM
 
 :::
 
@@ -181,7 +181,7 @@ You may do so by opening **Sidebar --> Tempo Manager**.
 
 :::tip Tips
 
-Changing existing tempo: Find out that the start tempo is wrong and want to change an existing tempo? You can add a new tempo value on the same tick to override them.
+Changing existing tempo: Find out that the start tempo is wrong and want to change an existing tempo? You can add a new tempo value on the same tick or double click that tempo to override them.
 
 Keeping where things are while changing tempo: Changing tempo may off-sync existing stuff on the chart (Notes, Event, Chart/Page duration), *Tempo Manager* has an option to keep these in sync.
 :::
@@ -198,7 +198,7 @@ Playback speed may need to be changed to get more accurate sounds.
 
 ::: tip Tip
 
-You can increase the accuracy of slow playback by turning on **Alter audio sampling rate for playback speed adaptation** in **Settings --> Audio**.
+You can increase the accuracy of slow playback by turning on *Alter audio sampling rate for playback speed adaptation* in **Settings --> Audio**.
 
 But it will pitch down the song you're playing.
 
