@@ -11,18 +11,18 @@ lang: en-US
 - Started date: 2020/02/??
 - Frequency: Every 6 months
 - Status: Scheduled
-- Official Discord: https://discord.gg/fvbC4AsFrP 
+- Official Discord: [https://discord.gg/fvbC4AsFrP](https://discord.gg/fvbC4AsFrP)
 
 ## Cytoid Relay!
 
 - Cytoid Relay! is an event organized by Jytoid members.
 - Started date: 2020/07/01
 - Status: Unknown
-- Official Twitter: https://twitter.com/cytoidr
+- Official Twitter: [https://twitter.com/cytoidr](https://twitter.com/cytoidr)
 
 ## 国盗り合戦
 
 - 国盗り合戦 (Kunitori Battle) is a TBA event organized by Jytoid members.
 - Started date: TBA
 - Status: Scheduled
-- Official Twitter: https://twitter.com/cytoidr
+- Official Twitter: [https://twitter.com/cytoidr](https://twitter.com/cytoidr)
