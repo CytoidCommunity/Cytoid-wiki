@@ -50,71 +50,71 @@ Only *Fast*, *Slow*, *No Scanner*, and *Invisible* modifiers are allowed.
 
 ## Game settings
 
-- [ ] ### General
+### General
 
-| Option name | Available options | Description |
+| Option name | Available options | In-game description |
 |---|---|---|
-| Language | | Select your preferred in-game language.|
-| CDN region| International/Mainland China | CDN region.|
-| Music volume | 0% ~ 100% | The volume of the music.|
-| Sound effect volume | 0% ~ 100% | The volume of the sound effects. |
-| Hit sound |None<br>Click 1 – 3<br>Shaker<br>Tambourine<br>Rim<br>Hat<br>Clap<br>Donk<br>8-bit<br>Quack| The hit sound. It will be played when the note is cleared. |
-|Hold hit sound timing| Begin<br>End<br>Begin & End | Determines when the hit sound will be played for hold notes.<br>**Begin** – Only play the hit sound when the hold note begins.<br>**End** – Only play the hit sound when the hold note ends.<br>**Begin & End** – Play the hit sound when the hold begins and ends.|
-| Hit taptic feedback | Off/On | Sets whether your device vibrates when hitting notes or not (iOS/iPadOS only).|
-| Menu taptic feedback | Off/On | Sets whether your device vibrates when navigating through the menu or not (iOS/iPadOS only).|
-| Graphics quality | Very low<br>Low<br>Medium<br>High<br>Ultra | Sets the game’s graphics quality. The higher quality, the higher battery and hardware requirements. |
-| Storyboard effects | Off/On | Determines whether the Storyboard effects (shaders only) is on or off. |
-| Skip music on completion | Off/On | Skips the remaining music when you finished the current level or not. |
-| Base note offset | | Sets the device offset value (in seconds) and it will be applied on all levels while playing. |
-| Headset note offset | | Sets the headset offset value (in seconds) and it will be applied on all level when you use a headset. |
-| Offset setup wizard | | When you hit *Enter*, the *Offset setup wizard* will be started. It'll help you setting up the *Base note offset* easily through a test.|
+| Language | | |
+| CDN region| International/Mainland China | Choose the nearest region |
+| Music volume | 0% ~ 100%  ||
+| Sound effect volume | 0% ~ 100% | |
+| Hit sound |None<br>Click 1 – 3<br>Shaker<br>Tambourine<br>Rim<br>Hat<br>Clap<br>Donk<br>8-bit<br>Quack| Played when note is cleared |
+|Hold hit sound timing| Begin<br>End<br>Begin & End | When to play hit sounds for hold notes |
+| Hit taptic feedback | Off/On | Provide taptic feedback when note is cleared |
+| Menu taptic feedback | Off/On | Enable taptic feedback in menus |
+| Graphics quality | Very low<br>Low<br>Medium<br>High<br>Ultra | Lower quality saves battery and results in higher frame rates |
+| Storyboard effects | Off/On | Recommended for high-end devices only |
+| Skip music on completion | Off/On | Otherwise wait for music to finish |
+| Base note offset | | Added to each level's individual note offset |
+| Headset note offset | | Added to note offset when using headset |
+| Offset setup wizard | | Easily calibrate base note offset |
 
 ### Gameplay
 
 
-| Option name | Available options | Description |
+| Option name | Available options | In-game description |
 |---|---|---|
-| Early/Late indicators | Off/On | Sets whether the Early/Late indicators option is on or off. |
-| Hitbox size (Click) | Small/Medium/Large | The hitbox size of Click notes. You don’t need to adjust unless you have some problems while trying to hit the notes.|
-| Hitbox size (Drag) | Small/Medium/Large | The hitbox size of Drag/C-Drag notes.|
-| Hitbox size (Hold) | Small/Medium/Large | The hitbox size of Hold/Long hold notes. |
-| Hitbox size (Flick) | Small/Medium/Large | The hitbox size of Flick notes. |
-| Horizontal margin | -4 ~ +4 | The left/right of play area. The higher value, the smaller play area, and contrariwise. |
-| Vertical margin | -4 ~ +4 | The top/bottom of play area. The higher value, the smaller play area, and contrariwise.|
+| Early/Late indicators | Off/On | Displayed when notes cleared early/late |
+| Hitbox size (Click) | Small/Medium/Large | Larger hitboxes make notes easier to hit |
+| Hitbox size (Drag) | Small/Medium/Large | |
+| Hitbox size (Hold) | Small/Medium/Large | |
+| Hitbox size (Flick) | Small/Medium/Large | |
+| Horizontal margin | -4 ~ +4 | The left/right of play area |
+| Vertical margin | -4 ~ +4 | The top/bottom of play area |
 
 ### Visual
 
-| Option name | Available options | Description |
+| Option name | Available options | In-game description |
 |---|---|---|
-| Note size | 50% ~ 150% | The size of all notes. This option is not **affected** to hitbox size.|
-| Clear FX size | 50% ~ 150% | The size of note clearing effect. |
-| Play area boundaries | Off/On | Sets whether the play area boundaries is displayed or not.|
-| Background opacity | 0% ~ 100% | The opacity of the background image. The higher value is, the brighter background is, and contrariwise. |
-| Ring color | Hexadecimal RGB | The ring color. |
-| Fill color (Click, up)| Hexadecimal RGB | The fill color of the Click note (up). |
-| Fill color (Click, down)| Hexadecimal RGB | The fill color of the Click note (down). |
-| Fill color (Drag, up)| Hexadecimal RGB | The fill color of the Drag note (up). |
-| Fill color (Drag, down)| Hexadecimal RGB | The fill color of the Drag note (down). |
-| Fill color (C-Drag, up)| Hexadecimal RGB | The fill color of the C-Drag note (up). |
-| Fill color (C-Drag, down)| Hexadecimal RGB | The fill color of the C-Drag note (down). |
-| Fill color (Hold, up)| Hexadecimal RGB | The fill color of the Hold note (up). |
-| Fill color (Hold, down)| Hexadecimal RGB | The fill color of the Hold note (down). |
-| Fill color (Long hold, up)| Hexadecimal RGB | The fill color of the Long hold note (up). |
-| Fill color (Long hold, down)| Hexadecimal RGB | The fill color of the Long hold note (down). |
-| Fill color (Flick, up)| Hexadecimal RGB | The fill color of the Flick note (up). |
-| Fill color (Flick, down)| Hexadecimal RGB | The fill color of the Flick note (down). |
-| Use fill color for Drag/C-drag child nodes | Off/On | Sets if the game will use fill color for Drag/C-Drag child nodes or not. |
+| Note size | 50% ~ 150% | Display size of notes (hitboxes unaffected) |
+| Clear FX size | 50% ~ 150% | Display size of note clear effects |
+| Play area boundaries | Off/On | Display play area boundaries |
+| Background opacity | 0% ~ 100% | Adjust the background brightness |
+| Ring color | Hexadecimal RGB | Change the note ring color |
+| Fill color (Click, up)| Hexadecimal RGB | Change the click note fill color |
+| Fill color (Click, down)| Hexadecimal RGB |  |
+| Fill color (Drag, up)| Hexadecimal RGB | Change the drag note fill color |
+| Fill color (Drag, down)| Hexadecimal RGB | |
+| Fill color (C-Drag, up)| Hexadecimal RGB | Change the c-drag note fill color |
+| Fill color (C-Drag, down)| Hexadecimal RGB | |
+| Fill color (Hold, up)| Hexadecimal RGB | Change the hold note fill color |
+| Fill color (Hold, down)| Hexadecimal RGB | |
+| Fill color (Long hold, up)| Hexadecimal RGB | Change the long hold note fill color |
+| Fill color (Long hold, down)| Hexadecimal RGB | |
+| Fill color (Flick, up)| Hexadecimal RGB | Change the flick note fill color |
+| Fill color (Flick, down)| Hexadecimal RGB | |
+| Use fill color for Drag/C-drag child nodes | Off/On | Turn off to use ring color instead |
 
 ### Advanced
 
 | Option name | Available options | Description |
 |---|---|---|
-| DSP buffer size | | The buffer size of DSP (de-sampler). Lower value, lower latency but you should only adjust if the game can’t play the music properly. |
-| Use Native Audio | Off/On | Sets whether the game will use Native Audio or not. **Off** – Use Unity’s audio playback API instead. It might give a high audio latency on your device but the game performance seems to be better.<br>**On** – Use Exceed7 Experiments’ Native Audio playback API. It will give a better and lower audio latency but hit sound might not play properly.|
-| Profiler | Off/On | Displays the profiler (it will display game FPS, RAM usage and audio playback information).|
-| Note ID | Off/On | Sets whether the game will display note ID or not, it’s really suitable if you’re testing your chart(s).|
+| DSP buffer size | | Adjust only if music is not playing properly |
+| Use Native Audio | Off/On | Disable if hit sounds feel too late |
+| Profiler | Off/On | Display frame rates and RAM usage |
+| Note ID | Off/On | For level debugging purposes |
 | Development console | Off/On | Enable development console, it’s recommended to turn on to find out in-game bugs. |
 | Experimental note AR | Off/On | Set whether the experimental note AR option is on or off.<br>**Off** – Using traditional note AR. <br>**On** – Using experimental note AR, the notes will fade in earlier and smaller. |
 | Experimental note animations | Off/On | Set whether the experimental note animations option is on or off. |
-| Judgment offset | | The offset of note's judgments (in seconds), for advanced players only.|
-| APPLY LATEST LOCALIZATION | | Once clicked, the game will download and apply the latest localization temporarily. Recommended for the client translators.|
+| Judgment offset | | For advanced players only |
+| APPLY LATEST LOCALIZATION | | |
