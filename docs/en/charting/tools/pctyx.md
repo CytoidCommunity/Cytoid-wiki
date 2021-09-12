@@ -1,6 +1,8 @@
 ---
 title: Chart with PCtyx
 lang: en-US
+prev: "../audio.md"
+next: "../cytoid/packing.md#packing-with-a-help-of-pctyx"
 ---
 # Chart with PCtyx
 
