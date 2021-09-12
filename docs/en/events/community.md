@@ -22,7 +22,7 @@ lang: en-US
 
 ## 国盗り合戦
 
-- 国盗り合戦 (Kunitori Battle) is a TBA event organized by Jytoid members.
-- Started date: TBA
-- Status: Scheduled
+- 国盗り合戦 (Kunitori Battle) is an event organized by Jytoid members.
+- Started date: 2021/9/11
+- Status: Ongoing
 - Official Twitter: [https://twitter.com/cytoidr](https://twitter.com/cytoidr)
