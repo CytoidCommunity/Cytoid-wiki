@@ -3,6 +3,7 @@ title: Mods
 lang: en-US
 finish: true
 ---
+
 # {{$frontmatter.title}}
 
 Modifiers (or mods) 
@@ -15,7 +16,7 @@ Modifiers (or mods)
 
 > Add an HP bar to the game.
 
-- By enabling Hyper, it will add an HP bar to the game, initial HP value is ``difficulty * 75`` (1000 if it's ? difficulty). If it reaches to 0, you will automatically fail the game.
+- By enabling Hyper, it will add an HP bar to the game, the initial HP value is ``difficulty * 75`` (1000 if it's ? difficulty). If it reaches 0, you will automatically fail the game.
 - HYPER works differently in Ranked and Practice
 
 ::: details Practice
@@ -46,7 +47,7 @@ Modifiers (or mods)
 
 > Same as HYPER, but more difficult.
 
-- All its mechanics are same as HYPER, but it's adjusted to make more damage if you get a note cleared is not Perfect.
+- All its mechanics are the same as HYPER, but it's adjusted to deal more damage if you get a note cleared that isn't Perfect.
 - Like HYPER, ANOTHER also works differently in Ranked and Practice
 
 ::: details Practice
@@ -138,7 +139,7 @@ When Slow is enabled, notes will fade in earlier, i.e approach rate is lower.
 ## Autoplaying modifiers
 
 ::: warning NOTICE!
-Enabling any autoplaying modifiers, your score won't be saved (that means your score won't be submitted to CytoidIO, you don't gain any EXP or rating)
+If you enabled any autoplaying modifiers, your score won't be saved (that means your score won't be submitted to CytoidIO and you won't gain any EXP or rating)
 :::
 
 ### Auto
