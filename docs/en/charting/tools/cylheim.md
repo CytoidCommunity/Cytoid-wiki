@@ -9,11 +9,13 @@ next: "../cytoid/packing.md#packing-by-using-cylheim"
 
 # Getting binaries and running Cylheim 
 
-1. Go to Cylheim's repository on [GitHub](https://github.com/Horiztar/Cylheim-Windows/).
+1. Go to Cylheim's repository on [GitHub](https://github.com/Horiztar/Cylheim-Windows/) or **download via the [Microsoft Store](https://www.microsoft.com/store/apps/9PCCZSWG973K)(Windows 10/11 only) (Recommended)**.
+
+> If you downloaded Cylheim via the Microsoft Store, skip to step 4.
 
 2. Look at the Right Sidebar, click on *Releases*.
 
-3. Download the zipped file or **the installer(Recommended)** depending on your architecture.
+3. Download the installer depending on your architecture.
 
 ::: warning NOTICE!
 
@@ -21,13 +23,9 @@ Please choose the correct architecture (if you don't know, see in Settings or Co
 
 :::
 
-> If you downloaded the zipped file, follow from step 4. If not, you can find the shortcut of Cylheim on your desktop, then follow from step 6.
+4. Run Cylheim
 
-4. Extract the zipped file to the folder you wanted (if you can't open and extract the file, download [*7-Zip*](https://www.7-zip.org/)).
-
-5. Go to the Cylheim folder, run *Cylheim.exe*.
-
-6. If this is your first time running Cylheim, this screen will be shown up, just click *I accept*.
+5. If this is your first time running Cylheim, this screen will show up, just click *I accept*.
 
 ![Terms of use agreement screen](./_sources_cylheim.md/welcome.jpg)
 
@@ -37,7 +35,7 @@ If there is a message appearing like this image below, please install .NET 6 Des
 
 # Using Cylheim
 
-Before we start, you should prepare an edited audio file (we have mentioned how to do it in the previous article). For this tutorial, we'll use Yunomi\'s track: [*夢色パレード (w/ 桃箱 & miko)*](https://iamyunomi.bandcamp.com/track/w-miko-6) (CC BY-NC-SA 3.0 licensed).
+Before we start, you should prepare an edited audio file (we have mentioned how to do it [here](../audio.md)). For this tutorial, we'll use Yunomi\'s track: [*夢色パレード (w/ 桃箱 & miko)*](https://iamyunomi.bandcamp.com/track/w-miko-6) (CC BY-NC-SA 3.0 licensed).
 
 For easier chart management, we recommend that you should put in a separate folder for each track, like this:
 
@@ -228,17 +226,7 @@ If these tips aren't helpful, try using Xbox Game Bar or using another video rec
 
 ### Packing into a Cytoidlevel file
 
-Cylheim has a build-in Cytoid level packer, which will export your chart into a Cytoid level.
-
-Click the top-left button and see in the menu, click *Export to Cytoid*.
-
-Follow the tips, fill in the metadata and chart, and finished!
-
-::: tip Tip: adding Storyboard?
-
-You can also include storyboard files and resources while packing :wink:.
-
-:::
+See [here](../cytoid/packing.md)
 
 ## Video Tutorial (in Chinese, outdated)
 
