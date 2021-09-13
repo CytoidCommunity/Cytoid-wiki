@@ -3,69 +3,60 @@ title: Audio editing with Audacity
 lang: en-US
 ---
 
-# Audio editing with Audacity
+# Audio editing
 
-::: warning WARNING!
+Cytoid supports the music offset. However, you still should set it to "0" because we can maximize the compatibility with chart editors. Moreover, if your song starts before 0.9 seconds, this might be a big problem in your chart. That's why you should edit the audio file(s) before charting.
 
-Before you read this guide, please note:
-A few stuffs here are outdated, but you still need to fix the audio offset with this tutorial.
+## You might need
 
+An audio editor - we will use Audacity in this article.
+The audio file of the song you want to chart.
+
+## Editing your audio file(s)
+
+
+### Importing the file into Audacity
+
+You can go to File --> Import --> Audio or use "drag and drop" method.
+
+### Editing your audio file(s)
+
+:::tip TIP
+We will use "Marry me, Nightmare" by t+pazolite as an example for this article.
 :::
 
-## Requirements
-
-Before we started, you will need:
-
-- [Audacity](https://www.audacityteam.org)
-- The music file
-
-## Start editing your audio file
-
-Start by importing your music to Audacity. You can easily do so by drag and drop your music to Audacity. For this guide, we'll *Marry Me, Nightmare* by t+pazolite.
+Now, look at the waveform.
 
 ![](./_sources_audio.md/start.png)
 
-As you can see, the music starts at 0.250 seconds. Because it's below 0.9 seconds so we need to put fix that.
-
-Press Home to make Audacity's scanner bar move to the leftmost. Then Generate → Silence. Set Duration to 0.900
+You can see that the music starts at around 0.250 seconds, that's below 0.9 seconds, we need to fix it.
 
 ![](./_sources_audio.md/slience.png)
 
-Then you have something like this:
+Our result will look like this:
 
 ![](./_sources_audio.md/after.png)
 
-Double click or **Ctrl + A** to select all. Now go to Tools --> Regular Interval Labels
-
-You'll get a window like this:
+Next, double-click or Ctrl + A on your keyboard and go to Tools --> Regular Interval Labels..., you can see this dialog:
 
 ![Regular Interval Labels Window](./_sources_audio.md/labels_window.png){.side-img}
 
-Set Label Interval to ${\frac{120}{BPM}}$. The $BPM$ here is the starting BPM of your song file.
+Set:
+- *Create labels based on* to *Label Interval*
+- *Number of labels* to a random number (don't set it too big!)
+- *Label interval (seconds):* to ${120 \div BPM}$ (in this example, it starts with 250 BPM, so ${120\div 250 = 0.48)
+- "Adjust label interval to fit length:" to No
+- "Begining numbering from:" to 0
 
-In this case, the song starts with 250 BPM, so the value is:
-$$
-{\frac{120}{250}}=0.48
-$$
-Then do this set of things:
-
-1. Label Text (optional, empty it if you want)
-
-2. Minimum Digit Number is set to 1 or 2 (for easier reading).
-
-3. Set begin numbering from 0.
-
-4. Adjust label interval to fit length must be set to No.
-
-Here is our config for this example:
+Here is our configuration for this example:
 
 ![After fill-in](./_sources_audio.md/labels_after.png){.side-img}
 
-Click OK. Our result is like this:
+Click OK and finished!
 
 ![](./_sources_audio.md/result.png)
 
-As you can see, it starts in the middle between the label *2* and *3*. To zero the offset in chart editors, you must be sure the music beat start on the label.
+As you can see, the music starts around between the label 2 and 3. To zero the offset, you will have to make sure that the music begins on the label.
 
 ::: tip NOTE
 
@@ -73,9 +64,7 @@ We recommend you syncing the labels that are an even number (or an odd number if
 
 :::
 
-There are two approaches, either edit the music to start at Label 2 or start at 3.
-
-So either delete some silence (approach 1) or generate more silence (approach 2). This is dependent on your existing chart.
+There are two approaches, either edit the music to start at Label 2 or start at 3. So either delete some silence (approach 1) or generate more silence (approach 2). This is dependent on your existing chart.
 
 To do approach 1, simply from starting music, left click and drag until it selects to label 2, then press **Delete**.
 
@@ -92,3 +81,5 @@ Deselect your selection, Press Home, go to Generate --> Silence, and enter the v
 ![](./_sources_audio.md/appr2_after.png)
 
 Now the music starts at Label 3. And you can test play this with scanline shift 0. If the scanline rebounds in line with the beat, you've done right.
+
+Congratulations! You've learned how to edit an audio file. Now, you should try editing your audio file and start charting!
