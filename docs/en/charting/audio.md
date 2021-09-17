@@ -28,9 +28,11 @@ Now, look at the waveform.
 
 ![](./_sources_audio.md/start.png)
 
-You can see that the music starts at around 0.250 seconds, that's below 0.9 seconds, we need to fix it.
+You can see that the music starts at around 0.778 seconds, that's below 0.9 seconds, we need to fix it.
 
-![](./_sources_audio.md/slience.png)
+Click on the start of the audio and go to generate --> Silence, type 0.9, and click "OK".
+
+![](./_sources_audio.md/silence.png)
 
 Our result will look like this:
 
@@ -42,10 +44,10 @@ Next, double-click or **Ctrl + A** on your keyboard and go to Tools --> Regular 
 
 Now set:
 
-- "Create labels based on:" to Label Interval
+- "Create labels based on:" to *Label Interval*
 - "Label interval (seconds):" to ${120 \div BPM}$ (in this example, it starts with 250 BPM, so ${120 \div 250} = 0.48$)
-- "Adjust label interval to fit length:" to No
-- "Begining numbering from:" to 0
+- "Adjust label interval to fit length:" to *No*
+- "Begining numbering from:" to *0*
 
 Here is our configuration for this example:
 
@@ -58,7 +60,7 @@ Click OK, and this is our result.
 As you can see, it starts in the middle between the label *2* and *4*. To zero the offset, you will have to make sure that the music begins on the label.
 ::: tip NOTE
 
-We recommend you syncing the labels that are an even number (or an odd number if you're using 1 as the begin numbering) because of how syncing works with speed changes
+We recommend you syncing the labels that are an even number because of how syncing works with speed changes
 
 :::
 
@@ -68,7 +70,7 @@ To do approach 1, simply left-click and drag from where the music starts until i
 
 ![](./_sources_audio.md/appr1.png)
 
-And for the second approach, zoom in to label 0 and label 1, drag from the start of the music to label 4. And make sure to set selection to *Length and End of Selection*.
+And for the second approach, first, make sure you have set selection to *Length and End of Selection*, then zoom in to label 0 and label 1, and drag from the start of the music to label 4.
 
 ![Length and End of Selection](./_sources_audio.md/length.png){.side-img}
 
@@ -80,7 +82,7 @@ Deselect your selection, press Home, go to Generate --> Silence, and enter the v
 
 ![](./_sources_audio.md/appr2_after.png)
 
-Now the music starts at Label 4. And you can test play this with scanline shift 0. If the scanline rebounds in line with the beat, you've done right.
+Now the music starts at Label 4. And you can test play this with scanline shift/offset 0. If the scanline rebounds in line with the beat, you've done right.
 
 ::: warning
 If your song has fade-in before it starts, always sync the label with the first beat and not the fade-in.
