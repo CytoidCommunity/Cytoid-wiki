@@ -28,6 +28,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -8% (-2.4%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -8% (-2.4%) |
 | Flick               |          +1 |    -0.75% |    -2.75% |       -4% |         -6% |
+
 :::
 
 ::: details Ranked
@@ -39,6 +40,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -8% (-2.4%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -8% (-2.4%) |
 | Flick               |          +1 |      +0.5 |    -0.75% |    -2.75% |         -6% |
+
 :::
 
 ### ANOTHER
@@ -59,6 +61,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -20% (-6%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -20% (-6%) |
 | Flick               |          +1 |       -3% |       -6% |      -12% |       -15% |
+
 :::
 
 ::: details Ranked
@@ -70,6 +73,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -20% (-6%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -20% (-6%) |
 | Flick               |          +1 |         0 |       -3% |       -6% |       -15% |
+
 :::
 
 ### Full combo
