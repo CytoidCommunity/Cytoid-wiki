@@ -176,7 +176,7 @@ If you enabled any autoplaying modifiers, your score won't be saved (that means 
 
 > Autoplay the hold notes
 
-- The game will automatically hit Flick notes
+- The game will automatically hit Hold notes
 
 <style type="text/css">
 .icon-img {
