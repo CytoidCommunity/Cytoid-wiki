@@ -7,7 +7,7 @@ lang: en-US
 
 ## Game modes
 
-There are 5 game modes in Cytoid: Free Play, Community, Events, Training and Tiers.
+There are 5 game modes in Cytoid: Free Play, Community, Events, Training, and Tiers.
 
 ### Free Play
 
@@ -15,7 +15,7 @@ There are 5 game modes in Cytoid: Free Play, Community, Events, Training and Tie
 
 This mode allows you to:
 
-- Select and play all downloaded levels even you’re offline.
+- Select and play all downloaded levels even when you’re offline.
 - Display levels by category: All, Official, and Community
 - Sort all levels by added date, played date, difficulty, title, and play count.
 - Delete levels.
@@ -42,9 +42,9 @@ This mode allows you to play 15 levels, ranged from Lv. 1 to Lv. 15. You also ca
 
 > The tier ranking system judges and quantifies your skill level at Cytoid; if you ever feel confident enough to take the challenge, please come anytime!
 
-You will have to play **3 preset charts in a row** (with a HP gauge) and clear the requirements. You also **can not** pause or leaving the game while playing.
+You will have to play **3 preset charts in a row** (with an HP gauge) and clear the requirements. You also **can not** pause or leave the game while playing.
 
-These tiers are sorted by difficulty, means higher tier, more difficult. Tier 6 is the current highest tier.
+These tiers are sorted by difficulty, which means higher tier, more difficult. Tier 6 is the current highest tier.
 
 Only *Fast*, *Slow*, *No Scanner*, and *Invisible* modifiers are allowed.
 
@@ -70,7 +70,6 @@ Only *Fast*, *Slow*, *No Scanner*, and *Invisible* modifiers are allowed.
 | Offset setup wizard | | Easily calibrate base note offset |
 
 ### Gameplay
-
 
 | Option name | Available options | In-game description |
 |---|---|---|
@@ -114,7 +113,7 @@ Only *Fast*, *Slow*, *No Scanner*, and *Invisible* modifiers are allowed.
 | Profiler | Off/On | Display frame rates and RAM usage |
 | Note ID | Off/On | For level debugging purposes |
 | Development console | Off/On | Enable development console, it’s recommended to turn on to find out in-game bugs. |
-| Experimental note AR | Off/On | Set whether the experimental note AR option is on or off.<br>**Off** – Using traditional note AR. <br>**On** – Using experimental note AR, the notes will fade in earlier and smaller. |
+| Experimental note AR | Off/On | Set whether the experimental note AR option is on or off.<br>**Off** – Uses traditional note AR. <br>**On** – Uses experimental note AR, the notes will fade in earlier and smaller. |
 | Experimental note animations | Off/On | Set whether the experimental note animations option is on or off. |
 | Judgment offset | | For advanced players only |
-| APPLY LATEST LOCALIZATION | | |
+| APPLY LATEST LOCALIZATION | | Once clicked, the game will download and apply the latest localization temporarily. |

@@ -3,7 +3,7 @@ title: Charting Contest
 lang: en-US
 ---
 # Charting Contest
-Charting Contest have been held for **17** times.
+Charting Contest has been held for **17** times.
 
 - [Charting Contest Judgement Criteria](https://cytoid.io/posts/contest-judgement-criteria)
 
