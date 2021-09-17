@@ -3,6 +3,7 @@ title: Chart with Mobile Chart Editor
 lang: en-US
 finish: true
 ---
+
 # Chart with Mobile Chart Editor
 
 ## Download
