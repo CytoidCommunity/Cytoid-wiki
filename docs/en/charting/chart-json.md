@@ -1,3 +1,8 @@
+---
+title: C2 chart format
+lang: en-US
+---
+
 # C2 chart format
 
 Cytus II (C2) chart format is a JSON file, that means you can edit easily in any text editor. This article will explain its concept and parameters that appears in a chart file.
@@ -33,13 +38,13 @@ This article aims at Cytoid compatibility, some tools might not be fully support
 
 - **vertical_margin**: the vertical margin (ranged from `1` to `5`).
 
-- **tempo_list**: array of [Tempo](./chart-json/#Tempo) objects.
+- **tempo_list**: array of [Tempo](./chart-json.html/#Tempo) objects.
 
-- **page_list**: array of [Page](./chart-json/#Page) objects.
+- **page_list**: array of [Page](./chart-json.html/#Page) objects.
 
-- **note_list**: array of [Note](./chart-json/#Note) objects.
+- **note_list**: array of [Note](./chart-json.html/#Note) objects.
 
-- **event_order_list**: array of [EventOrder](./chart-json/#EventOrder) objects.
+- **event_order_list**: array of [EventOrder](./chart-json.html/#EventOrder) objects.
 
 ### Objects
 
@@ -101,7 +106,7 @@ When you want to finish the Drag/C-Drag chain, set it to `-1`.
 
 - **tick**: specify when the event will be triggered.
 
-- **event_list**: array of [ChartEvent](./chart-json/#ChartEvent) object
+- **event_list**: array of [ChartEvent](./chart-json.html/#ChartEvent) object
 
 #### ChartEvent
 
