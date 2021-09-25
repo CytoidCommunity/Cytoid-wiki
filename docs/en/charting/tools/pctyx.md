@@ -38,13 +38,13 @@ It depends on which version you're using.
 
 **If you're using v210 or higher:**
 
-Just go to the PCtyx folder and run pctyxeditor.app
+Just go to the PCtyx folder and run `pctyxeditor.app`
 
 **If you're using v201:**
 
 Follow these steps before running:
 
-1. Download [NW.js](https://nwjs.io/downloads/) (using the Stable version is recommended) and extract `nwjs.app` into a new folder, called as New Project below.
+1. Download [NW.js](https://nwjs.io/downloads/) **(using the Stable version is recommended)** and extract `nwjs.app` into a new folder.
 2. Copy `keymap.json` to that new folder where you extracted New Project.
 3. Right-click `pctyxeditor.app` and select "Show Package Contents".
 4. Copy PCtyx's `Contents/Resources` folder.
