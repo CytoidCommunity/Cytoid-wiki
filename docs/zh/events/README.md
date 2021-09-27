@@ -4,12 +4,14 @@ lang: zh-Hans
 ---
 # Cytoid 游戏内活动
 
-## Cytoid Xmas 2020
-### 活动信息:
+## 最近活动
+
+### Cytoid Xmas 2020
+#### 活动信息
 - **活动时间**: 从 `2020/12/25` 开始, 到 `2021/01/03` 结束
 - **参与了本次活动的艺术家**: Punjidixie
 
-### 奖励:
+#### 奖励
 - **新关卡**: **Snow Candy**  
 
 ::: details 本次活动的关卡
@@ -18,13 +20,15 @@ lang: zh-Hans
   - **关卡难度**: <CtdDiff type="easy" diff="3"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="11"/>
 :::
 
-## Signal Interference
-### 活动信息:   
+## 往期活动
+
+### Signal Interference
+#### 活动信息  
 - **活动时间**: 从 `2020/10/30` 开始, 到 `2020/12/04` 结束
 - **参与了本次活动的艺术家**: PTB10, nm-γ, rareguy 和 Helblinde
 - 这次是 2020 年万圣节特典活动.
 
-### 奖励:  
+#### 奖励
 - **新人物**: **Laeti**  
 
 ::: details 本次活动的关卡
@@ -51,13 +55,13 @@ lang: zh-Hans
   - 在 **Interference: Finale** 的 **EX** 难度取得 **93%** 或更高精确度.**(本条件无需使用 HYPER Mod)**
 :::
 
-## Summer Festival
-### 活动信息:
+### Summer Festival
+#### 活动信息
 - **活动时间**: 从 `2020/8/20` 开始, 到 `2020/9/16` 结束
 - **参与了本次活动的艺术家**: MYUKKE., N.H.I 和 cosMo@暴走P
 - This is the first in-game Cytoid event
 
-### 奖励:
+#### 奖励
 - **新人物**: **Sora**  
 
 ::: details 本次活动的关卡
@@ -82,12 +86,12 @@ lang: zh-Hans
 
 <!-- Example
 
-## Event name
-### 活动信息:
+### Event name
+#### 活动信息
 - **活动时间**: 从 `0000/00/00` 开始, 到 `0000/00/00` 结束
 - **参与了本次活动的艺术家**: 
 
-### 奖励:
+#### 奖励
 - **新人物**: **Character_Name**  
 
 ::: details 本次活动的关卡

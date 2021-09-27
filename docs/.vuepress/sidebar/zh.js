@@ -89,14 +89,31 @@ module.exports = {
   ],
   '/zh/events/': [
     {
-      title: "活动",
+      title: "Cytoid 活动",
       sidebarDepth: 3,
       collapsable: false,
       children: [
-        '',
-        'official'
+        ''
       ]
-    }
+    },
+    {
+      title: "官方活动",
+      sidebarDepth: 3,
+      collapsable: false,
+      children: [
+        'official',
+        'charting-contest',
+        'octopus'
+      ]
+    },
+    // {
+    //   title: "社区活动",
+    //   sidebarDepth: 3,
+    //   collapsable: false,
+    //   children: [
+    //     'community'
+    //   ]
+    // }
   ],
   '/zh/about/': [
     {

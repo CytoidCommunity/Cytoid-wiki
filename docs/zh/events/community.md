@@ -1,6 +1,6 @@
 ---
-title: Community Events
+title: 社区活动
 lang: zh-Hans
 ---
 
-# Community Events
+# 社区活动

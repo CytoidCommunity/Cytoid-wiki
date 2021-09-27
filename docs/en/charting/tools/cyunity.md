@@ -66,7 +66,8 @@ Note:
 
 ------
 
-![](./_sources_cyunity.md/4.png)
+![Settings](./_sources_cyunity.md/4.png)
+
 ### 4. Settings
 > We have a ton of stuff to cover so I won’t be explicit on each section unless it is needed
 

@@ -3,13 +3,14 @@ title: Chart with Mobile Chart Editor
 lang: en-US
 finish: true
 ---
+
 # Chart with Mobile Chart Editor
 
-## Download 
+## Download
 
-- For Android users: you can download it form [GitHub Releases](https://github.com/CatalinTermure/Cytoid-Chart-Editor/releases)
+- For Android users: you can download it from [GitHub Releases](https://github.com/CatalinTermure/Cytoid-Chart-Editor/releases)
 
-- For iOS users: `iOS TestFlight: Currently unavailable`
+- For iOS users (via [TestFlight](https://apps.apple.com/app/testflight/id899247664)): Currently unavailable
 
 ## Next Step
 

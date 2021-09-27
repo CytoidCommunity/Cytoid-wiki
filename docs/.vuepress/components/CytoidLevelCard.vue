@@ -11,14 +11,18 @@
     />
     <a class="link" :href="'https://cytoid.io/levels/'+leveldata.uid" target="_blank" />
     <div class="index">
-      <div class="difficulty-box" v-if="leveldata">
-        <ctd-diff
-          v-for="diff in leveldata.charts"
-          :key="diff.id"
-          :type="diff.type"
-          :name="diff.name"
-          :diff="diff.difficulty"
-        />
+      <div class="top-content">
+        <div v-if="leveldata.category.includes('featured')" class="featured" v-text="'Featured'" />
+        <div />
+        <div class="difficulty-box" v-if="leveldata">
+          <ctd-diff
+            v-for="diff in leveldata.charts"
+            :key="diff.id"
+            :type="diff.type"
+            :name="diff.name"
+            :diff="diff.difficulty"
+          />
+        </div>
       </div>
       <div class="info-box">
         <p class="artist" v-text="leveldata.metadata.artist.name" />
@@ -130,6 +134,21 @@ export default {
     justify-content: space-between;
     height: calc(100% - 1rem);
     padding: 0.5rem 0.75rem;
+    .top-content
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    .featured
+      background: linear-gradient(to right bottom,#b91d73,#f953c6)
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.3rem;
+      max-height: 2.3rem;
+      color: white;
+      font-weight: bold;
+      border-radius: 2.3rem;
+      padding: 0 1rem;
     .difficulty-box
       text-align: end;
     .info-box

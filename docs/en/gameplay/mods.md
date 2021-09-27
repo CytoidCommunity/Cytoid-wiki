@@ -3,6 +3,7 @@ title: Mods
 lang: en-US
 finish: true
 ---
+
 # {{$frontmatter.title}}
 
 Modifiers (or mods) 
@@ -15,7 +16,7 @@ Modifiers (or mods)
 
 > Add an HP bar to the game.
 
-- By enabling Hyper, it will add an HP bar to the game, initial HP value is ``difficulty * 75`` (1000 if it's ? difficulty). If it reaches to 0, you will automatically fail the game.
+- By enabling Hyper, it will add an HP bar to the game, the initial HP value is ``difficulty * 75`` (1000 if it's ? difficulty). If it reaches 0, you will automatically fail the game.
 - HYPER works differently in Ranked and Practice
 
 ::: details Practice
@@ -27,6 +28,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -8% (-2.4%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -8% (-2.4%) |
 | Flick               |          +1 |    -0.75% |    -2.75% |       -4% |         -6% |
+
 :::
 
 ::: details Ranked
@@ -38,6 +40,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -8% (-2.4%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -8% (-2.4%) |
 | Flick               |          +1 |      +0.5 |    -0.75% |    -2.75% |         -6% |
+
 :::
 
 ### ANOTHER
@@ -46,7 +49,7 @@ Modifiers (or mods)
 
 > Same as HYPER, but more difficult.
 
-- All its mechanics are same as HYPER, but it's adjusted to make more damage if you get a note cleared is not Perfect.
+- All its mechanics are the same as HYPER, but it's adjusted to deal more damage if you get a note cleared that isn't Perfect.
 - Like HYPER, ANOTHER also works differently in Ranked and Practice
 
 ::: details Practice
@@ -58,6 +61,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -20% (-6%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -20% (-6%) |
 | Flick               |          +1 |       -3% |       -6% |      -12% |       -15% |
+
 :::
 
 ::: details Ranked
@@ -69,6 +73,7 @@ Modifiers (or mods)
 | Drag Head (Child)   | +0.2 (+0.1) | N/A (N/A) | N/A (N/A) | N/A (N/A) | -20% (-6%) |
 | C-Drag Head (Child) | +0.2 (+0.1) |   0 (N/A) |   0 (N/A) |   0 (N/A) | -20% (-6%) |
 | Flick               |          +1 |         0 |       -3% |       -6% |       -15% |
+
 :::
 
 ### Full combo
@@ -138,7 +143,7 @@ When Slow is enabled, notes will fade in earlier, i.e approach rate is lower.
 ## Autoplaying modifiers
 
 ::: warning NOTICE!
-Enabling any autoplaying modifiers, your score won't be saved (that means your score won't be submitted to CytoidIO, you don't gain any EXP or rating)
+If you enabled any autoplaying modifiers, your score won't be saved (that means your score won't be submitted to CytoidIO and you won't gain any EXP or rating)
 :::
 
 ### Auto
@@ -171,7 +176,7 @@ Enabling any autoplaying modifiers, your score won't be saved (that means your s
 
 > Autoplay the hold notes
 
-- The game will automatically hit Flick notes
+- The game will automatically hit Hold notes
 
 <style type="text/css">
 .icon-img {

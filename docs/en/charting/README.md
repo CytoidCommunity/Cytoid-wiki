@@ -1,9 +1,10 @@
 ---
-title: Getting started (Charting)
+title: "Charting: Getting started"
 lang: en-US
+next: "./audio.md"
 ---
 
-# Getting started
+# Charting: Getting started
 
 Welcome to the Charting section of this wiki, we will help you know the charting basics, software (tools) you may need to make a chart.
 
