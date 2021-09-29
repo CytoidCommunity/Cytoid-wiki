@@ -29,7 +29,7 @@ It means your ID is in the wrong format, remember that ID **cannot** have capita
 
 ![ID error](./_sources_upload.md/2.png){.side-img}
 
-### *File not found* error
+### File not found error
 
 ![File not found](./_sources_upload.md/3.png){.side-img}
 
@@ -57,7 +57,7 @@ It means your login time has expired. You can refresh the page, log in, and try 
 
 ### Missing required field(s)
 
-![File not found](./_sources_upload.md/5.png){.side-img}
+![Missing required field(s)](./_sources_upload.md/5.png){.side-img}
 
 It means you forgot to add the required field(s). You may have to check and fill in the required field(s) in the `level.json` file, then zip again.
 
