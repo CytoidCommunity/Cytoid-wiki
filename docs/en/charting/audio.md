@@ -45,7 +45,7 @@ Next, double-click or **Ctrl + A** on your keyboard and go to Tools --> Regular 
 Now set:
 
 - "Create labels based on:" to *Label Interval*
-- "Label interval (seconds):" to ${120 \div BPM}$ (in this example, it starts with 250 BPM, so ${120 \div 250} = 0.48$)
+- "Label interval (seconds):" to ${240 \div BPM}$ (in this example, it starts with 250 BPM, so ${240 \div 250} = 0.96$)
 - "Adjust label interval to fit length:" to *No*
 - "Begining numbering from:" to *0*
 
@@ -57,32 +57,32 @@ Click OK, and this is our result.
 
 ![](./_sources_audio.md/result.png)
 
-As you can see, it starts in the middle between the label *2* and *4*. To zero the offset, you will have to make sure that the music begins on the label.
-::: tip NOTE
+As you can see, it starts in the middle between the label *1* and *2*. To zero the offset, you will have to make sure that the music begins on one of the labels.
 
-We recommend you syncing the labels that are an even number because of how syncing works with speed changes
+There are two approaches, either edit the music to start at Label 1 or start at 2. So either delete some silence (approach 1) or generate more silence (approach 2). This is dependent on your existing chart.
 
-:::
+#### Approach 1
 
-There are two approaches, either edit the music to start at Label 2 or start at 4. So either delete some silence (approach 1) or generate more silence (approach 2). This is dependent on your existing chart.
-
-To do approach 1, simply left-click and drag from where the music starts until it selects to label 2, then press **Delete**.
+To do approach 1, simply left-click and drag from where the music starts until it selects to label 1, then press **Delete**.
 
 ![](./_sources_audio.md/appr1.png)
 
-And for the second approach, first, make sure you have set selection to *Length and End of Selection*, then zoom in to label 0 and label 1, and drag from the start of the music to label 4.
+#### Approach 2
+
+For the second approach, first, make sure you have set selection to *Length and End of Selection*.
+Then, zoom in to label 0 and label 1, and drag from the start of the music to label 2.
 
 ![Length and End of Selection](./_sources_audio.md/length.png){.side-img}
 
 ![](./_sources_audio.md/appr2.png)
 
-The left bar will show the duration needed to generate silence. This happens to be 0.237. Note it.
+The left bar will show the duration of silence needed to generate. This happens to be 0.237. Note it.
 
-Deselect your selection, press Home, go to Generate --> Silence, and enter the value shown earlier.
+Deselect your selection, click on one of the silence part at the start, go to Generate --> Silence, and enter the value shown earlier.
 
 ![](./_sources_audio.md/appr2_after.png)
 
-Now the music starts at Label 4. And you can test play this with scanline shift/offset 0. If the scanline rebounds in line with the beat, you've done right.
+Now the music starts at Label 2, and you can test play this with scanline shift/offset 0. If the scanline rebounds in line with the beat, you've done right.
 
 ::: warning
 If your song has fade-in before it starts, always sync the label with the first beat and not the fade-in.
