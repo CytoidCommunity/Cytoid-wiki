@@ -76,7 +76,7 @@ Then, zoom in to label 0 and label 1, and drag from the start of the music to la
 
 ![](./_sources_audio.md/appr2.png)
 
-The left bar will show the duration of silence needed to generate. This happens to be 0.237. Note it.
+The left bar will show the duration of silence needed to generate. This happens to be 0.234. Note it.
 
 Deselect your selection, click on one of the silence part at the start, go to Generate --> Silence, and enter the value shown earlier.
 
