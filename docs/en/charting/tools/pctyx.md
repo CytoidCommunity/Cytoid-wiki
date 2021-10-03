@@ -1,8 +1,8 @@
 ---
 title: Chart with PCtyx
 lang: en-US
-prev: "../audio.md"
-next: "../cytoid/packing.md#packing-with-a-help-of-pctyx"
+prev: "../audio.html"
+next: "../cytoid/packing.html#packingwithahelpofpctyx"
 ---
 
 # Chart with PCtyx
@@ -36,11 +36,11 @@ Just go to the PCtyx folder and run PCtyxEditor.exe
 
 It depends on which version you're using.
 
-**If you're using v210 or higher:**
-
+::: details v210 or higher:
 Just go to the PCtyx folder and run `pctyxeditor.app`
+:::
 
-**If you're using v201:**
+::: details v201:
 
 Follow these steps before running:
 
@@ -58,9 +58,9 @@ You don't need to do these again in the future.
 
 1. Go to the PCtyx folder
 
-2. Allow PCtyx to execute as a program. If you don't know how follow one of these methods
+2. Allow PCtyx to execute as a program. If you don't know how follow one of these methods.
 
-- Method 1: Allowing by using Terminal
+::: details Allowing by using Terminal
 
 Run Terminal and execute this command:
 
@@ -68,7 +68,9 @@ Run Terminal and execute this command:
 chmod a+x PCtyxEditor
 ```
 
-- Method 2: Allowing without using Terminal
+::::
+
+::: details Allowing without using Terminal
 
 Right-click on PCtyxEditor file, choose Properties → Permissions, check the Allow executing file as program box
 
@@ -76,7 +78,9 @@ Right-click on PCtyxEditor file, choose Properties → Permissions, check the Al
 Depending on your current distro and desktop environment, this method might not work or be different from the instruction.
 :::
 
-3. Run PCtyxEditor file
+:::
+
+3. Run  `PCtyxEditor` file
 
 ## Troubleshooting
 
