@@ -2,7 +2,7 @@
 title: Chart with PCtyx
 lang: en-US
 prev: "../audio.html"
-next: "../cytoid/packing.html#packingwithahelpofpctyx"
+next: "../cytoid/packing.md#packing-with-a-help-of-pctyx"
 ---
 
 # Chart with PCtyx
@@ -76,10 +76,8 @@ chmod a+x PCtyxEditor
 
 Right-click on PCtyxEditor file, choose Properties → Permissions, check the Allow executing file as program box
 
-::: warning Warning!
+::: warning NOTICE!
 Depending on your current distro and desktop environment, this method might not work or be different from the instruction.
-:::
-
 :::
 
 3. Run  `PCtyxEditor` file
