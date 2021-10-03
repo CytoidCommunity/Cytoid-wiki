@@ -54,6 +54,8 @@ Follow these steps before running:
 
 You don't need to do these again in the future.
 
+:::
+
 ### Linux
 
 1. Go to the PCtyx folder
