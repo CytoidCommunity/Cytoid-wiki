@@ -1,7 +1,7 @@
 ---
 title: Chart with PCtyx
 lang: en-US
-prev: "../audio.md"
+prev: "../audio.html"
 next: "../cytoid/packing.md#packing-with-a-help-of-pctyx"
 ---
 
@@ -36,16 +36,16 @@ Just go to the PCtyx folder and run PCtyxEditor.exe
 
 It depends on which version you're using.
 
-**If you're using v210 or higher:**
-
+::: details v210 or higher:
 Just go to the PCtyx folder and run `pctyxeditor.app`
+:::
 
-**If you're using v201:**
+::: details v201:
 
 Follow these steps before running:
 
 1. Download [NW.js](https://nwjs.io/downloads/) **(using the Stable version is recommended)** and extract `nwjs.app` into a new folder.
-2. Copy `keymap.json` to that new folder where you extracted New Project.
+2. Copy `keymap.json` to that new folder where you extracted `nwjs.app`.
 3. Right-click `pctyxeditor.app` and select "Show Package Contents".
 4. Copy PCtyx's `Contents/Resources` folder.
 5. Right-click --> "Show Package Contents" on `nwjs.app` and replace the `Contents/Resources` folder with the copied PCtyx one.
@@ -54,13 +54,15 @@ Follow these steps before running:
 
 You don't need to do these again in the future.
 
+:::
+
 ### Linux
 
 1. Go to the PCtyx folder
 
-2. Allow PCtyx to execute as a program. If you don't know how follow one of these methods
+2. Allow PCtyx to execute as a program. If you don't know how follow one of these methods.
 
-- Method 1: Allowing by using Terminal
+::: details Allowing by using Terminal
 
 Run Terminal and execute this command:
 
@@ -68,15 +70,17 @@ Run Terminal and execute this command:
 chmod a+x PCtyxEditor
 ```
 
-- Method 2: Allowing without using Terminal
+::::
+
+::: details Allowing without using Terminal
 
 Right-click on PCtyxEditor file, choose Properties → Permissions, check the Allow executing file as program box
 
-::: warning Warning!
+::: warning NOTICE!
 Depending on your current distro and desktop environment, this method might not work or be different from the instruction.
 :::
 
-3. Run PCtyxEditor file
+3. Run  `PCtyxEditor` file
 
 ## Troubleshooting
 
