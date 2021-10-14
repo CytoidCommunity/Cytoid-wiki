@@ -25,9 +25,9 @@ If you have errors while uploading, here’s a quick FAQ with the errors:
 
 ### ID error
 
-It means your ID is in the wrong format. Remember that ID **cannot** have capitals or spaces, and you **need** to add a `.`, `_` or `-` in between after the first word.
-
 ![ID error](./_sources_upload.md/2.png){.side-img}
+
+It means your ID is in the wrong format. Remember that ID **cannot** have capitals or spaces, and you **need** to add a `.`, `_` or `-` in between after the first word.
 
 ### File not found error
 
@@ -51,9 +51,9 @@ CytoidIO cannot detect if you also have the necessary resources for your **story
 
 ### Unauthorized error
 
-It means your login time has expired. You can refresh the page, log in, and try again.
-
 ![Unauthorized](./_sources_upload.md/4.png){.side-img}
+
+It means your login time has expired. You can refresh the page, log in, and try again.
 
 ### Missing required field(s) error
 
