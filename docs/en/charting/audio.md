@@ -82,7 +82,7 @@ Now deselect your selection, click on one of the silence parts at the start, go 
 
 ![Approach 2 finshed](./_sources_audio.md/appr2_after.png)
 
-Now the music starts at Label 2, and you can export the song file by clicking File --> Export --> Export to OGG.
+Now the music starts at Label 2, and you can export the audio file by clicking File --> Export --> Export to OGG.
 
 ::: danger NOTICE
 Using MP3 song files to chart is **not** recommended because of the *audio delay on playback start* problem every charting program will have.  
