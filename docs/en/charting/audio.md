@@ -85,7 +85,7 @@ Now deselect your selection, click on one of the silence parts at the start, go 
 Now the music starts at Label 2, and you can export the audio file by clicking File --> Export --> Export to OGG.
 
 ::: danger NOTICE
-Using MP3 song files to chart is **not** recommended because of the *audio delay on playback start* problem every charting program will have.  
+Using MP3 audio files to chart is **not recommended** because of the *audio delay on playback start* problem every charting program will have.  
 In fact, some charting programs don't even support MP3 as the music file!
 :::
 
@@ -95,4 +95,4 @@ Then, you may test play this audio file with scanline shift/offset 0. If the sca
 If your song has fade-in before it starts, always sync the label with the first beat and not the fade-in.
 :::
 
-Congratulations! You've learned how to edit an audio file. Now, you should try editing your audio file and start charting!
+Congratulations! You've learned how to edit an audio file. Now, you should try editing yours and start charting!
