@@ -7,15 +7,17 @@ prev: "../audio.md"
 next: "../cytoid/packing.md#packing-by-using-cylheim"
 ---
 
-# Getting binaries and running Cylheim 
+# Charting with Cylheim
+
+## Getting binaries and running Cylheim
 
 1. Go to Cylheim's repository on [GitHub](https://github.com/Horiztar/Cylheim-Windows/) or **download via the [Microsoft Store](https://www.microsoft.com/store/apps/9PCCZSWG973K)(Windows 10/11 only) (Recommended)**.
 
 > If you downloaded Cylheim via the Microsoft Store, skip to step 4.
 
-2. Look at the Right Sidebar, click on *Releases*.
+2. Look at the Right Sidebar, click on [**Releases**](https://github.com/Horiztar/Cylheim-Windows/releases).
 
-3. Download the installer depending on your architecture.
+3. Download the installer depending on your architecture, run it, and follow the on-screen steps to install Cylheim.
 
 ::: warning NOTICE!
 
@@ -25,15 +27,15 @@ Please choose the correct architecture (if you don't know, see in Settings or Co
 
 4. Run Cylheim
 
-5. If this is your first time running Cylheim, this screen will show up, just click *I accept*.
+5. If this is your first time running Cylheim, this screen will show up, click *I accept*.
 
 ![Terms of use agreement screen](./_sources_cylheim.md/welcome.jpg)
 
-If there is a message appearing like this image below, please install .NET 6 Desktop Runtime [here](https://dotnet.microsoft.com/download/dotnet/6.0).
+If an error message that appears like this image below showed up, please install .NET 6 Desktop Runtime [here](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 ![.NET not installed error](./_sources_cylheim.md/dotnet_error.png)
 
-# Using Cylheim
+## Using Cylheim
 
 Before we start, you should prepare an edited audio file (we have mentioned how to do it [here](../audio.md)). For this tutorial, we'll use Yunomi\'s track: [*夢色パレード (w/ 桃箱 & miko)*](https://iamyunomi.bandcamp.com/track/w-miko-6) (CC BY-NC-SA 3.0 licensed).
 
@@ -75,9 +77,9 @@ When you click the *+* button in the chart list, a window appears.
 
 ![New Chart](./_sources_cylheim.md/new_chart.jpg){.side-img}
 
-It is divided into four parts by lines. Their functions are **importing chart file**, **basic information of the chart**, **editor appearance**, and **presets for the appearance** (from up to down).
+It is divided into four parts by lines. From up to down, their functions are **importing chart file**, **basic information of the chart**, **editor appearance**, and **presets for the appearance**.
 
-However, we only have to type the basic information of the chart here, which are: **chart file's name**, **the path to the music file**, and **the initial BPM**.
+However, the only information of the chart we need to type is the basic information of the chart, which are **chart file's name**, **the path to the music file**, and **the initial BPM**.
 
 > Duration will be automatically detected and filled in after choosing a music file, so you don't need to type them manually.
 
@@ -107,45 +109,48 @@ Cylheim's controls are simple to learn!
 
 You can also go to **Settings --> Shortcut** to edit the shortcuts for your preference.
 
-#### Add notes
+#### Adding notes
 
 You can add all kinds of notes with your mouse easily (excluding C-Drag).
 
-##### Add Click notes
+##### Adding Click notes
 
 Move your cursor to where you want to add the note, then **left-click**.
 
-##### Add Hold / Long hold notes
+##### Adding Hold / Long hold notes
 
-At where the Hold note starts, **left-click** and hold, then move your cursor to where the Hold note ends and release the click.
+Move your cursor to where the Hold note should start, **left-click** and hold, then move your cursor to where the Hold note should end and release the click.
 
-::: tip Tips: Long holds
+::: tip Tip: Adding Long holds
+Use the shortcut to switch between pages while adding to make your Hold note cross-page.
 
-While holding, you can use shortcuts and go to the next page, which also extends the hold notes to the next page(s).
+Hold notes will turn into Long hold notes when it is cross-page.
+:::
 
-Hold note will turn into the Long hold note when it is longer than one page.
-::::
+##### Adding Flick notes
 
-##### Add Flick notes
+**Left-click and hold** on where the Flick note should be, then drag left / right until you see the click note become a Flick note, here you can release your **left-click**.
 
-**Left-click and hold** on where the Flick note should be, then drag left / right until you see the click note becomes the Flick note, here you can release your **left-click**.
+##### Adding Drag notes
 
-##### Add Drag notes
+**Right-click and hold** on where the drag starts, move the cursor to where you want the Drag notes added, and **left-click**, you may continue holding **right-click** and repeat to add more drag notes.
 
-**Right-click and hold** on where the drag starts, move the cursor to where the drag notes should be added, and **left-click,** you may continue holding the **right-click** button and repeat to add more drag notes.
+When you have done adding, release your **Right-click**.
 
-When you're finished, release your **Right-click**.
+::: tip Tip: Connecting and Disconnecting drags
+Select the drag notes you want to connect and click the *Connect* button from the toolbar. Same do if disconnect, select the drag notes and click the *Disconnect* button.
+:::
 
-::: tip Tips
+::: tip Tip: Extending drags
+Select then **right-click and hold** the drag you want and **left-click**.
+:::
 
-Connecting and Disconnecting drags: Select the drag notes you want to connect and click the *Connect* button from the toolbar. Same do if disconnect, select the drag notes and click the *Disconnect* button.
+::: tip Tip: Cross-page drag
+Use the shortcut to switch between pages while holding **right-click** to make your drag notes cross-page.
+:::
 
-Extending drags: Select then **right-click and hold** the drag you want and **left-click**.
-
-Cross-page drag: Use the shortcut to switch between pages while holding **right-click** to make your drag notes cross-page.
-
-Click-drag (C-Drag): While adding, hold **Shift** and then drag will become a C-Drag.
-
+::: tip Tip: Adding Click-drag (C-Drag)
+While adding, hold **Shift** then **Left-click**, and the drag will become a C-Drag.
 :::
 
 #### Scanline speed
@@ -162,9 +167,7 @@ You can also change the size to exactly what you want by opening
 **Sidebar --> Page manager**.
 
 ::: tip Tips:
-
 Don't know why? [Try reading C2's chart format article](../chart-json).
-
 :::
 
 ##### Changing BPM
@@ -174,21 +177,20 @@ Don't know why? [Try reading C2's chart format article](../chart-json).
 
 - Changing Page size doesn't give you the result you wanted
 - The song itself changes its' BPM
-
 :::
 
 You may do so by opening **Sidebar --> Tempo Manager**.
 
-:::tip Tips
-
-Changing existing tempo: Find out that the start tempo is wrong and want to change an existing tempo? You can add a new tempo value on the same tick or double click that tempo to override them.
-
-Keeping where things are while changing tempo: Changing tempo may off-sync existing stuff on the chart (Notes, Event, Chart/Page duration), *Tempo Manager* has an option to keep these in sync.
+::: tip Changing existing tempo
+Find out that the start tempo is wrong? Want to change an existing tempo? You can add a new tempo value on the same tick to override them.
+:::
+::: tip Keeping where things are after changing the tempo
+Changing tempo may off-sync existing stuff on the chart (Notes, Event, Chart/Page duration), *Tempo Manager* has an option to keep these in sync.
 :::
 
 #### Generating events
 
-You need to add *Speed up / Speed down* warnings while scanline speed changes.
+You need to add *Speed up / Speed down* warnings if there are scanline speed changes.
 
 You can use the shortcut **Ctrl + E** to let Cylheim do it automatically.
 
@@ -196,7 +198,7 @@ You can use the shortcut **Ctrl + E** to let Cylheim do it automatically.
 
 Playback speed may need to be changed to get more accurate sounds.
 
-::: tip Tip
+::: tip Increasing the accuracy of slow playback
 
 You can increase the accuracy of slow playback by turning on *Alter audio sampling rate for playback speed adaptation* in **Settings --> Audio**.
 
@@ -226,7 +228,17 @@ If these tips aren't helpful, try using Xbox Game Bar or using another video rec
 
 ### Packing into a Cytoidlevel file
 
-See [here](../cytoid/packing.md)
+Cylheim has a build-in Cytoid level packer, which will export your chart(s) into a Cytoid level.
+
+Click the top-left button and look down, then click *Export to Cytoid*.
+
+Follow the tips, fill in the metadata and chart, and finished!
+
+::: tip Tip: Adding Storyboard?
+You can also include storyboard files and resources while packing.
+:::
+
+A more in-depth tutorial about packing is available [here](../cytoid/packing.md#packing-by-using-cylheim)
 
 ## Video Tutorial (in Chinese, outdated)
 
