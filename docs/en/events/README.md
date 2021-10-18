@@ -12,10 +12,10 @@ lang: en-US
 - **Artists in this event**: Punjidixie
 
 #### Rewards:
-- **New Level**: **Snow Candy**  
+- **New Level**: Snow Candy  
 
 ::: details Level in this event
-- **Punjidixie - Snow Candy**
+- Punjidixie - Snow Candy
   - **Charter**: LAPID-20
   - **Difficulty**: <CtdDiff type="easy" diff="3"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="11"/>
 :::
@@ -29,30 +29,30 @@ lang: en-US
 - This event is held for the Haloween day in 2020.
 
 #### Rewards:  
-- **New character**: **Laeti**  
+- **New character**: Laeti  
 
 ::: details Level in this event
-- **PTB10 - Interference: Finale**
+- PTB10 - Interference: Finale
   - **Charter**: lumixanth, ptb10 and suconhh
   - **Storyboarder**: wandererzariq and tigerhix
   - **Difficulty**: <CtdDiff type="easy" diff="10"/><CtdDiff type="hard" diff="14"/><CtdDiff type="ex" diff="16"/>
-- **nm-γ - Hex Tiamat**
+- nm-γ - Hex Tiamat
   - **Charter**: geswat001122 and thebombman
   - **Difficulty**: <CtdDiff type="easy" diff="6"/><CtdDiff type="hard" diff="13"/><CtdDiff type="ex" diff="15"/>
-- **rareguy - Mechanted**
+- rareguy - Mechanted
   - **Charter**: Triquinacene
   - **Difficulty**: <CtdDiff type="easy" diff="3"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="13"/>
-- **Helblinde - Omnia Vanitas**
+- Helblinde - Omnia Vanitas
   - **Charter**: wandererzariq
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="8"/><CtdDiff type="ex" diff="13"/>
 :::
 
 ::: details Tiers in this event
-- **Tier 1**: Obtain grade of D or higher on Easy, Hard or EX difficulty of **Interference: Finale**, **Hex Tiamat**, **Mechanted**, **Omnia Vanitas**.
-- **Tier 2**: Obtain 95% accuracy or higher on Hard or EX difficulty of **Interference: Finale**, **Hex Tiamat**, **Mechanted**, **Omnia Vanitas**.
+- **Tier 1**: Obtain grade of D or higher on Easy, Hard or EX difficulty of *Interference: Finale*, *Hex Tiamat*, *Mechanted*, *Omnia Vanitas*.
+- **Tier 2**: Obtain 95% accuracy or higher on Hard or EX difficulty of *Interference: Finale*, *Hex Tiamat*, *Mechanted*, *Omnia Vanitas*.
 - **Tier 3**:
-  - With HYPER mod, obtain 99% accuracy or higher on EX difficulty of **Hex Tiamat**, **Mechanted**, **Omnia Vanitas** and Hard difficulty of **Interference: Finale**
-  - In addition, obtain 93% accuracy or higher on EX difficulty of **Interference: Finale** (HYPER mod is not necessary)
+  - With HYPER mod, obtain 99% accuracy or higher on EX difficulty of *Hex Tiamat**, *Mechanted*, *Omnia Vanitas* and Hard difficulty of *Interference: Finale*
+  - In addition, obtain 93% accuracy or higher on EX difficulty of *Interference: Finale* (HYPER modifier is not necessary)
 :::
 
 ### Summer Festival
@@ -62,24 +62,24 @@ lang: en-US
 - This is the first in-game Cytoid event
 
 #### Rewards:
-- **New character**: **Sora**  
+- **New character**: Sora
 
 ::: details Level in this event
-- **MYUKKE. - Ginevra**
+- MYUKKE. - Ginevra
   - **Charter**: Helamind_CW and he2o3
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="8"/><CtdDiff type="ex" diff="12"/>
-- **N.H.I - DhAneLLeis**
+- N.H.I - DhAneLLeis
   - **Charter**: Triquinacene
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="10"/><CtdDiff type="ex" diff="15"/>
-- **cosMo@暴走P - Hopeful Restart**
+- cosMo@暴走P - Hopeful Restart
   - **Charter**: ECIC1 and geswat001122
   - **Difficulty**: <CtdDiff type="easy" diff="8"/><CtdDiff type="hard" diff="13"/><CtdDiff type="ex" diff="16"/>
 :::
 
 ::: details Tiers in this event
-- **Tier 1**: Obtain grade of A or higher on Easy, Hard or EX difficulty of **Ginevra**, **DhAneLLeis**, **Hopeful Restart**
-- **Tier 2**: Obtain grade of S or higher on Hard or EX difficulty of **Ginevra**, **DhAneLLeis**, **Hopeful Restart**
-- **Tier 3**: Obtain grade of SSS or higher on EX difficulty of **Ginevra**, and obtain grade of SS or higher on EX difficulty of **DhAneLLeis**, and obtain grade of AA or higher on EX difficulty of **DhAneLLeis** **Hopeful Restart**
+- **Tier 1**: Obtain grade of A or higher on Easy, Hard or EX difficulty of *Ginevra*, *DhAneLLeis*, *Hopeful Restart*
+- **Tier 2**: Obtain grade of S or higher on Hard or EX difficulty of *Ginevra*, *DhAneLLeis*, *Hopeful Restart*
+- **Tier 3**: Obtain grade of SSS or higher on EX difficulty of *Ginevra*, and obtain grade of SS or higher on EX difficulty of *DhAneLLeis*, and obtain grade of AA or higher on EX difficulty of *DhAneLLeis* and *Hopeful Restart*
 :::
 
 
@@ -88,14 +88,14 @@ lang: en-US
 
 ### Event name
 #### Informations:
-- **Event duration**: from `0000/00/00` to `0000/00/00`
+- **Event duration**: from `YYYY/MM/DD` to `YYYY/MM/DD`
 - **Artists in this event**: 
 
 #### Rewards:
-- **New character**: **Character_Name**  
+- **New character**: Character_Name
 
 ::: details Level in this event
-- **Artist - Song_Name**
+- Artist - Song_Name
   - **Charter**: 
   - **Storyboarder**: 
   - **Difficulty**: <CtdDiff type="easy" diff=""/><CtdDiff type="hard" diff=""/><CtdDiff type="ex" diff=""/>
