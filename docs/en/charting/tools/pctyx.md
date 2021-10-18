@@ -60,25 +60,11 @@ You don't need to do these again in the future.
 
 1. Go to the PCtyx folder
 
-2. Allow PCtyx to execute as a program. If you don't know how follow one of these methods.
-
-::: details Allowing by using Terminal
-
-Run Terminal and execute this command:
+2. Now you need to allow PCtyx to execute as a program. Run Terminal and execute this command:
 
 ```shell
 chmod a+x PCtyxEditor
 ```
-
-::::
-
-::: details Allowing without using Terminal
-
-Right-click on PCtyxEditor file, choose Properties → Permissions, check the Allow executing file as program box
-
-::: warning NOTICE!
-Depending on your current distro and desktop environment, this method might not work or be different from the instruction.
-:::
 
 3. Run  `PCtyxEditor` file
 
@@ -97,9 +83,7 @@ None.
 None.
 
 ::: tip
-
 You can find more information and troubleshoot by reading the README.txt file in the PCtyx folder.
-
 :::
 
 Ready to go? Read PCtyx’s official documentation at [here](https://docs.google.com/document/d/1BhSrt75mdEBCJfKPf5B2WlgmuBRJ6WmWviH95-x4Sqk)
