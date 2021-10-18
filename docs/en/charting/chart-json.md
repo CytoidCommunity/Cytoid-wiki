@@ -38,13 +38,13 @@ This article aims at Cytoid compatibility, some tools might not be fully support
 
 - **vertical_margin**: the vertical margin (ranged from `1` to `5`).
 
-- **tempo_list**: array of [Tempo](./chart-json.html/#tempo) objects.
+- **tempo_list**: array of [Tempo](./chart-json.html#tempo) objects.
 
-- **page_list**: array of [Page](./chart-json.html/#page) objects.
+- **page_list**: array of [Page](./chart-json.html#page) objects.
 
-- **note_list**: array of [Note](./chart-json.html/#note) objects.
+- **note_list**: array of [Note](./chart-json.html#note) objects.
 
-- **event_order_list**: array of [EventOrder](./chart-json.html/#order) objects.
+- **event_order_list**: array of [EventOrder](./chart-json.html#order) objects.
 
 ### Objects
 
@@ -106,7 +106,7 @@ When you want to finish the Drag/C-Drag chain, set it to `-1`.
 
 - **tick**: specify when the event will be triggered.
 
-- **event_list**: array of [ChartEvent](./chart-json.html/#chartevent) object
+- **event_list**: array of [ChartEvent](./chart-json.html#chartevent) object
 
 #### ChartEvent
 
