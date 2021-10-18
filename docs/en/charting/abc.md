@@ -11,31 +11,33 @@ This is an article outline.
 
 - Explain what a chart editor is
 - Say its usage (why charters need it)
-  - Helps they finish their charts quickly
+  - Helps them finish their charts quickly
   - WYSIWYG user interface
   - Generates chart without remembering parameters
-# PCtyx
 
-  - Platform: Cross-platform
-  - Supported audio formats:
-  - Additional features
-  - Pros and cons
+### PCtyx
+
+- Platform: Cross-platform
+- Supported audio formats: WAV, OGG, and FLAC
+- Additional features
+- Pros and cons
 
 > Giving a screenshot of PCtyx
 
 ### Cylheim
 
-  - Plaform: Windows
-  - Supported audio formats: WAV and OGG
-  - Additional features:
-  - Pros and cons
+- Platform: Windows
+- Supported audio formats: WAV and OGG
+- Additional features:
+- Pros and cons
 
-> Giving a sreenshot of Cylheim
+> Giving a screenshot of Cylheim
 
 ### Cytoid Chart Edior
-  - Platform: Android/iOS/PC
-  - Supported audio formats: WAV and OGG
-  - Addtional features
-  - Pros and cons
 
-> Giving a screenshot
+- Platform: Android/iOS/PC
+- Supported audio formats: WAV and OGG
+- Additional features
+- Pros and cons
+
+> Giving a screenshot of Cytoid Chart Editor
