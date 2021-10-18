@@ -44,7 +44,7 @@ This article aims at Cytoid compatibility, some tools might not be fully support
 
 - **note_list**: array of [Note](./chart-json.html#note) objects.
 
-- **event_order_list**: array of [EventOrder](./chart-json.html#order) objects.
+- **event_order_list**: array of [EventOrder](./chart-json.html#eventorder) objects.
 
 ### Objects
 
