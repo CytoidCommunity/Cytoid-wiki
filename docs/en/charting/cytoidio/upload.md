@@ -6,28 +6,28 @@ author: KS62
 
 # Uploading your level
 
-You seem very proud of your chart! Now we'll learn how to upload it to let people play it!
+You seem very proud of your chart! Now we'll learn how to upload and let people play it!
 
-You need to check these to proceed:
+You will need to check these to proceed:
 
-1. A Cytoid ID (sign up [here](https://cytoid.io/session/signup) if you don't have one)
-2. A `.cytoidlevel` file (read [this article](../cytoid/packing.md) to learn how to make one)
+- A Cytoid ID (sign up [here](https://cytoid.io/session/signup) if you don't have one)
+- A `.cytoidlevel` file (read [this article](../cytoid/packing.md) to learn how to make one)
 
-After checking, you can log in to [CytoidIO](https://cytoid.io/session/login) and go to [https://cytoid.io/studio/levels](https://cytoid.io/studio/levels). Here you will see something like this:
+After checking, you can log in to [CytoidIO](https://cytoid.io/session/login) and go to [Studio](https://cytoid.io/studio/levels). You will see something like this:
 
 ![Studio](./_sources_upload.md/1.png)
 
-Here, you can click the *Click or drag a Cytoid level to this area* and select the Cytoid level you want to upload or drag the `.cytoidlevel` file to that area.
+Here, you can click the *Click or drag a Cytoid level to this area* button and select the Cytoid level you want to upload or click and drag the `.cytoidlevel` file to that area.
 
-## Uploading errors
+## Upload errors
 
-If you have errors while uploading, here’s a quick FAQ with upload errors:
+If you have errors while uploading, here’s a quick FAQ with the errors:
 
 ### ID error
 
-It means your ID is in the wrong format, remember that ID **cannot** have capitals and spaces, and you **should** add a `.`, `_` or `-` in between after the first word (also, you should read the [Rules](./rules) article).
-
 ![ID error](./_sources_upload.md/2.png){.side-img}
+
+It means your ID is in the wrong format. Remember that ID **cannot** have capitals or spaces, and you **need** to add a `.`, `_` or `-` in between after the first word.
 
 ### File not found error
 
@@ -35,27 +35,27 @@ It means your ID is in the wrong format, remember that ID **cannot** have capita
 
 It could mean:
 
-1. You haven't zipped (more than) one of the file(s) specified in the level.json
-2. You zipped the folder
-3. You have the file path in the `level.json` file is wrong
+- You haven't zipped (more than) one of the file(s) specified in the `level.json`
+- You zipped the folder
+- The file path(s) in the `level.json` file is (are) wrong
 
 Check all three of them before uploading again
 
-:::warning WARNING
+::: danger
 
-Capitals or not will also mess up the problem, make sure they are exactly what the files are named. That's also why we recommend you only use lower-case letters for the file name. Also, **do not** use special characters.
+Capitals or not will also mess up the problem. Make sure the path's names are exactly what the files are named. This is also why we recommend you only use lower-case letters for the file name. Also, **do not** use special characters.
 
-CytoidIO cannot detect if you also have the necessary resources for your **storyboard**, and because just missing an image will **break** the whole storyboard, **you really should double-check when you're uploading a storyboard chart having images (sprites)**
+CytoidIO cannot detect if you also have the necessary resources for your **storyboard**. And because just missing an image will make the storyboard unplayable, **you really should double-check when you're uploading a storyboard chart that contains images (sprites)**
 
 :::
 
 ### Unauthorized error
 
-It means your login time has expired. You can refresh the page, log in, and try again. Unless it’s a server problem, you can try uploading the level.
+![Unauthorized](./_sources_upload.md/4.png){.side-img}
 
- ![Unauthorized](./_sources_upload.md/4.png){.side-img}
+It means your login time has expired. You can refresh the page, log in, and try again.
 
-### Missing required field(s)
+### Missing required field(s) error
 
 ![Missing required field(s)](./_sources_upload.md/5.png){.side-img}
 
@@ -63,9 +63,9 @@ It means you forgot to add the required field(s). You may have to check and fill
 
 ## After uploading
 
-If your chart is uploaded successfully, the website will redirect to this page:
+If your chart(s) has uploaded successfully, the website will redirect to this page:
 
-![Edit](./_sources_upload.md/6.png)
+![Edit listing](./_sources_upload.md/6.png)
 
 In here you have:
 
@@ -75,15 +75,15 @@ In here you have:
 
 **Edit level**: upload a new version of a chart if you need to and preview level information.
 
-:::warning NOTICE
+::: warning NOTICE
 
-Currently, Cytoid can’t show the description in-game.
+Currently, Cytoid cannot show descriptions in-game.
 
 :::
 
-You can write anything in the description and tags or don’t even add one as long as it’s following the rules.
+You can write anything in the description and tags or don’t even add one as long as it's following the [rules](rules.md).
 
-Finally, click on the *PRIVATE* button and click on the *Public* button, click *SAVE* after finishing. Now, people can download your level on CytoidIO and Cytoid’s build-in chart downloader!
+Finally, click the *PRIVATE* button, then the *Public* button, and click *SAVE* after finishing. Now, people can download your level on CytoidIO and Cytoid’s build-in chart downloader!
 
 ::: tip Information
 

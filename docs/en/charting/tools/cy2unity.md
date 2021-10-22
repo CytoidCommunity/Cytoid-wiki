@@ -1,8 +1,9 @@
 ---
-title: Chart with Cy2Unity
+title: Charting with Cy2Unity
 lang: en-US
 ---
-# Chart with Cy2Unity
+
+# Charting with Cy2Unity
 
 Note: You need to have basic understanding of the Cytus 2 chart format.
 This project is currently in its beta stages. There may be a lot of bugs in the program and is expected to receive multiple patches for the next few months. Here are some known bugs:

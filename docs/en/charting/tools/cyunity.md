@@ -1,8 +1,9 @@
 ---
-title: Chart with Cyunity
+title: Charting with Cyunity
 lang: en-US
 ---
-# Chart with Cyunity
+
+# Charting with Cyunity
 
 ## User Interface
 ![](./_sources_cyunity.md/1.png)
