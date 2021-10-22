@@ -1,10 +1,10 @@
 ---
-title: Chart with Mobile Chart Editor
+title: Charting with Mobile Chart Editor
 lang: en-US
 finish: true
 ---
 
-# Chart with Mobile Chart Editor
+# Charting with Mobile Chart Editor
 
 ## Download
 

@@ -1,11 +1,11 @@
 ---
-title: Chart with PCtyx
+title: Charting with PCtyx
 lang: en-US
 prev: "../audio.html"
 next: "../cytoid/packing.md#packing-with-a-help-of-pctyx"
 ---
 
-# Chart with PCtyx
+# Charting with PCtyx
 
 ::: warning NOTICE
 This is a guide about how to set up PCtyx.  
