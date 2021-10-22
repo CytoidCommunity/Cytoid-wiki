@@ -18,7 +18,7 @@ Cytoid supports the `music_offset` parameter. However, you still should set it t
 
 You can go to File --> Import --> Audio or use the "drag and drop" method.
 
-### Editing your audio file(s)
+### Start editing
 
 ::: tip INFORMATION
 We will use "Marry me, Nightmare" by t+pazolite as an example for this article.
