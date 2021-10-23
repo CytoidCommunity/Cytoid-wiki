@@ -232,7 +232,7 @@ Cylheim has a build-in Cytoid level packer, which will export your chart(s) into
 
 Click the top-left button and look down, then click *Export to Cytoid*.
 
-Follow the tips, fill in the metadata and chart, and finished!
+Follow the tips, fill in the metadata and chart, and done!
 
 ::: tip Tip: Adding Storyboard?
 You can also include storyboard files and resources while packing.
