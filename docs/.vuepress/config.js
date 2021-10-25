@@ -141,6 +141,7 @@ module.exports = ctx => ({
     extendMarkdown: md => {
       md.use(require('markdown-it-katex'))
       md.use(require('markdown-it-attrs'))
+      md.use(require('markdown-it-deflist'))
     },
     lineNumbers: false
   }
