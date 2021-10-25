@@ -11,7 +11,7 @@ next: "../cytoid/packing.md#packing-by-using-cylheim"
 
 ## Getting binaries and running Cylheim
 
-1. Go to Cylheim's repository on [GitHub](https://github.com/Horiztar/Cylheim-Windows/) or **download via the [Microsoft Store](https://www.microsoft.com/store/apps/9PCCZSWG973K)(Windows 10/11 only) (Recommended)**.
+1. Go to Cylheim's repository on [GitHub](https://github.com/Horiztar/Cylheim-Windows/) or **download via the [Microsoft Store](https://www.microsoft.com/store/apps/9PCCZSWG973K) (Windows 10/11 only) (Recommended)**.
 
 > If you downloaded Cylheim via the Microsoft Store, skip to step 4.
 
@@ -31,11 +31,11 @@ Please choose the correct architecture (if you don't know, see in Settings or Co
 
 ![Terms of use agreement screen](./_sources_cylheim.md/welcome.jpg)
 
-If an error message that appears like this image below showed up, please install .NET 6 Desktop Runtime [here](https://dotnet.microsoft.com/download/dotnet/6.0).
+If an error message like this image below showed up, please install .NET 6 Desktop Runtime [here](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 ![.NET not installed error](./_sources_cylheim.md/dotnet_error.png)
 
-## Using Cylheim
+## Getting ready
 
 Before we start, you should prepare an edited audio file (we have mentioned how to do it [here](../audio.md)). For this tutorial, we'll use Yunomi\'s track: [*夢色パレード (w/ 桃箱 & miko)*](https://iamyunomi.bandcamp.com/track/w-miko-6) (CC BY-NC-SA 3.0 licensed).
 
@@ -77,7 +77,7 @@ When you click the *+* button in the chart list, a window appears.
 
 ![New Chart](./_sources_cylheim.md/new_chart.jpg){.side-img}
 
-It is divided into four parts by lines. From up to down, their functions are **importing chart file**, **basic information of the chart**, **editor appearance**, and **presets for the appearance**.
+It is divided into four parts by lines. From up to down, their functions are **import chart file**, **basic information of the chart**, **editor appearance**, and **presets for the appearance**.
 
 However, the only information of the chart we need to type is the basic information of the chart, which are **chart file's name**, **the path to the music file**, and **the initial BPM**.
 
@@ -232,7 +232,7 @@ Cylheim has a build-in Cytoid level packer, which will export your chart(s) into
 
 Click the top-left button and look down, then click *Export to Cytoid*.
 
-Follow the tips, fill in the metadata and chart, and done!
+Follow the tips, fill in the metadata and chart, and finish!
 
 ::: tip Tip: Adding Storyboard?
 You can also include storyboard files and resources while packing.

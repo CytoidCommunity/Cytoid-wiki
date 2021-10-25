@@ -52,7 +52,7 @@ Follow these steps before running:
 
 4. Copy PCtyx's `Contents/Resources` folder.
 
-5. **Right-click --> Show Package Contents** on `nwjs.app` and replace the `Contents/Resources` folder with the copied PCtyx one.
+5. **Right-click -->** ***Show Package Contents*** on `nwjs.app` and replace the `Contents/Resources` folder with the copied PCtyx one.
 
 6. Download [FFmpeg](https://github.com/iteufel/nwjs-ffmpeg-prebuilt/releases) and extract `<your NW.JS version>-osx-x64.zip`, then copy `libffmpeg.dylib`.
 

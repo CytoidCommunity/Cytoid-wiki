@@ -73,7 +73,7 @@ If you have typed everything necessary, you should have the generator looks some
 
 ![Filled in metadata](./_sources_packing.md/8.png)
 
-Click *Create level.json*, repeat the zipping steps (have mentioned before), and done!
+Click *Create level.json*, repeat the zipping steps (have mentioned before), and finish!
 
 ::: tip INFORMATION
 We used Wanderer Zariq's *You're the Miserable* as an example for this article. Try it [here](https://cytoid.io/levels/wz.yatm).
