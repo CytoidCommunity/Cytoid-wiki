@@ -78,7 +78,7 @@ chmod a+x PCtyxEditor
 
 ### Windows
 
-If PCtyx isn’t working, try to install DirectX 9 by running dxwebsetup.exe in the PCtyx folder. If it still doesn’t work, please update your graphics driver.
+If PCtyx isn’t working, try to install DirectX 9 by running `dxwebsetup.exe` in the PCtyx folder. If it still doesn’t work, please update your graphics driver.
 
 ### MacOS
 
