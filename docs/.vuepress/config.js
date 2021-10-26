@@ -22,7 +22,7 @@ module.exports = ctx => ({
     '/vi/': {
       lang: 'vi',
       title: 'Cytoid Wiki',
-      description: 'A wiki for Cytoid and powered by community.'
+      description: 'Một "trạm đỗ xe" dành cho Cytoid bởi cộng đồng!'
     }
   },
   head: [
@@ -92,15 +92,15 @@ module.exports = ctx => ({
       },
       '/vi/': {
         label: 'Tiếng Việt',
-        selectText: 'Languages',
-        ariaLabel: 'Select language',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
-        author: 'Author',
-        notFinish: 'Under Construction',
-        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span>
-                  <span>Written by Discord Community and Localizers.</span>
-                  <span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
+        selectText: 'Ngôn ngữ',
+        ariaLabel: 'Chọn ngôn ngữ',
+        editLinkText: 'Chỉnh sửa bài viết này trên Github',
+        lastUpdated: 'Cập nhật lần cuối vào',
+        author: 'Được viết bởi:',
+        notFinish: 'Hmm... Không có nội dung gì cả! ... Xin vui lòng chờ, bài viết này chưa hoàn thành đâu!',
+        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. Toàn quyền bảo lưu.</span>
+                  <span>Được tạo ra bởi cộng đồng Cytoid trên Discord.</span>
+                  <span>Đây là trang wiki của cộng đồng <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a>, được phát triển bởi <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> và <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
                   `,
         nav: require('./nav/vi'),
         sidebar: require('./sidebar/vi')
