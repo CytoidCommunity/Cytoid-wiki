@@ -11,12 +11,12 @@ The following is a list of fields you can find in a level.json, what values you 
 
 ## Parameters
 
-### Schema version, level version and level ID
+### Schema version, level version, and level ID
 
 - **schema_version** <Badge text="required" type="error"/>: your level schema version.
 
-::: warning NOTICE!
-To upload to CytoidIO, ts value **must** be: `2`.
+::: danger NOTICE!
+To upload to CytoidIO, its value **must** be: `2`.
 ::::
 
 - **version** <Badge text="required" type="error"/>: your level version, start with `1`; if you changed something in your chart, go up by 1, e.g.: `"version": 2`.
@@ -62,7 +62,7 @@ Do not use "unknown" or something like that as the illustrator!
 
 ### File paths
 
-#### Path to music preview, music, and background file
+#### Path to music, music preview, and background file
 
 - **music** <Badge text="required" type="error"/>:
   - Start with a curly bracket: `{`.
@@ -96,16 +96,19 @@ Use `0` if the chart is a troll chart. `16` or higher will display as *15+* on C
 
 - **path** <Badge text="required" type="error"/>: the path to your chart in the current difficulty, e.g.: `"path": "chart.easy.txt"`.
 - **music_override**: Use this in-between two or more difficulties if they use a different song file.
+
   - Start with a curly bracket: `{`.
   - **path**: The path to your music file. Its value **must** be a string. E.g.:`"path": "preview.wav"`.
   - Use another curly bracket: `}` to mark as the end of this value.
+
 - **storyboard**: Use this in-between two or more difficulties if they use a different storyboard.
+
   - Start with a curly bracket: `{`.
   - **path**: The path to your storyboard file. Its value **must** be a string. E.g.:`"path": "sb.hard.json"`.
   - Use another curly bracket: `}` to mark as the end of this value.
-  - Use another curly bracket: `}` to mark the end of the current difficulty.
-  
-If you want to create a new difficulty, use curly bracket to initialize it and repeat.
+
+Use another curly bracket: `}` to mark the end of the current difficulty.  
+If you want to create a new difficulty, use curly brackets to initialize it and repeat.
 
 When finished, you use another square bracket: `]` to mark the end of `charts`.
 
@@ -113,7 +116,8 @@ When finished, you use another square bracket: `]` to mark the end of `charts`.
 
 ### level.json template
 
-You may copy this template and fill in the blank values with information relevant to your chart. **Remember, if a parameter requires a string value, type inside `""`; if a  is an integer, type next to `:`.**
+You may copy this template and fill in the blank values with information relevant to your chart.  
+**Remember, if a parameter requires a string value, type inside `""`; if a  is an integer, type next to `:`.**
 
 ```json
 {
@@ -168,7 +172,7 @@ You may copy this template and fill in the blank values with information relevan
 
 ### Generating a level.json with PCtyx
 
-In the PCtyx menu, click *Cytoid Settings*, then just type what it tells you to do and select the chart files, then click *Create level.json* and save the level.json file wherever you want.
+In the PCtyx menu, click *Cytoid Settings*. Then, type what it tells you to do and select the chart files. Now, click *Create level.json* and save the level.json file wherever you want.
 <!--
 ![PCtyx level.json generator](./_sources_level.json.md/pctyx.jpg)
 -->
@@ -188,7 +192,7 @@ In the *Charts* tab, Click on *Add chart info*. Then select a chart file and cha
 <!--
 ![Charts](./_sources_level.json.md/cyl2.png)
 -->
-After all of this, click the arrow below, select *Export metadata*, and save the level.json file.
+After this, click the arrow below, select *Export metadata*, and save the level.json file.
 <!--
 ![Export metadata](./_sources_level.json.md/export_cyl.png)
 -->
