@@ -83,7 +83,7 @@ Do not use "unknown" or something like that as the illustrator!
 
 In order to create level difficulty(-ies), you need to use  **charts** parameter.
 
-Frist, start with a square bracket: `[`. Then, initialize a new difficulty with a curly bracket: `{`. Here are a few parameters you need to use:
+First, start with a square bracket: `[`. Then, initialize a new difficulty with a curly bracket: `{`. Here are a few parameters you need to use:
 - **type** <Badge text="required" type="error"/>: the difficulty type of the chart. Its value **must** be a string and classified as one of three here: `easy`, `hard`, and `extreme`. E.g.: `"type": "extreme"`.
 
 - **name**: the name of the current difficulty, its value **must** be a string. E.g.: `"name": "Extra"`.
