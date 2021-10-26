@@ -26,9 +26,9 @@ module.exports = {
     ],
     '/en/charting/': [
       {
-        // title: "Getting started",
-        // sidebarDepth: 3,
-        // collapsable: false,
+        title: "Getting started",
+        sidebarDepth: 3,
+        collapsable: false,
         children: [
         '',
         'abc',
