@@ -79,29 +79,35 @@ Do not use "unknown" or something like that as the illustrator!
   - **path**: the path to your image file, its value **must** be a string. E.g.:`"path": "bg.png"`.
   - Use another curly bracket: `}` to mark the end of this argument.
 
-#### Path to chart file(s)
+#### Creating level difficulty(-ies)
 
-- **charts** <Badge text="required" type="error"/>:
-  - Start with a square bracket: `[`.
-  - Initialize a new difficulty with a curly bracket: `{`.
-   - **type** <Badge text="required" type="error"/>: the difficulty type of the chart. Its value **must** be a string and classified as one of three here: `easy`, `hard`, and `extreme`. E.g.: `"type": "extreme"`.
-    - **name**: the name of the current difficulty, its value **must** be a string. E.g.: `"name": "Extra"`.
-    - **difficulty** <Badge text="required" type="error"/>: determines the difficulty of the chart, its value **must** be an integer and rated from 0 to 16. E.g.: `"difficulty": 13`.
+In order to create level difficulty(-ies), you need to use  **charts** parameter.
+
+Frist, start with a square bracket: `[`. Then, initialize a new difficulty with a curly bracket: `{`. Here are a few parameters you need to use:
+- **type** <Badge text="required" type="error"/>: the difficulty type of the chart. Its value **must** be a string and classified as one of three here: `easy`, `hard`, and `extreme`. E.g.: `"type": "extreme"`.
+
+- **name**: the name of the current difficulty, its value **must** be a string. E.g.: `"name": "Extra"`.
+
+- **difficulty** <Badge text="required" type="error"/>: determines the difficulty of the chart, its value **must** be an integer and rated from 0 to 16. E.g.: `"difficulty": 13`.
+
 ::: warning NOTICE
 Use `0` if the chart is a troll chart. `16` or higher will display as *15+* on Cytoid.
 :::
-    - **path** <Badge text="required" type="error"/>: the path to your chart in the current difficulty, e.g.: `"path": "chart.easy.txt"`.
-    - **music_override**: Use this in-between two or more difficulties if they use a different song file.
-      - Start with a curly bracket: `{`.
-      - **path**: The path to your music file. Its value **must** be a string. E.g.:`"path": "preview.wav"`.
-      - Use another curly bracket: `}` to mark as the end of this value.
-    - **storyboard**: Use this in-between two or more difficulties if they use a different storyboard.
-      - Start with a curly bracket: `{`.
-      - **path**: The path to your storyboard file. Its value **must** be a string. E.g.:`"path": "sb.hard.json"`.
-      - Use another curly bracket: `}` to mark as the end of this value.
+
+- **path** <Badge text="required" type="error"/>: the path to your chart in the current difficulty, e.g.: `"path": "chart.easy.txt"`.
+- **music_override**: Use this in-between two or more difficulties if they use a different song file.
+  - Start with a curly bracket: `{`.
+  - **path**: The path to your music file. Its value **must** be a string. E.g.:`"path": "preview.wav"`.
+  - Use another curly bracket: `}` to mark as the end of this value.
+- **storyboard**: Use this in-between two or more difficulties if they use a different storyboard.
+  - Start with a curly bracket: `{`.
+  - **path**: The path to your storyboard file. Its value **must** be a string. E.g.:`"path": "sb.hard.json"`.
+  - Use another curly bracket: `}` to mark as the end of this value.
   - Use another curly bracket: `}` to mark the end of the current difficulty.
-  - Repeat step 2 and 3 if your level has more than one difficulty (with a maximum of three).
-  - Use another square bracket: `]` to mark the end of `charts`.
+  
+If you want to create a new difficulty, use curly bracket to initialize it and repeat.
+
+When finished, you use another square bracket: `]` to mark the end of `charts`.
 
 ## Resources
 
