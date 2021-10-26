@@ -84,14 +84,12 @@ Do not use "unknown" or something like that as the illustrator!
 - **charts** <Badge text="required" type="error"/>:
   - Start with a square bracket: `[`.
   - Initialize a new difficulty with a curly bracket: `{`.
-    - **type** <Badge text="required" type="error"/>: the difficulty type of the chart. Its value **must** be a string and classified as one of three here: `easy`, `hard`, and `extreme`. E.g.: `"type": "extreme"`.
+   - **type** <Badge text="required" type="error"/>: the difficulty type of the chart. Its value **must** be a string and classified as one of three here: `easy`, `hard`, and `extreme`. E.g.: `"type": "extreme"`.
     - **name**: the name of the current difficulty, its value **must** be a string. E.g.: `"name": "Extra"`.
     - **difficulty** <Badge text="required" type="error"/>: determines the difficulty of the chart, its value **must** be an integer and rated from 0 to 16. E.g.: `"difficulty": 13`.
-
 ::: warning NOTICE
 Use `0` if the chart is a troll chart. `16` or higher will display as *15+* on Cytoid.
 :::
-
     - **path** <Badge text="required" type="error"/>: the path to your chart in the current difficulty, e.g.: `"path": "chart.easy.txt"`.
     - **music_override**: Use this in-between two or more difficulties if they use a different song file.
       - Start with a curly bracket: `{`.
@@ -109,7 +107,7 @@ Use `0` if the chart is a troll chart. `16` or higher will display as *15+* on C
 
 ### level.json template
 
-You may copy this template and fill in the blank values with information relevant to your chart. **Remember, if a parameter requires a string value, type inside `""`; if an argument is an integer, type next to `:`.**
+You may copy this template and fill in the blank values with information relevant to your chart. **Remember, if a parameter requires a string value, type inside `""`; if a  is an integer, type next to `:`.**
 
 ```json
 {
