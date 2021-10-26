@@ -26,12 +26,13 @@ module.exports = {
     ],
     '/en/charting/': [
       {
-        title: "Introduction & Preparing",
-        sidebarDepth: 3,
-        collapsable: false,
+        // title: "Getting started",
+        // sidebarDepth: 3,
+        // collapsable: false,
         children: [
-          '',
-          'abc',
+        '',
+        'abc',
+        'audio'
         ]
       },
       {
@@ -102,17 +103,16 @@ module.exports = {
         children: [
           'official',
           'charting-contest',
-          'octopus'
         ]
       },
-      // {
-      //   title: "Community Events",
-      //   sidebarDepth: 3,
-      //   collapsable: false,
-      //   children: [
-      //     'community'
-      //   ]
-      // }
+      {
+        title: "Community Events",
+        sidebarDepth: 3,
+        collapsable: false,
+        children: [
+         'community'
+        ]
+      }
     ],
     '/en/about/': [
       {
