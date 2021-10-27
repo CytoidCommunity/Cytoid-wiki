@@ -59,7 +59,7 @@ It means your login time has expired. You can refresh the page, log in, and try 
 
 ![Missing required field(s)](./_sources_upload.md/5.png){.side-img}
 
-It means you forgot to add the required field(s) in the `level.json`. You may have to check and fill in the necessary field(s) in the `level.json` file mentioned [here](../cytoid/level.json.md#list-of-arguments), then zip again.
+It means you forgot to add the required field(s) in the `level.json`. You may have to check and fill in the necessary field(s) in the `level.json` file mentioned [here](../cytoid/level.json.md#parameters), then zip again.
 
 ## After uploading
 
