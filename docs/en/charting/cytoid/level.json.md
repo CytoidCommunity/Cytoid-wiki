@@ -173,9 +173,9 @@ You may copy this template and fill in the blank values with information relevan
 ### Generating a level.json with PCtyx
 
 In the PCtyx menu, click *Cytoid Settings*. Then, type what it tells you to do and select the chart files. Now, click *Create level.json* and save the level.json file wherever you want.
-<!--
+
 ![PCtyx level.json generator](./_sources_level.json.md/pctyx.jpg)
--->
+
 ::: warning WARNING!
 PCtyx cannot display some characters and will show them as white boxes.
 :::
@@ -183,16 +183,16 @@ PCtyx cannot display some characters and will show them as white boxes.
 ### Generating a level.json with Cylheim
 
 After finishing a chart in Cylheim, click the top-left button and look down, then click *Export to Cytoid*. You will see the following window:
-<!--
+
 ![Cylheim's Cytoid Level Compiler](./_sources_level.json.md/cyl1.png)
--->
+
 Type what it tells you to do and click on the *Charts* tab after doing so.
 
 In the *Charts* tab, Click on *Add chart info*. Then select a chart file and change the difficulty from the slider.
-<!--
+
 ![Charts](./_sources_level.json.md/cyl2.png)
--->
+
 After this, click the arrow below, select *Export metadata*, and save the level.json file.
-<!--
+
 ![Export metadata](./_sources_level.json.md/export_cyl.png)
--->
+
