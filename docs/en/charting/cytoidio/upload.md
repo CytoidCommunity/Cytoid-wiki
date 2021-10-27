@@ -10,8 +10,8 @@ You seem very proud of your chart! Now we'll learn how to upload and let people 
 
 You will need to check these to proceed:
 
-- A Cytoid ID (sign up [here](https://cytoid.io/session/signup) if you don't have one)
-- A `.cytoidlevel` file (read [this article](../cytoid/packing.md) to learn how to make one)
+- A Cytoid ID (sign up [here](https://cytoid.io/session/signup) if you don't have one.)
+- A `.cytoidlevel` file (read [this article](../cytoid/packing.md) to learn how to make one.)
 
 After checking, you can log in to [CytoidIO](https://cytoid.io/session/login) and go to [Studio](https://cytoid.io/studio/levels). You will see something like this:
 
@@ -35,17 +35,17 @@ It means your ID is in the wrong format. Remember that ID **cannot** have capita
 
 It could mean:
 
-- You haven't zipped (more than) one of the file(s) specified in the `level.json`
-- You zipped the folder
-- The file path(s) in the `level.json` file is (are) wrong
+- You haven't zipped (more than) one of the file(s) specified in the `level.json`.
+- You zipped the folder.
+- The file path(s) in the `level.json` file is (are) wrong.
 
-Check all three of them before uploading again
+Check all three of them before uploading again.
 
 ::: danger
 
 Capitals or not will also mess up the problem. Make sure the path's names are exactly what the files are named. This is also why we recommend you only use lower-case letters for the file name. Also, **do not** use special characters.
 
-CytoidIO cannot detect if you also have the necessary resources for your **storyboard**. And because just missing an image will make the storyboard unplayable, **you really should double-check when you're uploading a storyboard chart that contains images (sprites)**
+CytoidIO cannot detect if you also have the necessary resources for your **storyboard**. And because just missing an image will make the storyboard unplayable, **you really should double-check when you're uploading a storyboard chart that contains images (sprites).**
 
 :::
 
