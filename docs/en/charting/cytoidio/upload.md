@@ -23,13 +23,13 @@ Here, you can click the *Click or drag a Cytoid level to this area* button and s
 
 If you have errors while uploading, here’s a quick FAQ with the errors:
 
-### ID error
+### *Wrong ID format* error
 
 ![ID error](./_sources_upload.md/2.png){.side-img}
 
-It means your ID is in the wrong format. Remember that ID **cannot** have capitals or spaces, and you **need** to add a `.`, `_` or `-` in between after the first word.
+It means your ID is in the wrong format. Remember that ID **cannot** have capitals or spaces, and you **need** to add a `.`, `_`, or `-` in between after the first word.
 
-### File not found error
+### *File not found* error
 
 ![File not found](./_sources_upload.md/3.png){.side-img}
 
@@ -37,25 +37,23 @@ It could mean:
 
 - You haven't zipped (more than) one of the file(s) specified in the `level.json`.
 - You zipped the folder.
-- The file path(s) in the `level.json` file is (are) wrong.
+- The file path(s) specified in the `level.json` file is wrong.
 
 Check all three of them before uploading again.
 
 ::: danger
-
 Capitals or not will also mess up the problem. Make sure the path's names are exactly what the files are named. This is also why we recommend you only use lower-case letters for the file name. Also, **do not** use special characters.
 
 CytoidIO cannot detect if you also have the necessary resources for your **storyboard**. And because just missing an image will make the storyboard unplayable, **you really should double-check when you're uploading a storyboard chart that contains images (sprites).**
-
 :::
 
-### Unauthorized error
+### *Unauthorized* error
 
 ![Unauthorized](./_sources_upload.md/4.png){.side-img}
 
 It means your login time has expired. You can refresh the page, log in, and try again.
 
-### Missing required field(s) error
+### *Missing required field(s)* error
 
 ![Missing required field(s)](./_sources_upload.md/5.png){.side-img}
 
@@ -87,6 +85,6 @@ Finally, click the *PRIVATE* button, then the *Public* button, and click *SAVE* 
 
 ::: tip Information
 
-We used an art drew by [鵜飼沙樹](https://www.pixiv.net/users/48456) as an example background image for this article. Here's the link to the [art](https://www.pixiv.net/artworks/92258191).
+We used an art drawn by [鵜飼沙樹](https://www.pixiv.net/users/48456) as an example background image for this article. Here's the link to the [art](https://www.pixiv.net/artworks/92258191).
 
 :::
