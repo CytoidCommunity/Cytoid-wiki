@@ -117,5 +117,5 @@ If you need any help with any of the below, you may ask in the [Cytoid Discord S
 - Content such as sexual content, pornography, and imagery of “private” parts are disallowed. But some contents are acceptable **to a respectable degree**, including small amounts of partial nudity where “private” parts aren’t shown, or offensive language.
 
 ::: warning Notice from author
-This game is not osu!. Please respect the game by not calling levels or charts “beatmaps” or calling RT “PP”.
+This game is not osu!. Please respect the game by not calling levels or charts “beatmaps” or call RT “PP”.
 :::
