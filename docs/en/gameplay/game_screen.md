@@ -7,7 +7,6 @@ lang: en-US
 
 ## Selection screen
 
-<! ![Selection screen](_source_game_screen.md/select.png)>
 
 ### Leaderboard
 
@@ -31,7 +30,6 @@ Practice Mode
 : When *Practice Mode* is on, a more lenient timing windows will be used, however, scores won't be shown in the leaderboard.
 : A *Practice Mode* indicator will be shown while in playing screen.
 
-<! ![Practice Mode indicator](_source_game_screen.md/practice_play.png)>
 
 :::details Timing windows comparison
 |Judging grade   | Practice mode: Off | Practice mode: On  |
@@ -94,7 +92,6 @@ To pause the game, press the *Pause* button, this will be shown:
 
 ## Result screen
 
-<! ![Result screen](_source_game_screen.md/result.png)>
 
 The result screen shows: score, accuracy and playing statics. It also shows the selected character on the left.
 
