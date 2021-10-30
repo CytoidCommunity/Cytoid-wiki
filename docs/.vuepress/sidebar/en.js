@@ -74,7 +74,7 @@ module.exports = {
         collapsable: false,
         children: [
           'extras/charting-and-you',
-          'extra/c2-chart-format'
+          'extras/c2-chart-format'
         ]
       }
     ],
