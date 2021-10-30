@@ -68,21 +68,15 @@ database.
 
 ## Play screen
 
-![Play screen](_source_game_screen.md/play.png){.side-img .icon-img}
-
 ### Pausing the game
 
 To pause the game, press the *Pause* button, this will be shown:
-
-![Pause](_source_game_screen.md/pause.png){.side-img .icon-img}
 
 - Go back: return back to the *Selection* screen.
 - Retry: restart the game.
 - Resume: continue the game.
 
 ### Calibration Mode
-
-![Calibration Mode](_source_game_screen.md/calibration.png){.side-img}
 
 *Calibration Mode* is a special form of playing screen, allows players to adjust current level offset easily.
 
