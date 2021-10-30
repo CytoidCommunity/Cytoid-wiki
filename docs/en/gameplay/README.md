@@ -19,8 +19,11 @@ Please sign in before proceeding.
 :::
 
 1. Open Cytoid and go to *Community*.
+
 2. Find a level you like and click on it.
+
 3. Press *Download!* to download the level.
+
 4. Wait for it to finish and enjoy the level!
 
 ### Getting levels from CytoidIO
