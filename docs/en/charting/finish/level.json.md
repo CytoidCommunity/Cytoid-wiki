@@ -7,13 +7,13 @@ author: alxdre (Author), Melodion, KS62 (Editor)
 # Building a level.json file
 
 A level.json is a metadata file that stores crucial data of your levels. (e.g., the song’s title, the path to the background image, etc.)  
-Here are a few parameters that you might need to use in the level.json file before playing on Cytoid and sharing on the IO (:star2:).
+Here are a few parameters that you might need to use in the level.json file before playing on Cytoid and sharing on the IO (:star:).
 
 ## Parameters
 
 ### Schema version, level version, and level ID
 
-`schema_version` :star2:
+`schema_version` :star:
 : The level schema version.
 : Example:
 
@@ -25,14 +25,14 @@ Here are a few parameters that you might need to use in the level.json file befo
 To upload to CytoidIO, its value **must** be: `2`.
 :::
 
-`version` :star2:
+`version` :star:
 : Your level version, start with `1`. If you changed something in your chart, go up by 1.
 : Example:
 ```json
 "version": 2
 ```
 
-`id` :star2:
+`id` :star:
 : Your level's unique ID. Its value **must** be a string and **lowercased**.
 : Example:
 
@@ -48,7 +48,7 @@ We recommend you use your chart's unique ID as: `<your_name>.<song_name>`.
 
 #### Song title
 
-`title` :star2:
+`title` :star:
 : The song title in its original language.
 : Its value **must** be a string.
 : Example: 
@@ -62,7 +62,7 @@ We recommend you use your chart's unique ID as: `<your_name>.<song_name>`.
 
 #### Artist information
 
-`artist` :star2:
+`artist` :star:
 : The artist's name.
 : Its value **must** be a string.
 : Example:
@@ -79,7 +79,7 @@ With tracks from other video games, be sure to credit the game title if it doesn
 : The artist's localized name.
 : You only need to use this if the artist's name has is not in English.
 
-`artist_source` :star2:
+`artist_source` :star:
 : A **URL link** to the source of the music, artist's website (owner of the song), or even the game's website (that game **must** have the song file you charted).
 : Example:
 
@@ -89,7 +89,7 @@ With tracks from other video games, be sure to credit the game title if it doesn
 
 #### Illustrator information
 
-`illustrator` :star2:
+`illustrator` :star:
 : The illustrator's name.
 : Its value **must** be a string.
 : Example:
@@ -101,7 +101,7 @@ With tracks from other video games, be sure to credit the game title if it doesn
 Do not use "unknown" or something like that as the illustrator!
 :::
 
-`illustrator_source` :star2:
+`illustrator_source` :star:
 : A **URL link** to the source of the background image, artist's website (owner of the background image), or even the game's website (that game **must** have the background image you used).
 : Example:
 
@@ -111,7 +111,7 @@ Do not use "unknown" or something like that as the illustrator!
 
 #### Charter and storyboarder
 
-`charter` :star2:
+`charter` :star:
 : The charter's name.
 : Its value **must** be a string.
 : Eample:
@@ -131,7 +131,7 @@ Do not use "unknown" or something like that as the illustrator!
 
 #### Path to music, music preview, and background file
 
-`music` :star2:
+`music` :star:
 : Start with a curly bracket: `{`.
 : - **path**: The path to your music file. Its value **must** be a string.
 : Use another curly bracket: `}` to mark as the end of this parameter.
@@ -144,7 +144,7 @@ Do not use "unknown" or something like that as the illustrator!
 }
 ```
 
-`music_preview` :star2:
+`music_preview` :star:
 : Start with a curly bracket: `{`.
 : - **path**: The path to your music file. Its value **must** be a string.
 : Use another curly bracket: `}` to mark as the end of this parameter.
@@ -157,7 +157,7 @@ Do not use "unknown" or something like that as the illustrator!
 }
 ```
 
-`background` :star2:
+`background` :star:
 : Start with a curly bracket: `{`.
 : - **path**: The path to your image file, its value **must** be a string.
 : Use another curly bracket: `}` to mark the end of this parameter.
@@ -175,7 +175,7 @@ To create level difficulty(-ies), you need to use the **charts** parameter.
 
 First, start with a square bracket: `[`. Then, initialize a new difficulty with a curly bracket: `{`. Here you can use the following parameters:
 
-`type` :star2:
+`type` :star:
 : The difficulty type of the chart. Its value **must** be a string and classified as one of three here: `easy`, `hard`, and `extreme`.
 : E.g.: `"type": "extreme"`.
 
@@ -183,7 +183,7 @@ First, start with a square bracket: `[`. Then, initialize a new difficulty with 
 : The name of the current difficulty, its value **must** be a string.
 : E.g.: `"name": "Extra"`.
 
-`difficulty` :star2:
+`difficulty` :star:
 : The difficulty of the chart, its value **must** be an integer and rated from 0 to 16.
 : E.g.: `"difficulty": 13`.
 
@@ -191,7 +191,7 @@ First, start with a square bracket: `[`. Then, initialize a new difficulty with 
 Use `0` if the chart is a troll chart. `16` or higher will display as *15+* on Cytoid.
 :::
 
-`path` :star2:
+`path` :star:
 : The path to your chart in the current difficulty.
 : E.g.: `"path": "chart.easy.txt"`.
 
