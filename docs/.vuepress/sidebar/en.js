@@ -18,7 +18,7 @@ module.exports = {
         collapsable: false,
         children: [
           '',
-          'game_mode',
+          'mode',
           'game_screen',
           'note',
           'mods',
