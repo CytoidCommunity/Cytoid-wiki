@@ -18,9 +18,11 @@ module.exports = {
         collapsable: false,
         children: [
           '',
-          'installation',
-          'play',
-          'mods'
+          'game_mode',
+          'game_screen',
+          'note',
+          'mods',
+          'settings'
         ]
       }
     ],
@@ -31,8 +33,8 @@ module.exports = {
         collapsable: false,
         children: [
         '',
-        'abc',
-        'audio'
+        'audio',
+        'abc'
         ]
       },
       {
@@ -40,12 +42,12 @@ module.exports = {
         sidebarDepth: 3,
         collapsable: false,
         children: [
-          'tools/cylheim',
-          'tools/pctyx',
-          'tools/mobile',
-          'tools/cy2unity',
-          'tools/cyunity',
-          'tools/other'
+          'chart_editors/cylheim',
+          'chart_editors/pctyx',
+          'chart_editors/mobile',
+          'chart_editors/cy2unity',
+          'chart_editors/cyunity',
+          'chart_editors/other'
         ]
       },
       {
@@ -53,8 +55,8 @@ module.exports = {
         sidebarDepth: 3,
         collapsable: false,
         children: [
-          'cytoid/level.json',
-          'cytoid/packing'
+          'finish/level.json',
+          'finish/packing'
         ]
       },
       {
@@ -62,8 +64,8 @@ module.exports = {
         sidebarDepth: 3,
         collapsable: false,
         children: [
-          'cytoidio/rules',
-          'cytoidio/upload'
+          'sharing/rules',
+          'sharing/upload'
         ]
       },
       {
@@ -71,8 +73,8 @@ module.exports = {
         sidebarDepth: 3,
         collapsable: false,
         children: [
-          'charting-and-you',
-          'chart-json'
+          'extras/charting-and-you',
+          'extra/c2-chart-format'
         ]
       }
     ],

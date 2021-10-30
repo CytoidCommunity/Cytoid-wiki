@@ -14,11 +14,11 @@ lang: en-US
 
 ## What You Can Do
 
-Want to contribute to the wiki? 
+Want to contribute to the wiki?
 
 You can make suggestions on our github page, or check out [TigerHix's GitHub profile](https://github.com/tigerhix/) directly.
 
-~~Don't forget to ask Tiger about the dev progress while you're at it.jpg~~ 
+~~Don't forget to ask Tiger about the dev progress while you're at it.jpg~~
 
 > You can also donate on [Cytoid.io](https://cytoid.io).
 

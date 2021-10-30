@@ -6,7 +6,7 @@ finish: true
 
 # {{$frontmatter.title}}
 
-Modifiers (or mods) 
+Modifiers help players adjust gameplay experience based on their preference. Here is a list of modifiers.
 
 ## HP modifiers
 
