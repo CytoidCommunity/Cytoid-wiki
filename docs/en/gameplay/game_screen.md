@@ -39,6 +39,7 @@ Practice Mode
 | Good           | -200ms ~ 150ms     | -400ms ~ 200ms     |
 | Bad            | -400ms ~ 200ms     | -800ms ~ 300ms     |
 | Miss           | >200ms             | >300ms             |
+
 :::
 
 #### Modifiers
