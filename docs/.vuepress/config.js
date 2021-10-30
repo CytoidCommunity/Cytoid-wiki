@@ -118,6 +118,7 @@ module.exports = ctx => ({
         background: "#000000cc"
       }
     }],
+    ['image'],
     // ['@vuepress/google-analytics', {
     //   ga: 'UA-128189152-1'
     // }],
@@ -142,6 +143,7 @@ module.exports = ctx => ({
       md.use(require('markdown-it-katex'))
       md.use(require('markdown-it-attrs'))
       md.use(require('markdown-it-deflist'))
+      md.use(require('markdown-it-image-lazy-loading'))
     },
     lineNumbers: false
   }

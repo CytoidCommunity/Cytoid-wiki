@@ -1,4 +1,4 @@
-﻿---
+---
 title: Rules
 lang: en-US
 author: TheBombMan (Alan Liu)

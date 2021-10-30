@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "markdown-it-deflist": "^2.1.0"
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-image-lazy-loading": "^1.1.0",
+    "vuepress-plugin-image": "^1.0.4"
   }
 }

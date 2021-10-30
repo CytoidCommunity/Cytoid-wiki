@@ -11,13 +11,13 @@ Using VuePress
 Run the program:
 ```
 yarn install
-yarn docs:run
+yarn dev
 ```
 
 Build the site:
 ```
 yarn install
-yarn docs:build
+yarn build
 ```
 
 > Cytoid Wiki Team ©2020-2021. All rights reserved.
