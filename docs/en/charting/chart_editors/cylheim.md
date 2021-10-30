@@ -238,7 +238,7 @@ Follow the tips, fill in the metadata and chart, and finish!
 You can also include storyboard files and resources while packing.
 :::
 
-A more in-depth tutorial about packing is available [here](../cytoid/packing.md#packing-by-using-cylheim)
+A more in-depth tutorial about packing is available [here](../finish/packing.md#packing-by-using-cylheim)
 
 ## Video Tutorial (in Chinese, outdated)
 

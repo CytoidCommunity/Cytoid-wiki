@@ -2,7 +2,7 @@
 title: Charting with PCtyx
 lang: en-US
 prev: "../audio.html"
-next: "../cytoid/packing.md#packing-with-a-help-of-pctyx"
+next: "../finish/packing.md#packing-with-a-help-of-pctyx"
 ---
 
 # Charting with PCtyx
