@@ -55,7 +55,7 @@ module.exports = {
         sidebarDepth: 3,
         collapsable: false,
         children: [
-          'finish/level.json',
+          'finish/level-json',
           'finish/packing'
         ]
       },
