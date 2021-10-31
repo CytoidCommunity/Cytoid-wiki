@@ -11,7 +11,7 @@ You seem very proud of your chart! Now we'll learn how to upload and let people 
 You will need to check these to proceed:
 
 - A Cytoid ID (sign up [here](https://cytoid.io/session/signup) if you don't have one.)
-- A `.cytoidlevel` file (read [this article](../cytoid/packing.md) to learn how to make one.)
+- A `.cytoidlevel` file (read [this article](../finish/packing.md) to learn how to make one.)
 
 After checking, you can log in to [CytoidIO](https://cytoid.io/session/login) and go to [Studio](https://cytoid.io/studio/levels). You will see something like this:
 
