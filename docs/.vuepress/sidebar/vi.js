@@ -52,7 +52,7 @@ module.exports = {
       sidebarDepth: 3,
       collapsable: false,
       children: [
-        'cytoid/level.json',
+        'cytoid/level-json',
         'cytoid/packing'
       ]
     },
