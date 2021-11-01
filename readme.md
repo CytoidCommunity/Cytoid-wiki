@@ -4,7 +4,7 @@ This site is the community wiki of Cytoid built by TigerHix and Neo.
 
 Written by Discord Community and Localizers.
 
-> Here is New System for Cytoid WIKI.
+Found something wrong? We are waitting for your issues / pull request! 
 
 Using VuePress
 
