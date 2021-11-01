@@ -15,8 +15,8 @@ export default {
   methods: {},
   data() {
     return {
-      lang: /\/(.*?)\/(.*)/.exec(window.location.pathname)[1],
-      path: /\/(.*?)\/(.*)/.exec(window.location.pathname)[2],
+      lang: '',
+      path: '',
       existEngVer: false
     }
   },
@@ -37,6 +37,8 @@ export default {
     }
   },
   mounted() {
+    this.lang = /\/(.*?)\/(.*)/.exec(window.location.pathname)[1]
+    this.path = /\/(.*?)\/(.*)/.exec(window.location.pathname)[2]
     const supportLang = {
       zh: "zh",
       "zh-CN": "zh",
