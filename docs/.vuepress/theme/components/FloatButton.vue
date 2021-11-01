@@ -88,9 +88,6 @@ export default {
         }
       }
     })
-    // window.addEventListener('storage', (e) => {
-    //   this.updateDark()
-    // })
   }
 }
 </script>

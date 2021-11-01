@@ -45,7 +45,6 @@ module.exports = ctx => ({
         background: "#000000cc"
       }
     }],
-    ['image'],
     // ['container', {
     //   type: 'vue',
     //   before: '<pre class="vue-container"><code>',
@@ -67,7 +66,6 @@ module.exports = ctx => ({
       md.use(require('markdown-it-katex'))
       md.use(require('markdown-it-attrs'))
       md.use(require('markdown-it-deflist'))
-      md.use(require('markdown-it-image-lazy-loading'))
     },
     lineNumbers: false
   }
