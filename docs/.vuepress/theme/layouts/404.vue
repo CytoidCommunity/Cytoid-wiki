@@ -2,30 +2,43 @@
   <div class="theme-container">
     <div class="theme-default-content">
       <h1>404</h1>
-
       <blockquote id="fofmsg"></blockquote>
-
       <RouterLink id="fofbtn" to="/"> Take me home. </RouterLink>
-
-      <!-- <PageAutoLang /> -->
     </div>
     <script></script>
   </div>
 </template>
 
 <script>
-// import PageAutoLang from "@theme/components/PageAutoLang.vue"
-
-// const msgs = [
-//   `There's nothing here.`,
-//   `How did we get here?`,
-//   `That's a Four-Oh-Four.`,
-//   `Looks like we've got some broken links.`
-// ]
 
 export default {
   methods: {},
+  data() {
+    return {
+      lang: '',
+      path: '',
+      existEngVer: false
+    }
+  },
+  methods: {
+    async toEngVer() {
+      if (this.lang == 'en') return
+      console.log(this.lang, this.path)
+      await fetch(`/en/${this.path}`).then((response)=>{
+        if (response.ok) {
+          this.existEngVer = true
+        } else {
+          this.existEngVer = false
+        }
+      })
+      if (this.existEngVer) {
+        window.location.href = (`/en/${this.path}?fromLang=${this.lang}`)
+      }
+    }
+  },
   mounted() {
+    this.lang = /\/(.*?)\/(.*)/.exec(window.location.pathname)[1]
+    this.path = /\/(.*?)\/(.*)/.exec(window.location.pathname)[2]
     const supportLang = {
       zh: "zh",
       "zh-CN": "zh",
@@ -63,6 +76,7 @@ export default {
         multiBTN[supportLang[navigator.language]] || multiBTN["en"];
     }
     auto404Lang();
+    this.toEngVer()
   },
 };
 </script>
