@@ -122,6 +122,11 @@ export default {
 <style lang="stylus">
 @require '../styles/wrapper.styl';
 
+#main > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .page {
   padding-top $navbarHeight
   padding-bottom: 2rem;

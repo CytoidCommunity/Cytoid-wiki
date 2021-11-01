@@ -99,4 +99,9 @@ div.img-side p{
   text-align: center
 }
 
+.icon-img {
+  max-width: 100px;
+}
+
+
 </style>
