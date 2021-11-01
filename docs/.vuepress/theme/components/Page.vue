@@ -121,6 +121,7 @@ export default {
 
 <style lang="stylus">
 @require '../styles/wrapper.styl';
+@require '../styles/article.styl';
 
 #main > * {
   margin-top: 1rem;
