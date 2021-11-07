@@ -6,8 +6,16 @@ module.exports = {
         collapsable: false,
         children: [
           '',
-          'start',
-          '../about/wiki'
+          'start'
+        ]
+      },
+      {
+        title: "About",
+        sidebarDepth: 3,
+        collapsable: false,
+        children: [
+          '../about/wiki',
+          '../about/cytoid'
         ]
       }
     ],
@@ -117,6 +125,15 @@ module.exports = {
       }
     ],
     '/en/about/': [
+      {
+        title: "Overview",
+        sidebarDepth: 3,
+        collapsable: false,
+        children: [
+          '../overview/',
+          '../overview/start'
+        ]
+      },
       {
         title: "About",
         sidebarDepth: 3,

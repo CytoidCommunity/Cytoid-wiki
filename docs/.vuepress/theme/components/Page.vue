@@ -182,13 +182,13 @@ body.darkmode {
     }
   }
 
-  .not-finish {
+  .page-tip  {
     background-color: $indexBGDarkColor;
     border-color: darken($customBlocksWarnDarkColor, 35%);
     color: darken($customBlocksWarnDarkColor, 50%);
 
     strong {
-      color: $darken($customBlocksWarnDarkColor, 50%);
+      color: darken($customBlocksWarnDarkColor, 50%);
     }
   }
 }
