@@ -124,7 +124,7 @@ export default {
 @require '../styles/article.styl';
 
 #main > * {
-  margin-top: 1rem;
+  // margin-top: 1rem;
   margin-bottom: 1rem;
 }
 

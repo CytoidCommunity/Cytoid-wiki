@@ -23,7 +23,7 @@ Chart editor is a tool that helps you chart and finish quickly. A chart editor o
   - Cannot read C2 chart format properly
   - Auto-saving is not supported
 
-![A screenshot of PCtyx](./_source_abc.md/PCtyx.PNG)
+![A screenshot of PCtyx](./_source_abc.md/PCtyx.png)
 
 ### Cylheim
 
