@@ -44,6 +44,22 @@ module.exports = ctx => ({
       options: {
         background: "#000000cc"
       }
+    }], 
+    [
+      '@vuepress/last-updated'
+      // {
+      //   transformer: (timestamp, lang) => {
+      //     const moment = require('moment')
+      //     moment.locale(lang)
+      //     return moment(timestamp).toString()
+      //   }
+      // }
+    ],
+    ['sitemap', {
+      hostname: 'https://cytoid.wiki',
+      dateFormatter: val => {
+        return new Date().toISOString()
+      }
     }],
     // ['container', {
     //   type: 'vue',
