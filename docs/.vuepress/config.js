@@ -1,30 +1,10 @@
 const { fs, path } = require('@vuepress/shared-utils')
+const localesConfig = require('./locales')
 
 module.exports = ctx => ({
   evergreen: true,
   dest: './wiki-html',
-  locales: {
-    '/': {
-      lang: 'en-US',
-      title: 'Cytoid Wiki',
-      description: 'A wiki for Cytoid and powered by community.'
-    },
-    '/en/': {
-      lang: 'en-US',
-      title: 'Cytoid Wiki',
-      description: 'A wiki for Cytoid and powered by community.'
-    },
-    '/zh/': {
-      lang: 'zh-Hans',
-      title: 'Cytoid Wiki',
-      description: '社区驱动的 Cytoid Wiki.'
-    },
-    '/vi/': {
-      lang: 'vi',
-      title: 'Cytoid Wiki',
-      description: 'A wiki for Cytoid and powered by community.'
-    }
-  },
+  locales: localesConfig.locales,
   head: [
     ['link', { rel: 'icon', href: `/site-source/pic/cytoid-girl.png` }],
     ['link', { rel: 'stylesheet', href: '//cdn.jsdelivr.net/npm/katex@0.7.0/dist/katex.min.css' }],
@@ -52,60 +32,7 @@ module.exports = ctx => ({
     //   }
     // }) : null,
     smoothScroll: true,
-    locales: {
-      '/':{
-        label: 'Auto',
-        selectText: '',
-        ariaLabel: '',
-        editLinkText: '',
-        lastUpdated: ''
-      },
-      '/en/': {
-        label: 'English',
-        selectText: 'Languages',
-        ariaLabel: 'Select language',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Update',
-        author: 'Author',
-        notFinish: 'Hmm... Something went wrong? Please wait... We have not done yet :(',
-        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span>
-                  <span>Written by Discord Community and Localizers.</span>
-                  <span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
-                  `,
-        nav: require('./nav/en'),
-        sidebar: require('./sidebar/en')
-      },
-      '/zh/': {
-        label: '中文',
-        selectText: '语言',
-        ariaLabel: '选择语言',
-        editLinkText: '在 GitHub 上编辑',
-        lastUpdated: '上次编辑',
-        author: '作者',
-        notFinish: '还没做完, 再咕咕咕一会(',
-        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span>
-                  <span>Written by Discord Community and Localizers.</span>
-                  <span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
-                  `,
-        nav: require('./nav/zh'),
-        sidebar: require('./sidebar/zh')
-      },
-      '/vi/': {
-        label: 'Tiếng Việt',
-        selectText: 'Languages',
-        ariaLabel: 'Select language',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
-        author: 'Author',
-        notFinish: 'Under Construction',
-        footer:  `<span><a href="https://github.com/CytoidCommunity/Cytoid-wiki"><strong>Cytoid Wiki Team</strong></a> ©2020. All rights reserved.</span>
-                  <span>Written by Discord Community and Localizers.</span>
-                  <span>This site is the community wiki of <a href="https://cytoid.io/" class=""><strong>Cytoid</strong></a> built by <a href="https://cytoid.io/profile/tigerhix" class=""><strong>TigerHix</strong></a> and <a href="https://cytoid.io/profile/neo" class=""><strong>Neo</strong></a>.</span>
-                  `,
-        nav: require('./nav/vi'),
-        sidebar: require('./sidebar/vi')
-      }
-    }
+    locales: localesConfig.themeLocales,
   },
   plugins: [
     ['@vuepress/pwa', {
@@ -117,10 +44,23 @@ module.exports = ctx => ({
       options: {
         background: "#000000cc"
       }
+    }], 
+    [
+      '@vuepress/last-updated'
+      // {
+      //   transformer: (timestamp, lang) => {
+      //     const moment = require('moment')
+      //     moment.locale(lang)
+      //     return moment(timestamp).toString()
+      //   }
+      // }
+    ],
+    ['sitemap', {
+      hostname: 'https://cytoid.wiki',
+      dateFormatter: val => {
+        return new Date().toISOString()
+      }
     }],
-    // ['@vuepress/google-analytics', {
-    //   ga: 'UA-128189152-1'
-    // }],
     // ['container', {
     //   type: 'vue',
     //   before: '<pre class="vue-container"><code>',
@@ -141,6 +81,7 @@ module.exports = ctx => ({
     extendMarkdown: md => {
       md.use(require('markdown-it-katex'))
       md.use(require('markdown-it-attrs'))
+      md.use(require('markdown-it-deflist'))
     },
     lineNumbers: false
   }

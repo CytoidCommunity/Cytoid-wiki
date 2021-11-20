@@ -6,7 +6,7 @@ finish: true
 
 # {{$frontmatter.title}}
 
-Modifiers (or mods) 
+Modifiers help players adjust gameplay experience based on their preference. Here is a list of modifiers.
 
 ## HP modifiers
 
@@ -177,9 +177,3 @@ If you enabled any autoplaying modifiers, your score won't be saved (that means 
 > Autoplay the hold notes
 
 - The game will automatically hit Hold notes
-
-<style type="text/css">
-.icon-img {
-    max-width: 100px;
-}
-</style>

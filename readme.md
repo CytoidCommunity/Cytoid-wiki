@@ -4,20 +4,20 @@ This site is the community wiki of Cytoid built by TigerHix and Neo.
 
 Written by Discord Community and Localizers.
 
-> Here is New System for Cytoid WIKI.
+Found something wrong? We are waitting for your issues / pull request! 
 
 Using VuePress
 
 Run the program:
 ```
 yarn install
-yarn docs:run
+yarn dev
 ```
 
 Build the site:
 ```
 yarn install
-yarn docs:build
+yarn build
 ```
 
 > Cytoid Wiki Team ©2020-2021. All rights reserved.
