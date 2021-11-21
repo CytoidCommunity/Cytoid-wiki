@@ -6,8 +6,10 @@ lang: en-US
 # Charting with Cyunity
 
 ## User Interface
+
 ![](./_sources_cyunity.md/1.png)
-### 1. Project Operations
+
+### Project Operations
 - **New**: Start a new project.
 
 - **Open**: Opens an existing project.
@@ -21,7 +23,7 @@ lang: en-US
 - **Quit**: Quits Cytunity after confirmation.
 
 
-### 2. Info
+### Info
 ![](./_sources_cyunity.md/2.png)
 
 1. **Name**: The name of the song.
@@ -38,11 +40,11 @@ Cytunity will auto-generate save name based on Info Name, so you may want to fil
 
 Before you can even chart, you need a song file first. It's mandatory.
 
-Note:  
-**None of this info actually matters (aside from song and name for charting) because Cytoid uses its own meta file (level.json).**
+::: warning NOTICE  
+None of this info actually matters (aside from song and name for charting) because Cytoid uses its own meta file (level.json).
+:::
 
-
-### 3. Beat Map
+### Beat Map
 ![](./_sources_cyunity.md/3.png)
 
 1. BPM: The BPM, or primary BPM of the song you will chart. The icon next to the value is a tool that helps you find the BPM.
@@ -65,11 +67,11 @@ Note:
 
 10. Delete Beat Map: Deletes your chart.
 
-------
+
+### Settings
 
 ![Settings](./_sources_cyunity.md/4.png)
 
-### 4. Settings
 > We have a ton of stuff to cover so I won’t be explicit on each section unless it is needed
 
 1. **Stage**: Switch between Autoplay and Edit modes to see your chart better, Options with notes (will not affect Cytoid)
@@ -96,16 +98,14 @@ Note:
 
 ### Basic Notes (These are the basic notes in Cytus. There are some specific steps on the holds and Drag notes)
 
-1. Adjust hold note length: Drag the end of the hold note bar up or down.
+- Adjust hold note length: Drag the end of the hold note bar up or down.
 
-2. Add drag note to a drag note chain.
+- Add drag note to a drag note chain:
+  - First, place another drag note or copy paste 1 drag note.
+  - Move the first note of a chain (if there is only one note in the chain, just drag that note) to the end of the chain you want to extend.
+  - If a chain link icon appears when dragging the drag note over to the end of a drag note chain, release it and the notes will be linked.
 
-    1. First, place another drag note or copy paste 1 drag note.
+### Folders
 
-    2. Move the first note of a chain (if there is only one note in the chain, just drag that note) to the end of the chain you want to extend.
-
-    3. If a chain link icon appears when dragging the drag note over to the end of a drag note chain, release it and the notes will be linked.
-
-### 6. Folders:
 You can use this to save certain note patterns you like, or easy note templates.
 
