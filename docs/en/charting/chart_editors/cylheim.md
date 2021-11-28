@@ -135,7 +135,7 @@ Hold notes will turn into Long hold notes when it is cross-page.
 
 **Right-click and hold** on where the drag starts, move the cursor to where you want the Drag notes added, and **left-click**, you may continue holding **right-click** and repeat to add more drag notes.
 
-When you have done adding, release your **Right-click**.
+When you have done adding, release your **right-click**.
 
 ::: tip Tip: Connecting and Disconnecting drags
 Select the drag notes you want to connect and click the *Connect* button from the toolbar. Same do if disconnect, select the drag notes and click the *Disconnect* button.
@@ -150,7 +150,7 @@ Use the shortcut to switch between pages while holding **right-click** to make y
 :::
 
 ::: tip Tip: Adding Click-drag (C-Drag)
-While adding, hold **Shift** then **Left-click**, and the drag will become a C-Drag.
+While adding, hold **Shift** then **left-click**, and the drag will become a C-Drag.
 :::
 
 #### Scanline speed
@@ -215,7 +215,6 @@ Cylheim has a built-in chart player at the Playback window button on the toolbar
 Use recording software to record the video (you can try [OBS Studio](https://obsproject.com/download)).
 
 ::: tip Tips
-
 If you need to record with a low-end computer due to different reasons, we have the following ways to lower the lags:
 
 - Record with lower resolution
@@ -223,7 +222,6 @@ If you need to record with a low-end computer due to different reasons, we have 
 - Close all unused apps to save some CPU usage (Cylheim uses CPU resources for the playback window)
 
 If these tips aren't helpful, try using Xbox Game Bar or using another video recorder.
-
 :::
 
 ### Packing into a Cytoidlevel file

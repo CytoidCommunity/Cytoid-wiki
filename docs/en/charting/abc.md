@@ -11,20 +11,23 @@ Chart editor is a tool that helps you chart and finish quickly. A chart editor o
 
 ![A screenshot of PCtyx](./_source_abc.md/PCtyx.png){.side-img}
 
-- Platform: Windows, MacOS, Linux
+- Platform: Windows, macOS, Linux
 
 - Supported audio formats: WAV, OGG, and FLAC
 
 - Additional features:
+  
   - Cytoid level.json generator
   - Supports some note events (exporting only, v210 or higher)
 
 - Pros:
+  
   - Cross-platform
-  - Quite friendly UI
+  - Friendly UI
   - High performance
 
 - Cons:
+  
   - Slow file reading and exporting
   - Cannot read C2 chart format properly
   - Auto-saving is not supported
@@ -38,19 +41,22 @@ Chart editor is a tool that helps you chart and finish quickly. A chart editor o
 - Supported audio formats: WAV and OGG
 
 - Additional features:
+  
   - level.json and .cytoidlevel generator
   - Custom note hit sound
   - Page events
 
 - Pros:
+  
   - Fast file reading
   - Supports auto-saving
   - Friendly UI
 
 - Cons:
+  
   - Windows-only
   - Bad performance on old devices
-  - Some features are not supported by Cytoid, a converter is required
+  - Some features need the build-in converter to play as intended in Cytoid
 
 ### Cytoid Chart Edior
 
@@ -72,12 +78,14 @@ Chart editor is a tool that helps you chart and finish quickly. A chart editor o
 
 - Supported audio formats: WAV and OGG
 
-- Addtional features:
+- Additional features:
+  
   - Batch editing
 
 - Pros: Unknown
 
 - Cons:
+  
   - Windows-only
   - Laggy and buggy when your chart has more than 1000 notes
 
@@ -87,12 +95,13 @@ Chart editor is a tool that helps you chart and finish quickly. A chart editor o
 
 - Supported audio formats: WAV and OGG
 
-- Additional features: Waveform diaplaying
+- Additional features: Waveform displaying
 
 - Pros:
+  
   - Waveform displaying
   - Quite friendly UI
 
 - Cons:
+  
   - Lack of features in editing mode
-
