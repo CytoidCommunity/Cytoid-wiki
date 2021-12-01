@@ -35,7 +35,7 @@ You can play event charts, unlock event tier(s), and get character(s) in a limit
 
 > If you're just getting started and want to get better, this is the right place. Play the levels here first to get comfortable with Cytoid's gameplay.
 
-This mode allows you to play 15 levels, ranged from Lv. 1 to Lv. 15. You also can tap the character on the left (Kaede) to get advice depending on your current rating. A CytoidID is required.
+This mode allows you to play 15 levels, ranged from Lv. 1 to Lv. 15. You also can tap the character on the left (Kaede) to get advice depending on your current rating. A CytoidID is required to get advice from Kaede.
 
 ## Tiers
 

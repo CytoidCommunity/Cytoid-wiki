@@ -140,10 +140,10 @@ When Slow is enabled, notes will fade in earlier, i.e approach rate is lower.
 
 > All notes are hidden.
 
-## Autoplaying modifiers
+## Auto-playing modifiers
 
 ::: warning NOTICE!
-If you enabled any autoplaying modifiers, your score won't be saved (that means your score won't be submitted to CytoidIO and you won't gain any EXP or rating)
+If you enabled any auto-playing modifiers, your score won't be saved (that means your score won't be submitted to CytoidIO and you won't gain any EXP or rating)
 :::
 
 ### Auto

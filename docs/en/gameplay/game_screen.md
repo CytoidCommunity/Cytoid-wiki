@@ -76,7 +76,7 @@ To pause the game, press the *Pause* button, and the following will show up:
 
 ### Calibration Mode
 
-*Calibration Mode* is a special form of playing screen, allows players to adjust current level offset easily.
+*Calibration Mode* is a special form of play screen, allows players to adjust current level offset easily.
 
 - Autoplay: toggle auto-playing is on or off, helps players adjust the note offset easily.
 - Hit sound: enable/disable the hit sound during the calibration.
@@ -86,10 +86,10 @@ To pause the game, press the *Pause* button, and the following will show up:
 
 The result screen shows your score, accuracy, and playing statics. It also shows the selected character on the left.
 
-Players also can share by clicking *Share* on the bottom-left.
+Players also can share by clicking *Share* button.
 
 <style type="text/css">
 .icon-img {
-    max-width: 150px;
+    max-width: 128px;
 }
 </style>

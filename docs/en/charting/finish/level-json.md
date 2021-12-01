@@ -28,6 +28,7 @@ To upload to CytoidIO, its value **must** be: `2`.
 `version` :star:
 : Your level version, start with `1`. If you changed something in your chart, go up by 1.
 : Example:
+
 ```json
 "version": 2
 ```
@@ -36,7 +37,7 @@ To upload to CytoidIO, its value **must** be: `2`.
 : Your level's unique ID. Its value **must** be a string and **lowercased**.
 : Example:
 
-```json 
+```json
 "id": "abcde.testsong"
 ```
 
@@ -52,6 +53,7 @@ We recommend you use your chart's unique ID as: `<your_name>.<song_name>`.
 : The song title in its original language.
 : Its value **must** be a string.
 : Example: 
+
 ```json
 "title": "You are the Miserable"
 ```
@@ -93,6 +95,7 @@ With tracks from other video games, be sure to credit the game title if it doesn
 : The illustrator's name.
 : Its value **must** be a string.
 : Example:
+
 ```json
 "illustrator": "白祈QSR"
 ```
@@ -115,6 +118,7 @@ Do not use "unknown" or something like that as the illustrator!
 : The charter's name.
 : Its value **must** be a string.
 : Eample:
+
 ```json
 "charter": "abcde"
 ```
@@ -123,6 +127,7 @@ Do not use "unknown" or something like that as the illustrator!
 : The storyboarder's name.
 : Its value **must** be a string, and you only need to use this if your level has a storyboard.  
 : E.g.:
+
 ```json
 "storyboarder": "fghij"
 ```
@@ -284,7 +289,8 @@ You may copy this template and fill in the blank values with information relevan
 
 ### Generating a level.json with PCtyx
 
-In the PCtyx menu, click *Cytoid Settings*. Then, type what it tells you to do and select the chart files.  
+In the PCtyx menu, click *Cytoid Settings*. Then, type what it tells you to do and select the chart files.
+
 Now, click *Create level.json* and save the level.json file to wherever you want.
 
 ![PCtyx level.json generator](./_sources_level.json.md/pctyx.jpg)
@@ -301,7 +307,7 @@ After finishing a chart in Cylheim, click the top-left button and look down, the
 
 Type what it tells you to do and click on the *Charts* tab after doing so.
 
-In the *Charts* tab, Click on *Add chart info*. Then select a chart file and change the difficulty from the slider.  
+In the *Charts* tab, Click on *Add chart info*. Then select a chart file and change the difficulty from the slider.
 You can Click on *Add chart info* again to add more difficulties.
 
 ![Charts](./_sources_level.json.md/cyl2.png)
