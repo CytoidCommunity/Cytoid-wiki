@@ -6,7 +6,7 @@ lang: en-US
 
 ## Basic information
 
-- Octopus Tournament was an official event organized by Cytoid's Discord server. It had been held for **157** times.
+- Octopus Tournament was an official event organized by Cytoid's Discord server. It has been held for 157 times.
 
 - Status: Discontinued
 

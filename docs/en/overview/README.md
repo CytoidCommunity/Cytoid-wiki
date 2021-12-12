@@ -29,8 +29,7 @@ You can support Cytoid by donating on Patreon.
 
 ## Cytoid wiki
 
-Cytoid wiki is an one-stop shop which helps you looking for information related to Cytoid easier. We are currently providing articles about Cytoid [Cytoid gameplay](/en/gameplay/), [charting](/en/charting/), [storyboarding](/en/storyboard/), and [official and community events](/en/events/).
-Cytoid wiki is an one-stop shop which helps you looking for information related to Cytoid easier. We are currently providing articles about [Cytoid gameplay](/en/gameplay/), [charting](/en/charting/), [storyboarding](/en/storyboard/), and [official and community events](/en/events/).
+Cytoid wiki is an one-stop shop which helps you looking for information related to Cytoid easier. We are currently providing articles about Cytoid, [Cytoid gameplay](/en/gameplay/), [charting](/en/charting/), [storyboarding](/en/storyboard/), and [official and community events](/en/events/).
 
 ## Support this wiki!
 

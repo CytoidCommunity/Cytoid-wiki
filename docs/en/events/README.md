@@ -12,7 +12,7 @@ lang: en-US
 
 #### Information
 
-- **Event duration**: from `2021/11/01` to `-`
+- **Event duration**: from `2021/11/01`
 - **Artists in this event**: きくお (Kikuo), BilliumMoto, N.H.I, shadow_bling, V0iD, rareguy, Kribskrabs, 816ThreeNumber, and 7aVArc_x
 - **Main illustrator**: 抑制意识
 
@@ -24,36 +24,36 @@ lang: en-US
 
 ::: details Levels in this event
 
-- N.H.I – Fallen Angel ~ the polychromatic mandrake ~
+- **N.H.I** – **Fallen Angel ~ the polychromatic mandrake ~**
   - **Charter**: triquinacene
   - **Difficulty**: <CtdDiff type="easy" diff="2"/><CtdDiff type="hard" diff="8"/><CtdDiff type="ex" diff="14"/>
-- BilliumMoto – Behind Stoic
+- **BilliumMoto** – **Behind Stoic**
   - **Charter**: helamind_cw
   - **Difficulty**: <CtdDiff type="easy" diff="3"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="11"/>
-- shadow_bling – **Gray Memories
+- **shadow_bling** – **Gray Memories**
   - **Charter**: thebombman
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="9"/><CtdDiff type="ex" diff="15"/>
-- Kikuko – 愛を探して (Searching for your love)
+- **Kikuo** – **愛を探して (Searching for your love)**
   - **Charter**: yyao and helamind_cw
   - **Storyboarder**: helamind_cw
   - **Difficulty**: <CtdDiff type="easy" diff="2"/><CtdDiff type="hard" diff="6"/><CtdDiff type="ex" diff="12"/>
-- V0iD – Alternative Destination
+- **V0iD** – **Alternative Destination**
   - **Charter**: bc_
   - **Storyboarder**: bc_
   - **Difficulty**: <CtdDiff type="easy" diff="5"/><CtdDiff type="hard" diff="12"/><CtdDiff type="ex" diff="15"/>
-- 816ThreeNumbers – Hidden Identity
+- **816ThreeNumber** – **Hidden Identity**
   - **Charter**: yyao
   - **Difficulty**: <CtdDiff type="easy" diff="1"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="13"/>
-- rareguy & Kribskrabs – Bluebell Dystopia
+- **rareguy & Kribskrabs** – **Bluebell Dystopia**
   - **Charter**: fwappy
   - **Difficulty**: <CtdDiff type="easy" diff="5"/><CtdDiff type="hard" diff="10"/><CtdDiff type="ex" diff="15+"/>
-- V0iD – DNA яєѕуη¢няσηιzαтιση
+- **V0iD** – **DNA яєѕуη¢няσηιzαтιση**
   - **Charter**: he2o3 and ptb10
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="14"/><CtdDiff type="ex" diff="15"/>
-- 7aVArc_x – Continued
+- **7aVArc_x** – **Continued**
   - **Charter**: yyao
   - **Difficulty**: <CtdDiff type="easy" diff="6"/><CtdDiff type="hard" diff="6"/><CtdDiff type="ex" diff="15"/>
-- shadow_bling – Figure
+- **shadow_bling** – **Figure**
   - **Charter**: helamind_cw
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="8"/><CtdDiff type="ex" diff="15+"/>
 
@@ -72,12 +72,7 @@ lang: en-US
   - Obtain 97.5%+ accuracy 5 times or 98.5+% accuracy once on Hard or EX difficulty of *Gray Memories*.
   - Obtain 98.5%+ accuracy 5 times or 99+% accuracy once on Hard or EX difficulty of *愛を探して*.
 
-
 - **Kuro: Tier 1**: Obtain D or higher on *Alternative Destination*, *Hidden Identity*, and *Bluebell Dystopia*.
-- **Kuro: Tier 2**:
-  - Obtain 96.5%+ accuracy 5 times or 98+% accuracy once on Hard or EX difficulty of *Alternative Destination*.
-  - Obtain 97%+ accuracy 5 times or 98.5+% accuracy once on Hard or EX difficulty of *Hidden Identity*.
-  - Obtain 96%+ accuracy 5 times or 97.5+% accuracy once on Hard or EX difficulty of *Bluebell Dystopia*.
 - **Kuro: Tier 2**:
   - Obtain 96.5%+ accuracy 5 times or 98+% accuracy once on Hard or EX difficulty of *Alternative Destination*.
   - Obtain 97%+ accuracy 5 times or 98.5+% accuracy once on Hard or EX difficulty of *Hidden Identity*.
@@ -86,7 +81,6 @@ lang: en-US
   - Obtain 99%+ accuracy 5 times or 99.5+% accuracy once on Hard or EX difficulty of *Alternative Destination*.
   - Obtain 99%+ accuracy 5 times or 99.5+% accuracy once on Hard or EX difficulty of *Hidden Identity*.
   - Obtain 98.5%+ accuracy 5 times or 99+% accuracy once on Hard or EX difficulty of *Bluebell Dystopia*.
-
 
 - **Shiro: Tier 1**: Obtain D or higher on *DNA яєѕуη¢няσηιzαтιση*, *Continued*, and *Figure*.
 - **Shiro: Tier 2**:
@@ -104,11 +98,11 @@ lang: en-US
 
 - There are 10 levels in this event, being the event with the highest level count.
 
-- The lyrics of 愛を探して changes based on the current game language: English, Chinese (Traditional), and Chinese (Simplified).
+- While not being a character of the event, Hanchō was introduced in the *CHARACTER AWAKENING* of the event information page, alongside Threose.
 
-- In the *CHARACTER AWAKENING* of the event information, there are 2 characters introduced, Threose and Hanchō, however, Hanchō is not a character of this event.
+- The event information page will recommend the player to use the *VIEW OBJECTIVES* button for tier criteria viewing if they opened the website in-game. However, visiting the event information page in cytoid.io will show them like previous events.
 
-- If players see the event information in the game, the website will suggest players seeing tier criteria by clicking the *VIEW OBJETCIVES* button in the game. But if players see the event information on the CytoidIO, the tier criteria will still display like previous events.
+## Previous Events
 
 ### Cytoid Xmas 2020
 
@@ -123,13 +117,11 @@ lang: en-US
 
 ::: details Level in this event
 
-- Punjidixie - Snow Candy
+- **Punjidixie** – **Snow Candy**
   - **Charter**: LAPID-20
   - **Difficulty**: <CtdDiff type="easy" diff="3"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="11"/>
 
 :::
-
-## Previous Events
 
 ### Signal Interference
 
@@ -145,17 +137,17 @@ lang: en-US
 
 ::: details Level in this event
 
-- PTB10 - Interference: Finale
+- **PTB10** – **Interference: Finale**
   - **Charter**: lumixanth, ptb10 and suconhh
   - **Storyboarder**: wandererzariq and tigerhix
   - **Difficulty**: <CtdDiff type="easy" diff="10"/><CtdDiff type="hard" diff="14"/><CtdDiff type="ex" diff="15+"/>
-- nm-γ - Hex Tiamat
+- **nm-γ** – **Hex Tiamat**
   - **Charter**: geswat001122 and thebombman
   - **Difficulty**: <CtdDiff type="easy" diff="6"/><CtdDiff type="hard" diff="13"/><CtdDiff type="ex" diff="15"/>
-- rareguy - Mechanted
+- **rareguy** – **Mechanted**
   - **Charter**: Triquinacene
   - **Difficulty**: <CtdDiff type="easy" diff="3"/><CtdDiff type="hard" diff="7"/><CtdDiff type="ex" diff="13"/>
-- Helblinde - Omnia Vanitas
+- **Helblinde** – **Omnia Vanitas**
   - **Charter**: wandererzariq
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="8"/><CtdDiff type="ex" diff="13"/>
 
@@ -166,7 +158,7 @@ lang: en-US
 - **Tier 1**: Obtain grade of D or higher on Easy, Hard or EX difficulty of *Interference: Finale*, *Hex Tiamat*, *Mechanted*, *Omnia Vanitas*.
 - **Tier 2**: Obtain 95% accuracy or higher on Hard or EX difficulty of *Interference: Finale*, *Hex Tiamat*, *Mechanted*, *Omnia Vanitas*.
 - **Tier 3**:
-  - With HYPER mod, obtain 99% accuracy or higher on EX difficulty of *Hex Tiamat**, *Mechanted*, *Omnia Vanitas* and Hard difficulty of *Interference: Finale*
+  - With HYPER mod, obtain 99% accuracy or higher on EX difficulty of *Hex Tiamat*, *Mechanted*, *Omnia Vanitas* and Hard difficulty of *Interference: Finale*
   - In addition, obtain 93% accuracy or higher on EX difficulty of *Interference: Finale* (HYPER modifier is not necessary)
 
 :::
@@ -185,13 +177,13 @@ lang: en-US
 
 ::: details Level in this event
 
-- MYUKKE. - Ginevra
+- **MYUKKE.** – **Ginevra**
   - **Charter**: Helamind_CW and he2o3
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="8"/><CtdDiff type="ex" diff="12"/>
-- N.H.I - DhAneLLeis
+- **N.H.I** – **DhAneLLeis**
   - **Charter**: Triquinacene
   - **Difficulty**: <CtdDiff type="easy" diff="4"/><CtdDiff type="hard" diff="10"/><CtdDiff type="ex" diff="15"/>
-- cosMo@暴走P - Hopeful Restart
+- **cosMo@暴走P** – **Hopeful Restart**
   - **Charter**: ECIC1 and geswat001122
   - **Difficulty**: <CtdDiff type="easy" diff="8"/><CtdDiff type="hard" diff="13"/><CtdDiff type="ex" diff="15+"/>
 
@@ -208,15 +200,15 @@ lang: en-US
 <!-- Example
 
 ### Event name
-#### Information:
+#### Information
 - **Event duration**: from `YYYY/MM/DD` to `YYYY/MM/DD`
 - **Artists in this event**:
 
-#### Rewards:
+#### Rewards
 - **New character**: Character_Name
 
 ::: details Level in this event
-- Artist - Song_Name (Alt_Song_Name)
+- **Artist** – **Song_Name (Alt_Song_Name)**
   - **Charter**:
   - **Storyboarder**:
   - **Difficulty**: <CtdDiff type="easy" diff=""/><CtdDiff type="hard" diff=""/><CtdDiff type="ex" diff=""/>
