@@ -25,7 +25,7 @@ finish: true
 
 ![C-Drag](./_source_note.md/c-drag.gif){.side-img}
 
-- This is a "hybrid note" of Click and Drag.
+- This is a "hybrid" of Click and Drag.
 - Its "drag head" has click note's mechanics.
 - That means you have to touch when the scanner reaches it, then slide your finger along the line with connecting notes.
 

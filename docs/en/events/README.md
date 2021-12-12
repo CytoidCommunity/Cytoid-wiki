@@ -100,7 +100,7 @@ lang: en-US
 
 - While not being a character of the event, Hanchō was introduced in the *CHARACTER AWAKENING* of the event information page, alongside Threose.
 
-- The event information page will recommend the player to use the *VIEW OBJECTIVES* button for tier criteria viewing if they opened the website in-game. However, visiting the event information page in cytoid.io will show them like previous events.
+- The event information page will recommend the player to use the *VIEW OBJECTIVES* button for tier criteria viewing if they opened the website in-game. However, visiting the event information page on CytoidIO will show them like previous events.
 
 ## Previous Events
 
