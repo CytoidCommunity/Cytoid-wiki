@@ -17,12 +17,12 @@ lang: en-US
 
 - Cytoid Relay! is an event organized by Jytoid members.
 - Started date: 2020/07/01
-- Status: Unknown
+- Status: Scheduled
 - Official Twitter: [https://twitter.com/cytoidr](https://twitter.com/cytoidr)
 
 ## 国盗り合戦
 
 - 国盗り合戦 (Kunitori Battle) is an event organized by Jytoid members.
 - Started date: 2021/9/11
-- Status: Ongoing
+- Status: Finished
 - Official Twitter: [https://twitter.com/cytoidr](https://twitter.com/cytoidr)
