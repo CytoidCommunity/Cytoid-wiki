@@ -15,7 +15,7 @@ module.exports = {
         collapsable: false,
         children: [
           '../about/wiki',
-          '../about/cytoid'
+          '../about/cytoid_release_note'
         ]
       }
     ],
