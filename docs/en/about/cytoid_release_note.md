@@ -5,7 +5,7 @@ lang: en-US
 # Cytoid release note
 
 ::: warning NOTICE!
-The release date of these following notes may be not accurate (totally copied from Apple App Store). The headers are sorted by newer to older version.
+The headers are sorted by newer to older version.
 :::
 
 ## 2.x.x
@@ -42,7 +42,7 @@ The release date of these following notes may be not accurate (totally copied fr
   - The in-game UI has been overhauled.
   - Players can download level in-game instead of having to access to CytoidIO.
   - Introduced new game modes: Event, Tiers, and Training.
-  - Supports up to 14 languages
+  - Supports up to 14 languages.
 
 ## 1.x.x
 
