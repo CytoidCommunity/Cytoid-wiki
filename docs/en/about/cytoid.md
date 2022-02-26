@@ -2,6 +2,55 @@
 title: Cytoid release note
 lang: en-US
 ---
+
+# Cytoid
+
+Cytoid is a free, open-source and community-driven rhythm game made by TigerHix and Neo.
+
+<v-card>
+  <v-card-title>Cytoid</v-card-title>
+  <v-card-subtitle>
+    Let's shape the music<br>
+    world together!
+  <v-card-subtitle>
+  <v-card-text>
+    <p>Original author(s)</p>
+    <div class="text--primary">
+    TigerHix
+    </div>
+    <p>Developer</p>
+    <div class="text--primary">
+    TigerHix
+    </div>
+    <p>Latest release</p>
+    <div class="text--primary">
+      2.1.1 / 2021/11/03 (Android),<br>
+      2021/11/04 (iOS)
+    </div>
+    <p>Initial release</p>
+    <div class="text--primary">
+      iOS: 2017/08/14<br>
+      Android: 2017/08/17
+    </div>
+    <p>Repository</p>
+    <div class="text--primary">
+      https://github.com/Cytoid/Cytoid
+    </div>
+    <p>Game engine</p>
+    <div class="text--primary">
+      Unity
+    </div>
+    <p>License</p>
+    <div class="text--primary">
+      GPL (2.0.0 onwards)<br>
+      MIT (before 2.0.0)
+    <p>Website</p>
+    <div class="text--primary">
+      https://cytoid.io
+    </div>
+  </v-card-text>
+</v-card>
+
 # Cytoid release note
 
 ::: warning NOTICE!
@@ -72,7 +121,7 @@ The headers are sorted by newer to older version.
 
 - **Release date**: 2018/08/01 (Android, iOS)
 - **New features**:
-  - New built-in song: *Ecstatic*.
+  - New built-in song: "Ecstatic".
   - Added support for C2 chart format.
   - Introduced modifiers.
   - Added in-game online functions.
@@ -142,6 +191,6 @@ The headers are sorted by newer to older version.
 
 ### 1.0
 
-- **Release date**: 2017/08/14 (iOS), 2017/08/17 (Android)
+- **Release date**: 2017/08/17 (Android), 2017/08/14 (iOS)
 - **New features**:
   - Initial release
