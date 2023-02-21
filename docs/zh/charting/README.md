@@ -1,34 +1,40 @@
 ---
-title: Start Charting
+title: 开始谱面制作
 lang: zh-Hans
+next: "./audio.md"
 ---
 
-# Start Charting
+# 开始谱面制作
 
-Welcome to the world of charting fanmade Cytus/Cytoid Charts! To get started, you need the following things:
+欢迎来到本维基的制谱部分，我们将帮助你了解谱面的基本知识和制作谱面可能需要的软件（及工具）。
 
-A charting program. For now, we have Cytunity and PCTyx to use. (Windows only. If you have a Mac or Linux, look for options that allow you to run these programs)
+## 一些定义
 
-A song file. Cytunity accepts .wav or .ogg formats, while PCTyx accepts .mp3, .m4a, or .ogg formats.
+什么是谱面？
+: 在 Cytoid 中，一张谱面对应一个难度级别。但在制谱标准中，谱面是一个文件，它包含了单个难度中关于时间和音符位置的数据。
 
-You can use Audacity (A free application) to convert song files to the right formats if needed (and even cut/add extra space). Link
+什么是制谱？
+: 简单来说，就是进行谱面的制作。
 
-If you need to convert to .mp3 format, see here
+谁是“谱师”？
+: 你会在关卡信息中看到它，可以很容易猜到，谱师就是谱面的制作者（或关卡制作者）。
 
-A background picture to use. Make sure it is reasonably good quality/size and either in 16:9 or 4:3 ratio. Cytunity only takes .png, while PCTyx takes both .jpg or .png formats. It is recommended that you write down or save the link from where you got it, because you will need to include the link to the image and the artist's name in the level.json.
+## 如何制作谱面？
 
-A level.json.
+有两种方法来制作谱面：使用谱面编辑器和使用文本编辑器。谱面编辑器经常被使用，因为它们可能会节省时间并获得更好的结果。
 
-The Next Step
-Things you need to know: 
+然而，在使用文本编辑器时，你可以做更多的功能，比如 [Luna Flina 的“Galaxy Collapse”](https://cytoid.io/levels/flina.touhou.collapse)（实际上它并不是完全用文本编辑器做的，只是隐藏扫描线部分）。
 
-Cytunity's support for Cytoid is limited. This is because Cytunity does not support flicks, Long Holds and BPM changes.
+**使用谱面编辑器制作谱面需要什么？**
+- 谱面编辑器。
+- 音频编辑器（用来加空白），如果不知道该用什么，试试 [Audacity](https://www.audacityteam.org)。
+- 一些制谱知识和规则，请看[这里](./charting-and-you)。
 
-PCTyx is more modern in terms of charting support, although less intuitive when you start it. It's recommended to start using PCTyx if you want to have all the of the charting features available to you.
+**使用文字编辑器制作谱面需要什么？**
+- 文本编辑器，如 Notepad。
+- 音频编辑器（用来加空白），如果不知道该用什么，试试 [Audacity](https://www.audacityteam.org)。
+- 一些制谱知识和规则，请看[这里](./charting-and-you)。
 
-If you decided to use Cytunity go here.
+最重要的是，你需要知道并理解 Cytoid 支持的谱面格式。
 
-If you decided to use PCTyx go here.
-
-If you have finished a chart, go here.
-
+就这些了！接下来，你将学习到如何编辑音频文件，点击“下一步”继续学习吧！
