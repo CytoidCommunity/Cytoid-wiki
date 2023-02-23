@@ -1,7 +1,6 @@
 ---
 title: 开始谱面制作
 lang: zh-Hans
-next: "./audio.md"
 ---
 
 # 开始谱面制作
