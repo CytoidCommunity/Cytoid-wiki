@@ -84,6 +84,8 @@ finish: true
             就是这样! 我们委托 Cytoid 计算 `stageY:600` 的实际长度, 并将这个实际长度转换为 `stageX` 的值. 无论实际长度是多少, sprite 总是被渲染成一个正方形.
 
     - 最后, 您不太可能需要转换深度(Z 轴)坐标, 因为这没有数学意义. 但是您随时可以尝试! 😇
+	
+> 谱师批注：由于note坐标系和stage坐标系在Cytoid2.0以后的版本中中心点不重合，当你尝试将一个spirte对象坐标系转为note坐标系后移动camera会导致奇怪的偏移使该sprite对象与同位置原本重合的note发生错位。遇到此问题建议使用parent_id（详见下文）
 
 ## 基本对象
 
@@ -142,10 +144,17 @@ finish: true
 
     - 还有另外一种用法: 简化复杂状态. 假如您要将一个text的状态进行如下修改: `t=0` 到 `t=5` 执行位移, 并在 `t=2.5` 到 `t=7.5` 修改透明度, 以前您需要手动计算四个关键帧的状态. 
     - 请注意, target_id 所指对象必须与其属于同一种对象. 例如, 您不能将 sprite 的 target_id 设置为 text 的 id.
+
+> 谱师批注：目前Cytoid2.1.1及以前版本target_id均无法正常使用，系Bug导致，如果想创建双轴或多轴动画请自行写脚本
+
 - 🌟 **parent_id**: *仅适用于 texts和 sprites.* 当 `parent_id` 设置为某个其他对象的 ID 时, 前者成为后者的子对象, 子对象的坐标系将会以父对象为原点(参考系), 即子对象将会跟随父对象进行运动. 支持使用 `$note` 占位符 (详情请参阅 note 控制器部分).
     - 例如, 您可以设置 sprite A 的 parent_id 为 sprite B 的id, 这样就能让 sprite A 跟随 sprite B 移动. sprite A 的任何运动都以 sprite B 的坐标为原点.
     - 另一个有趣的实验是将 sprite 的 parent_id 设置为一个 note controller 的 id. 由于 note controller 的位置为 note 的实际位置, 因此这个 sprite 会跟随 note 移动.
         - *但是, 您还不能用它创建自定义 note 皮肤.* 更多详情请见 "note controller" 部分.
+
+> 谱师批注1：请注意sprite对象和text对象之间无法互相成为父子对象
+谱师批注2：parent_id会继承父对象几乎所有的状态，包括opacity等属性
+
 - **time**: 该对象的基准时间, 以秒为单位. 要注意的是, 这个时间可能不等于实际时间, 请阅读下文查看计算对象确切时间的方法.
     - **如果一个场景对象 *(例如 text 和 sprite)* 没有设置 `time`, 这个场景对象将不会被启用, 除非这个场景对象被 trigger 启用.** *~~可是trigger被删了~~*
     - 如果值为以下格式之一, 则将自动进行替换. 请注意引号是必需的. `<Note ID>` 支持以 `$note` 在 note_controller中表示当前note (详情请见 note controller 部分).
@@ -259,6 +268,8 @@ finish: true
         	],
         ...
         ```
+		
+> 谱师批注：不建议在制作故事板过程中添加destroy选项以免发生摧毁后倒回谱面无法正常生成的问题，请在彻底完成谱面制作后添加destroy选项或时不时reload all
 
 - **states**: 存储对象额外状态的列表.
     - 您可以在列表内再次定义状态, 该状态将被附加到父对象. 例如:
@@ -355,6 +366,9 @@ finish: true
 #### Text 对象状态
 
 - **text**: 要显示的文本. 请注意, text中的文字支持 [富文本](https://docs.unity3d.com/Manual/StyledText.html), 但是只支持 **bold(加粗)**, *italic(倾斜)*, <font size=5>inline size(字体大小)</font>, <font color=red>inline color(字体颜色)</font>.
+
+> 谱师批注：在富文本中这四种字体效果无法叠加，如需叠加请优先使用斜体并修改font_weight，color，size
+
 - **color**: 字体颜色, 使用十六进制颜色 (例如 "#fff" 或 "#4568dc"). 默认值为 `"#fff"` (白色).
 - **size**: 字体大小, 默认值为 `20`.
     - 要设置字体大小改变的动画, 请使用 `scale` 设置这种动画. 而不是使用 `size` 设置, `size` 只能为整数并且将消耗大量运行资源(可能造成卡顿).
@@ -383,6 +397,9 @@ finish: true
         - **x**: 顶点的 X 坐标. 默认坐标系为 `noteX`.
         - **y**: 顶点的 Y 坐标. 默认坐标系为 `noteY`.
         - **z**: 顶点的 Z 坐标. 默认坐标系为 `noteZ`.
+
+> 谱师批注：Line对象的**所有states状态**中都必须添加pos，**即使pos没有改变**，这是已知Bug
+
 - **width**: 线段的宽度. 默认为`0.05`.
 - **color**: 线段的颜色, 使用十六进制颜色. 默认为`"#fff"` (白色).
 - 使用两个 line 对象建立三角形的示例:
@@ -462,6 +479,9 @@ finish: true
         ```
 
     - 注意: 如果没有设置任何颜色 (或者都设置为 `null`), 会使用用户设置的颜色.
+
+> 谱师批注：目前为止，所有Cytoid2.0及以后的版本均无法使用null作为note颜色，系Bug导致
+
 - **override_scanline_pos**: 如果为 `true`, 则允许覆盖扫描线的Y坐标, 参见 `scanline_pos`. 默认为`false`.
 - **scanline_pos**: 覆盖扫描线的y坐标. 默认情况下, 最小值为 `0`, 最大值为 `1`, 但允许越界. 默认坐标系为 `noteY`.(如果`override_scanline_pos`的值不为true, 则不生效)
 - **perspective**: 如果为 `true`, 则使用perspective camera(透视相机, 用于渲染3D场景); 如果为 `false`, 则使用 orthographic camera (正交相机, 用于渲染2D场景). 默认为`true`.
@@ -484,6 +504,8 @@ finish: true
 
 - **bloom**: 开启 bloom(泛光) 滤镜. 默认为`false`.
     - **bloom_intensity**: 范围从 `0` 到 `5`.
+
+> 谱师批注：请注意，将bloom_intensity调至0不等同于关闭bloom特效，但其他滤镜子选项（如chromatical_fade、gray_scale_intensity等）全部调至0后效果几乎等同于关闭所属特效。换句话说，bloom滤镜是唯一一个无法丝滑地开启和关闭的滤镜
 
 - **radial_blur**: 开启 blur(模糊) 滤镜, `true` 或 `false`. 默认为`false`.
     - **radial_blur_intensity**: 范围从 `-0.5` 到 `0.5`. 默认为`0.025`.
@@ -530,6 +552,22 @@ finish: true
     - **arcade_contrast**: 范围从 `0` 到 `10`. 默认为`1`.
 
 - **tape**: 开启 the tape (screen flipping) 滤镜.
+
+> 谱师批注：滤镜记忆表：
+chromatical：色散，紧张气氛，效果不太明显
+bloom：~~daisuke~~ 亮瞎眼
+radial_blur：视野模糊
+color_adjustment：ps，一般调亮度和饱和度，用在drop段
+color_filter：透明染色玻璃
+gray_scale：变灰
+noise：电视雪花屏
+sepia：红温了
+dream：嗑魔法邮票了/潜水了
+fisheye：0.0 （用处不大）
+shockwave：duang~
+focus：卡其脱离太！！！！！！！！！
+glitch：发生错误，信号干扰
+arcade：老式电视机、街机屏幕
 
 - 🌟 **在Cytoid 2.0.0 中被移除.** ~~**vignette**: boolean to toggle the vignette effect. 默认为`false`.~~
     - ~~**vignette_intensity**: the intensity of the vignette effect. 范围从 `0` 到 `1`.~~
@@ -826,7 +864,7 @@ finish: true
         		{
         			"note": {},
         			"id": "note_controller_$note",
-        			"time": 0,
+        			"time": 0,//谱师批注：该处代码有误，应为"time": "intro:$note"
         			"opacity_multiplier": 0
         		} // 为每个 note 创建一个 note 控制器，每个 note 都有不同的 ID，并使该 note 不可见
         	],
@@ -853,9 +891,12 @@ finish: true
         }
         ```
 
-        不幸的是, 这一切有些理想化. 如果您过早的点击了 note, note 控制器将失去有效位置, 因此作为 note 皮肤的 sprite 的位置将被重置, 并闪现至屏幕中心. 未来我们将推出 StoryBoard 事件, 使用 StoryBoard 事件, 我们可以在点击 note 的同时销毁 sprite, 使 note 皮肤更加真实.
+       不幸的是, 这一切有些理想化. 如果您过早的点击了 note, note 控制器将失去有效位置, 因此作为 note 皮肤的 sprite 的位置将被重置, 并闪现至屏幕中心. 未来我们将推出 StoryBoard 事件, 使用 StoryBoard 事件, 我们可以在点击 note 的同时销毁 sprite, 使 note 皮肤更加真实.
 
         - 有一点需要特别留意, 尽管 note 控制器没有出现在游戏中, 反它们实际上有个"隐性位置", 这个位置与 **对应 note 的位置重合**! 因此, 如果您需要将某个场景对象与一个 note 对齐, 只需要为这个 note 定义一个 note 控制器, 然后将场景对象的 `parent_id` 设置为 note 控制器的 ID 即可.
+
+> 谱师批注：上段代码中，如果发现图片只在第一个note处正确生成，大概率为id中不含$note导致。如果出现id找不到之类的报错，可能是time中没有添加$note
+
 - 常用技巧:
     - 要创建下落式玩法, 只需将 `override_y` 设置为 `true`, 并让 note 按照 `time` = `intro:$note` 且 `y` = `2`(或者任意超出屏幕边缘的值), 到 `time` = `intro:$note` 且 `y` = `0` 的始末状态运动.
         - 在 [Interference: Finale](https://cytoid.io/levels/io.cytoid.interference3) EX 难度的 StoryBoard 中, 出现了下落式和扫描线式两种玩法混合. 这是因为在谱面中, 需要下落式的note都被放置在了 X = 0.4 上, 因此只需在 StoryBoard 中选择所有 X = 0.4 的 note, 重新安排它们的 X 坐标, 并让它们按照下落式的方式处理, 使得其他的 note 保持"正常".
