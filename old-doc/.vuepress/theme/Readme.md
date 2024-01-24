@@ -1,3 +1,0 @@
-# Theme for Cytoid WIKI
-
-Editing....
