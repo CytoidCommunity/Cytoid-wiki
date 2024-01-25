@@ -1,10 +1,8 @@
 ---
-title: Mods 介绍
-lang: zh-Hans
 author: 冰糖酱-BillZhou233
 ---
 
-# {{$frontmatter.title}}
+# Mods 介绍
 
 和很多自制类音游一样, Cytoid 也提供了玩法拓展功能即 Mods, 您可在谱面难度选择页面右上角的手柄菜单中选择启用. 接下来的部分将分类介绍它们 (顺序可能与游戏内不同) .
 
