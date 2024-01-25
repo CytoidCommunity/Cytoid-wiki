@@ -2,7 +2,7 @@
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import mediumZoom from 'medium-zoom'
 
-import { useLocaleCookie } from '../composables/locale'
+import { useLocaleStorage } from '../composables/locale'
 
 const route = useRoute()
 function initPlugins() {
@@ -43,7 +43,7 @@ watch(
 )
 
 const { lang } = useData()
-const localeCookie = useLocaleCookie()
+const localeCookie = useLocaleStorage()
 watchEffect(() => {
   if (inBrowser && route.path !== '/') {
     localeCookie.value = lang.value

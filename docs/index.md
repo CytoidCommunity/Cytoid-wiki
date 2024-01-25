@@ -17,12 +17,12 @@ hero:
 
 <script setup>
 import { onMounted } from 'vue'
-import { useLocaleCookie } from '../.vitepress/composables/locale'
+import { useLocaleStorage } from '../.vitepress/composables/locale'
 import { useRouter } from 'vitepress'
 
 onMounted(() => {
   const router = useRouter()
-  const prefer = useLocaleCookie()
+  const prefer = useLocaleStorage()
   router.go(`/${prefer.value}/`)
 })
 </script>
