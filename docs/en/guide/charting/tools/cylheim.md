@@ -1,6 +1,4 @@
 ---
-title: Charting with Cylheim
-lang: en-US
 author: GattoKai (original author), Teages (CN writer), KS62 (translator), alxdre a.k.a. Thanh9356 (editor)
 finish: false
 prev: "../audio.md"

@@ -1,11 +1,6 @@
----
-title: Cytoid and Cytoid Wiki
-lang: en-US
----
+![img](/pic/sayaka_thumb.png){.no-zoom}
 
-![img](/site-source/pic/sayaka_thumb.png){.no-zoom}
-
-# An overview of Cytoid and Cytoid wiki
+# Cytoid and Cytoid Wiki
 
 ## Cytoid
 

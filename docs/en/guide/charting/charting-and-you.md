@@ -1,8 +1,3 @@
----
-title: Charting and You
-lang: en-US
----
-
 # Charting and You
 
 ## Introduction
@@ -76,7 +71,7 @@ Same do Cytunity somewhat, less prominent in autoplay mode, but completely missi
 
 ![Edit Mode](./_sources_charting_and_you.md/8.png)
 
-There are no information whatsoever from previous page (in Edit Mode), making you as a charter prone to mistakes. Keep this in mind when charting (This is also probably the main reason why new charters often have overlapping notes in their chart). 
+There are no information whatsoever from previous page (in Edit Mode), making you as a charter prone to mistakes. Keep this in mind when charting (This is also probably the main reason why new charters often have overlapping notes in their chart).
 
 ### Tolerable overlaps
 

@@ -1,8 +1,3 @@
----
-title: Official Events
-lang: en-US
----
-
 # Official Events
 
 ## Charting Contest

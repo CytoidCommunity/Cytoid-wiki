@@ -1,9 +1,4 @@
----
-title: Game screen
-lang: en-US
----
-
-# {{$frontmatter.title}}
+# Game Screen
 
 ## Selection screen
 

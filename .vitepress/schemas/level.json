@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "category": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "charts": {
+      "items": {
+        "properties": {
+          "difficulty": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "easy",
+              "extreme",
+              "hard"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "difficulty",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "cover": {
+      "properties": {
+        "thumbnail": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "thumbnail"
+      ],
+      "type": "object"
+    },
+    "metadata": {
+      "properties": {
+        "artist": {
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "charter": {
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "illustrator": {
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "storyboarder": {
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "artist",
+        "charter",
+        "title"
+      ],
+      "type": "object"
+    },
+    "owner": {
+      "properties": {
+        "avatar": {
+          "properties": {
+            "small": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "small"
+          ],
+          "type": "object"
+        },
+        "name": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "avatar",
+        "uid"
+      ],
+      "type": "object"
+    },
+    "uid": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "required": [
+    "metadata", "charts"
+  ]
+}

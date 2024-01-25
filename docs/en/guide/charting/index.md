@@ -1,6 +1,4 @@
 ---
-title: "Charting: Getting started"
-lang: en-US
 next: "./audio.md"
 ---
 

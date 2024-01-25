@@ -1,13 +1,4 @@
----
-title: Cytoid release note
-lang: en-US
----
-
-# Cytoid
-
-Cytoid is a free, open-source and community-driven rhythm game made by TigerHix and Neo.
-
-# Cytoid release note
+# Changelog of Cytoid
 
 ::: warning NOTICE!
 The headers are sorted by newer to older version.

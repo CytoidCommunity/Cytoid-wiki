@@ -1,10 +1,4 @@
----
-title: Cytoid Events (In-game Events)
-lang: en-US
-
----
-
-# Cytoid in-game events
+# Cytoid In-game Events
 
 ## Latest Event
 
@@ -113,7 +107,7 @@ lang: en-US
 
 #### Rewards
 
-- **New Level**: Snow Candy  
+- **New Level**: Snow Candy
 
 ::: details Level in this event
 
@@ -133,7 +127,7 @@ lang: en-US
 
 #### Rewards
 
-- **New character**: Laeti  
+- **New character**: Laeti
 
 ::: details Level in this event
 

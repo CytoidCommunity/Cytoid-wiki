@@ -1,9 +1,3 @@
----
-title: Charting with Mobile Chart Editor
-lang: en-US
-finish: true
----
-
 # Charting with Mobile Chart Editor
 
 ## Download

@@ -1,12 +1,10 @@
 ---
-title: Building a level.json file
-lang: en-US
 author: alxdre (Author), Melodion, KS62 (Editor)
 ---
 
 # Building a level.json file
 
-A level.json is a metadata file that stores crucial data of your levels. (e.g., the song’s title, the path to the background image, etc.)  
+A level.json is a metadata file that stores crucial data of your levels. (e.g., the song’s title, the path to the background image, etc.)
 Here are a few parameters that you might need to use in the level.json file before playing on Cytoid and sharing on the IO (:star:).
 
 ## Parameters
@@ -52,7 +50,7 @@ We recommend you use your chart's unique ID as: `<your_name>.<song_name>`.
 `title` :star:
 : The song title in its original language.
 : Its value **must** be a string.
-: Example: 
+: Example:
 
 ```json
 "title": "You are the Miserable"
@@ -125,7 +123,7 @@ Do not use "unknown" or something like that as the illustrator!
 
 `storyboarder`
 : The storyboarder's name.
-: Its value **must** be a string, and you only need to use this if your level has a storyboard.  
+: Its value **must** be a string, and you only need to use this if your level has a storyboard.
 : E.g.:
 
 ```json
@@ -270,7 +268,7 @@ You may copy this template and fill in the blank values with information relevan
     {
       "type": "",
       "name": "",
-      "difficulty": ,      
+      "difficulty": ,
       "path": "",
       "music_override":
       {

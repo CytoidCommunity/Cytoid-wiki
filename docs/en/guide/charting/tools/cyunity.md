@@ -1,8 +1,3 @@
----
-title: Charting with Cyunity
-lang: en-US
----
-
 # Charting with Cyunity
 
 ## User Interface
@@ -22,7 +17,6 @@ lang: en-US
 
 - **Quit**: Quits Cytunity after confirmation.
 
-
 ### Info
 ![](./_sources_cyunity.md/2.png)
 
@@ -40,7 +34,7 @@ Cytunity will auto-generate save name based on Info Name, so you may want to fil
 
 Before you can even chart, you need a song file first. It's mandatory.
 
-::: warning NOTICE  
+::: warning NOTICE
 None of this info actually matters (aside from song and name for charting) because Cytoid uses its own meta file (level.json).
 :::
 
@@ -66,7 +60,6 @@ None of this info actually matters (aside from song and name for charting) becau
 9. Load To Stage: If you have multiple difficulties, use this button to switch between charts.
 
 10. Delete Beat Map: Deletes your chart.
-
 
 ### Settings
 
@@ -108,4 +101,3 @@ None of this info actually matters (aside from song and name for charting) becau
 ### Folders
 
 You can use this to save certain note patterns you like, or easy note templates.
-

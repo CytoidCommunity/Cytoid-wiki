@@ -1,8 +1,3 @@
----
-title: Charting with Cy2Unity
-lang: en-US
----
-
 # Charting with Cy2Unity
 
 Note: You need to have basic understanding of the Cytus 2 chart format.
@@ -14,7 +9,7 @@ This project is currently in its beta stages. There may be a lot of bugs in the 
 
     - Don’t delete the first BPM change.
 
-    - There is severe FPS drop when the note count is larger than 1000. 
+    - There is severe FPS drop when the note count is larger than 1000.
 
 :::warning NEW VERSION COMMING!!!
 The New Verison of Cy2unity is comming.
@@ -39,27 +34,24 @@ Double-click on Cy2unity.exe to launch the editor. You should see the following 
 ![](./_sources_cy2unity.md/2.png)
 
 Let’s try creating a project. Click on File → Create Project. You will need to choose a music file in either .wav or .ogg format as .mp3 formats are not supported. If you do not know how to convert a .mp3 file into a .wav/.ogg format, use this online converter.
-
 ------
 
 1. After the import is done, you will need to enter a default BPM.
 ![](./_sources_cy2unity.md/3.png)
 
-2. Later, you can change this value, or you can set up multiple BPMs for different music sections.  
+2. Later, you can change this value, or you can set up multiple BPMs for different music sections.
 Then you need to enter the value of ticks per page.
 ![](./_sources_cy2unity.md/4.png)
 
-3. It is recommended to add 480 for each beat per page, i.e. if you want each page to have 2 beats, enter 960; if you want each page to have 4 beats, enter 1920.  
+3. It is recommended to add 480 for each beat per page, i.e. if you want each page to have 2 beats, enter 960; if you want each page to have 4 beats, enter 1920.
 Now you are greeted with the main interface.
 ![](./_sources_cy2unity.md/5.png)
 
 4. If you choose to open an existing project at the beginning, you will need to specify both the music file and the chart file (.json).
 ![](./_sources_cy2unity.md/6.png)
 
-
 ![](./_sources_cy2unity.md/7.png)
 ![](./_sources_cy2unity.md/8.png)
-
 ------
 
 ## 2. Main interface
@@ -92,9 +84,9 @@ There are only 4 tools on the tool bar now, and they are “Edit project”, “
 
 You can edit basic chart metadata here.
 
-**Format version** and **time base** correspond to “format_version” and “time_base” in the Cytus 2 chart format.  
-**Play speed** controls how fast the chart is played in the editor. The default value is 1.  
-**Default BPM** is just what its name suggests. It changes the initial BPM only.  
+**Format version** and **time base** correspond to “format_version” and “time_base” in the Cytus 2 chart format.
+**Play speed** controls how fast the chart is played in the editor. The default value is 1.
+**Default BPM** is just what its name suggests. It changes the initial BPM only.
 You shouldn’t need to change any of these settings.
 ![](./_sources_cy2unity.md/11.png)
 
@@ -138,22 +130,21 @@ You can change both the BPM and the tick duration.
 When the BPM is not changed at the current time, you will see the following:
 ![](./_sources_cy2unity.md/14.png)
 
-Enter a new BPM and click “Add”. This will apply to the remaining part of the music.  
+Enter a new BPM and click “Add”. This will apply to the remaining part of the music.
 When the BPM is already changed at the current time, you will see the following:
-![](./_sources_cy2unity.md/15.png)  
+![](./_sources_cy2unity.md/15.png)
 You can adjust the BPM or delete the BPM change. **Note: there is currently a bug that crashes the editor if you delete the first BPM change. Also, don’t make BPM too small (< 30) or negative.**
 
 #### For changing the tick duration:
 
-
 You can change the tick duration of the current page (at the current time).
 ![](./_sources_cy2unity.md/16.png)
 
-If you click Apply, this page and all subsequent pages will be set to have the tick duration specified, in this case, 1920.  
+If you click Apply, this page and all subsequent pages will be set to have the tick duration specified, in this case, 1920.
 You can also enter a number in the textbox right to the Apply button:
 ![](./_sources_cy2unity.md/17.png)
 
-If you click Apply, only this page and the next N-1 pages will be set to have the tick duration specified.  
+If you click Apply, only this page and the next N-1 pages will be set to have the tick duration specified.
 **Note: the tick duration should be generally larger or equal than 480. If you need a smaller value, use the “Apply to next N pages” option; but even so, the tick duration specified should not be smaller than 60 for performance reasons.**
 ![](./_sources_cy2unity.md/18.png)
 

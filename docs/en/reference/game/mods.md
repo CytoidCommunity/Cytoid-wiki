@@ -1,10 +1,4 @@
----
-title: Mods
-lang: en-US
-finish: true
----
-
-# {{$frontmatter.title}}
+# Mods
 
 Modifiers help players adjust gameplay experience based on their preference. Here is a list of modifiers.
 

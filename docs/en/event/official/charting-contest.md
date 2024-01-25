@@ -1,7 +1,3 @@
----
-title: Charting Contest
-lang: en-US
----
 # Charting Contest
 
 Charting Contest has been held for 17 times.
@@ -25,18 +21,18 @@ There are **5** winners in **round 1**, and **4** winners in **round 2**. Congra
 
 ##### Round One
 
-<CytoidLevelCard levelid="iv.uv.utopia"/>
-<CytoidLevelCard levelid="timitini.harry_hcx.lostpresent"/>
-<CytoidLevelCard levelid="void.helamind"/>
-<CytoidLevelCard levelid="cthulol.fallenworld"/>
-<CytoidLevelCard levelid="whigrac.blackout"/>
+<CtdLevel levelId="iv.uv.utopia"/>
+<CtdLevel levelId="timitini.harry_hcx.lostpresent"/>
+<CtdLevel levelId="void.helamind"/>
+<CtdLevel levelId="cthulol.fallenworld"/>
+<CtdLevel levelId="whigrac.blackout"/>
 
 ##### Round Two
 
-<CytoidLevelCard levelid="jq.blossom"/>
-<CytoidLevelCard levelid="teages.yunomi.yumeiroparedo"/>
-<CytoidLevelCard levelid="bc.happy_life_"/>
-<CytoidLevelCard levelid="saltsaltsalt.fashion_"/>
+<CtdLevel levelId="jq.blossom"/>
+<CtdLevel levelId="teages.yunomi.yumeiroparedo"/>
+<CtdLevel levelId="bc.happy_life_"/>
+<CtdLevel levelId="saltsaltsalt.fashion_"/>
 
 ## Previous Contest
 
@@ -55,18 +51,18 @@ There are **5** winners in **round 1**, and **4** winners in **round 2**. Congra
 
 ##### Round One
 
-<CytoidLevelCard levelid="cthulol.secretlaboratory"/>
-<CytoidLevelCard levelid="teages.___eric___.40mp.kano.imaokakerushoujo"/>
-<CytoidLevelCard levelid="tri_floweroftheend"/>
-<CytoidLevelCard levelid="rb.cy2.tsukiyuki"/>
-<CytoidLevelCard levelid="uv.kafig"/>
+<CtdLevel levelId="cthulol.secretlaboratory"/>
+<CtdLevel levelId="teages.___eric___.40mp.kano.imaokakerushoujo"/>
+<CtdLevel levelId="tri_floweroftheend"/>
+<CtdLevel levelId="rb.cy2.tsukiyuki"/>
+<CtdLevel levelId="uv.kafig"/>
 
 ##### Round Two
 
-<CytoidLevelCard levelid="he.wing"/>
-<CytoidLevelCard levelid="arma.corridor"/>
-<CytoidLevelCard levelid="anakin.solros"/>
-<CytoidLevelCard levelid="rnk0u.ten_sen_men_rittai"/>
+<CtdLevel levelId="he.wing"/>
+<CtdLevel levelId="arma.corridor"/>
+<CtdLevel levelId="anakin.solros"/>
+<CtdLevel levelId="rnk0u.ten_sen_men_rittai"/>
 
 ### Contest 15 - Vivacious
 
@@ -83,16 +79,16 @@ There are **4** winners in **round 1**, and **3** winners in **round 2**. Congra
 
 ##### Round One
 
-<CytoidLevelCard levelid="timitini.you_are_the_miserable_"/>
-<CytoidLevelCard levelid="iv.glaz"/>
-<CytoidLevelCard levelid="he.macaron"/>
-<CytoidLevelCard levelid="anakin.alienweapon"/>
+<CtdLevel levelId="timitini.you_are_the_miserable_"/>
+<CtdLevel levelId="iv.glaz"/>
+<CtdLevel levelId="he.macaron"/>
+<CtdLevel levelId="anakin.alienweapon"/>
 
 ##### Round Two
 
-<CytoidLevelCard levelid="creepy.helamind.kai_king"/>
-<CytoidLevelCard levelid="tri_beam"/>
-<CytoidLevelCard levelid="simon.cutter"/>
+<CtdLevel levelId="creepy.helamind.kai_king"/>
+<CtdLevel levelId="tri_beam"/>
+<CtdLevel levelId="simon.cutter"/>
 
 ### Contest 14 - Ignoti
 
@@ -109,18 +105,17 @@ There are **4** winners in **round 1**, and **4** winners in **round 2**. Congra
 
 ##### Round One
 
-<CytoidLevelCard levelid="ptb10_ai"/>
-<CytoidLevelCard levelid="he.nyctophobia"/>
-<CytoidLevelCard levelid="hideous.helamind_cw.iv"/>
-<CytoidLevelCard levelid="y2y.schwertkampf"/>
+<CtdLevel levelId="ptb10_ai"/>
+<CtdLevel levelId="he.nyctophobia"/>
+<CtdLevel levelId="hideous.helamind_cw.iv"/>
+<CtdLevel levelId="y2y.schwertkampf"/>
 
 ##### Round Two
 
-<CytoidLevelCard levelid="pitstain.7colors"/>
-<CytoidLevelCard levelid="tri_sogalbi"/>
-<CytoidLevelCard levelid="arkivist.mahjong"/>
-<CytoidLevelCard levelid="cnk.fog_rain"/>
-
+<CtdLevel levelId="pitstain.7colors"/>
+<CtdLevel levelId="tri_sogalbi"/>
+<CtdLevel levelId="arkivist.mahjong"/>
+<CtdLevel levelId="cnk.fog_rain"/>
 
 ### Contest 13 - Overhaul
 
@@ -137,14 +132,14 @@ There are **3** winners in **round 1**, and **2** winners in **round 2**. Congra
 
 ##### Round One
 
-<CytoidLevelCard levelid="iv.grimheart"/>
-<CytoidLevelCard levelid="peko.cp"/>
-<CytoidLevelCard levelid="guiyangfighter.deepinabyss_nekomata"/>
+<CtdLevel levelId="iv.grimheart"/>
+<CtdLevel levelId="peko.cp"/>
+<CtdLevel levelId="guiyangfighter.deepinabyss_nekomata"/>
 
 ##### Round Two
 
-<CytoidLevelCard levelid="jq.beta.crmx"/>
-<CytoidLevelCard levelid="ptb10_alittle"/>
+<CtdLevel levelId="jq.beta.crmx"/>
+<CtdLevel levelId="ptb10_alittle"/>
 
 ### Contest 12 - Rebirth
 
@@ -161,17 +156,17 @@ There are **4** winners in **round 1**, and **3** winners in **round 2**. Congra
 
 ##### Round One
 
-<CytoidLevelCard levelid="cthulol.nacreoussnowmelt"/>
-<CytoidLevelCard levelid="lumixanth.frontline"/>
-<CytoidLevelCard levelid="gf.otoge"/>
+<CtdLevel levelId="cthulol.nacreoussnowmelt"/>
+<CtdLevel levelId="lumixanth.frontline"/>
+<CtdLevel levelId="gf.otoge"/>
 [sista)nightTrans](https://www.bilibili.com/video/BV1vJ41197Ng/)
-<CytoidLevelCard levelid="sista)nightTrans"/>
+<CtdLevel levelId="sista)nightTrans"/>
 
 ##### Round Two
 
-<CytoidLevelCard levelid="ec.rev"/>
-<CytoidLevelCard levelid="flina.rinne"/>
-<CytoidLevelCard levelid="rnk0u.muse"/>
+<CtdLevel levelId="ec.rev"/>
+<CtdLevel levelId="flina.rinne"/>
+<CtdLevel levelId="rnk0u.muse"/>
 
 ### Contest 11 - Rock
 
@@ -186,9 +181,9 @@ There are **4** winners in **round 1**, and **3** winners in **round 2**. Congra
 
 There are **5** winners. Congratulations!
 
-<CytoidLevelCard levelid="cthulol.touchoff"/>
-<CytoidLevelCard levelid="mekko_rebirth"/>
-<CytoidLevelCard levelid="ptb10_overkill"/>
+<CtdLevel levelId="cthulol.touchoff"/>
+<CtdLevel levelId="mekko_rebirth"/>
+<CtdLevel levelId="ptb10_overkill"/>
 
 ### Contest 10 - Epic
 
@@ -203,11 +198,11 @@ There are **5** winners. Congratulations!
 
 There are **5** winners. Congratulations!
 
-<CytoidLevelCard levelid="ptb10_gekkouranbu"/>
-<CytoidLevelCard levelid="cuteio14_ptb10_government"/>
-<CytoidLevelCard levelid="lolita.romanesque"/>
-<CytoidLevelCard levelid="pitstain.tulala"/>
-<CytoidLevelCard levelid="cthulol.cyaegha"/>
+<CtdLevel levelId="ptb10_gekkouranbu"/>
+<CtdLevel levelId="cuteio14_ptb10_government"/>
+<CtdLevel levelId="lolita.romanesque"/>
+<CtdLevel levelId="pitstain.tulala"/>
+<CtdLevel levelId="cthulol.cyaegha"/>
 
 ### Contest 09 - Pixel
 
@@ -222,9 +217,9 @@ There are **5** winners. Congratulations!
 
 There are **3** winners. Congratulations!
 
-<CytoidLevelCard levelid="gf_hop"/>
-<CytoidLevelCard levelid="pitstain.epilogue"/>
-<CytoidLevelCard levelid="cthulol.cosmicinvaders"/>
+<CtdLevel levelId="gf_hop"/>
+<CtdLevel levelId="pitstain.epilogue"/>
+<CtdLevel levelId="cthulol.cosmicinvaders"/>
 
 ### Contest 08 - Clash
 
@@ -239,10 +234,10 @@ There are **3** winners. Congratulations!
 
 There are **4** winners. Congratulations!
 
-<CytoidLevelCard levelid="bern.rip"/>
-<CytoidLevelCard levelid="flina.panzer"/>
-<CytoidLevelCard levelid="y2y.chaotic"/>
-<CytoidLevelCard levelid="ptb10_nulctrl"/>
+<CtdLevel levelId="bern.rip"/>
+<CtdLevel levelId="flina.panzer"/>
+<CtdLevel levelId="y2y.chaotic"/>
+<CtdLevel levelId="ptb10_nulctrl"/>
 
 ### Contest 07 - Inspiration
 
@@ -257,11 +252,11 @@ There are **4** winners. Congratulations!
 
 There are **5** winners. Congratulations!
 
-<CytoidLevelCard levelid="wz.six"/>
-<CytoidLevelCard levelid="pitstain.mirai"/>
-<CytoidLevelCard levelid="gf_eb"/>
-<CytoidLevelCard levelid="td.juujika"/>
-<CytoidLevelCard levelid="cthulol.singularity"/>
+<CtdLevel levelId="wz.six"/>
+<CtdLevel levelId="pitstain.mirai"/>
+<CtdLevel levelId="gf_eb"/>
+<CtdLevel levelId="td.juujika"/>
+<CtdLevel levelId="cthulol.singularity"/>
 
 ### Contest 06 - Summer
 
@@ -276,9 +271,9 @@ There are **5** winners. Congratulations!
 
 There are **3** winners. Congratulations!
 
-<CytoidLevelCard levelid="nigel.gbtym"/>
-<CytoidLevelCard levelid="cthulol.citrus"/>
-<CytoidLevelCard levelid="gfsd.dsa"/>
+<CtdLevel levelId="nigel.gbtym"/>
+<CtdLevel levelId="cthulol.citrus"/>
+<CtdLevel levelId="gfsd.dsa"/>
 
 ### Contest 05 - Revisit
 
@@ -293,11 +288,11 @@ There are **3** winners. Congratulations!
 
 There are **5** chart have been featured. Congratulations!
 
-<CytoidLevelCard levelid="ptb10_headroom"/>
-<CytoidLevelCard levelid="flina.heartache"/>
-<CytoidLevelCard levelid="ptb10_usedtobe"/>
-<CytoidLevelCard levelid="gfsd.orientalblossom"/>
-<CytoidLevelCard levelid="td.data"/>
+<CtdLevel levelId="ptb10_headroom"/>
+<CtdLevel levelId="flina.heartache"/>
+<CtdLevel levelId="ptb10_usedtobe"/>
+<CtdLevel levelId="gfsd.orientalblossom"/>
+<CtdLevel levelId="td.data"/>
 
 ### Contest 04 - Piano
 
@@ -313,12 +308,12 @@ There are **6** winners. Congratulations!
 
 ##### Round One
 
-<CytoidLevelCard levelid="taida.pureruby"/>
-<CytoidLevelCard levelid="bombman.lightmeal"/>
-<CytoidLevelCard levelid="td.hae"/>
-<CytoidLevelCard levelid="ptb10_polarizedblaze"/>
-<CytoidLevelCard levelid="fwapy.redance"/>
-<CytoidLevelCard levelid="gf_ele"/>
+<CtdLevel levelId="taida.pureruby"/>
+<CtdLevel levelId="bombman.lightmeal"/>
+<CtdLevel levelId="td.hae"/>
+<CtdLevel levelId="ptb10_polarizedblaze"/>
+<CtdLevel levelId="fwapy.redance"/>
+<CtdLevel levelId="gf_ele"/>
 
 ### Contest 03
 
@@ -328,11 +323,11 @@ There are **6** winners. Congratulations!
 
 There are **5** winners. Congratulations!
 
-<CytoidLevelCard levelid="lumixanth.partenza"/>
-<CytoidLevelCard levelid="yy.dandelion"/>
-<CytoidLevelCard levelid="cthulol.waltzindevilsplayground"/>
-<CytoidLevelCard levelid="ptb10_trickerswaltz"/>
-<CytoidLevelCard levelid="ptb10_impulsevip"/>
+<CtdLevel levelId="lumixanth.partenza"/>
+<CtdLevel levelId="yy.dandelion"/>
+<CtdLevel levelId="cthulol.waltzindevilsplayground"/>
+<CtdLevel levelId="ptb10_trickerswaltz"/>
+<CtdLevel levelId="ptb10_impulsevip"/>
 
 ### Contest 02
 
@@ -355,9 +350,9 @@ Data lost, sorry for that...
 
 There are **3** winners. Congratulations!
 
-<CytoidLevelCard levelid="cthulol.ultimatefate"/>
-<CytoidLevelCard levelid="fwapy.fitms"/>
-<CytoidLevelCard levelid="ptb10_003"/>
+<CtdLevel levelId="cthulol.ultimatefate"/>
+<CtdLevel levelId="fwapy.fitms"/>
+<CtdLevel levelId="ptb10_003"/>
 
 <!-- Example
 
@@ -372,17 +367,16 @@ There are **3** winners. Congratulations!
 There are **5** winners in **round 1**, and **4** winners in **round 2**. Congratulations!
 
 ##### Round One
-<CytoidLevelCard levelid=""/>
-<CytoidLevelCard levelid=""/>
-<CytoidLevelCard levelid=""/>
-<CytoidLevelCard levelid=""/>
-<CytoidLevelCard levelid=""/>
+<CtdLevel levelId=""/>
+<CtdLevel levelId=""/>
+<CtdLevel levelId=""/>
+<CtdLevel levelId=""/>
+<CtdLevel levelId=""/>
 
 ##### Round Two
-<CytoidLevelCard levelid=""/>
-<CytoidLevelCard levelid=""/>
-<CytoidLevelCard levelid=""/>
-<CytoidLevelCard levelid=""/>
-
+<CtdLevel levelId=""/>
+<CtdLevel levelId=""/>
+<CtdLevel levelId=""/>
+<CtdLevel levelId=""/>
 
 -->

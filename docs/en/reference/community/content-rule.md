@@ -1,13 +1,13 @@
-﻿---
+---
 title: Rules
-lang: en-US
+
 author: TheBombMan (Alan Liu)
 finish: true
 ---
 
 # Rules
 
-No matter the song, chart, storyboard, or troll level, these guidelines serve as a baseline for all charters to follow. Not following the proper guidelines below can get levels unlisted. And possibly deleted due to copyright or other issues. **This is not a guide, but guidelines to keep in mind.**  
+No matter the song, chart, storyboard, or troll level, these guidelines serve as a baseline for all charters to follow. Not following the proper guidelines below can get levels unlisted. And possibly deleted due to copyright or other issues. **This is not a guide, but guidelines to keep in mind.**
 If you need any help with any of the below, you may ask in the [Cytoid Discord Server](https://discord.gg/cytoid).
 
 ## Do not plagiarize

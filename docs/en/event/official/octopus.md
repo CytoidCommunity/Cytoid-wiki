@@ -1,7 +1,3 @@
----
-title: Octopus Tournament
-lang: en-US
----
 # Octopus Tournament
 
 ## Basic information

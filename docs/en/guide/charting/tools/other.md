@@ -1,7 +1,3 @@
----
-title: Chart in other ways
-lang: en-US
----
 # Chart in other ways
 
 ## Excel Charting
@@ -12,7 +8,7 @@ Excel Charting, as what it's name states, charting using Excel program from Micr
 
 This guide here is an extended reach after charting via PCTyx then converted to C2 format via Converter.
 
-Excel charting is *not* recommended for new charters because it requires knowledge of notepad charting, which has very steep learning curve. 
+Excel charting is *not* recommended for new charters because it requires knowledge of notepad charting, which has very steep learning curve.
 
 ### Pros and Cons
 
@@ -63,7 +59,7 @@ Repeat the same procedures for each items below. Make sure to do them sequential
 
 ![](./_sources_other.md/6.png)
 
-When it's done correctly you have something that looks like this. 
+When it's done correctly you have something that looks like this.
 
 Press CTRL+A to Select All, and press CTRL+C to Copy it. Then open Excel
 
@@ -74,8 +70,6 @@ In Excel, select cell B1, and press CTRL+V. Why Cell B1? Because A1 will be used
 ![](./_sources_other.md/8.png)
 
 If you see image like above (no triple quotes, numbers are in their own cells, symbols are also in their own cells), then you've done it right.
-
-
 
 BUT WAIT, there's something you have to check first.
 
@@ -103,10 +97,7 @@ Make sure to generate them to the last of "start_tick" in cell C.
 
 You have to redo this every time you add or delete a page.
 
-
-
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IeGlITjocFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 Then we go to our first Note page index cell, which is two columns to the right where "page_index" resides.
 
@@ -126,21 +117,15 @@ In which case where:
 
 Check Video below on how to do it.
 
-
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vEB8sjyODzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 Next step would be to just drag the formula down like video below.
 
-
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yEXzGvVJdas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 Video on Dynamic Page Index at work:
 
-
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/l2oe3fgU80c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 ### Exporting Back to Notepad
 
@@ -150,9 +135,7 @@ The video also shows how to easily delete white spaces.
 
 The site to delete white spaces is [jsoneditoronline.org](http://www.google.com/url?q=http%3A%2F%2Fjsoneditoronline.org%2F&sa=D&sntz=1&usg=AFQjCNG2P92UzDMJwZhc-jBgrPCilgu3vQ)
 
-
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gzC7KygoiQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 ### Tips When Editing
 
@@ -221,7 +204,7 @@ But if you use the 2nd approach:
 
 Note that 2nd approach cannot be used for previous page size if said previous page is used for scanline freeze (in which case where starting page tick is a very huge negative number).
 
-If you manage calculate all of those, congratulations, you have managed to calculate approach rate for just *ONE NOTE*. 
+If you manage calculate all of those, congratulations, you have managed to calculate approach rate for just *ONE NOTE*.
 
 However, It's very, Very, VERY unlikely you will use approach_rate for just one note. Most likely, you have to calculate more than one page, and in one page there can be more than one note. This is a very tiring work.
 
@@ -232,7 +215,6 @@ You will most likely need to automate this via excel because of the nested formu
 In this section, we will add "approach_rate" string to all notes. But doing things globally will make them simply more simple, except if there's any scanline freeze in the middle, you have to modify them yourself.
 
 First we generate "approach_rate" string to all notes. See video below.
-
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SZVTj7rxj4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

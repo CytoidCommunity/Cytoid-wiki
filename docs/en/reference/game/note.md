@@ -1,10 +1,4 @@
----
-title: Note system
-lang: en-US
-finish: true
----
-
-# {{$frontmatter.title}}
+# Note of Cytoid
 
 - There are 6 note types in Cytoid, they're: Tap, Drag, C-Drag, Hold, Long hold, Flick.
 

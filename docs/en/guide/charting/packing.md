@@ -1,12 +1,10 @@
 ---
-title: Packing into a .cytoidlevel file
-lang: en-US
 author: KS62
 ---
 
 # Packing into a .cytoidlevel file
 
-You have finished your chart! Now how can we play it on Cytoid?  
+You have finished your chart! Now how can we play it on Cytoid?
 You will need to pack your files into a `.cytoidlevel` file.
 
 ## Packing by using Cylheim
@@ -25,7 +23,7 @@ Click on *Add chart info* first then this will show up:
 
 ![Chart info](./_sources_packing.md/3.png)
 
-You **must** add the chart file and change the difficulty from the slider (that goes from ? to 15+). 
+You **must** add the chart file and change the difficulty from the slider (that goes from ? to 15+).
 
 And for *Convert unsupported features in Cytoid as a storyboard (for simulation)*, you **only** have to tick the box if you have:
 

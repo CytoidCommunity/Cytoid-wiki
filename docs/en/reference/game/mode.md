@@ -1,10 +1,4 @@
----
-title: Game modes
-lang: en-US
-finish: true
----
-
-# {{$frontmatter.title}}
+# Game Modes
 
 There are 5 game modes in Cytoid: Free Play, Community, Events, Training, and Tiers.
 

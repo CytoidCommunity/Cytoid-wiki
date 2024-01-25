@@ -1,7 +1,4 @@
----
-title: StoryBoard Basic
-lang: en-US
----
+# StoryBoard Basic
 
 Storyboard Example (I by suconh):
 
@@ -13,7 +10,6 @@ Storyboard Example (I by suconh):
 
 [Storyboarding Basics](https://www.notion.so/Storyboarding-Basics-7897a9b0112841b09bd5e0b465d22a51)
 
-[Full Specification](./specification)
+[Full Specification](../reference/storyboard/specification)
 
 [Performance Data](https://www.notion.so/194b52facc824d28a5756fb420d206c3?v=9f9b51b1ab2342d2876ee338a9648564)
-

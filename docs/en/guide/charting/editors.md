@@ -1,8 +1,3 @@
----
-title: Chart editors
-lang: en-US
----
-
 # Chart editors
 
 Chart editor is a tool that helps you chart and finish quickly. A chart editor often provides edit and preview mode with its WYSIWYG user interface (means you don't need to remember parameters).
@@ -78,7 +73,7 @@ Chart editor is a tool that helps you chart and finish quickly. A chart editor o
 - Pros: Unknown
 
 - Cons:
-  
+
   - Windows-only
   - Laggy and buggy when your chart has more than 1000 notes
 

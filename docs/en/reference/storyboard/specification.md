@@ -1,6 +1,5 @@
 ---
 title: Storyboard Specification
-lang: en-US
 ---
 
 # Full Specification

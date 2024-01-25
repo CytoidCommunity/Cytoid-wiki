@@ -1,6 +1,5 @@
 ---
 title: Audio editing with Audacity
-lang: en-US
 ---
 
 # Audio editing

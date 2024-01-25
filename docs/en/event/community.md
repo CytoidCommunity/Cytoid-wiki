@@ -1,8 +1,3 @@
----
-title: Community Events
-lang: en-US
----
-
 # Community Events
 
 ## Cytoid Cthulhu Championship

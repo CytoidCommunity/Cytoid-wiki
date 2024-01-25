@@ -1,6 +1,4 @@
 ---
-title: Uploading your level
-lang: en-US
 author: KS62
 ---
 

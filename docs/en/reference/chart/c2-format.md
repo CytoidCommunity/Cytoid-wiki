@@ -1,8 +1,3 @@
----
-title: C2 chart format
-lang: en-US
----
-
 # C2 chart format
 
 Cytus II (C2) chart format is a JSON file, that means you can edit easily in any text editor. This article will explain its concept and parameters that appears in a chart file.
@@ -26,7 +21,7 @@ This article aims at Cytoid compatibility, some tools might not be fully support
 - **ring_color**: ring color of all notes (in RGB hexadecimal).
 
 - **fill_colors**: array of fill colors of **different types of notes** (in RGB hexadecimal format).
-  
+
   - Format: `[<click 1>, <click 2>, <drag 1>, <drag 2>, <hold 1>, <hold 2>, <long hold 1>, <long hold 2>, <flick 1>, <flick 2>]`
 
 - **opacity**: maximum opacity of all notes. Default: `1.0`.
@@ -64,7 +59,7 @@ This is different from BPM. However, you still can convert by using this equatio
 - **page_index**: which page the note is in.
 
 - **type**: Type of note, ranged from 0 to 7.
-  
+
   - `0`: Click
   - `1`: Hold
   - `2`: Long Hold
@@ -115,7 +110,7 @@ When you want to finish the Drag/C-Drag chain, set it to `-1`.
 - **type**: the event type
 
 - **args**: the event arguments
-  
+
   - `W`: Use when the scanline returns to the original speed
   - `R`: Use when the scanline is slower than the original speed
   - `G`: Use when the scanline is faster than the original speed

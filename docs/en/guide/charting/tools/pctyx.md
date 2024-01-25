@@ -1,6 +1,4 @@
 ---
-title: Charting with PCtyx
-lang: en-US
 prev: "../audio.html"
 next: "../finish/packing.md#packing-with-a-help-of-pctyx"
 ---
@@ -8,7 +6,7 @@ next: "../finish/packing.md#packing-with-a-help-of-pctyx"
 # Charting with PCtyx
 
 ::: warning NOTICE
-This article is a guide about how to set up PCtyx.  
+This article is a guide about how to set up PCtyx.
 You will need to read [PCtyx’s official documentation](https://docs.google.com/document/d/1BhSrt75mdEBCJfKPf5B2WlgmuBRJ6WmWviH95-x4Sqk) later.
 :::
 

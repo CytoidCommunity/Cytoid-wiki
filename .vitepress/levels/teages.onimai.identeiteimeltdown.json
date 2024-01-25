@@ -1,0 +1,22 @@
+{
+  "$schema": "../schemas/level.json",
+  "metadata": {
+    "title": "アイデン貞貞メルトダウン (TV Size)",
+    "artist": {
+      "name": "えなこ feat. P丸様。"
+    },
+    "charter": {
+      "name": "Teages"
+    }
+  },
+  "charts": [
+    {
+      "type": "easy",
+      "difficulty": 3
+    },
+    {
+      "type": "extreme",
+      "difficulty": 13
+    }
+  ]
+}

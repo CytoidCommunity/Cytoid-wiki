@@ -1,15 +1,15 @@
-.vscode
-.idea
-.DS_Store
+/coverage
 *.log
-node_modules
+*.tgz
+.DS_Store
+.idea
+.temp
+.vite_opt_cache
 dist
-yarn.lock
-package-lock.json
+cache
+temp
+node_modules
+pnpm-global
+TODOs.md
 
-.vuepress-org
-wiki-html
-docubc/
-docs/en/markdown.md
-
-backup_res
+*.generated.d.ts
