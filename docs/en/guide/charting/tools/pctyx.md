@@ -1,6 +1,6 @@
 ---
-prev: "../audio.html"
-next: "../finish/packing.md#packing-with-a-help-of-pctyx"
+prev: "../audio"
+next: "../packing#packing-with-a-help-of-pctyx"
 ---
 
 # Charting with PCtyx

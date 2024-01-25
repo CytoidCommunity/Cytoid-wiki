@@ -1,11 +1,9 @@
----
-title: 官方活动
-lang: zh-Hans
----
-
 # 官方活动
+
 目前, Cytoid 有这些官方活动:
+
 - [Charting Contest 制谱大赛](#charting-contest-制谱大赛)
+
 ## Charting Contest 制谱大赛
 Charting Contest 制谱大赛已经举办了 **17** 次.
 

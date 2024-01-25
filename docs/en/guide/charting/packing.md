@@ -39,7 +39,7 @@ If you have done it correctly, you should have the compiler looks something like
 
 To do so, first make sure you have the following files:
 
-- A [`level.json`](../cytoid/level-json.md) file
+- A [`level.json`](./level-json) file
 - A chart file (at least)
 - Music file (`.ogg` recommended)
 - Music preview file (has to be less than 30 seconds)

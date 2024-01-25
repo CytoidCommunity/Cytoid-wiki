@@ -9,7 +9,7 @@ You seem very proud of your chart! Now we'll learn how to upload and let people 
 You will need to check these to proceed:
 
 - A Cytoid ID (sign up [here](https://cytoid.io/session/signup) if you don't have one.)
-- A `.cytoidlevel` file (read [this article](../finish/packing.md) to learn how to make one.)
+- A `.cytoidlevel` file (read [this article](./packing) to learn how to make one.)
 
 After checking, you can log in to [CytoidIO](https://cytoid.io/session/login) and go to [Studio](https://cytoid.io/studio/levels). You will see something like this:
 
@@ -57,7 +57,7 @@ It means your login time has expired. You can refresh the page, log in, and try 
 
 ![Missing required field(s)](./_sources_upload.md/5.png){.side-img}
 
-It means you forgot to add the required field(s) in the `level.json`. You may have to check and fill in the necessary field(s) in the `level.json` file mentioned [here](../cytoid/level-json.md#parameters), then zip again.
+It means you forgot to add the required field(s) in the `level.json`. You may have to check and fill in the necessary field(s) in the `level.json` file mentioned [here](./level-json#parameters), then zip again.
 
 ## After uploading
 
@@ -79,7 +79,7 @@ Currently, Cytoid cannot show descriptions in-game.
 
 :::
 
-You can write anything in the description and tags or don’t even add one as long as it's following the [rules](rules.md).
+You can write anything in the description and tags or don’t even add one as long as it's following the [rules](../../reference/community/content-rule).
 
 Finally, click the *PRIVATE* button, then the *Public* button, and click *SAVE* after finishing. Now, people can download your level on CytoidIO and Cytoid’s build-in chart downloader!
 

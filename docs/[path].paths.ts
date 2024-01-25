@@ -70,15 +70,16 @@ export default {
               withoutFrontmatter
                 .replace( // fix image path
                   /!\[(.*?)\]\((.*?)\)/g,
-                  (org, alt, src) =>
-                    src.startsWith('http') || src.startsWith('/')
+                  (org, alt, src) => {
+                    return src.startsWith('http') || src.startsWith('/')
                       ? org
-                      : `![${alt}](${
+                      : `![${alt}](/${
                           relative(
-                            resolve(__dirname, locale, file),
+                            resolve(__dirname),
                             resolve(__dirname, fallbackFrom, dirname(file), src),
                           )
-                        })`,
+                        })`
+                  },
                 ),
             ].join('\n\n'),
           }

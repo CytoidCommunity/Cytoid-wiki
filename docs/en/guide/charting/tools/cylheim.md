@@ -2,7 +2,7 @@
 author: GattoKai (original author), Teages (CN writer), KS62 (translator), alxdre a.k.a. Thanh9356 (editor)
 finish: false
 prev: "../audio.md"
-next: "../finish/packing.md#packing-by-using-cylheim"
+next: "../packing.md#packing-by-using-cylheim"
 ---
 
 # Charting with Cylheim
@@ -165,7 +165,7 @@ You can also change the size to exactly what you want by opening
 **Sidebar --> Page manager**.
 
 ::: tip Tips:
-Don't know why? [Try reading C2's chart format article](../chart-json).
+Don't know why? [Try reading C2's chart format article](../level-json).
 :::
 
 ##### Changing BPM
@@ -234,7 +234,7 @@ Follow the tips, fill in the metadata and chart, and finish!
 You can also include storyboard files and resources while packing.
 :::
 
-A more in-depth tutorial about packing is available [here](../finish/packing.md#packing-by-using-cylheim)
+A more in-depth tutorial about packing is available [here](../packing#packing-by-using-cylheim)
 
 ## Video Tutorial (in Chinese, outdated)
 

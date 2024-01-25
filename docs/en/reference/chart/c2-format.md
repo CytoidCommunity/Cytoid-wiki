@@ -34,13 +34,13 @@ This article aims at Cytoid compatibility, some tools might not be fully support
 
 - **vertical_margin**: the vertical margin (ranged from `1` to `5`).
 
-- **tempo_list**: array of [Tempo](./c2-chart-format.html#tempo) objects.
+- **tempo_list**: array of [Tempo](#tempo) objects.
 
-- **page_list**: array of [Page](./c2-chart-format.html#page) objects.
+- **page_list**: array of [Page](#page) objects.
 
-- **note_list**: array of [Note](./c2-chart-format.html#note) objects.
+- **note_list**: array of [Note](#note) objects.
 
-- **event_order_list**: array of [EventOrder](./c2-chart-format.html#eventorder) objects.
+- **event_order_list**: array of [EventOrder](#eventorder) objects.
 
 ### Objects
 
@@ -103,7 +103,7 @@ When you want to finish the Drag/C-Drag chain, set it to `-1`.
 
 - **tick**: specify when the event will be triggered.
 
-- **event_list**: array of [ChartEvent](./c2-chart-format.html#chartevent) object
+- **event_list**: array of [ChartEvent](#chartevent) object
 
 #### ChartEvent
 
