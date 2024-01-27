@@ -1,5 +1,8 @@
 # Cytoid Wiki
 
+> [!NOTE]
+> It have been moved to [cytoid/wiki](https://github.com/cytoid/wiki), this repo is now archived.
+
 This site is the community wiki of Cytoid built by TigerHix and Neo.
 
 Written by Discord Community and Localizers.
